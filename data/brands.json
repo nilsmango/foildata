@@ -1,10 +1,16 @@
 [
     {
-        "name": "Naish",
-        "website": "https://naish.com",
+        "name": "Indiana",
+        "logoFilename": "Indiana_Main_positiv.webp",
+        "website": "https:\/\/indiana-paddlesurf.com",
+        "instagram": "",
+        "youtube": ""
     },
     {
-        "name": "Slingshot",
-        "website": "https://slingshotsports.com",
+        "name": "Naish",
+        "logoFilename": "Bildschirmfoto 2025-03-27 um 16.41.30.png",
+        "website": "https:\/\/www.naish.com",
+        "instagram": "",
+        "youtube": ""
     }
 ]

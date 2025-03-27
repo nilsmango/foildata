@@ -8,7 +8,7 @@
     <form id="brand-form" method="post" enctype="multipart/form-data">
         <label for="brand-name">Name:</label>
         <input type="text" id="brand-name" name="name" required>
-        <p id="name-warning" style="color: red; display: none;">This brand already exists.</p>
+        <p id="name-warning" style="color: red; display: none;">This brand name already exists, will merge any new data.</p>
         
         <label for="brand-logo">Logo:</label>
         <input type="file" id="brand-logo" name="logo">
@@ -39,17 +39,17 @@
                 brands.map(brand => brand.name.toLowerCase().replace(/\s/g, ''))
             );
 
-            // Form submission and validation handler
+            // Form submission handler (no longer prevents submission)
             document.getElementById('brand-form').addEventListener('submit', async function(event) {
                 event.preventDefault();
-                
                 const inputName = document.getElementById('brand-name').value.toLowerCase().replace(/\s/g, '');
                 const nameWarning = document.getElementById('name-warning');
                 
-                // Client-side duplicate check
+                // Show warning if brand exists, but allow submission
                 if (existingBrands.has(inputName)) {
                     nameWarning.style.display = 'block';
-                    return;
+                } else {
+                    nameWarning.style.display = 'none';
                 }
                 
                 const formData = new FormData(this);
