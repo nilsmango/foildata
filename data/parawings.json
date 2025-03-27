@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Roger",
+        "brandName": "Ensis",
+        "imageFilename": null,
+        "website": null,
+        "sizes": [
+            {
+                "areaSqM": 3,
+                "wingSpan": null,
+                "linesLengthCm": null,
+                "aspectRatio": null,
+                "weightKg": null,
+                "doubleSkin": false,
+                "listPriceUSD": null
+            }
+        ]
+    }
+]
