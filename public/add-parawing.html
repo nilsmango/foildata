@@ -3,149 +3,248 @@
 <head>
     <title>Add Parawing</title>
     <style>
-            .dropdown {
-                position: relative;
-                width: 100%;
-            }
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #f9f9f9;
-                width: 100%;
-                max-height: 200px;
-                overflow-y: auto;
-                border: 1px solid #ddd;
-                z-index: 1;
-            }
-            .dropdown-content div {
-                padding: 10px;
-                cursor: pointer;
-            }
-            .dropdown-content div:hover {
-                background-color: #f1f1f1;
-            }
-            .show {
-                display: block;
-            }
-        </style>
+        .dropdown {
+            position: relative;
+            width: 100%;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: 100%;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            z-index: 1;
+        }
+        .dropdown-content div {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .dropdown-content div:hover {
+            background-color: #f1f1f1;
+        }
+        .show {
+            display: block;
+        }
+        .required::after {
+            content: '*';
+            color: red;
+            margin-left: 4px;
+        }
+        .size-section {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .remove-size {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: red;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>Add Parawing</h1>
     <form id="parawing-form" method="post" enctype="multipart/form-data">
-            <div>
-                <label for="brand-name">Brand Name:</label>
-                <div class="dropdown">
-                    <input type="text" id="brand-name" name="brand" required autocomplete="off">
-                    <div id="brand-dropdown" class="dropdown-content"></div>
-                </div>
+        <div>
+            <label for="brand-name" class="required">Brand Name:</label>
+            <div class="dropdown">
+                <input type="text" id="brand-name" name="brand" required autocomplete="off">
+                <div id="brand-dropdown" class="dropdown-content"></div>
             </div>
-    
-            <div>
-                <label for="parawing-name">Parawing Name:</label>
-                <input type="text" id="parawing-name" name="parawing" required>
-            </div>
-            
-            <button type="submit">Submit</button>
-        </form>
-        <p><a href="brands.html">Back to Brands</a></p>
+        </div>
+
+        <div>
+            <label for="parawing-name" class="required">Parawing Name:</label>
+            <input type="text" id="parawing-name" name="parawing" required>
+        </div>
+
+        <h3>Parawing Sizes 
+            <button type="button" id="add-size">Add Size</button>
+        </h3>
+        <div id="sizes-container">
+            <!-- Initial size will be added dynamically by JS -->
+        </div>
+
+        <div>
+            <label for="parawing-image">Parawing Image:</label>
+            <input type="file" id="parawing-image" name="imageFilename" accept="image/*">
+        </div>
+
+        <div>
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website">
+        </div>
         
-        <script>
-        // Function to fetch existing brands and set up form functionality
-        async function initializeParawingForm() {
-            try {
-                // Fetch existing brands from brands.json
-                const response = await fetch('brands.json');
-                const brands = await response.json();
+        <button type="submit">Submit</button>
+    </form>
+    <p>Fields marked with * are required.</p>
+    <p><a href="brands.html">Back to Brands</a></p>
+    
+    <template id="size-template">
+        <div class="size-section">
+            <span class="remove-size">Delete</span>
+            <div>
+                <label for="area-sqm" class="required">Area (sq m):</label>
+                <input type="number" name="areaSqM[]" step="0.1" required>
+            </div>
+
+            <div>
+                <label for="wing-span">Wing Span (m):</label>
+                <input type="number" name="wingSpan[]" step="0.1">
+            </div>
+
+            <div>
+                <label for="lines-length">Lines Length (cm):</label>
+                <input type="number" name="linesLengthCm[]" step="0.1">
+            </div>
+
+            <div>
+                <label for="aspect-ratio">Aspect Ratio:</label>
+                <input type="number" name="aspectRatio[]" step="0.1">
+            </div>
+
+            <div>
+                <label for="weight-kg">Weight (kg):</label>
+                <input type="number" name="weightKg[]" step="0.1">
+            </div>
+
+            <div>
+                <label for="double-skin" class="required">Double Skin:</label>
+                <select name="doubleSkin[]" required>
+                    <option value="false">No</option>
+                    <option value="true">Yes</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="list-price">List Price (USD):</label>
+                <input type="number" name="listPriceUSD[]" step="0.01">
+            </div>
+        </div>
+    </template>
+    
+    <script>
+    // Function to add a new size section
+    function addSizeSection() {
+        const container = document.getElementById('sizes-container');
+        const template = document.getElementById('size-template');
+        const newSize = template.content.cloneNode(true);
+        
+        // Add remove button functionality
+        const removeButton = newSize.querySelector('.remove-size');
+        removeButton.addEventListener('click', function() {
+            this.closest('.size-section').remove();
+        });
+        
+        container.appendChild(newSize);
+    }
+
+    // Function to fetch existing brands and set up form functionality
+    async function initializeParawingForm() {
+        // Add initial size section
+        addSizeSection();
+
+        try {
+            // Fetch existing brands from brands.json
+            const response = await fetch('brands.json');
+            const brands = await response.json();
+            
+            // Create a Set of existing brand names (normalized)
+            const existingBrands = new Set(
+                brands.map(brand => brand.name.toLowerCase().replace(/\s/g, ''))
+            );
+            
+            const brandInput = document.getElementById('brand-name');
+            const brandDropdown = document.getElementById('brand-dropdown');
+            
+            // Add size button functionality
+            document.getElementById('add-size').addEventListener('click', addSizeSection);
+            
+            // Brand name input event listener for filtering and dropdown
+            brandInput.addEventListener('input', function() {
+                const inputValue = this.value.toLowerCase();
                 
-                // Create a Set of existing brand names (normalized)
-                const existingBrands = new Set(
-                    brands.map(brand => brand.name.toLowerCase().replace(/\s/g, ''))
+                // Filter brands based on input
+                const filteredBrands = brands.filter(brand => 
+                    brand.name.toLowerCase().includes(inputValue)
                 );
                 
-                const brandInput = document.getElementById('brand-name');
-                const brandDropdown = document.getElementById('brand-dropdown');
-                const nameWarning = document.getElementById('name-warning');
+                // Clear previous dropdown content
+                brandDropdown.innerHTML = '';
                 
-                // Brand name input event listener for filtering and dropdown
-                brandInput.addEventListener('input', function() {
-                    const inputValue = this.value.toLowerCase();
-                    
-                    // Filter brands based on input
-                    const filteredBrands = brands.filter(brand => 
-                        brand.name.toLowerCase().includes(inputValue)
-                    );
-                    
-                    // Clear previous dropdown content
-                    brandDropdown.innerHTML = '';
-                    
-                    // Populate dropdown
-                    filteredBrands.forEach(brand => {
-                        const div = document.createElement('div');
-                        div.textContent = brand.name;
-                        div.addEventListener('click', () => {
-                            brandInput.value = brand.name;
-                            brandDropdown.classList.remove('show');
-                        });
-                        brandDropdown.appendChild(div);
+                // Populate dropdown
+                filteredBrands.forEach(brand => {
+                    const div = document.createElement('div');
+                    div.textContent = brand.name;
+                    div.addEventListener('click', () => {
+                        brandInput.value = brand.name;
+                        brandDropdown.classList.remove('show');
+                    });
+                    brandDropdown.appendChild(div);
+                });
+                
+                // Show/hide dropdown
+                brandDropdown.classList.toggle('show', filteredBrands.length > 0);
+            });
+            
+            // Hide dropdown when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!brandInput.contains(event.target) && !brandDropdown.contains(event.target)) {
+                    brandDropdown.classList.remove('show');
+                }
+            });
+            
+            // Form submission handler
+            document.getElementById('parawing-form').addEventListener('submit', async function(event) {
+                event.preventDefault();
+                const inputName = brandInput.value.toLowerCase().replace(/\s/g, '');
+                
+                const formData = new FormData(this);
+                
+                try {
+                    // Post to submit-parawing.php
+                    const parawingResponse = await fetch('submit-parawing.php', {
+                        method: 'POST',
+                        body: formData
                     });
                     
-                    // Show/hide dropdown
-                    brandDropdown.classList.toggle('show', filteredBrands.length > 0);
-                });
-                
-                // Hide dropdown when clicking outside
-                document.addEventListener('click', function(event) {
-                    if (!brandInput.contains(event.target) && !brandDropdown.contains(event.target)) {
-                        brandDropdown.classList.remove('show');
-                    }
-                });
-                
-                // Form submission handler
-                document.getElementById('parawing-form').addEventListener('submit', async function(event) {
-                    event.preventDefault();
-                    const inputName = brandInput.value.toLowerCase().replace(/\s/g, '');
-                    
-                    const formData = new FormData(this);
-                    
-                    try {
-                        // Post to submit-parawing.php
-                        const parawingResponse = await fetch('submit-parawing.php', {
+                    // If brand does not exist, also post to submit-brand.php
+                    if (!existingBrands.has(inputName)) {
+                        const brandFormData = new FormData();
+                        brandFormData.append('name', brandInput.value);
+                        
+                        await fetch('submit-brand.php', {
                             method: 'POST',
-                            body: formData
+                            body: brandFormData
                         });
-                        
-                        // If brand does not exist, also post to submit-brand.php
-                        if (!existingBrands.has(inputName)) {
-                            const brandFormData = new FormData();
-                            brandFormData.append('name', brandInput.value);
-                            
-                            await fetch('submit-brand.php', {
-                                method: 'POST',
-                                body: brandFormData
-                            });
-                        }
-                        
-                        const result = await parawingResponse.json();
-                        if (parawingResponse.ok) {
-                            alert('Parawing added successfully!');
-                            this.reset();
-                            window.location.href = 'parawings.html';
-                        } else {
-                            alert(result.error || 'Failed to add parawing');
-                        }
-                    } catch (error) {
-                        console.error('Submission error:', error);
-                        alert('Failed to submit parawing');
                     }
-                });
-            } catch (error) {
-                console.error('Failed to fetch brands:', error);
-                alert('Unable to load existing brands. Please try again later.');
-            }
+                    
+                    const result = await parawingResponse.json();
+                    if (parawingResponse.ok) {
+                        alert('Parawing added successfully!');
+                        this.reset();
+                        window.location.href = 'parawings.html';
+                    } else {
+                        alert(result.error || 'Failed to add parawing');
+                    }
+                } catch (error) {
+                    console.error('Submission error:', error);
+                    alert('Failed to submit parawing');
+                }
+            });
+        } catch (error) {
+            console.error('Failed to fetch brands:', error);
+            alert('Unable to load existing brands. Please try again later.');
         }
-        
-        // Initialize the form when the page loads
-        document.addEventListener('DOMContentLoaded', initializeParawingForm);
-        </script>
+    }
+    
+    // Initialize the form when the page loads
+    document.addEventListener('DOMContentLoaded', initializeParawingForm);
+    </script>
 </body>
 </html>
