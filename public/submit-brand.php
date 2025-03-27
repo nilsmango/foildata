@@ -29,9 +29,9 @@ if (file_exists($brandsFile)) {
 $newBrand = [
     'name' => $_POST['name'] ?? '',
     'logoFilename' => null,
-    'website' => !empty($_POST['website']) ? $_POST['website'] : null,,
-    'instagram' => !empty($_POST['instagram']) ? $_POST['instagram'] ?? null,
-    'youtube' => !empty($_POST['youtube']) ? $_POST['youtube'] ?? null
+    'website' => !empty($_POST['website']) ? $_POST['website'] : null,
+    'instagram' => !empty($_POST['instagram']) ? $_POST['instagram'] : null,
+    'youtube' => !empty($_POST['youtube']) ? $_POST['youtube'] : null
 ];
 // Handle file upload if present
 if (!empty($_FILES['logo']['tmp_name'])) {
