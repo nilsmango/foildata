@@ -20,7 +20,6 @@
         "instagram": null,
         "youtube": null
     },
-
     {
         "name": "Duotone",
         "logoFilename": "Bildschirmfoto 2025-03-27 um 19.31.34.png",
@@ -32,6 +31,20 @@
         "name": "Ensis",
         "logoFilename": null,
         "website": null,
+        "instagram": null,
+        "youtube": null
+    },
+    {
+        "name": "Test",
+        "logoFilename": null,
+        "website": null,
+        "instagram": null,
+        "youtube": null
+    },
+    {
+        "name": "Boardriding Maui",
+        "logoFilename": "brm logo.png",
+        "website": "https:\/\/boardridingmaui.com",
         "instagram": null,
         "youtube": null
     }
