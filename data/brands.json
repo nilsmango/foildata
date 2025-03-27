@@ -12,5 +12,26 @@
         "website": "https:\/\/www.naish.com",
         "instagram": "",
         "youtube": ""
+    },
+    {
+        "name": "Code Foils",
+        "logoFilename": "ORANGE-Code-Foils-Logo-WITH-FONT_TRANSPARENT.webp",
+        "website": "https:\/\/codefoils.com",
+        "instagram": "",
+        "youtube": ""
+    },
+    {
+        "name": "Test",
+        "logoFilename": null,
+        "website": "",
+        "instagram": "",
+        "youtube": ""
+    },
+    {
+        "name": "Duotone",
+        "logoFilename": "Bildschirmfoto 2025-03-27 um 19.31.34.png",
+        "website": "https:\/\/www.duotonesports.com\/de",
+        "instagram": "",
+        "youtube": ""
     }
 ]

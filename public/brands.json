@@ -3,28 +3,36 @@
         "name": "Indiana",
         "logoFilename": "Indiana_Main_positiv.webp",
         "website": "https:\/\/indiana-paddlesurf.com",
-        "instagram": "",
-        "youtube": ""
+        "instagram": null,
+        "youtube": null
     },
     {
         "name": "Naish",
         "logoFilename": "Bildschirmfoto 2025-03-27 um 16.41.30.png",
         "website": "https:\/\/www.naish.com",
-        "instagram": "",
-        "youtube": ""
+        "instagram": null,
+        "youtube": null
     },
     {
         "name": "Code Foils",
         "logoFilename": "ORANGE-Code-Foils-Logo-WITH-FONT_TRANSPARENT.webp",
         "website": "https:\/\/codefoils.com",
-        "instagram": "",
-        "youtube": ""
+        "instagram": null,
+        "youtube": null
+    },
+
+    {
+        "name": "Duotone",
+        "logoFilename": "Bildschirmfoto 2025-03-27 um 19.31.34.png",
+        "website": "https:\/\/www.duotonesports.com\/de",
+        "instagram": null,
+        "youtube": null
     },
     {
-        "name": "Test",
+        "name": "Ensis",
         "logoFilename": null,
-        "website": "",
-        "instagram": "",
-        "youtube": ""
+        "website": null,
+        "instagram": null,
+        "youtube": null
     }
 ]
