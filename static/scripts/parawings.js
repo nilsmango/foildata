@@ -40,7 +40,7 @@ class ParawingsTable {
       name: "Name",
       brandName: "Brand",
       areaSqM: "Area (m²)",
-      wingSpan: "Wing Span",
+      wingSpan: "Wing Span (m)",
       linesLengthCm: "Lines Length (cm)",
       aspectRatio: "Aspect Ratio",
       weightKg: "Weight (kg)",

@@ -38,23 +38,31 @@ body {
 /* Card Styles */
 .card {
   background-color: var(--card-background);
-  border-radius: 0.5rem;
-  box-shadow: var(--shadow);
+  /* border-radius: 0.5rem;
+  box-shadow: var(--shadow); */
   overflow: hidden;
 }
 
 .card-header {
   padding: 1.5rem;
-  border-bottom: 1px solid var(--border);
+  /* border-bottom: 1px solid var(--border); */
 }
 
-.card-title {
+/* .card-title {
   font-size: 1.5rem;
   font-weight: 700;
-}
+} */
 
 .card-content {
   padding: 1.5rem;
+}
+#form-h3,
+#add-size {
+    margin-top: 0.5rem; /* Optional: Adds space between title and button */
+}
+
+#sizes-container {
+    margin-top: 0.75rem; /* Adds space between the button and the container */
 }
 
 /* Button Styles */
@@ -80,6 +88,7 @@ body {
 }
 
 /* Input Styles */
+input[type="url"],
 input[type="text"],
 input[type="number"] {
   padding: 0.5rem;
@@ -90,11 +99,33 @@ input[type="number"] {
   font-size: 0.875rem;
 }
 
+input[type="url"]:focus,
 input[type="text"]:focus,
 input[type="number"]:focus {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
+}
+
+/* Style for the file input */
+input[type="file"] {
+  padding: 0.5rem;
+  background-color: var(--input-background);
+  width: 100%;
+  font-size: 0.875rem;
+  cursor: pointer; /* Add a pointer cursor */
+}
+
+/* Focus state */
+input[type="file"]:focus,
+label[for="parawing-image"]:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
+}
+
+select {
+    font-size: 1rem;
 }
 
 /* Filter Styles */
@@ -120,9 +151,6 @@ input[type="number"]:focus {
   position: relative;
 }
 
-.dropdown {
-    display: inline-block;
-}
 .dropdown-content {
     display: none;
     position: absolute;
@@ -305,7 +333,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+    color: var(--primary-hover);
 }
 
 
@@ -322,14 +350,88 @@ form div {
 }
 .size-section {
     border: 1px solid #ddd;
+    border-radius: 0.5rem;
     padding: 15px;
     margin-bottom: 15px;
     position: relative;
 }
 .remove-size {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    color: red;
+    top: 5px;
+    right: 5px;
+    /* color: red; */
     cursor: pointer;
 }
+
+.main-button {
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    background-color: var(--primary);
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    margin-right: 0.5rem;
+}
+
+.main-button.small {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.main-button:hover {
+    background-color: var(--primary-hover, darkblue);
+}
+
+.main-button:focus,
+.main-button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Style the link to look like a button */
+a.main-button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--button-background, #0070f3); /* Adjust color */
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none; 
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Style for small button variant */
+a.main-button.small {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Hover effect */
+a.main-button:hover {
+  background-color: var(--button-hover, #005bb5); /* Adjust color */
+}
+
+#adder {
+    margin-top: 0.5rem
+}
+
+.info {
+    opacity: 0.8;
+    font-size: 0.875rem;
+}
+
+.bottom-button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+}
+

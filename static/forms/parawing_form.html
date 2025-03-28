@@ -1,3 +1,9 @@
+<div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title">Add Parawing</h1>
+      </div>
+      <div class="card-content">
 <form id="parawing-form" method="post" enctype="multipart/form-data">
     <div>
         <label for="brand-name" class="required">Brand Name:</label>
@@ -12,9 +18,10 @@
         <input type="text" id="parawing-name" name="parawing" required>
     </div>
 
-    <h3>Parawing Sizes 
-        <button type="button" id="add-size">Add Size</button>
-    </h3>
+    <h3 id="form-h3">Parawing Sizes</h3>
+    <button type="button" id="add-size" class="badge badge-outline">Add Size</button>
+   
+    
     <div id="sizes-container">
         <!-- Initial size will be added dynamically by JS -->
     </div>
@@ -28,17 +35,20 @@
         <label for="website">Website:</label>
         <input type="url" id="website" name="website">
     </div>
+    <div class="bottom-button">
+    <button type="submit" class="main-button">Submit</button>
+    <a href="parawings.html">Back to Parawings</a>
+    </div>
     
-    <button type="submit">Submit</button>
 </form>
-<p>Fields marked with * are required.</p>
-<p><a href="parawings.html">Back to Parawings</a></p>
+<p class="info">Fields marked with * are required.</p>
+
 
 <template id="size-template">
     <div class="size-section">
-        <span class="remove-size">Delete</span>
+        <span class="remove-size badge badge-outline">Remove</span>
         <div>
-            <label for="area-sqm" class="required">Area (sq m):</label>
+            <label for="area-sqm" class="required">Area (m²):</label>
             <input type="number" name="areaSqM[]" step="0.1" required>
         </div>
 
@@ -76,3 +86,6 @@
         </div>
     </div>
 </template>
+</div>
+    </div>
+</div>
