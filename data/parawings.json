@@ -1,9 +1,9 @@
 [
     {
         "name": "Roger",
-        "brandName": "Ensis",
-        "imageFilename": null,
-        "website": null,
+        "brandName": "ENSIS",
+        "imageFilename": "DSC03057_by-Tobias-Meier.webp",
+        "website": "https:\/\/ensis.surf\/product\/roger\/",
         "sizes": [
             {
                 "areaSqM": 3,
@@ -12,7 +12,60 @@
                 "aspectRatio": null,
                 "weightKg": null,
                 "doubleSkin": false,
-                "listPriceUSD": null
+                "listPriceUSD": 985
+            }
+        ]
+    },
+    {
+        "name": "Maliko",
+        "brandName": "Boardriding Maui",
+        "imageFilename": "BRM-Maliko-123.jpg.webp",
+        "website": "https:\/\/boardridingmaui.com\/pages\/parawing",
+        "sizes": [
+            {
+                "areaSqM": 1.8,
+                "wingSpan": null,
+                "linesLengthCm": null,
+                "aspectRatio": null,
+                "weightKg": null,
+                "doubleSkin": false,
+                "listPriceUSD": 900
+            },
+            {
+                "areaSqM": 2.9,
+                "wingSpan": null,
+                "linesLengthCm": null,
+                "aspectRatio": null,
+                "weightKg": null,
+                "doubleSkin": false,
+                "listPriceUSD": 975
+            },
+            {
+                "areaSqM": 4,
+                "wingSpan": null,
+                "linesLengthCm": null,
+                "aspectRatio": null,
+                "weightKg": null,
+                "doubleSkin": false,
+                "listPriceUSD": 1050
+            },
+            {
+                "areaSqM": 5.1,
+                "wingSpan": null,
+                "linesLengthCm": null,
+                "aspectRatio": null,
+                "weightKg": null,
+                "doubleSkin": false,
+                "listPriceUSD": 1125
+            },
+            {
+                "areaSqM": 6.2,
+                "wingSpan": null,
+                "linesLengthCm": null,
+                "aspectRatio": null,
+                "weightKg": null,
+                "doubleSkin": false,
+                "listPriceUSD": 1200
             }
         ]
     }

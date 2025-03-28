@@ -1,46 +1,72 @@
 [
-  {
-    "name": "Roger",
-    "brandName": "Ensis",
-    "imageFilename": null,
-    "website": null,
-    "sizes": [
-      {
-        "areaSqM": 3,
-        "wingSpan": null,
-        "linesLengthCm": null,
-        "aspectRatio": null,
-        "weightKg": 2,
-        "doubleSkin": false,
-        "listPriceUSD": 890
-      }
-    ]
-  },
-  {
-    "name": "testthing",
-    "brandName": "Test",
-    "imageFilename": null,
-    "website": null,
-    "sizes": [
-      {
-        "areaSqM": 4.2,
-        "wingSpan": null,
-        "linesLengthCm": null,
-        "aspectRatio": null,
-        "weightKg": 0.9,
-        "doubleSkin": true,
-        "listPriceUSD": 500
-      },
-      {
-        "areaSqM": 6.2,
-        "wingSpan": null,
-        "linesLengthCm": null,
-        "aspectRatio": null,
-        "weightKg": 1,
-        "doubleSkin": false,
-        "listPriceUSD": 600
-      }
-    ]
-  }
+    {
+        "name": "Roger",
+        "brandName": "ENSIS",
+        "imageFilename": "DSC03057_by-Tobias-Meier.webp",
+        "website": "https:\/\/ensis.surf\/product\/roger\/",
+        "sizes": [
+            {
+                "areaSqM": 3,
+                "wingSpan": null,
+                "linesLengthCm": null,
+                "aspectRatio": null,
+                "weightKg": null,
+                "doubleSkin": false,
+                "listPriceUSD": 985
+            }
+        ]
+    },
+    {
+        "name": "Maliko",
+        "brandName": "Boardriding Maui",
+        "imageFilename": "BRM-Maliko-123.jpg.webp",
+        "website": "https:\/\/boardridingmaui.com\/pages\/parawing",
+        "sizes": [
+            {
+                "areaSqM": 1.8,
+                "wingSpan": null,
+                "linesLengthCm": null,
+                "aspectRatio": null,
+                "weightKg": null,
+                "doubleSkin": false,
+                "listPriceUSD": 900
+            },
+            {
+                "areaSqM": 2.9,
+                "wingSpan": null,
+                "linesLengthCm": null,
+                "aspectRatio": null,
+                "weightKg": null,
+                "doubleSkin": false,
+                "listPriceUSD": 975
+            },
+            {
+                "areaSqM": 4,
+                "wingSpan": null,
+                "linesLengthCm": null,
+                "aspectRatio": null,
+                "weightKg": null,
+                "doubleSkin": false,
+                "listPriceUSD": 1050
+            },
+            {
+                "areaSqM": 5.1,
+                "wingSpan": null,
+                "linesLengthCm": null,
+                "aspectRatio": null,
+                "weightKg": null,
+                "doubleSkin": false,
+                "listPriceUSD": 1125
+            },
+            {
+                "areaSqM": 6.2,
+                "wingSpan": null,
+                "linesLengthCm": null,
+                "aspectRatio": null,
+                "weightKg": null,
+                "doubleSkin": false,
+                "listPriceUSD": 1200
+            }
+        ]
+    }
 ]
-

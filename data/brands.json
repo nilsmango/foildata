@@ -3,35 +3,56 @@
         "name": "Indiana",
         "logoFilename": "Indiana_Main_positiv.webp",
         "website": "https:\/\/indiana-paddlesurf.com",
-        "instagram": "",
-        "youtube": ""
+        "instagram": null,
+        "youtube": null
     },
     {
         "name": "Naish",
         "logoFilename": "Bildschirmfoto 2025-03-27 um 16.41.30.png",
         "website": "https:\/\/www.naish.com",
-        "instagram": "",
-        "youtube": ""
+        "instagram": null,
+        "youtube": null
     },
     {
         "name": "Code Foils",
         "logoFilename": "ORANGE-Code-Foils-Logo-WITH-FONT_TRANSPARENT.webp",
         "website": "https:\/\/codefoils.com",
-        "instagram": "",
-        "youtube": ""
-    },
-    {
-        "name": "Test",
-        "logoFilename": null,
-        "website": "",
-        "instagram": "",
-        "youtube": ""
+        "instagram": "https:\/\/www.instagram.com\/codefoils\/",
+        "youtube": "https:\/\/www.youtube.com\/@codefoils"
     },
     {
         "name": "Duotone",
         "logoFilename": "Bildschirmfoto 2025-03-27 um 19.31.34.png",
         "website": "https:\/\/www.duotonesports.com\/de",
-        "instagram": "",
-        "youtube": ""
+        "instagram": null,
+        "youtube": null
+    },
+    {
+        "name": "ENSIS",
+        "logoFilename": "ensis.png",
+        "website": "https:\/\/ensis.surf",
+        "instagram": null,
+        "youtube": null
+    },
+    {
+        "name": "Test",
+        "logoFilename": null,
+        "website": "https:\/\/test.com",
+        "instagram": null,
+        "youtube": null
+    },
+    {
+        "name": "Boardriding Maui",
+        "logoFilename": "brm logo.png",
+        "website": "https:\/\/boardridingmaui.com",
+        "instagram": null,
+        "youtube": null
+    },
+    {
+        "name": "Tester",
+        "logoFilename": null,
+        "website": null,
+        "instagram": null,
+        "youtube": null
     }
 ]

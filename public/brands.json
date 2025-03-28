@@ -17,8 +17,8 @@
         "name": "Code Foils",
         "logoFilename": "ORANGE-Code-Foils-Logo-WITH-FONT_TRANSPARENT.webp",
         "website": "https:\/\/codefoils.com",
-        "instagram": null,
-        "youtube": null
+        "instagram": "https:\/\/www.instagram.com\/codefoils\/",
+        "youtube": "https:\/\/www.youtube.com\/@codefoils"
     },
     {
         "name": "Duotone",
@@ -28,9 +28,9 @@
         "youtube": null
     },
     {
-        "name": "Ensis",
-        "logoFilename": null,
-        "website": null,
+        "name": "ENSIS",
+        "logoFilename": "ensis.png",
+        "website": "https:\/\/ensis.surf",
         "instagram": null,
         "youtube": null
     },

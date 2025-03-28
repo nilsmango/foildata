@@ -421,7 +421,7 @@ a.main-button:hover {
 }
 
 #adder {
-    margin-top: 0.5rem
+    margin-top: 1.5rem;
 }
 
 .info {
@@ -433,5 +433,60 @@ a.main-button:hover {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+.brands-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
 }
 
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.brand:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.brand img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+.brand:hover img {
+    filter: grayscale(0);
+}
+
+.brand h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    color: var(--text);
+}
+
+.brand p {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .brands-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .brand img {
+        width: 120px;
+        height: 120px;
+    }
+}
