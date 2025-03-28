@@ -15,5 +15,22 @@
                 "listPriceUSD": null
             }
         ]
+    },
+    {
+        "name": "testthing",
+        "brandName": "Test",
+        "imageFilename": null,
+        "website": null,
+        "sizes": [
+            {
+                "areaSqM": 4.2,
+                "wingSpan": null,
+                "linesLengthCm": null,
+                "aspectRatio": null,
+                "weightKg": null,
+                "doubleSkin": false,
+                "listPriceUSD": null
+            }
+        ]
     }
 ]
