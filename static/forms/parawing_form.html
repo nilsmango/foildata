@@ -1,78 +1,78 @@
 <form id="parawing-form" method="post" enctype="multipart/form-data">
-        <div>
-            <label for="brand-name" class="required">Brand Name:</label>
-            <div class="dropdown">
-                <input type="text" id="brand-name" name="brand" required autocomplete="off" inputmode="text">
-                <div id="brand-dropdown" class="dropdown-content"></div>
-            </div>
+    <div>
+        <label for="brand-name" class="required">Brand Name:</label>
+        <div class="dropdown">
+            <input type="text" id="brand-name" name="brand" required autocomplete="off" inputmode="text">
+            <div id="brand-dropdown" class="dropdown-content"></div>
         </div>
+    </div>
 
-        <div>
-            <label for="parawing-name" class="required">Parawing Name:</label>
-            <input type="text" id="parawing-name" name="parawing" required>
-        </div>
+    <div>
+        <label for="parawing-name" class="required">Parawing Name:</label>
+        <input type="text" id="parawing-name" name="parawing" required>
+    </div>
 
-        <h3>Parawing Sizes 
-            <button type="button" id="add-size">Add Size</button>
-        </h3>
-        <div id="sizes-container">
-            <!-- Initial size will be added dynamically by JS -->
-        </div>
+    <h3>Parawing Sizes 
+        <button type="button" id="add-size">Add Size</button>
+    </h3>
+    <div id="sizes-container">
+        <!-- Initial size will be added dynamically by JS -->
+    </div>
 
-        <div>
-            <label for="parawing-image">Parawing Image:</label>
-            <input type="file" id="parawing-image" name="imageFilename" accept="image/*">
-        </div>
+    <div>
+        <label for="parawing-image">Parawing Image:</label>
+        <input type="file" id="parawing-image" name="imageFilename" accept="image/*">
+    </div>
 
-        <div>
-            <label for="website">Website:</label>
-            <input type="url" id="website" name="website">
-        </div>
-        
-        <button type="submit">Submit</button>
-    </form>
-    <p>Fields marked with * are required.</p>
-    <p><a href="parawings.html">Back to Parawings</a></p>
+    <div>
+        <label for="website">Website:</label>
+        <input type="url" id="website" name="website">
+    </div>
     
-    <template id="size-template">
-        <div class="size-section">
-            <span class="remove-size">Delete</span>
-            <div>
-                <label for="area-sqm" class="required">Area (sq m):</label>
-                <input type="number" name="areaSqM[]" step="0.1" required>
-            </div>
+    <button type="submit">Submit</button>
+</form>
+<p>Fields marked with * are required.</p>
+<p><a href="parawings.html">Back to Parawings</a></p>
 
-            <div>
-                <label for="wing-span">Wing Span (m):</label>
-                <input type="number" name="wingSpan[]" step="0.1">
-            </div>
-
-            <div>
-                <label for="lines-length">Lines Length (cm):</label>
-                <input type="number" name="linesLengthCm[]" step="0.1">
-            </div>
-
-            <div>
-                <label for="aspect-ratio">Aspect Ratio:</label>
-                <input type="number" name="aspectRatio[]" step="0.1">
-            </div>
-
-            <div>
-                <label for="weight-kg">Weight (kg):</label>
-                <input type="number" name="weightKg[]" step="0.1">
-            </div>
-
-            <div>
-                <label for="double-skin" class="required">Double Skin:</label>
-                <select name="doubleSkin[]" required>
-                    <option value="false">No</option>
-                    <option value="true">Yes</option>
-                </select>
-            </div>
-
-            <div>
-                <label for="list-price">List Price (USD):</label>
-                <input type="number" name="listPriceUSD[]" step="0.01">
-            </div>
+<template id="size-template">
+    <div class="size-section">
+        <span class="remove-size">Delete</span>
+        <div>
+            <label for="area-sqm" class="required">Area (sq m):</label>
+            <input type="number" name="areaSqM[]" step="0.1" required>
         </div>
-    </template>
+
+        <div>
+            <label for="wing-span">Wing Span (m):</label>
+            <input type="number" name="wingSpan[]" step="0.1">
+        </div>
+
+        <div>
+            <label for="lines-length">Lines Length (cm):</label>
+            <input type="number" name="linesLengthCm[]" step="0.1">
+        </div>
+
+        <div>
+            <label for="aspect-ratio">Aspect Ratio:</label>
+            <input type="number" name="aspectRatio[]" step="0.1">
+        </div>
+
+        <div>
+            <label for="weight-kg">Weight (kg):</label>
+            <input type="number" name="weightKg[]" step="0.1">
+        </div>
+
+        <div>
+            <label for="double-skin" class="required">Double Skin:</label>
+            <select name="doubleSkin[]" required>
+                <option value="false">No</option>
+                <option value="true">Yes</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="list-price">List Price (USD):</label>
+            <input type="number" name="listPriceUSD[]" step="0.01">
+        </div>
+    </div>
+</template>
