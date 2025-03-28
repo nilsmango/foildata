@@ -1,36 +1,46 @@
 [
-    {
-        "name": "Roger",
-        "brandName": "Ensis",
-        "imageFilename": null,
-        "website": null,
-        "sizes": [
-            {
-                "areaSqM": 3,
-                "wingSpan": null,
-                "linesLengthCm": null,
-                "aspectRatio": null,
-                "weightKg": null,
-                "doubleSkin": false,
-                "listPriceUSD": null
-            }
-        ]
-    },
-    {
-        "name": "testthing",
-        "brandName": "Test",
-        "imageFilename": null,
-        "website": null,
-        "sizes": [
-            {
-                "areaSqM": 4.2,
-                "wingSpan": null,
-                "linesLengthCm": null,
-                "aspectRatio": null,
-                "weightKg": null,
-                "doubleSkin": false,
-                "listPriceUSD": null
-            }
-        ]
-    }
+  {
+    "name": "Roger",
+    "brandName": "Ensis",
+    "imageFilename": null,
+    "website": null,
+    "sizes": [
+      {
+        "areaSqM": 3,
+        "wingSpan": null,
+        "linesLengthCm": null,
+        "aspectRatio": null,
+        "weightKg": 2,
+        "doubleSkin": false,
+        "listPriceUSD": 890
+      }
+    ]
+  },
+  {
+    "name": "testthing",
+    "brandName": "Test",
+    "imageFilename": null,
+    "website": null,
+    "sizes": [
+      {
+        "areaSqM": 4.2,
+        "wingSpan": null,
+        "linesLengthCm": null,
+        "aspectRatio": null,
+        "weightKg": 0.9,
+        "doubleSkin": false,
+        "listPriceUSD": 500
+      },
+      {
+        "areaSqM": 6.2,
+        "wingSpan": null,
+        "linesLengthCm": null,
+        "aspectRatio": null,
+        "weightKg": 1,
+        "doubleSkin": false,
+        "listPriceUSD": 600
+      }
+    ]
+  }
 ]
+
