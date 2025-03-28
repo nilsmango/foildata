@@ -1,34 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Add Brand</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-    <h1>Add Brand</h1>
-    <form id="brand-form" method="post" enctype="multipart/form-data">
-    <label for="brand-name">Name:</label>
-    <input type="text" id="brand-name" name="name" required>
-    <p id="name-warning" style="color: red; display: none;">This brand name already exists, will merge any new data.</p>
-    
-    <label for="brand-logo">Logo:</label>
-    <input type="file" id="brand-logo" name="logo">
-    
-    <label for="brand-website">Website:</label>
-    <input type="url" id="brand-website" name="website">
-    
-    <label for="brand-instagram">Instagram:</label>
-    <input type="url" id="brand-instagram" name="instagram">
-    
-    <label for="brand-youtube">YouTube:</label>
-    <input type="url" id="brand-youtube" name="youtube">
-    
-    <button type="submit">Submit</button>
-</form>
-    <p><a href="brands.html">Back to Brands</a></p>
-    
-    <script>
-    // Function to fetch existing brands and set up form validation
+// Function to fetch existing brands and set up form validation
 async function initializeBrandForm() {
     try {
         // Fetch existing brands from brands.json
@@ -95,6 +65,3 @@ async function initializeBrandForm() {
 
 // Initialize the form when the page loads
 document.addEventListener('DOMContentLoaded', initializeBrandForm);
-    </script>
-</body>
-</html>

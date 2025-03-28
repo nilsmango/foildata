@@ -1,0 +1,42 @@
+.dropdown {
+            position: relative;
+            width: 100%;
+        }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+.dropdown-content div {
+    padding: 10px;
+    cursor: pointer;
+}
+.dropdown-content div:hover {
+    background-color: #f1f1f1;
+}
+.show {
+    display: block;
+}
+.required::after {
+    content: '*';
+    color: red;
+    margin-left: 4px;
+}
+.size-section {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.remove-size {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+    cursor: pointer;
+}
