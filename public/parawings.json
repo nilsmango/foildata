@@ -28,7 +28,7 @@
         "linesLengthCm": null,
         "aspectRatio": null,
         "weightKg": 0.9,
-        "doubleSkin": false,
+        "doubleSkin": true,
         "listPriceUSD": 500
       },
       {

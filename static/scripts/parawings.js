@@ -26,13 +26,12 @@ class ParawingsTable {
     this.visibleColumns = {
       name: true,
       brandName: true,
-      website: true,
       areaSqM: true,
-      wingSpan: true,
-      linesLengthCm: true,
-      aspectRatio: true,
+      wingSpan: false,
+      linesLengthCm: false,
+      aspectRatio: false,
       weightKg: true,
-      doubleSkin: true,
+      doubleSkin: false,
       listPriceUSD: true,
     }
 
@@ -40,7 +39,6 @@ class ParawingsTable {
     this.columnDisplayNames = {
       name: "Name",
       brandName: "Brand",
-      website: "Website",
       areaSqM: "Area (m²)",
       wingSpan: "Wing Span",
       linesLengthCm: "Lines Length (cm)",
@@ -112,7 +110,6 @@ class ParawingsTable {
           name: parawing.name,
           brandName: parawing.brandName,
           imageFilename: parawing.imageFilename,
-          website: parawing.website,
           ...size,
         })),
       )
@@ -223,21 +220,19 @@ class ParawingsTable {
     this.elements.tableHead.innerHTML = ""
 
     Object.keys(this.visibleColumns).forEach((column) => {
-      if (this.visibleColumns[column]) {
-        const th = document.createElement("th")
-
-        if (column !== "website") {
+        if (this.visibleColumns[column]) {
+          const th = document.createElement("th")
           th.addEventListener("click", () => this.requestSort(column))
-
+    
           const headerContent = document.createElement("div")
           headerContent.className = "header-content"
           headerContent.style.display = "flex"
           headerContent.style.alignItems = "center"
-
+    
           const headerText = document.createElement("span")
           headerText.textContent = this.columnDisplayNames[column]
           headerContent.appendChild(headerText)
-
+    
           if (this.sortConfig.key === column) {
             const sortIcon = document.createElement("span")
             sortIcon.className = "sort-icon"
@@ -247,13 +242,9 @@ class ParawingsTable {
                 : "&#9660;" // Down arrow
             headerContent.appendChild(sortIcon)
           }
-
+    
           th.appendChild(headerContent)
-        } else {
-          th.textContent = this.columnDisplayNames[column]
-        }
-
-        this.elements.tableHead.appendChild(th)
+          this.elements.tableHead.appendChild(th)
       }
     })
   }
@@ -471,17 +462,6 @@ class ParawingsTable {
             cell.textContent = parawing.doubleSkin ? "Yes" : "No"
           } else if (column === "listPriceUSD") {
             cell.textContent = parawing.listPriceUSD ? `$${parawing.listPriceUSD}` : "-"
-          } else if (column === "website") {
-            if (parawing.website) {
-              const link = document.createElement("a")
-              link.href = parawing.website
-              link.target = "_blank"
-              link.rel = "noopener noreferrer"
-              link.textContent = "Visit"
-              cell.appendChild(link)
-            } else {
-              cell.textContent = "-"
-            }
           } else {
             cell.textContent = parawing[column] !== null ? parawing[column] : "-"
           }
