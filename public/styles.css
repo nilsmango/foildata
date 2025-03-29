@@ -332,10 +332,18 @@ a {
   text-decoration: none;
 }
 
+a.row-link {  
+    color: var(--text);  
+}
+
+a.row-link:hover {  
+    color: var(--text);
+   text-shadow: 0 0 0.5px currentColor;
+}
+
 a:hover {
     color: var(--primary-hover);
 }
-
 
 form div {
     padding-bottom: 10px;

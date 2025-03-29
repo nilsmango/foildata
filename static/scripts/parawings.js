@@ -450,11 +450,16 @@ class ParawingsTable {
 
     this.filteredParawings.forEach((parawing) => {
       const row = document.createElement("tr")
-
+      const link = document.createElement("a")
+    
+      link.href = `/${parawing.brandName.replace(/\s+/g, "")}/${parawing.name.replace(/\s+/g, "")}.html`
+      link.className = "row-link"
+      link.style.display = "contents" // Ensures the whole row is clickable
+    
       Object.keys(this.visibleColumns).forEach((column) => {
         if (this.visibleColumns[column]) {
           const cell = document.createElement("td")
-
+    
           if (column === "name") {
             cell.className = "font-medium"
             cell.textContent = parawing.name
@@ -465,17 +470,18 @@ class ParawingsTable {
           } else {
             cell.textContent = parawing[column] !== null ? parawing[column] : "-"
           }
-
+    
           row.appendChild(cell)
         }
       })
-
-      this.elements.tableBody.appendChild(row)
+    
+      link.appendChild(row)
+      this.elements.tableBody.appendChild(link)
     })
   }
 
   updateResultsCount() {
-    this.elements.resultsText.textContent = `Showing ${this.filteredParawings.length} of ${this.parawings.length} parawings`
+    this.elements.resultsText.textContent = `Showing ${this.filteredParawings.length} of ${this.parawings.length} parawings.`
   }
 }
 
