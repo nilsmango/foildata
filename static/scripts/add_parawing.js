@@ -10,7 +10,7 @@ function addSizeSection() {
         this.closest('.size-section').remove();
     });
     
-    container.appendChild(newSize);
+    container.prepend(newSize);
 }
 
 // Function to fetch existing brands and set up form functionality

@@ -91,7 +91,7 @@
 
         <div>
             <label for="list-price">List Price (USD):</label>
-            <input type="number" name="listPriceUSD[]" step="0.01">
+            <input type="number" name="listPriceUSD[]" step="1.0">
         </div>
     </div>
 </template>
@@ -111,7 +111,7 @@ function addSizeSection() {
         this.closest('.size-section').remove();
     });
     
-    container.appendChild(newSize);
+    container.prepend(newSize);
 }
 
 // Function to fetch existing brands and set up form functionality
