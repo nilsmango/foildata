@@ -54,5 +54,12 @@
         "website": null,
         "instagram": null,
         "youtube": null
+    },
+    {
+        "name": "Gong",
+        "logoFilename": "gong.png",
+        "website": "https:\/\/www.gong-galaxy.com\/en",
+        "instagram": "https:\/\/www.instagram.com\/gong.galaxy\/",
+        "youtube": "https:\/\/www.youtube.com\/@GONG.GALAXY"
     }
 ]

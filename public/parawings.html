@@ -555,7 +555,7 @@ class ParawingsTable {
       const row = document.createElement("tr")
       const link = document.createElement("a")
     
-      link.href = `/${parawing.brandName.replace(/\s+/g, "")}/${parawing.name.replace(/\s+/g, "")}.html`
+      link.href = `/${parawing.brandName.replace(/\s+/g, "-")}/parawings/${parawing.name.replace(/\s+/g, "-")}.html`
       link.className = "row-link"
       link.style.display = "contents" // Ensures the whole row is clickable
     
