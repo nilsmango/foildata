@@ -14,6 +14,23 @@
                 "doubleSkin": false,
                 "listPriceUSD": 985
             }
+        ],
+        "videos": [
+            {
+                "url": "https:\/\/www.instagram.com\/reel\/DEHSDqQoJKe\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                "date": "2025-04-03",
+                "kind": "Insta"
+            },
+            {
+                "url": "https:\/\/www.youtube.com\/watch?v=9SrjRrQCFmA",
+                "kind": "YouTube",
+                "date": "2025-04-07"
+            },
+            {
+                "url": "https:\/\/www.youtube.com\/watch?v=HBg6BxDoPyc",
+                "kind": "YouTube",
+                "date": "2025-04-07"
+            }
         ]
     },
     {
@@ -67,6 +84,7 @@
                 "doubleSkin": false,
                 "listPriceUSD": 1200
             }
-        ]
+        ],
+        "videos": []
     }
 ]
