@@ -464,6 +464,17 @@ a.main-button:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.product-image {
+    max-width: 100vw;
+    width: 100%;
+}
+
+/* @media (max-width: 768px) {
+    .product-image {
+        max-width: 100vw;
+    }
+} */
+
 .brand img,
 .profile-logo {
     width: 150px;
@@ -473,6 +484,8 @@ a.main-button:hover {
     filter: grayscale(20%);
     transition: filter 0.3s ease;
 }
+
+
 
 .brand:hover img {
     filter: grayscale(0);

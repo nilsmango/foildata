@@ -30,6 +30,11 @@
                 "url": "https:\/\/www.youtube.com\/watch?v=HBg6BxDoPyc",
                 "kind": "YouTube",
                 "date": "2025-04-07"
+            },
+            {
+                "url": "https:\/\/www.instagram.com\/reel\/DIJhZxZRVV8\/?utm_source=ig_web_copy_link",
+                "kind": "Insta",
+                "date": "2025-04-08"
             }
         ]
     },
@@ -85,6 +90,32 @@
                 "listPriceUSD": 1200
             }
         ],
-        "videos": []
+        "videos": [
+            {
+                "url": "https:\/\/www.youtube.com\/watch?v=oEweFf1tM4s&pp=ygUKYnJtIG1hbGlrbw%3D%3D",
+                "kind": "YouTube",
+                "date": "2025-04-08"
+            },
+            {
+                "url": "https:\/\/www.youtube.com\/watch?v=yQlmsyK6qMQ&pp=ygUKYnJtIG1hbGlrbw%3D%3D",
+                "kind": "YouTube",
+                "date": "2025-04-08"
+            },
+            {
+                "url": "https:\/\/www.youtube.com\/watch?v=3lJtdwY5puk&t=1s&pp=ygUKYnJtIG1hbGlrb9IHCQl-CQGHKiGM7w%3D%3D",
+                "kind": "YouTube",
+                "date": "2025-04-08"
+            },
+            {
+                "url": "https:\/\/www.youtube.com\/watch?v=Nch2R9zzhxk&t=530s",
+                "kind": "YouTube",
+                "date": "2025-04-08"
+            },
+            {
+                "url": "https:\/\/www.youtube.com\/watch?v=29egcF9nyCM&t=251s&pp=ygURbWFsaWtvIGJybSByZXZpZXc%3D",
+                "kind": "YouTube",
+                "date": "2025-04-08"
+            }
+        ]
     }
 ]

@@ -59,6 +59,7 @@ if ($updated) {
     if ($result === false) {
         die("Error: Failed to write to JSON file");
     }
+    usleep(50000);
 }
 
 // Get the referring URL or use a default
