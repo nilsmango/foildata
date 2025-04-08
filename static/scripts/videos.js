@@ -1,5 +1,6 @@
 async function loadVideos() {
-  const res = await fetch("/parawings.json");
+  const jsonFile = "__JSON_FILE__";
+  const res = await fetch(jsonFile);
   const parawings = await res.json();
   const videoContainer = document.getElementById("videos");
   const brandName = "__BRAND_NAME__";

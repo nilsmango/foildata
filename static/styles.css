@@ -32,10 +32,12 @@ body {
 
 h2 {
     margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 h3 {
     margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .container {
@@ -571,4 +573,42 @@ a.main-button:hover {
 .review-count {
     margin-left: 0.3em;
     font-weight: bold;
+}
+
+.review {
+    margin-bottom: 1.5rem;
+}
+
+/* review form */
+#review-form-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#review-form .form-group {
+  margin-bottom: 15px;
+}
+
+#review-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#review-form input[type="text"],
+#review-form input[type="url"],
+#review-form select,
+#review-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#review-form textarea {
+  resize: vertical;
 }
