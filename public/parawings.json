@@ -36,7 +36,16 @@
                 "kind": "Insta",
                 "date": "2025-04-08"
             }
-        ]
+        ],
+        "reviews": [
+            {
+                "userName": "Nils Mango",
+                "website": "https:\/\/nilsmango.ch",
+                "date": "2025-04-08",
+                "stars": 3,
+                "text": "No real low end, such a small wind strength window, no real de-power, extremely twitchy, stupid red ball where lines can tangle.\nPositive: very high performance, really nimble."
+            }
+            ]
     },
     {
         "name": "Maliko",
@@ -116,6 +125,7 @@
                 "kind": "YouTube",
                 "date": "2025-04-08"
             }
-        ]
+        ],
+        "reviews": []
     }
 ]

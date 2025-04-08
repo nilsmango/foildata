@@ -14,6 +14,7 @@
   --badge-active-background: #0070f3;
   --badge-active-text: #ffffff;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --star-size: 24px;
 }
 
 * {
@@ -27,6 +28,14 @@ body {
   background-color: var(--background);
   color: var(--text);
   line-height: 1.5;
+}
+
+h2 {
+    margin-top: 1rem;
+}
+
+h3 {
+    margin-top: 1rem;
 }
 
 .container {
@@ -44,7 +53,8 @@ body {
 }
 
 .card-header {
-  padding: 1.5rem;
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
   /* border-bottom: 1px solid var(--border); */
 }
 
@@ -511,4 +521,54 @@ a.main-button:hover {
         width: 120px;
         height: 120px;
     }
+}
+
+
+.stars {
+  --rating: 0;
+  --star-color: gold;
+  display: inline-block;
+  font-size: var(--star-size);
+  line-height: 1;
+  vertical-align: middle; /* Add vertical alignment */
+}
+
+.stars.small {
+  font-size: initial; /* or specify a normal size, e.g., 1rem */
+}
+
+.stars::before {
+  content: '★★★★★';
+  letter-spacing: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--star-color) calc(var(--rating) / 5 * 100%),
+    #ccc calc(var(--rating) / 5 * 100%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rating-text {
+  margin-right: 0.3em;
+  font-weight: bold;
+  font-size: var(--star-size);
+  display: inline-block;
+  vertical-align: middle; /* Add vertical alignment */
+}
+
+.rating-link {
+  color: inherit;
+  display: inline-flex; /* Use flexbox for better alignment */
+  align-items: center; /* Center align all children vertically */
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.rating-link:hover {
+  color: inherit;
+}
+
+.review-count {
+    margin-left: 0.3em;
+    font-weight: bold;
 }
