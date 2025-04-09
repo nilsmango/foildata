@@ -133,6 +133,14 @@
                 "date": "2025-04-08"
             }
         ],
-        "reviews": []
+        "reviews": [
+            {
+                "userName": "Nils Mango",
+                "website": "https://nilsmango.ch",
+                "date": "2025-04-09",
+                "stars": 4,
+                "text": "Nice low end, very small to pack down.\r\nNegative: Bar is very thin and the fabric can rip at the ends."
+            }
+        ]
     }
 ]

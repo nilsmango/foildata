@@ -18,7 +18,7 @@ async function loadDynamicReviews() {
     
     // Find the matching parawing
     const parawing = parawings.find(p => p.brandName === brandName && p.name === productName);
-    if (!parawing || !parawing.reviews) return;
+    if (!parawing || !parawing.reviews || parawing.reviews.length === 0) return;
     
     // Get the dynamic reviews container
     const dynamicReviewsContainer = document.getElementById('dynamic-reviews');
@@ -28,6 +28,8 @@ async function loadDynamicReviews() {
     const sortedReviews = parawing.reviews.sort((a, b) => 
       new Date(b.date) - new Date(a.date)
     );
+    
+    document.querySelectorAll('.empty-review').forEach(el => el.style.display = 'none');
     
     // Calculate the total number of reviews (both static and dynamic)
     const staticReviewsCount = document.querySelectorAll('.review-container .review').length;

@@ -368,13 +368,23 @@ form div {
     color: red;
     margin-left: 4px;
 }
-.size-section {
+
+.size-section, #review-form-container {
     border: 1px solid #ddd;
     border-radius: 0.5rem;
     padding: 15px;
     margin-bottom: 15px;
     position: relative;
 }
+
+/* #review-form-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
 .remove-size {
     position: absolute;
     top: 5px;
@@ -575,18 +585,11 @@ a.main-button:hover {
     font-weight: bold;
 }
 
-.review {
+.review, .empty-review {
     margin-bottom: 1.5rem;
 }
 
 /* review form */
-#review-form-container {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
 #review-form .form-group {
   margin-bottom: 15px;

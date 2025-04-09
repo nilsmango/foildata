@@ -11,7 +11,11 @@
         <div class="card">
           <div class="card-header">
             <h1 class="card-title">Boardriding Maui Maliko</h1>
-            
+            <a href="#reviews" class="rating-link">
+  <span class="rating-text"></span>
+  <span class="stars" style="--rating: ;"></span>
+  <span class="review-count"></span>
+</a>
           </div>
           <div class="card-content">
             <img src="/images/parawings/BRM-Maliko-123.jpg.webp" alt="Boardriding Maui Maliko Image" class="product-image">
@@ -93,7 +97,7 @@
             <div class="product-reviews" data-brand="Boardriding Maui" data-product="Maliko">
   <h2 id="reviews">Reviews</h2>
   <div id="dynamic-reviews"></div>
-  <div class="review-container"><p>No reviews yet.</p>  </div>
+  <div class="review-container"><p class="empty-review">No reviews yet.</p>  </div>
 </div>
 <div class="main-button small" id="add-review-btn">+ Review</div>
   <div id="review-form-container" style="display: none;">
@@ -112,7 +116,7 @@
           <option value="1">1 Star</option>
           <option value="2">2 Stars</option>
           <option value="3">3 Stars</option>
-          <option value="4">4a Stars</option>
+          <option value="4">4 Stars</option>
           <option value="5">5 Stars</option>
         </select>
       </div>
@@ -401,7 +405,7 @@ async function loadDynamicReviews() {
     
     // Find the matching parawing
     const parawing = parawings.find(p => p.brandName === brandName && p.name === productName);
-    if (!parawing || !parawing.reviews) return;
+    if (!parawing || !parawing.reviews || parawing.reviews.length === 0) return;
     
     // Get the dynamic reviews container
     const dynamicReviewsContainer = document.getElementById('dynamic-reviews');
@@ -411,6 +415,8 @@ async function loadDynamicReviews() {
     const sortedReviews = parawing.reviews.sort((a, b) => 
       new Date(b.date) - new Date(a.date)
     );
+    
+    document.querySelectorAll('.empty-review').forEach(el => el.style.display = 'none');
     
     // Calculate the total number of reviews (both static and dynamic)
     const staticReviewsCount = document.querySelectorAll('.review-container .review').length;
