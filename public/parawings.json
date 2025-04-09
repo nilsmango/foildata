@@ -52,7 +52,9 @@
                 "stars": 4,
                 "text": "It's just \r\nthe \r\ndumbest\r\nthing\r\never"
             }
-        ]
+        ],
+        "reviewsCount": 1,
+        "averageRating": 3.0
     },
     {
         "name": "Maliko",
@@ -133,15 +135,9 @@
                 "date": "2025-04-08"
             }
         ],
-        "reviews": [
-            {
-                "userName": "Nils Mango",
-                "website": "https:\/\/nilsmango.ch",
-                "date": "2025-04-09",
-                "stars": 4,
-                "text": "Nice low end, very small to pack down.\r\nNegative: Bar is very thin and the fabric can rip at the ends."
-            }
-        ]
+        "reviews": [],
+        "reviewsCount": 1,
+        "averageRating": 4.0
     },
     {
         "name": "Testwing",

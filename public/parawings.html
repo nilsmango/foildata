@@ -117,7 +117,11 @@ class ParawingsTable {
     this.minPrice = ""
     this.maxPrice = ""
     this.doubleSkinFilter = null
-    this.showDiscontinuedFilter = null // New filter for discontinued items
+    this.showDiscontinuedFilter = null
+    this.minRating = ""  // New rating filter
+    this.maxRating = ""  // New rating filter
+    this.minReviews = "" // New reviews count filter
+    this.maxReviews = "" // New reviews count filter
 
     // Sorting state
     this.sortConfig = {
@@ -133,10 +137,12 @@ class ParawingsTable {
       wingSpan: false,
       linesLengthCm: false,
       aspectRatio: false,
-      weightKg: true,
+      weightKg: false, // Changed to false as default
       doubleSkin: false,
       listPriceUSD: true,
-      discontinued: false, // New column for discontinued status
+      discontinued: false,
+      averageRating: true, // New column for rating (default to visible)
+      reviewsCount: false  // New column for reviews count
     }
 
     // Column display names
@@ -151,6 +157,8 @@ class ParawingsTable {
       doubleSkin: "Double Skin",
       listPriceUSD: "Price (USD)",
       discontinued: "Discontinued",
+      averageRating: "Rating",
+      reviewsCount: "Reviews"
     }
 
     // DOM elements
@@ -174,8 +182,9 @@ class ParawingsTable {
       doubleSkinBadges: document.querySelectorAll("#double-skin-filter .badge"),
       clearDoubleSkin: document.getElementById("clear-double-skin"),
       resultsText: document.getElementById("results-text"),
-      // We'll create this element in the init method
       discontinuedFilter: null,
+      ratingFilter: null, // New rating filter element
+      reviewsFilter: null // New reviews filter element
     }
 
     // Initialize
@@ -189,7 +198,13 @@ class ParawingsTable {
 
       // Create discontinued filter element
       this.createDiscontinuedFilterElement()
-
+      
+      // Create rating filter element
+      this.createRatingFilterElement()
+      
+      // Create reviews count filter element
+      this.createReviewsFilterElement()
+      
       // Setup event listeners
       this.setupEventListeners()
 
@@ -215,15 +230,41 @@ class ParawingsTable {
 
       // Flatten the data structure
       this.parawings = data.flatMap((parawing, parawingIndex) =>
-        parawing.sizes.map((size, sizeIndex) => ({
-          id: `${parawing.name}-${sizeIndex}`,
-          name: parawing.name,
-          brandName: parawing.brandName,
-          imageFilename: parawing.imageFilename,
-          discontinued: parawing.discontinued || false, // Default to false if not provided
-          freshlyAdded: parawing.freshlyAdded || false, // Default to false if not provided
-          ...size,
-        })),
+        parawing.sizes.map((size, sizeIndex) => {
+          // Calculate rating and reviews counts from the reviews array if they exist
+          let reviewsCount = parawing.reviewsCount || 0
+          let averageRating = parawing.averageRating || 0
+          
+          // If we have reviews in the array, add them to the existing counts
+          if (parawing.reviews && parawing.reviews.length > 0) {
+            // Calculate total stars from existing average and count
+            let totalExistingStars = averageRating * reviewsCount
+            
+            // Add stars from the reviews array
+            const newReviewsStars = parawing.reviews.reduce((sum, review) => sum + review.stars, 0)
+            
+            // Update the total count
+            const newTotalCount = reviewsCount + parawing.reviews.length
+            
+            // Calculate the new average rating
+            averageRating = (totalExistingStars + newReviewsStars) / newTotalCount
+            
+            // Update the count
+            reviewsCount = newTotalCount
+          }
+          
+          return {
+            id: `${parawing.name}-${sizeIndex}`,
+            name: parawing.name,
+            brandName: parawing.brandName,
+            imageFilename: parawing.imageFilename,
+            discontinued: parawing.discontinued || false,
+            freshlyAdded: parawing.freshlyAdded || false,
+            reviewsCount: reviewsCount,
+            averageRating: averageRating,
+            ...size,
+          }
+        })
       )
 
       this.filteredParawings = [...this.parawings]
@@ -268,6 +309,76 @@ class ParawingsTable {
 
     // Set default filter (hide discontinued by default)
     this.showDiscontinuedFilter = false
+  }
+
+  createRatingFilterElement() {
+    // Create the rating filter section
+    const filterSection = document.createElement("div")
+    filterSection.id = "rating-filter"
+    filterSection.className = "filter-section hidden"
+  
+    filterSection.innerHTML = `
+      <span class="filter-label">Rating:</span>
+        <div class="range-filter">
+          <input type="number" id="min-rating" placeholder="Min" min="1" max="5" step="0.1">
+          <span>to</span>
+          <input type="number" id="max-rating" placeholder="Max" min="1" max="5" step="0.1">
+        </div>
+    `
+  
+    // Insert it after the reviews filter
+    if (this.elements.reviewsFilter) {
+      this.elements.reviewsFilter.parentNode.insertBefore(
+        filterSection, 
+        this.elements.reviewsFilter.nextSibling
+      )
+    } else {
+      // Fallback
+      const tableContainer = document.querySelector(".table-container")
+      if (tableContainer) {
+        tableContainer.parentNode.insertBefore(filterSection, tableContainer)
+      }
+    }
+  
+    // Store references to the elements
+    this.elements.ratingFilter = filterSection
+    this.elements.minRatingInput = filterSection.querySelector("#min-rating")
+    this.elements.maxRatingInput = filterSection.querySelector("#max-rating")
+  }
+  
+  createReviewsFilterElement() {
+    // Create the reviews filter section
+    const filterSection = document.createElement("div")
+    filterSection.id = "reviews-filter"
+    filterSection.className = "filter-section hidden"
+  
+    filterSection.innerHTML = `
+      <span class="filter-label">Reviews:</span>
+      <div class="range-filter">
+        <input type="number" id="min-reviews" placeholder="Min" min="1" step="1">
+        <span>to</span>
+        <input type="number" id="max-reviews" placeholder="Max" min="1" step="1">
+      </div>
+    `
+  
+    // Insert it after the price filter
+    if (this.elements.priceFilter) {
+      this.elements.priceFilter.parentNode.insertBefore(
+        filterSection, 
+        this.elements.priceFilter.nextSibling
+      )
+    } else {
+      // Fallback
+      const tableContainer = document.querySelector(".table-container")
+      if (tableContainer) {
+        tableContainer.parentNode.insertBefore(filterSection, tableContainer)
+      }
+    }
+  
+    // Store references to the elements
+    this.elements.reviewsFilter = filterSection
+    this.elements.minReviewsInput = filterSection.querySelector("#min-reviews")
+    this.elements.maxReviewsInput = filterSection.querySelector("#max-reviews")
   }
 
   setupEventListeners() {
@@ -322,6 +433,31 @@ class ParawingsTable {
       this.maxPrice = this.elements.maxPriceInput.value
       this.applyFiltersAndSort()
     })
+    
+    // Reviews count filter inputs
+    this.elements.minReviewsInput.addEventListener("input", () => {
+      this.minReviews = this.elements.minReviewsInput.value
+      this.applyFiltersAndSort()
+    })
+
+    this.elements.maxReviewsInput.addEventListener("input", () => {
+      this.maxReviews = this.elements.maxReviewsInput.value
+      this.applyFiltersAndSort()
+    })
+    
+    
+    // Rating filter inputs
+    this.elements.minRatingInput.addEventListener("input", () => {
+      this.minRating = this.elements.minRatingInput.value
+      this.applyFiltersAndSort()
+    })
+
+    this.elements.maxRatingInput.addEventListener("input", () => {
+      this.maxRating = this.elements.maxRatingInput.value
+      this.applyFiltersAndSort()
+    })
+
+    
 
     // Double skin filter badges
     this.elements.doubleSkinBadges.forEach((badge) => {
@@ -516,6 +652,14 @@ class ParawingsTable {
     // Check if we have any discontinued products
     const hasDiscontinuedProducts = this.parawings.some((item) => item.discontinued === true)
     this.elements.discontinuedFilter.classList.toggle("hidden", !hasDiscontinuedProducts)
+    
+    // Check if we have any products with ratings
+    const hasRatings = this.parawings.some(item => item.reviewsCount > 0 && item.averageRating > 0)
+    this.elements.ratingFilter.classList.toggle("hidden", !hasRatings)
+    
+    // Check if we have any products with reviews
+    const hasReviews = this.parawings.some(item => item.reviewsCount > 0)
+    this.elements.reviewsFilter.classList.toggle("hidden", !hasReviews)
   }
 
   toggleBrandFilter(brand) {
@@ -579,6 +723,24 @@ class ParawingsTable {
 
     if (this.maxPrice !== "") {
       result = result.filter((item) => item.listPriceUSD !== null && item.listPriceUSD <= Number(this.maxPrice))
+    }
+    
+    // Apply rating range filter
+    if (this.minRating !== "") {
+      result = result.filter((item) => item.reviewsCount > 0 && item.averageRating >= Number(this.minRating))
+    }
+
+    if (this.maxRating !== "") {
+      result = result.filter((item) => item.reviewsCount > 0 && item.averageRating <= Number(this.maxRating))
+    }
+    
+    // Apply reviews count range filter
+    if (this.minReviews !== "") {
+      result = result.filter((item) => item.reviewsCount >= Number(this.minReviews))
+    }
+
+    if (this.maxReviews !== "") {
+      result = result.filter((item) => item.reviewsCount <= Number(this.maxReviews))
     }
 
     // Apply double skin filter
@@ -693,6 +855,15 @@ class ParawingsTable {
               cell.textContent = parawing.discontinued ? "Yes" : "No"
             } else if (column === "listPriceUSD") {
               cell.textContent = parawing.listPriceUSD ? `$${parawing.listPriceUSD}` : "-"
+            } else if (column === "averageRating") {
+              // Display rating as stars or dash if no reviews
+              if (parawing.reviewsCount > 0) {
+                cell.innerHTML = this.createStarRating(parawing.averageRating)
+              } else {
+                cell.textContent = "-"
+              }
+            } else if (column === "reviewsCount") {
+              cell.textContent = parawing.reviewsCount > 0 ? parawing.reviewsCount : "-"
             } else {
               cell.textContent = parawing[column] !== null ? parawing[column] : "-"
             }
@@ -735,28 +906,45 @@ class ParawingsTable {
               cell.textContent = parawing.discontinued ? "Yes" : "No"
             } else if (column === "listPriceUSD") {
               cell.textContent = parawing.listPriceUSD ? `$${parawing.listPriceUSD}` : "-"
-            } else {
-              cell.textContent = parawing[column] !== null ? parawing[column] : "-"
-            }
-            
-            row.appendChild(cell)
-          }
-        })
-      }
-      
-      this.elements.tableBody.appendChild(row)
-    })
-  }
-
-  updateResultsCount() {
-    this.elements.resultsText.textContent = `Showing ${this.filteredParawings.length} of ${this.parawings.length} parawings.`
-  }
-}
-
-// Initialize the parawings table when the DOM is loaded
-document.addEventListener("DOMContentLoaded", () => {
-  new ParawingsTable()
-})
+            } else if (column === "averageRating") {
+              // Display rating as stars or dash if no reviews
+              if (parawing.reviewsCount > 0) {
+                              cell.innerHTML = this.createStarRating(parawing.averageRating)
+                            } else {
+                              cell.textContent = "-"
+                            }
+                          } else if (column === "reviewsCount") {
+                            cell.textContent = parawing.reviewsCount > 0 ? parawing.reviewsCount : "-"
+                          } else {
+                            cell.textContent = parawing[column] !== null ? parawing[column] : "-"
+                          }
+                          
+                          row.appendChild(cell)
+                        }
+                      })
+                    }
+                    
+                    this.elements.tableBody.appendChild(row)
+                  })
+                }
+              
+                // Helper method to create star rating HTML
+                createStarRating(rating) {
+                  rating = parseFloat(rating);
+                  return `<div class="stars small" style="--rating: ${rating};">
+                            <span class="rating-number">(${rating.toFixed(1)})</span>
+                          </div>`;
+                }
+              
+                updateResultsCount() {
+                  this.elements.resultsText.textContent = `Showing ${this.filteredParawings.length} of ${this.parawings.length} parawings.`
+                }
+              }
+              
+              // Initialize the parawings table when the DOM is loaded
+              document.addEventListener("DOMContentLoaded", () => {
+                new ParawingsTable()
+              })
     </script>
 </body>
 </html>
