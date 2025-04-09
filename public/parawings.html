@@ -118,6 +118,7 @@ class ParawingsTable {
     this.minPrice = ""
     this.maxPrice = ""
     this.doubleSkinFilter = null
+    this.showDiscontinuedFilter = null // New filter for discontinued items
 
     // Sorting state
     this.sortConfig = {
@@ -136,6 +137,7 @@ class ParawingsTable {
       weightKg: true,
       doubleSkin: false,
       listPriceUSD: true,
+      discontinued: false, // New column for discontinued status
     }
 
     // Column display names
@@ -149,6 +151,7 @@ class ParawingsTable {
       weightKg: "Weight (kg)",
       doubleSkin: "Double Skin",
       listPriceUSD: "Price (USD)",
+      discontinued: "Discontinued",
     }
 
     // DOM elements
@@ -172,6 +175,8 @@ class ParawingsTable {
       doubleSkinBadges: document.querySelectorAll("#double-skin-filter .badge"),
       clearDoubleSkin: document.getElementById("clear-double-skin"),
       resultsText: document.getElementById("results-text"),
+      // We'll create this element in the init method
+      discontinuedFilter: null,
     }
 
     // Initialize
@@ -182,6 +187,9 @@ class ParawingsTable {
     try {
       // Fetch data
       await this.fetchData()
+
+      // Create discontinued filter element
+      this.createDiscontinuedFilterElement()
 
       // Setup event listeners
       this.setupEventListeners()
@@ -213,6 +221,7 @@ class ParawingsTable {
           name: parawing.name,
           brandName: parawing.brandName,
           imageFilename: parawing.imageFilename,
+          discontinued: parawing.discontinued || false, // Default to false if not provided
           ...size,
         })),
       )
@@ -221,6 +230,44 @@ class ParawingsTable {
     } catch (error) {
       throw new Error(`Failed to load parawings data: ${error.message}`)
     }
+  }
+
+  createDiscontinuedFilterElement() {
+    // Create the discontinued filter section
+    const filterSection = document.createElement("div")
+    filterSection.id = "discontinued-filter"
+    filterSection.className = "filter-section hidden"
+
+    filterSection.innerHTML = `
+      <span class="filter-label">Show Discontinued:</span>
+      <div class="badge-container">
+        <span class="badge badge-outline" data-value="true">Yes</span>
+        <span class="badge badge-outline active" data-value="false">No</span>
+        <span class="badge badge-outline hidden" id="clear-discontinued">Clear</span>
+      </div>
+    `
+
+    // Insert it after the double skin filter
+    if (this.elements.doubleSkinFilter) {
+      this.elements.doubleSkinFilter.parentNode.insertBefore(
+        filterSection, 
+        this.elements.doubleSkinFilter.nextSibling
+      )
+    } else {
+      // Fallback to inserting before the table container
+      const tableContainer = document.querySelector(".table-container")
+      if (tableContainer) {
+        tableContainer.parentNode.insertBefore(filterSection, tableContainer)
+      }
+    }
+
+    // Store references to the elements
+    this.elements.discontinuedFilter = filterSection
+    this.elements.discontinuedBadges = filterSection.querySelectorAll(".badge")
+    this.elements.clearDiscontinued = filterSection.querySelector("#clear-discontinued")
+
+    // Set default filter (hide discontinued by default)
+    this.showDiscontinuedFilter = false
   }
 
   setupEventListeners() {
@@ -301,6 +348,34 @@ class ParawingsTable {
       this.doubleSkinFilter = null
       this.elements.clearDoubleSkin.classList.add("hidden")
       this.updateDoubleSkinBadges()
+      this.applyFiltersAndSort()
+    })
+
+    // Discontinued filter badges
+    this.elements.discontinuedBadges.forEach((badge) => {
+      badge.addEventListener("click", () => {
+        const value = badge.dataset.value === "true"
+
+        if (this.showDiscontinuedFilter === value) {
+          // If already selected, clear the filter
+          this.showDiscontinuedFilter = null
+          this.elements.clearDiscontinued.classList.remove("hidden")
+        } else {
+          // Otherwise, set the filter
+          this.showDiscontinuedFilter = value 
+          this.elements.clearDiscontinued.classList.remove("hidden")
+        }
+
+        this.updateDiscontinuedBadges()
+        this.applyFiltersAndSort()
+      })
+    })
+
+    // Clear discontinued filter
+    this.elements.clearDiscontinued.addEventListener("click", () => {
+      this.showDiscontinuedFilter = null
+      this.elements.clearDiscontinued.classList.add("hidden")
+      this.updateDiscontinuedBadges()
       this.applyFiltersAndSort()
     })
   }
@@ -417,6 +492,14 @@ class ParawingsTable {
     noBadge.classList.toggle("active", this.doubleSkinFilter === false)
   }
 
+  updateDiscontinuedBadges() {
+    const yesBadge = this.elements.discontinuedFilter.querySelector('[data-value="true"]')
+    const noBadge = this.elements.discontinuedFilter.querySelector('[data-value="false"]')
+
+    yesBadge.classList.toggle("active", this.showDiscontinuedFilter === true)
+    noBadge.classList.toggle("active", this.showDiscontinuedFilter === false)
+  }
+
   updateConditionalFilters() {
     // Check if we have weight values
     const hasWeightValues = this.parawings.some((item) => item.weightKg !== null)
@@ -429,6 +512,10 @@ class ParawingsTable {
     // Check if we have double skin variety
     const hasDoubleSkinVariety = new Set(this.parawings.map((item) => item.doubleSkin)).size > 1
     this.elements.doubleSkinFilter.classList.toggle("hidden", !hasDoubleSkinVariety)
+
+    // Check if we have any discontinued products
+    const hasDiscontinuedProducts = this.parawings.some((item) => item.discontinued === true)
+    this.elements.discontinuedFilter.classList.toggle("hidden", !hasDiscontinuedProducts)
   }
 
   toggleBrandFilter(brand) {
@@ -499,6 +586,14 @@ class ParawingsTable {
       result = result.filter((item) => item.doubleSkin === this.doubleSkinFilter)
     }
 
+    // Apply discontinued filter
+    if (this.showDiscontinuedFilter !== null) {
+      // Show only discontinued if true, hide discontinued if false
+      result = result.filter((item) => 
+        this.showDiscontinuedFilter ? item.discontinued === true : item.discontinued !== true
+      )
+    }
+
     // Apply sorting
     if (this.sortConfig.key) {
       result.sort((a, b) => {
@@ -565,9 +660,34 @@ class ParawingsTable {
     
           if (column === "name") {
             cell.className = "font-medium"
-            cell.textContent = parawing.name
+            
+            // Add discontinued indication to name if needed
+            if (parawing.discontinued) {
+              const nameSpan = document.createElement("span")
+              nameSpan.textContent = parawing.name
+              
+              const discontinuedBadge = document.createElement("span")
+              discontinuedBadge.className = "discontinued-badge"
+              discontinuedBadge.textContent = "Discontinued"
+              discontinuedBadge.style.fontSize = "0.7rem"
+              discontinuedBadge.style.backgroundColor = "#ff6b6b"
+              discontinuedBadge.style.color = "white"
+              discontinuedBadge.style.padding = "0.15rem 0.2rem"
+              discontinuedBadge.style.borderRadius = "0.25rem"
+              discontinuedBadge.style.marginLeft = "0.5rem"
+              discontinuedBadge.style.verticalAlign = "baseline"
+              discontinuedBadge.style.position = "relative"
+              discontinuedBadge.style.top = "-0.15rem"
+              
+              cell.appendChild(nameSpan)
+              cell.appendChild(discontinuedBadge)
+            } else {
+              cell.textContent = parawing.name
+            }
           } else if (column === "doubleSkin") {
             cell.textContent = parawing.doubleSkin ? "Yes" : "No"
+          } else if (column === "discontinued") {
+            cell.textContent = parawing.discontinued ? "Yes" : "No"
           } else if (column === "listPriceUSD") {
             cell.textContent = parawing.listPriceUSD ? `$${parawing.listPriceUSD}` : "-"
           } else {
@@ -592,8 +712,6 @@ class ParawingsTable {
 document.addEventListener("DOMContentLoaded", () => {
   new ParawingsTable()
 })
-
-
     </script>
 </body>
 </html>
