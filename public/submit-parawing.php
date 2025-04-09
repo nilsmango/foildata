@@ -39,7 +39,8 @@ $newParawing = [
     'website' => !empty($_POST['website']) ? $_POST['website'] : null,
     'sizes' => [],
     'videos' => [],
-    'reviews' => []
+    'reviews' => [],
+    'freshlyAdded' => true
 ];
 
 // Handle file upload if present
@@ -88,8 +89,10 @@ function mergeParawingAttributes($existingParawing, $newParawing) {
         'imageFilename' => $newParawing['imageFilename'] ?? $existingParawing['imageFilename'],
         'website' => !empty($newParawing['website']) ? $newParawing['website'] : $existingParawing['website'],
         'sizes' => array_merge($existingParawing['sizes'], $newParawing['sizes']),
-        'reviews' => array_merge($existingParawing['reviews'], $newParawing['reviews']),
-        'videos' => array_merge($existingParawing['videos'], $newParawing['videos']),
+        'reviews' => $newParawing['reviews'] ? array_merge($existingParawing['reviews'], $newParawing['reviews']) : $existingParawing['reviews'],
+        'videos' => $newParawing['videos'] ? array_merge($existingParawing['videos'], $newParawing['videos']) : $existingParawing['videos'],
+        // freshly added should remain true
+        'freshlyAdded' => $existingParawing['freshlyAdded'],
     ];
 }
 

@@ -119,6 +119,7 @@ class ParawingsTable {
           brandName: parawing.brandName,
           imageFilename: parawing.imageFilename,
           discontinued: parawing.discontinued || false, // Default to false if not provided
+          freshlyAdded: parawing.freshlyAdded || false, // Default to false if not provided
           ...size,
         })),
       )
@@ -545,58 +546,103 @@ class ParawingsTable {
 
     this.filteredParawings.forEach((parawing) => {
       const row = document.createElement("tr")
-      const link = document.createElement("a")
-    
-      link.href = `/brands/${parawing.brandName.replace(/\s+/g, "-").toLowerCase()}/parawings/${parawing.name.replace(/\s+/g, "-").toLowerCase()}.html`;
-      link.className = "row-link"
-      link.style.display = "contents" // Ensures the whole row is clickable
-    
-      Object.keys(this.visibleColumns).forEach((column) => {
-        if (this.visibleColumns[column]) {
-          const cell = document.createElement("td")
-    
-          if (column === "name") {
-            cell.className = "font-medium"
+      
+      // Only create link if not freshlyAdded
+      if (!parawing.freshlyAdded) {
+        const link = document.createElement("a")
+        link.href = `/brands/${parawing.brandName.replace(/\s+/g, "-").toLowerCase()}/parawings/${parawing.name.replace(/\s+/g, "-").toLowerCase()}.html`;
+        link.className = "row-link"
+        link.style.display = "contents" // Ensures the whole row is clickable
+        
+        // Create cells inside the link
+        Object.keys(this.visibleColumns).forEach((column) => {
+          if (this.visibleColumns[column]) {
+            const cell = document.createElement("td")
             
-            // Add discontinued indication to name if needed
-            if (parawing.discontinued) {
+            if (column === "name") {
+              cell.className = "font-medium"
+              
+              // Add discontinued indication to name if needed
+              if (parawing.discontinued) {
+                const nameSpan = document.createElement("span")
+                nameSpan.textContent = parawing.name
+                
+                const discontinuedBadge = document.createElement("span")
+                discontinuedBadge.className = "discontinued-badge"
+                discontinuedBadge.textContent = "Discontinued"
+                discontinuedBadge.style.fontSize = "0.7rem"
+                discontinuedBadge.style.backgroundColor = "#ff6b6b"
+                discontinuedBadge.style.color = "white"
+                discontinuedBadge.style.padding = "0.15rem 0.2rem"
+                discontinuedBadge.style.borderRadius = "0.25rem"
+                discontinuedBadge.style.marginLeft = "0.5rem"
+                discontinuedBadge.style.verticalAlign = "baseline"
+                discontinuedBadge.style.position = "relative"
+                discontinuedBadge.style.top = "-0.15rem"
+                
+                cell.appendChild(nameSpan)
+                cell.appendChild(discontinuedBadge)
+              } else {
+                cell.textContent = parawing.name
+              }
+            } else if (column === "doubleSkin") {
+              cell.textContent = parawing.doubleSkin ? "Yes" : "No"
+            } else if (column === "discontinued") {
+              cell.textContent = parawing.discontinued ? "Yes" : "No"
+            } else if (column === "listPriceUSD") {
+              cell.textContent = parawing.listPriceUSD ? `$${parawing.listPriceUSD}` : "-"
+            } else {
+              cell.textContent = parawing[column] !== null ? parawing[column] : "-"
+            }
+            
+            link.appendChild(cell)
+          }
+        })
+        
+        row.appendChild(link)
+      } else {
+        // For freshlyAdded items, create cells directly in the row (no link)
+        Object.keys(this.visibleColumns).forEach((column) => {
+          if (this.visibleColumns[column]) {
+            const cell = document.createElement("td")
+            
+            if (column === "name") {
+              cell.className = "font-medium"
+              
               const nameSpan = document.createElement("span")
               nameSpan.textContent = parawing.name
               
-              const discontinuedBadge = document.createElement("span")
-              discontinuedBadge.className = "discontinued-badge"
-              discontinuedBadge.textContent = "Discontinued"
-              discontinuedBadge.style.fontSize = "0.7rem"
-              discontinuedBadge.style.backgroundColor = "#ff6b6b"
-              discontinuedBadge.style.color = "white"
-              discontinuedBadge.style.padding = "0.15rem 0.2rem"
-              discontinuedBadge.style.borderRadius = "0.25rem"
-              discontinuedBadge.style.marginLeft = "0.5rem"
-              discontinuedBadge.style.verticalAlign = "baseline"
-              discontinuedBadge.style.position = "relative"
-              discontinuedBadge.style.top = "-0.15rem"
+              const processingBadge = document.createElement("span")
+              processingBadge.className = "processing-badge"
+              processingBadge.textContent = "Pending"
+              processingBadge.style.fontSize = "0.5rem"
+              processingBadge.style.backgroundColor = "#FFF033"
+              processingBadge.style.color = "black"
+              processingBadge.style.padding = "0.15rem 0.2rem"
+              processingBadge.style.borderRadius = "0.25rem"
+              processingBadge.style.marginLeft = "0.25rem"
+              processingBadge.style.verticalAlign = "baseline"
+              processingBadge.style.position = "relative"
+              processingBadge.style.top = "-0.35rem"
               
               cell.appendChild(nameSpan)
-              cell.appendChild(discontinuedBadge)
+              cell.appendChild(processingBadge)
+            } else if (column === "doubleSkin") {
+              cell.textContent = parawing.doubleSkin ? "Yes" : "No"
+            } else if (column === "discontinued") {
+              cell.textContent = parawing.discontinued ? "Yes" : "No"
+            } else if (column === "listPriceUSD") {
+              cell.textContent = parawing.listPriceUSD ? `$${parawing.listPriceUSD}` : "-"
             } else {
-              cell.textContent = parawing.name
+              cell.textContent = parawing[column] !== null ? parawing[column] : "-"
             }
-          } else if (column === "doubleSkin") {
-            cell.textContent = parawing.doubleSkin ? "Yes" : "No"
-          } else if (column === "discontinued") {
-            cell.textContent = parawing.discontinued ? "Yes" : "No"
-          } else if (column === "listPriceUSD") {
-            cell.textContent = parawing.listPriceUSD ? `$${parawing.listPriceUSD}` : "-"
-          } else {
-            cell.textContent = parawing[column] !== null ? parawing[column] : "-"
+            
+            row.appendChild(cell)
           }
-    
-          row.appendChild(cell)
-        }
-      })
-    
-      link.appendChild(row)
-      this.elements.tableBody.appendChild(link)
+        })
+      }
+      
+      this.elements.tableBody.appendChild(row)
     })
   }
 
