@@ -73,7 +73,7 @@ try {
     }
     
     if (!$parawingFound) {
-        throw new Exception('Parawing not found');
+        throw new Exception('Product not found');
     }
     
     // Encode the updated array back to JSON
