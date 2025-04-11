@@ -44,6 +44,7 @@ h3 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  min-height: calc(100vh - 7.3125rem);
 }
 
 /* Card Styles */
@@ -612,4 +613,140 @@ a.main-button:hover {
 
 #review-form textarea {
   resize: vertical;
+}
+
+/* header */
+header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* logo */
+
+.logo {
+  /* margin-top: -2.5em; */
+  text-decoration: none;
+}
+
+.logo h1 {
+  font-size: 3rem;
+  color: var(--text);
+  position: relative;
+  /* line-height: 4rem; */
+  font-weight: 400;
+}
+
+.iii {
+    letter-spacing: -.13rem;
+    font-weight: 800;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+
+/* Navigation */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.25rem;
+  padding: 0.5rem 0;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-item a:hover {
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='wave-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 40 7'%3E%3Cstyle type='text/css'%3E.wave{animation:shift 3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-40px);}}%3C/style%3E%3Cpath fill='none' stroke='%230070f3' stroke-width='2' class='wave' d='M0,3.5 c 10,0,10,-6,20,-6 s 10,6,20,6 c 10,0,10,-6,20,-6 s 10,6,20,6'/%3E%3C/svg%3E");
+    background-size: 38px 30px;
+}
+
+/* Sine wave animation */
+.active {
+    background-position: 0 95%;
+    background-repeat: repeat-x;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='wave-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.wave{animation:shift 2s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%230070f3' stroke-width='2' class='wave' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-size: 19px 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav {
+    margin-top: 0.75rem;
+    width: 100%;
+  }
+  
+  .nav-list {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+/* Footer */
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem 1.5rem;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto; /* Centers the footer-nav */
+}
+
+.footer-nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.footer-nav-item {
+    position: relative;
+}
+
+.footer-nav-item a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-nav-item a:hover {
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='wave-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 40 7'%3E%3Cstyle type='text/css'%3E.wave{animation:shift 3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-40px);}}%3C/style%3E%3Cpath fill='none' stroke='%230070f3' stroke-width='1.5' class='wave' d='M0,3.5 c 10,0,10,-6,20,-6 s 10,6,20,6 c 10,0,10,-6,20,-6 s 10,6,20,6'/%3E%3C/svg%3E");
+    background-size: 38px 30px;
+}
+
+.footer-nav .active {
+    background-position: 0 95%;
+    background-repeat: repeat-x;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='wave-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.wave{animation:shift 2s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%230070f3' stroke-width='1.5' class='wave' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-size: 19px 12px;
+}
+
+.copyright {
+    font-size: .75rem;
+    line-height: 1.1rem;
+    margin-top: 0.25rem;
 }
