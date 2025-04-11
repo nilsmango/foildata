@@ -20,7 +20,11 @@
           </div>
           <div class="column-visibility">
             <button id="column-toggle-btn" class="btn btn-outline">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M3 9h18M3 15h18M9 3v18M15 3v18"></path></svg>
+                <svg width="16" height="10" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="icon" style="transform: rotate(90deg);" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="0" y1="5" x2="24" y2="5"  />
+                  <line x1="0" y1="12" x2="24" y2="12" />
+                  <line x1="0" y1="19" x2="24" y2="19"  />
+                </svg>
               <span>Columns</span>
             </button>
             <div id="column-dropdown" class="table-dropdown-content hidden">
@@ -552,8 +556,8 @@ class ParawingsTable {
             sortIcon.className = "sort-icon"
             sortIcon.innerHTML =
               this.sortConfig.direction === "asc"
-                ? "&#9650;" // Up arrow
-                : "&#9660;" // Down arrow
+                ? "▲" // Up arrow
+                : "▼" // Down arrow
             headerContent.appendChild(sortIcon)
           }
     
@@ -787,6 +791,7 @@ class ParawingsTable {
     this.filteredParawings = result
     this.renderTable()
     this.updateResultsCount()
+    this.createTableHeaders()
   }
 
   renderTable() {
@@ -858,7 +863,7 @@ class ParawingsTable {
             } else if (column === "averageRating") {
               // Display rating as stars or dash if no reviews
               if (parawing.reviewsCount > 0) {
-                cell.innerHTML = this.createStarRating(parawing.averageRating)
+                cell.textContent = parawing.averageRating.toFixed(1);
               } else {
                 cell.textContent = "-"
               }
@@ -909,7 +914,7 @@ class ParawingsTable {
             } else if (column === "averageRating") {
               // Display rating as stars or dash if no reviews
               if (parawing.reviewsCount > 0) {
-                              cell.innerHTML = this.createStarRating(parawing.averageRating)
+                              cell.textContent = parawing.averageRating.toFixed(1);
                             } else {
                               cell.textContent = "-"
                             }
@@ -927,15 +932,6 @@ class ParawingsTable {
                     this.elements.tableBody.appendChild(row)
                   })
                 }
-              
-                // Helper method to create star rating HTML
-                createStarRating(rating) {
-                  rating = parseFloat(rating);
-                  return `<div class="stars small" style="--rating: ${rating};">
-                            <span class="rating-number">(${rating.toFixed(1)})</span>
-                          </div>`;
-                }
-              
                 updateResultsCount() {
                   this.elements.resultsText.textContent = `Showing ${this.filteredParawings.length} of ${this.parawings.length} parawings.`
                 }

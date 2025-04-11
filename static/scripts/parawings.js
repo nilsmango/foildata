@@ -450,8 +450,8 @@ class ParawingsTable {
             sortIcon.className = "sort-icon"
             sortIcon.innerHTML =
               this.sortConfig.direction === "asc"
-                ? "&#9650;" // Up arrow
-                : "&#9660;" // Down arrow
+                ? "▲" // Up arrow
+                : "▼" // Down arrow
             headerContent.appendChild(sortIcon)
           }
     
@@ -685,6 +685,7 @@ class ParawingsTable {
     this.filteredParawings = result
     this.renderTable()
     this.updateResultsCount()
+    this.createTableHeaders()
   }
 
   renderTable() {
@@ -756,7 +757,7 @@ class ParawingsTable {
             } else if (column === "averageRating") {
               // Display rating as stars or dash if no reviews
               if (parawing.reviewsCount > 0) {
-                cell.innerHTML = this.createStarRating(parawing.averageRating)
+                cell.textContent = parawing.averageRating.toFixed(1);
               } else {
                 cell.textContent = "-"
               }
@@ -807,7 +808,7 @@ class ParawingsTable {
             } else if (column === "averageRating") {
               // Display rating as stars or dash if no reviews
               if (parawing.reviewsCount > 0) {
-                              cell.innerHTML = this.createStarRating(parawing.averageRating)
+                              cell.textContent = parawing.averageRating.toFixed(1);
                             } else {
                               cell.textContent = "-"
                             }
@@ -825,15 +826,6 @@ class ParawingsTable {
                     this.elements.tableBody.appendChild(row)
                   })
                 }
-              
-                // Helper method to create star rating HTML
-                createStarRating(rating) {
-                  rating = parseFloat(rating);
-                  return `<div class="stars small" style="--rating: ${rating};">
-                            <span class="rating-number">(${rating.toFixed(1)})</span>
-                          </div>`;
-                }
-              
                 updateResultsCount() {
                   this.elements.resultsText.textContent = `Showing ${this.filteredParawings.length} of ${this.parawings.length} parawings.`
                 }

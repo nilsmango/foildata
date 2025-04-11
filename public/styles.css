@@ -316,9 +316,9 @@ tr:last-child td {
 }
 
 .sort-icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
+  /* display: inline-block; */
+  /* width: 16px;
+  height: 16px; */
   margin-left: 0.25rem;
   vertical-align: middle;
 }
@@ -329,8 +329,6 @@ tr:last-child td {
 }
 
 .icon {
-  width: 16px;
-  height: 16px;
   margin-right: 0.25rem;
 }
 
