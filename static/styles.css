@@ -17,6 +17,28 @@
   --star-size: 24px;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+      --primary: #0864CF;
+      --primary-hover: #074597;
+      --background: #000000;
+      --card-background: #000000;
+      --text: #DADADA;
+      --text-muted: #888888;
+      --border: #2C302E;
+      --input-border: #d1d5db;
+      --input-background: #000000;
+      --badge-background: #2C302E;
+      --badge-text: #AB8A81;
+      --badge-active-background: #0864CF;
+      --badge-active-text: #ffffff;
+      --shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.9), 0 2px 4px -1px rgba(255, 255, 255, 0.94);
+  }
+  
+  input {
+      color: #DADADA;
+    }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -427,7 +449,7 @@ form div {
 a.main-button {
   display: inline-block;
   padding: 0.75rem 1.25rem;
-  background-color: var(--button-background, #0070f3); /* Adjust color */
+  background-color: var(--primary);
   color: #fff;
   font-size: 1rem;
   text-align: center;
@@ -446,7 +468,7 @@ a.main-button.small {
 
 /* Hover effect */
 a.main-button:hover {
-  background-color: var(--button-hover, #005bb5); /* Adjust color */
+  background-color: var(--primary-hover); 
 }
 
 #adder {
@@ -674,7 +696,7 @@ header {
 }
 
 /* Sine wave animation */
-.active {
+.nav-active {
     background-position: 0 95%;
     background-repeat: repeat-x;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='wave-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.wave{animation:shift 2s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%230070f3' stroke-width='2' class='wave' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
@@ -738,7 +760,7 @@ footer {
     background-size: 38px 30px;
 }
 
-.footer-nav .active {
+.footer-nav .nav-active {
     background-position: 0 95%;
     background-repeat: repeat-x;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='wave-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.wave{animation:shift 2s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%230070f3' stroke-width='1.5' class='wave' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
