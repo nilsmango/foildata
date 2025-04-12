@@ -780,6 +780,7 @@ class ParawingsTable {
             
             if (column === "name") {
               cell.className = "font-medium"
+              cell.style.position = "relative"  // Make the cell a positioning context
               
               const nameSpan = document.createElement("span")
               nameSpan.textContent = parawing.name
@@ -790,12 +791,14 @@ class ParawingsTable {
               processingBadge.style.fontSize = "0.5rem"
               processingBadge.style.backgroundColor = "#FFF033"
               processingBadge.style.color = "black"
-              processingBadge.style.padding = "0.15rem 0.2rem"
-              processingBadge.style.borderRadius = "0.25rem"
-              processingBadge.style.marginLeft = "0.25rem"
-              processingBadge.style.verticalAlign = "baseline"
-              processingBadge.style.position = "relative"
-              processingBadge.style.top = "-0.35rem"
+              processingBadge.style.padding = "0.05rem 0.1rem"
+              // processingBadge.style.borderRadius = "0.5rem"
+              
+              // Position over the text
+              processingBadge.style.position = "absolute"
+              processingBadge.style.top = "4%"
+              processingBadge.style.left = "1rem"
+              // processingBadge.style.transform = "translateX(-50%)"
               
               cell.appendChild(nameSpan)
               cell.appendChild(processingBadge)
