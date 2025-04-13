@@ -119,11 +119,10 @@
   <div id="dynamic-reviews"></div>
   <div class="review-container">  <div class="review" data-user="Nils Mango">
     <div class="review-header">
-      <p><a href="https://nilsmango.ch" class="user-website" rel="noopener" target="_blank"><span class="user-name">Nils Mango</span></a></p>
-      
-      <p><div class="stars small" style="--rating: 4;"></div></p>
+      <p><a href="https://nilsmango.ch" class="user-website" rel="noopener" target="_blank"><span class="user-name">Nils Mango</span></a><div class="stars small" style="--rating: 4;"></div></p>
+        </div>
       <div class="review-date">April 9, 2025</div>
-    </div>
+    
     <p class="review-text">Nice low end, very small to pack down.<br>Negative: Bar is very thin and the fabric can rip at the ends.</p>
   </div>  </div>
 </div>
@@ -520,10 +519,9 @@ async function loadDynamicReviews() {
       reviewsHTML += `
         <div class="review" data-user="${review.userName}">
           <div class="review-header">
-            <p>${websiteLinkStart}<span class="user-name">${review.userName}</span>${websiteLinkEnd}</p>
-            <p>${stars}</p>
+            <p>${websiteLinkStart}<span class="user-name">${review.userName}</span>${websiteLinkEnd}${stars}</p>
+            </div>
             <div class="review-date">${formattedDate}</div>
-          </div>
           <p class="review-text">${textHTML}</p>
         </div>
       `;

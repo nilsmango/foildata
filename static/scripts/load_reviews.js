@@ -95,10 +95,9 @@ async function loadDynamicReviews() {
       reviewsHTML += `
         <div class="review" data-user="${review.userName}">
           <div class="review-header">
-            <p>${websiteLinkStart}<span class="user-name">${review.userName}</span>${websiteLinkEnd}</p>
-            <p>${stars}</p>
+            <p>${websiteLinkStart}<span class="user-name">${review.userName}</span>${websiteLinkEnd}${stars}</p>
+            </div>
             <div class="review-date">${formattedDate}</div>
-          </div>
           <p class="review-text">${textHTML}</p>
         </div>
       `;

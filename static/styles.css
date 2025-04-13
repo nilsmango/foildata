@@ -581,6 +581,7 @@ a.main-button:hover {
 
 .stars.small {
   font-size: initial; /* or specify a normal size, e.g., 1rem */
+  margin-top: -1rem;
 }
 
 .stars::before {
@@ -621,6 +622,13 @@ a.main-button:hover {
 
 .review, .empty-review {
     margin-bottom: 1.5rem;
+}
+
+.review-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: -0.8rem;
 }
 
 /* review form */

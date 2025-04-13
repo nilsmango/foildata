@@ -83,11 +83,10 @@
   <div id="dynamic-reviews"></div>
   <div class="review-container">  <div class="review" data-user="Nils Mango">
     <div class="review-header">
-      <p><a href="https://nilsmango.ch" class="user-website" rel="noopener" target="_blank"><span class="user-name">Nils Mango</span></a></p>
-      
-      <p><div class="stars small" style="--rating: 3;"></div></p>
+      <p><a href="https://nilsmango.ch" class="user-website" rel="noopener" target="_blank"><span class="user-name">Nils Mango</span></a><div class="stars small" style="--rating: 3;"></div></p>
+        </div>
       <div class="review-date">April 8, 2025</div>
-    </div>
+    
     <p class="review-text">No real low end, such a small wind strength window, no real de-power, extremely twitchy, stupid red ball where lines can tangle.<br>Positive: very high performance, really nimble.</p>
   </div>  </div>
 </div>
@@ -484,10 +483,9 @@ async function loadDynamicReviews() {
       reviewsHTML += `
         <div class="review" data-user="${review.userName}">
           <div class="review-header">
-            <p>${websiteLinkStart}<span class="user-name">${review.userName}</span>${websiteLinkEnd}</p>
-            <p>${stars}</p>
+            <p>${websiteLinkStart}<span class="user-name">${review.userName}</span>${websiteLinkEnd}${stars}</p>
+            </div>
             <div class="review-date">${formattedDate}</div>
-          </div>
           <p class="review-text">${textHTML}</p>
         </div>
       `;
