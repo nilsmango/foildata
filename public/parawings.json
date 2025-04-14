@@ -3,7 +3,7 @@
         "name": "Roger",
         "brandName": "ENSIS",
         "imageFilename": "DSC03057_by-Tobias-Meier.webp",
-        "website": "https://ensis.surf/product/roger/",
+        "website": "https:\/\/ensis.surf\/product\/roger\/",
         "sizes": [
             {
                 "areaSqM": 3,
@@ -17,22 +17,22 @@
         ],
         "videos": [
             {
-                "url": "https://www.instagram.com/reel/DEHSDqQoJKe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                "url": "https:\/\/www.instagram.com\/reel\/DEHSDqQoJKe\/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
                 "date": "2025-04-03",
                 "kind": "Insta"
             },
             {
-                "url": "https://www.youtube.com/watch?v=9SrjRrQCFmA",
+                "url": "https:\/\/www.youtube.com\/watch?v=9SrjRrQCFmA",
                 "kind": "YouTube",
                 "date": "2025-04-07"
             },
             {
-                "url": "https://www.youtube.com/watch?v=HBg6BxDoPyc",
+                "url": "https:\/\/www.youtube.com\/watch?v=HBg6BxDoPyc",
                 "kind": "YouTube",
                 "date": "2025-04-07"
             },
             {
-                "url": "https://www.instagram.com/reel/DIJhZxZRVV8/?utm_source=ig_web_copy_link",
+                "url": "https:\/\/www.instagram.com\/reel\/DIJhZxZRVV8\/?utm_source=ig_web_copy_link",
                 "kind": "Insta",
                 "date": "2025-04-08"
             }
@@ -40,7 +40,7 @@
         "reviews": [
             {
                 "userName": "Pims Pango",
-                "website": "https://nilsmango.ch",
+                "website": "https:\/\/nilsmango.ch",
                 "date": "2025-04-03",
                 "stars": 5,
                 "text": "This is a dynamic test review."
@@ -60,7 +60,7 @@
         "name": "Maliko",
         "brandName": "Boardriding Maui",
         "imageFilename": "BRM-Maliko-123.jpg.webp",
-        "website": "https://boardridingmaui.com/pages/parawing",
+        "website": "https:\/\/boardridingmaui.com\/pages\/parawing",
         "sizes": [
             {
                 "areaSqM": 1.8,
@@ -110,27 +110,27 @@
         ],
         "videos": [
             {
-                "url": "https://www.youtube.com/watch?v=oEweFf1tM4s&pp=ygUKYnJtIG1hbGlrbw%3D%3D",
+                "url": "https:\/\/www.youtube.com\/watch?v=oEweFf1tM4s&pp=ygUKYnJtIG1hbGlrbw%3D%3D",
                 "kind": "YouTube",
                 "date": "2025-04-08"
             },
             {
-                "url": "https://www.youtube.com/watch?v=yQlmsyK6qMQ&pp=ygUKYnJtIG1hbGlrbw%3D%3D",
+                "url": "https:\/\/www.youtube.com\/watch?v=yQlmsyK6qMQ&pp=ygUKYnJtIG1hbGlrbw%3D%3D",
                 "kind": "YouTube",
                 "date": "2025-04-08"
             },
             {
-                "url": "https://www.youtube.com/watch?v=3lJtdwY5puk&t=1s&pp=ygUKYnJtIG1hbGlrb9IHCQl-CQGHKiGM7w%3D%3D",
+                "url": "https:\/\/www.youtube.com\/watch?v=3lJtdwY5puk&t=1s&pp=ygUKYnJtIG1hbGlrb9IHCQl-CQGHKiGM7w%3D%3D",
                 "kind": "YouTube",
                 "date": "2025-04-08"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Nch2R9zzhxk&t=530s",
+                "url": "https:\/\/www.youtube.com\/watch?v=Nch2R9zzhxk&t=530s",
                 "kind": "YouTube",
                 "date": "2025-04-08"
             },
             {
-                "url": "https://www.youtube.com/watch?v=29egcF9nyCM&t=251s&pp=ygURbWFsaWtvIGJybSByZXZpZXc%3D",
+                "url": "https:\/\/www.youtube.com\/watch?v=29egcF9nyCM&t=251s&pp=ygURbWFsaWtvIGJybSByZXZpZXc%3D",
                 "kind": "YouTube",
                 "date": "2025-04-08"
             }
@@ -161,6 +161,26 @@
                 "weightKg": 2,
                 "doubleSkin": false,
                 "listPriceUSD": 450
+            }
+        ],
+        "videos": [],
+        "reviews": [],
+        "freshlyAdded": true
+    },
+    {
+        "name": "test",
+        "brandName": "Test",
+        "imageFilename": null,
+        "website": null,
+        "sizes": [
+            {
+                "areaSqM": 2,
+                "wingSpan": null,
+                "linesLengthCm": null,
+                "aspectRatio": null,
+                "weightKg": null,
+                "doubleSkin": false,
+                "listPriceUSD": null
             }
         ],
         "videos": [],

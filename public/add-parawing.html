@@ -150,18 +150,36 @@ async function initializeParawingForm() {
     // Add initial size section
     addSizeSection();
 
+    // Store existing parawings data
+    let existingParawings = [];
+
     try {
         // Fetch existing brands from brands.json
-        const response = await fetch('brands.json');
-        const brands = await response.json();
+        const brandsResponse = await fetch('brands.json');
+        const brands = await brandsResponse.json();
         
         // Create a Set of existing brand names (normalized)
         const existingBrands = new Set(
             brands.map(brand => brand.name.toLowerCase().replace(/\s/g, ''))
         );
         
+        // Fetch existing parawings from parawings.json
+        const parawingsResponse = await fetch('parawings.json');
+        existingParawings = await parawingsResponse.json();
+
         const brandInput = document.getElementById('brand-name');
+        const parawingInput = document.getElementById('parawing-name');
         const brandDropdown = document.getElementById('brand-dropdown');
+        
+        // Create error message element for parawing name
+        const parawingInputParent = parawingInput.parentElement;
+        const errorMessageElement = document.createElement('div');
+        errorMessageElement.className = 'error-message';
+        errorMessageElement.style.color = 'red';
+        errorMessageElement.style.fontSize = '0.8rem';
+        errorMessageElement.style.marginTop = '5px';
+        errorMessageElement.style.display = 'none';
+        parawingInputParent.appendChild(errorMessageElement);
         
         // Add size button functionality
         document.getElementById('add-size').addEventListener('click', addSizeSection);
@@ -185,6 +203,7 @@ async function initializeParawingForm() {
                 div.addEventListener('click', () => {
                     brandInput.value = brand.name;
                     brandDropdown.classList.remove('show');
+                    validateParawingName(); // Check for duplicates when brand is selected
                 });
                 brandDropdown.appendChild(div);
             });
@@ -199,12 +218,55 @@ async function initializeParawingForm() {
                 brandDropdown.classList.remove('show');
             }
         });
+
+        // Function to check if parawing name already exists for the selected brand
+        function validateParawingName() {
+            const brandName = brandInput.value.trim();
+            const parawingName = parawingInput.value.trim();
+            
+            if (brandName && parawingName) {
+                const isDuplicate = existingParawings.some(parawing => 
+                    parawing.brandName.toLowerCase() === brandName.toLowerCase() && 
+                    parawing.name.toLowerCase() === parawingName.toLowerCase()
+                );
+                
+                if (isDuplicate) {
+                    parawingInput.setCustomValidity('A parawing with this name already exists for this brand.');
+                    parawingInput.classList.add('error');
+                    errorMessageElement.textContent = 'This parawing name already exists for this brand. Please edit the existing one or choose a different name.';
+                    errorMessageElement.style.display = 'block';
+                } else {
+                    parawingInput.setCustomValidity('');
+                    parawingInput.classList.remove('error');
+                    errorMessageElement.style.display = 'none';
+                }
+            } else {
+                // Clear error state if fields are empty
+                parawingInput.setCustomValidity('');
+                parawingInput.classList.remove('error');
+                errorMessageElement.style.display = 'none';
+            }
+        }
+
+        // Add event listeners to check for duplicate parawing names
+        parawingInput.addEventListener('input', validateParawingName);
+        brandInput.addEventListener('change', validateParawingName);
         
         // Form submission handler
         document.getElementById('parawing-form').addEventListener('submit', async function(event) {
             event.preventDefault();
-            const inputName = brandInput.value.toLowerCase().replace(/\s/g, '');
             
+            // Validate parawing name before submission
+            validateParawingName();
+            
+            // Check if the form is valid (including our custom validation)
+            if (!this.checkValidity()) {
+                // If the form has validation errors, show them and stop submission
+                this.reportValidity();
+                return;
+            }
+
+            const inputName = brandInput.value.toLowerCase().replace(/\s/g, '');
             const formData = new FormData(this);
             
             try {
@@ -239,8 +301,8 @@ async function initializeParawingForm() {
             }
         });
     } catch (error) {
-        console.error('Failed to fetch brands:', error);
-        alert('Unable to load existing brands. Please try again later.');
+        console.error('Failed to fetch data:', error);
+        alert('Unable to load existing data. Please try again later.');
     }
 }
 
