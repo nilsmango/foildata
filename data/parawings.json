@@ -3,6 +3,7 @@
         "name": "Roger",
         "brandName": "ENSIS",
         "imageFilename": "DSC03057_by-Tobias-Meier.webp",
+        "discontinued": false,
         "website": "https://ensis.surf/product/roger/",
         "sizes": [
             {
