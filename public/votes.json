@@ -1,5 +1,135 @@
-{
-    "boards": 0,
-    "foils": 0,
-    "map": 1
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color"
+      content="#fff" media="(prefers-color-scheme: light)">
+      <meta name="theme-color" content="#171717"
+         media="(prefers-color-scheme: dark)">
+
+
+  <title>project7III - Making things.</title>
+  <!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/favi/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favi/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favi/favicon-16x16.png">
+<link rel="manifest" href="/favi/site.webmanifest">
+<!-- RSS Feed -->
+
+<!-- Share things -->
+
+<meta property="og:title" content="project7III - Making things.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https:&#x2F;&#x2F;project7iii.com">
+  <meta property="og:image" content="https:&#x2F;&#x2F;project7iii.com/ogpic.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;project7iii.com/style.css">
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      
+
+    <header>
+      <div class="logo">
+        <a href="https:&#x2F;&#x2F;project7iii.com">
+        <h1>7III</h1>
+        <h2>project7III</h2>
+      </a>
+      </div>
+      
+        <div class="nav">
+            <ul class="nav-list">
+            
+            
+                
+                <li class="nav-item"><a  href="&#x2F;contact">contact</a></li>
+            
+                
+                <li class="nav-item"><a  href="&#x2F;apps">apps</a></li>
+            
+                
+                <li class="nav-item"><a  href="&#x2F;projects">projects</a></li>
+            
+                
+                <li class="nav-item"><a  href="&#x2F;shop">shop</a></li>
+            
+
+            
+            </ul>
+          </div>
+    </header>
+    <div class="search-container">
+      <input id="search" type="search" placeholder="Search project7III">
+      <div class="search-results">
+          <div class="search-results__items"></div>
+          <hr>
+      </div>
+    </div>
+    
+      
+    
+        <h1>404: Page not found</h1>
+    <p>The project or page you're looking for cannot be found!<br>
+        Have some 404 project7III ASCII text art instead:
+    </p>
+    <pre>
+        
+             ________    __    __    __         
+           /\_____   /\ /\  \ /\  \ /\  \    
+           \/____/  / / \ \  \\ \  \\ \  \   
+                /  / /   \ \  \\ \  \\ \  \  
+               /  / /     \ \  \\ \  \\ \  \ 
+              /__/ /       \ \__\\ \__\\ \__\
+              \__\/         \/__/ \/__/ \/__/
+                                         
+                 p r o j e c t 7 I I I 
+ 
+                          404
+                  404 404 404 404 404
+     01110000 01110010 01101111 01101010 01100101 
+ 01100011 01110100 00110111 01001001 01001001 01001001 
+
+                       █  ▄▀▄ █
+                       █▄ ▀▄▀ █▄
+    </pre>
+
+
+    </section>
+    <footer>
+        <nav class="footernav">
+          <ul class="footernav-list">
+          
+          
+            <li class="footernav-item"><a   href="&#x2F;privacy">privacy policy </a> </li>
+            
+          
+            <li class="footernav-item"><a   href="&#x2F;contact">contact </a> </li>
+            
+          
+            <li class="footernav-item"><a  target="_blank" rel="noopener" href="https:&#x2F;&#x2F;twitter.com&#x2F;project7iii">X </a> </li>
+            
+          
+            <li class="footernav-item"><a  target="_blank" rel="noopener" href="https:&#x2F;&#x2F;www.instagram.com&#x2F;project7iii">Instagram </a> </li>
+            
+          </ul>
+        </nav>
+
+  <p class="copyright">project7III is powered by <a href="https://www.getzola.org/" target="_blank" rel="noopener">Zola</a>.
+    <br>Copyright © 2024 project7III - All rights reserved.</p>
+    </footer>
+</div>
+
+<script type="text/javascript" src="/elasticlunr.min.js"></script>
+<script type="text/javascript" src="/search.js"></script>
+</body>
+
+</html>
