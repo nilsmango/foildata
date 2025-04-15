@@ -792,7 +792,6 @@ footer {
     display: inline-block;
 }
 
-
 .footer-nav .nav-active, .footer-nav-item a:hover {
     background-position: 0 95%;
     background-repeat: repeat-x;
@@ -801,15 +800,66 @@ footer {
     animation: shift 2s linear infinite;
 }
 
-
-
 .copyright {
     font-size: .75rem;
     line-height: 1.1rem;
     margin-top: 0.25rem;
 }
 
+/* Voting */
+#compare {
+    margin-bottom: 2rem;
+}
 
+.vote-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+.vote-btn {
+    background-color: #FFDB5F;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.vote-btn:hover {
+    background-color: #FCAD0C;
+}
+
+.vote-btn.voted {
+    background-color: #00CC14;
+    color: white;
+}
+
+.vote-count {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.contact-section {
+    margin-top: 0rem;
+    padding-top: 1rem;
+}
+
+.message {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 999px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
