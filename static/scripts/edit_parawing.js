@@ -90,7 +90,7 @@
                 });
                 
                 // Set the back link to return to the parawing details page
-                document.getElementById('back-link').href = `brands/${parawing.brandName.replace(/\s+/g, '-')}/parawings/${parawing.name.replace(/\s+/g, '-')}.html`;
+                document.getElementById('back-link').href = `brands/${parawing.brandName.replace(/\s+/g, '-').toLowerCase()}/parawings/${parawing.name.replace(/\s+/g, '-').toLowerCase()}.html`;
                 
             } catch (error) {
                 console.error('Failed to load parawing data:', error);
