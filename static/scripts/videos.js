@@ -56,13 +56,20 @@ async function loadVideos() {
     try {
       const parsedUrl = new URL(url);
 
-      // For YouTube videos
+      // For YouTube videos (including Shorts)
       if (parsedUrl.hostname.includes('youtube.com') || parsedUrl.hostname === 'youtu.be') {
         let videoId;
 
+        // Handle youtu.be shortened URLs
         if (parsedUrl.hostname === 'youtu.be') {
           videoId = parsedUrl.pathname.substring(1);
-        } else {
+        } 
+        // Handle YouTube Shorts
+        else if (parsedUrl.pathname.includes('/shorts/')) {
+          videoId = parsedUrl.pathname.split('/shorts/')[1].split('/')[0];
+        } 
+        // Handle regular YouTube videos
+        else {
           videoId = parsedUrl.searchParams.get("v");
         }
 
@@ -106,9 +113,16 @@ async function loadVideos() {
           const url = new URL(video.url);
           let videoId;
 
+          // Handle youtu.be shortened URLs
           if (url.hostname === 'youtu.be') {
             videoId = url.pathname.substring(1);
-          } else {
+          } 
+          // Handle YouTube Shorts
+          else if (url.pathname.includes('/shorts/')) {
+            videoId = url.pathname.split('/shorts/')[1].split('/')[0];
+          } 
+          // Handle regular YouTube videos
+          else {
             videoId = url.searchParams.get("v");
           }
 
