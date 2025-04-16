@@ -166,5 +166,32 @@
       }
     ],
     "website" : "https:\/\/int.takoon.com\/collections\/parawing\/products\/parawing-zenith"
+  },
+  {
+    "averageRating" : 0,
+    "brandName" : "Element",
+    "discontinued" : false,
+    "imageFilename" : "freefly.jpg",
+    "name" : "Freefly",
+    "reviews" : [
+
+    ],
+    "reviewsCount" : 0,
+    "sizes" : [
+      {
+        "areaSqM" : 3.8,
+        "doubleSkin" : false,
+        "listPriceUSD" : 980
+      },
+      {
+        "areaSqM" : 2.8,
+        "doubleSkin" : false,
+        "listPriceUSD" : 919
+      }
+    ],
+    "videos" : [
+
+    ],
+    "website" : "https:\/\/element-kiteboarding.com\/product\/freefly\/"
   }
 ]

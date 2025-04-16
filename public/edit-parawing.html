@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Parawing</title>
     <link rel="stylesheet" href="/foildata/styles.css">
+    <meta name="description" content="Edit a foildata parawing.">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favi/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favi/favicon-16x16.png">
+    <link rel="manifest" href="/favi/site.webmanifest">
     <!-- Google Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +20,7 @@
    <div class="container">
         <header>
           <div class="logo">
-            <a href="/foildata/index.html">
+            <a href="/foildata">
                 <h1><span class="iii">7III</span> foildata</h1>
             </a>
           </div>
@@ -223,7 +229,7 @@
                 });
                 
                 // Set the back link to return to the parawing details page
-                document.getElementById('back-link').href = `brands/${parawing.brandName.replace(/\s+/g, '-')}/parawings/${parawing.name.replace(/\s+/g, '-')}.html`;
+                document.getElementById('back-link').href = `brands/${parawing.brandName.replace(/\s+/g, '-').toLowerCase()}/parawings/${parawing.name.replace(/\s+/g, '-').toLowerCase()}.html`;
                 
             } catch (error) {
                 console.error('Failed to load parawing data:', error);
@@ -306,8 +312,28 @@
                 // Handle image if provided
                 const imageFile = document.getElementById('parawing-image').files[0];
                 if (imageFile) {
-                    // In a real implementation, we would need server-side code to handle file uploads
                     editData.newImage = imageFile.name;
+                    // Create FormData object to send the file
+                    const formData = new FormData();
+                    formData.append('imageFile', imageFile);
+                    
+                    // Send file to server using fetch API
+                    fetch('upload-image.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            console.log('Upload successful:', data.message);
+                        } else {
+                            console.error('Upload failed:', data.message);
+                            // You might want to handle the error here (show a message, etc.)
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error during upload:', error);
+                    });
                 } else {
                     // Keep the existing image
                     editData.newImage = document.getElementById('current-image-name').textContent || null;
