@@ -35,12 +35,12 @@ class ParawingsTable {
       wingSpan: false,
       linesLengthCm: false,
       aspectRatio: false,
-      weightKg: false, // Changed to false as default
+      weightKg: false,
       doubleSkin: false,
       listPriceUSD: true,
       discontinued: false,
-      averageRating: true, // New column for rating (default to visible)
-      reviewsCount: false  // New column for reviews count
+      averageRating: true,
+      reviewsCount: false
     }
 
     // Column display names
@@ -415,6 +415,10 @@ class ParawingsTable {
   }
 
   initializeUI() {
+    // Check screen width on initial load
+    if (window.innerWidth < 768) {
+      this.visibleColumns.brandName = false;
+    }
     // Create table headers
     this.createTableHeaders()
 
