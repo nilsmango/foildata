@@ -36,8 +36,8 @@
       --badge-active-background: #0864CF;
       --badge-active-text: #ffffff;
       --shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.9), 0 2px 4px -1px rgba(255, 255, 255, 0.94);
-      --yellow: #A8A109;
-      --hover-yellow: #C99B00;
+      --yellow: #FFEE9199;
+      --hover-yellow: #FFE49199;
   }
   
   input {
@@ -836,8 +836,7 @@ footer {
 }
 
 .vote-btn.voted {
-    background-color: #FFE491;
-    color: white;
+    background-color: var(--hover-yellow);
 }
 
 .vote-count {
