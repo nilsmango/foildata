@@ -108,6 +108,7 @@
   {
     "averageRating" : 0,
     "brandName" : "Takoon",
+    "discontinued" : false,
     "imageFilename" : "parawing-zenith_carousel-1_3024x.jpg",
     "name" : "Zenith",
     "reviews" : [
@@ -123,10 +124,41 @@
         "listPriceUSD" : 386,
         "weightKg" : 0.53,
         "wingSpan" : 2.18
+      },
+      {
+        "areaSqM" : 3,
+        "aspectRatio" : 2.87,
+        "doubleSkin" : false,
+        "linesLengthCm" : 145,
+        "listPriceUSD" : 425,
+        "weightKg" : 0.73,
+        "wingSpan" : 2.98
+      },
+      {
+        "areaSqM" : 4,
+        "aspectRatio" : 2.36,
+        "doubleSkin" : false,
+        "linesLengthCm" : 146,
+        "listPriceUSD" : 464,
+        "weightKg" : 0.93,
+        "wingSpan" : 3.08
+      },
+      {
+        "areaSqM" : 5,
+        "aspectRatio" : 1.96,
+        "doubleSkin" : false,
+        "linesLengthCm" : 196,
+        "listPriceUSD" : 502,
+        "weightKg" : 1.13,
+        "wingSpan" : 2.96
       }
     ],
     "videos" : [
-
+      {
+        "date" : "2025-04-16",
+        "kind" : "YouTube",
+        "url" : "https:\/\/www.youtube.com\/watch?v=47Awi1U78-Q"
+      }
     ],
     "website" : "https:\/\/int.takoon.com\/collections\/parawing\/products\/parawing-zenith"
   }

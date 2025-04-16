@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const formData = new FormData(form);
     
-    fetch('/submit-review.php', {
+    fetch('__PREFIX__/submit-review.php', {
       method: 'POST',
       body: formData
     })

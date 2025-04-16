@@ -126,7 +126,7 @@
             <h2>Videos</h2>
             <div id="videos"></div>
 
-            <form action="/submit-video.php" method="POST">
+            <form action="/foildata/submit-video.php" method="POST">
                 <input type="hidden" name="brandName" id="brandName" value="ENSIS">
                 <input type="hidden" name="name" id="name" value="Roger">
                 <div style="padding-top: 40px">
@@ -544,7 +544,7 @@ document.addEventListener('DOMContentLoaded', loadDynamicReviews);
     
     const formData = new FormData(form);
     
-    fetch('/submit-review.php', {
+    fetch('/foildata/submit-review.php', {
       method: 'POST',
       body: formData
     })
