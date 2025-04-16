@@ -173,8 +173,28 @@
                 // Handle image if provided
                 const imageFile = document.getElementById('parawing-image').files[0];
                 if (imageFile) {
-                    // In a real implementation, we would need server-side code to handle file uploads
                     editData.newImage = imageFile.name;
+                    // Create FormData object to send the file
+                    const formData = new FormData();
+                    formData.append('imageFile', imageFile);
+                    
+                    // Send file to server using fetch API
+                    fetch('upload-image.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            console.log('Upload successful:', data.message);
+                        } else {
+                            console.error('Upload failed:', data.message);
+                            // You might want to handle the error here (show a message, etc.)
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error during upload:', error);
+                    });
                 } else {
                     // Keep the existing image
                     editData.newImage = document.getElementById('current-image-name').textContent || null;
