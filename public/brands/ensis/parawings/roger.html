@@ -154,7 +154,7 @@
     </footer>
     <script>
         async function loadVideos() {
-  const jsonFile = "/parawings.json";
+  const jsonFile = "/foildata/parawings.json";
   const res = await fetch(jsonFile);
   const parawings = await res.json();
   const videoContainer = document.getElementById("videos");
@@ -399,7 +399,7 @@ window.addEventListener("load", function() {
 async function loadDynamicReviews() {
   try {
     // Fetch the JSON data
-    const jsonFile = "/parawings.json";
+    const jsonFile = "/foildata/parawings.json";
     const response = await fetch(jsonFile);
     if (!response.ok) {
       throw new Error('Failed to load product data');

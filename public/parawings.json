@@ -104,5 +104,30 @@
       }
     ],
     "website" : "https:\/\/boardridingmaui.com\/pages\/parawing"
+  },
+  {
+    "averageRating" : 0,
+    "brandName" : "Takoon",
+    "imageFilename" : "parawing-zenith_carousel-1_3024x.jpg",
+    "name" : "Zenith",
+    "reviews" : [
+
+    ],
+    "reviewsCount" : 0,
+    "sizes" : [
+      {
+        "areaSqM" : 2,
+        "aspectRatio" : 2.33,
+        "doubleSkin" : false,
+        "linesLengthCm" : 107,
+        "listPriceUSD" : 386,
+        "weightKg" : 0.53,
+        "wingSpan" : 2.18
+      }
+    ],
+    "videos" : [
+
+    ],
+    "website" : "https:\/\/int.takoon.com\/collections\/parawing\/products\/parawing-zenith"
   }
 ]
