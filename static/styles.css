@@ -39,8 +39,8 @@
         --shadow:
             0 4px 6px -1px rgba(255, 255, 255, 0.9),
             0 2px 4px -1px rgba(255, 255, 255, 0.94);
-        --vote-background: #011c89;
-        --hover-vote-background: #0022ac;
+        --vote-background: #3E3E3E;
+        --hover-vote-background: #2D2D2D;
     }
 
     input, textarea, select {
