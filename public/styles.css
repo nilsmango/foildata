@@ -43,9 +43,9 @@
         --hover-vote-background: #0022ac;
     }
 
-    input {
+    input, textarea {
         color: #cfcfcf;
-    }
+    } 
 }
 
 * {
@@ -680,29 +680,33 @@ a.main-button:hover {
 
 /* review form */
 
-#review-form .form-group {
+#review-form .form-group,
+.form-group {
     margin-bottom: 15px;
 }
-
 #review-form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
-
 #review-form input[type="text"],
 #review-form input[type="url"],
 #review-form select,
-#review-form textarea {
+#review-form textarea,
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
 }
-
-#review-form textarea {
+#review-form textarea,
+.form-group textarea {
     resize: vertical;
+    background: var(--background)
 }
 
 /* header */
