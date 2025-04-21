@@ -37,8 +37,8 @@
         --badge-active-background: #0864cf;
         --badge-active-text: #ffffff;
         --shadow:
-            0 4px 6px -1px rgba(255, 255, 255, 0.9),
-            0 2px 4px -1px rgba(255, 255, 255, 0.94);
+            0 4px 6px -1px rgba(255, 255, 255, 0.1),
+            0 2px 4px -1px rgba(255, 255, 255, 0.06);
         --vote-background: #3E3E3E;
         --hover-vote-background: #2D2D2D;
     }
@@ -372,6 +372,29 @@ input.error:focus {
     background-color: var(--badge-active-background);
     color: var(--badge-active-text);
     border-color: var(--badge-active-background);
+}
+
+.info-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    
+    h3 {
+        font-size: 1.125rem;
+        font-weight: 600;
+    }
+}
+
+.info-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 1rem 0 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    .info-separator {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
 }
 
 /* Table Styles */
