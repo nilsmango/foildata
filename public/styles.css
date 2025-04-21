@@ -903,8 +903,7 @@ footer {
 }
 
 .success {
-    background-color: #d4edda;
-    color: #155724;
+    background-color: var(--vote-background);
 }
 
 /* Responsive adjustments */
