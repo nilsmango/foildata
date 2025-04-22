@@ -193,5 +193,45 @@
 
     ],
     "website" : "https:\/\/element-kiteboarding.com\/product\/freefly\/"
+  },
+  {
+    "averageRating" : 0,
+    "brandName" : "Duotone",
+    "imageFilename" : "Screen-Shot-2025-02-24-at-11.40.23-AM.png",
+    "name" : "Stash",
+    "reviews" : [
+
+    ],
+    "reviewsCount" : 0,
+    "sizes" : [
+      {
+        "areaSqM" : 6,
+        "doubleSkin" : false,
+        "listPriceUSD" : 1129
+      },
+      {
+        "areaSqM" : 5,
+        "doubleSkin" : false,
+        "listPriceUSD" : 1079
+      },
+      {
+        "areaSqM" : 4,
+        "doubleSkin" : false,
+        "listPriceUSD" : 1029
+      },
+      {
+        "areaSqM" : 3,
+        "doubleSkin" : false,
+        "listPriceUSD" : 979
+      },
+      {
+        "areaSqM" : 2,
+        "doubleSkin" : false,
+        "listPriceUSD" : 929
+      }
+    ],
+    "videos" : [
+
+    ]
   }
 ]

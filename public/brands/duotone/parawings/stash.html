@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duotone Stash</title>
+    <link rel="stylesheet" href="/foildata/styles.css">
+    <meta name="description" content="Duotone Stash info, videos and reviews.">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favi/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favi/favicon-16x16.png">
+    <link rel="manifest" href="/favi/site.webmanifest">
+    <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+            <header>
+          <div class="logo">
+            <a href="/foildata">
+                <h1><span class="iii">7III</span> foildata</h1>
+            </a>
+          </div>
+      
+      <div class="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="/foildata/about.html">about</a></li>
+<li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
+<li class="nav-item"><a href="/foildata/map.html">map</a></li>
+
+        </ul>
+      </div>
+    </header>
+        <div class="card">
+          <div class="card-header">
+          <div class="product-header">
+            <div>
+            <h1 class="card-title">Duotone Stash</h1>
+            <a href="#reviews" class="rating-link">
+  <span class="rating-text"></span>
+  <span class="stars" style="--rating: ;"></span>
+  <span class="review-count"></span>
+</a>
+            </div>
+            <div><a href="/foildata/edit-parawing.html?brand=Duotone&parawing=Stash" id="edit" class="main-button small">Edit Parawing</a></div></div>
+          </div>
+          <div class="card-content">
+            <img src="/foildata/images/parawings/Screen-Shot-2025-02-24-at-11.40.23-AM.png" alt="Duotone Stash Image" class="product-image">
+            <h2>Specifications</h2>
+            
+            <p>Skin: Single</p>
+            
+            <h2>Sizes</h2>
+            <div class="table-container">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>Area (m²)</th>
+                            
+                            
+                            
+                            
+                            
+                            <th>List Price (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+    <td>6.0</td>
+    
+    
+    
+    
+    
+    <td>$1129.00</td>
+</tr>
+<tr>
+    <td>5.0</td>
+    
+    
+    
+    
+    
+    <td>$1079.00</td>
+</tr>
+<tr>
+    <td>4.0</td>
+    
+    
+    
+    
+    
+    <td>$1029.00</td>
+</tr>
+<tr>
+    <td>3.0</td>
+    
+    
+    
+    
+    
+    <td>$979.00</td>
+</tr>
+<tr>
+    <td>2.0</td>
+    
+    
+    
+    
+    
+    <td>$929.00</td>
+</tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="results-count">
+                <span>All sizes are missing values for: Wingspan, Lines Length, Aspect Ratio, Weight</span>
+            </div>
+            <br>
+            <div class="product-reviews" data-brand="Duotone" data-product="Stash">
+  <h2 id="reviews">Reviews</h2>
+  <div id="dynamic-reviews"></div>
+  <div class="review-container"><p class="empty-review">No reviews yet.</p>  </div>
+</div>
+<div class="main-button" id="add-review-btn">+ Add Review</div>
+  <div id="review-form-container" style="display: none;">
+    <form id="review-form">
+      <div class="form-group">
+        <label for="userName">Your Name:</label>
+        <input type="text" id="userName" name="userName" required>
+      </div>
+      <div class="form-group">
+        <label for="website">Your Website (optional):</label>
+        <input type="url" id="website" name="website">
+      </div>
+      <div class="form-group">
+        <label for="stars">Rating:</label>
+        <select id="stars" name="stars" required>
+          <option value="1">1 Star</option>
+          <option value="2">2 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="5">5 Stars</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="reviewText">Your Review:</label>
+        <textarea id="reviewText" name="reviewText" rows="5" required></textarea>
+      </div>
+      <input type="hidden" id="brandName" name="brandName">
+      <input type="hidden" id="productName" name="productName">
+      <button type="submit" class="main-button">Submit Review</button>
+    </form>
+  </div>
+            <h2>Videos</h2>
+            <div id="videos"></div>
+
+            <form action="/foildata/submit-video.php" method="POST">
+                <input type="hidden" name="brandName" id="brandName" value="Duotone">
+                <input type="hidden" name="name" id="name" value="Stash">
+                <div style="padding-top: 40px">
+                    <label>
+                        Add a Video URL (YouTube or Instagram Reel):
+                        <input name="videoUrl" id="videoUrl" type="url" required>
+                    </label>
+                    <div class="bottom-button">
+                        <button type="submit" class="main-button">Submit Video</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+       </div>
+    </div>
+         <footer>
+      <div class="footer-nav">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><a href="/foildata/contact.html">contact</a></li>
+<li class="footer-nav-item"><a href="/foildata/privacy.html">privacy policy</a></li>
+
+        </ul>
+      </div>
+    <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
+    </footer>
+    <script>
+        async function loadVideos() {
+  const jsonFile = "/foildata/parawings.json";
+  const res = await fetch(jsonFile);
+  const parawings = await res.json();
+  const videoContainer = document.getElementById("videos");
+  const brandName = "Duotone";
+  const name = "Stash";
+
+  // Add masonry container style
+  videoContainer.style.columnCount = "1";
+  videoContainer.style.columnGap = "20px";
+  videoContainer.style.padding = "0";
+
+  // Set column count based on viewport width
+  const setMasonryColumns = () => {
+    if (window.innerWidth > 1200) {
+      videoContainer.style.columnCount = "3";
+    } else if (window.innerWidth > 768) {
+      videoContainer.style.columnCount = "2";
+    } else {
+      videoContainer.style.columnCount = "1";
+    }
+  };
+
+  // Set initial column count
+  setMasonryColumns();
+
+  // Update columns on resize
+  window.addEventListener("resize", setMasonryColumns);
+
+  // Get all videos and remove duplicates by URL
+  let allVideos = parawings
+    .filter(p => p.brandName === brandName && p.name === name)
+    .flatMap((p) => p.videos?.map((v) => ({ ...v, name: p.name })) || []);
+
+  // Track seen URLs to filter out duplicates
+  const seenUrls = new Set();
+  allVideos = allVideos.filter(video => {
+    // Normalize URL to handle slight variations
+    const normalizedUrl = normalizeVideoUrl(video.url);
+
+    if (seenUrls.has(normalizedUrl)) {
+      return false; // Skip this duplicate
+    }
+
+    // Add to seen set and keep this video
+    seenUrls.add(normalizedUrl);
+    return true;
+  });
+
+  // Sort by date (newest first)
+  allVideos.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  // Function to normalize video URLs to identify duplicates
+  function normalizeVideoUrl(url) {
+    try {
+      const parsedUrl = new URL(url);
+
+      // For YouTube videos (including Shorts)
+      if (parsedUrl.hostname.includes('youtube.com') || parsedUrl.hostname === 'youtu.be') {
+        let videoId;
+
+        // Handle youtu.be shortened URLs
+        if (parsedUrl.hostname === 'youtu.be') {
+          videoId = parsedUrl.pathname.substring(1);
+        } 
+        // Handle YouTube Shorts
+        else if (parsedUrl.pathname.includes('/shorts/')) {
+          videoId = parsedUrl.pathname.split('/shorts/')[1].split('/')[0];
+        } 
+        // Handle regular YouTube videos
+        else {
+          videoId = parsedUrl.searchParams.get("v");
+        }
+
+        if (videoId) {
+          // Return just the video ID as the normalized form
+          return `youtube:${videoId}`;
+        }
+      }
+
+      // For Instagram posts/reels
+      if (parsedUrl.hostname.includes('instagram.com')) {
+        const path = parsedUrl.pathname.split('/').filter(Boolean);
+        if (path.length >= 2) {
+          // Return the type and ID as the normalized form
+          return `instagram:${path[0]}/${path[1]}`;
+        }
+      }
+
+      // For URLs that don't match patterns, return the full URL
+      return url;
+    } catch (e) {
+      console.warn("Error normalizing URL:", url, e);
+      return url;
+    }
+  }
+
+  if (allVideos.length === 0) {
+    const noVideosMessage = document.createElement("p");
+    noVideosMessage.textContent = "No videos yet.";
+    videoContainer.appendChild(noVideosMessage);
+  } else {
+    allVideos.forEach((video) => {
+      // Create masonry item
+      const item = document.createElement("div");
+      item.classList.add("masonry-item");
+      item.style.breakInside = "avoid";
+      item.style.marginBottom = "20px";
+
+      if (video.kind === "YouTube") {
+        try {
+          const url = new URL(video.url);
+          let videoId;
+
+          // Handle youtu.be shortened URLs
+          if (url.hostname === 'youtu.be') {
+            videoId = url.pathname.substring(1);
+          } 
+          // Handle YouTube Shorts
+          else if (url.pathname.includes('/shorts/')) {
+            videoId = url.pathname.split('/shorts/')[1].split('/')[0];
+          } 
+          // Handle regular YouTube videos
+          else {
+            videoId = url.searchParams.get("v");
+          }
+
+          if (videoId) {
+            // Create responsive YouTube container - wider than before
+            const content = document.createElement("div");
+            content.style.position = "relative";
+            content.style.paddingBottom = "56.25%"; // 16:9 aspect ratio
+            content.style.height = "0";
+            content.style.overflow = "hidden";
+            content.style.maxWidth = "550px"; // Increased YouTube width
+            content.style.width = "100%";
+
+            const embed = document.createElement("iframe");
+            embed.src = `https://www.youtube-nocookie.com/embed/${videoId}`;
+            embed.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+            embed.allowFullscreen = true;
+            embed.loading = "lazy";
+            embed.style.position = "absolute";
+            embed.style.top = "0";
+            embed.style.left = "0";
+            embed.style.width = "100%";
+            embed.style.height = "100%";
+            embed.style.border = "none";
+
+            content.appendChild(embed);
+            item.appendChild(content);
+            videoContainer.appendChild(item);
+          }
+        } catch (e) {
+          console.warn("Invalid YouTube URL:", video.url, e);
+        }
+      } else if (video.kind === "Insta") {
+        try {
+          const url = new URL(video.url);
+          const path = url.pathname.split('/').filter(Boolean);
+
+          if (path.length >= 2) {
+            // Instagram container - no card design
+            const content = document.createElement("div");
+            content.style.position = "relative";
+            content.style.paddingBottom = "125%"; // 4:5 aspect ratio for Instagram
+            content.style.height = "0";
+            content.style.overflow = "hidden";
+            content.style.maxWidth = "350px"; // Keep Instagram width more compact
+            content.style.width = "100%";
+            content.style.margin = "0 auto";
+
+            // Create a placeholder with loading effect
+            const placeholder = document.createElement("div");
+            placeholder.style.position = "absolute";
+            placeholder.style.top = "0";
+            placeholder.style.left = "0";
+            placeholder.style.width = "100%";
+            placeholder.style.height = "100%";
+            placeholder.style.display = "flex";
+            placeholder.style.alignItems = "center";
+            placeholder.style.justifyContent = "center";
+            placeholder.style.backgroundColor = "#fafafa";
+
+            // Add a loading spinner
+            const spinner = document.createElement("div");
+            spinner.style.border = "3px solid #f3f3f3";
+            spinner.style.borderTop = "3px solid #3897f0"; // Instagram blue
+            spinner.style.borderRadius = "50%";
+            spinner.style.width = "30px";
+            spinner.style.height = "30px";
+            spinner.style.animation = "spin 1s linear infinite";
+            placeholder.appendChild(spinner);
+
+            // Add animation style if not already added
+            if (!document.getElementById("spin-animation")) {
+              const style = document.createElement("style");
+              style.id = "spin-animation";
+              style.textContent = "@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }";
+              document.head.appendChild(style);
+            }
+
+            // Create the Instagram iframe with proper parameters
+            const embedUrl = `https://www.instagram.com/${path[0]}/${path[1]}/embed`;
+            const embed = document.createElement('iframe');
+            embed.src = embedUrl;
+            embed.loading = "lazy";
+            embed.scrolling = "no";
+            embed.style.position = "absolute";
+            embed.style.top = "0";
+            embed.style.left = "0";
+            embed.style.width = "100%";
+            embed.style.height = "100%";
+            embed.style.border = "none";
+
+            // Remove placeholder when loaded
+            embed.onload = () => {
+              placeholder.style.display = "none";
+            };
+
+            content.appendChild(placeholder);
+            content.appendChild(embed);
+            item.appendChild(content);
+            videoContainer.appendChild(item);
+
+            // Load Instagram embed script if needed
+            if (!document.getElementById("instagram-embed-script")) {
+              const instaScript = document.createElement("script");
+              instaScript.id = "instagram-embed-script";
+              instaScript.src = "//www.instagram.com/embed.js";
+              instaScript.async = true;
+              instaScript.defer = true;
+              document.body.appendChild(instaScript);
+            }
+          }
+        } catch (e) {
+          console.warn("Invalid Instagram URL:", video.url, e);
+        }
+      }
+    });
+
+    // Process Instagram embeds after all are added
+    if (window.instgrm) {
+      window.instgrm.Embeds.process();
+    }
+  }
+}
+
+// Add event listeners
+window.addEventListener("DOMContentLoaded", loadVideos);
+window.addEventListener("load", function() {
+  if (window.instgrm) {
+    window.instgrm.Embeds.process();
+  }
+});
+        // Function to load and display dynamic reviews
+async function loadDynamicReviews() {
+  try {
+    // Fetch the JSON data
+    const jsonFile = "/foildata/parawings.json";
+    const response = await fetch(jsonFile);
+    if (!response.ok) {
+      throw new Error('Failed to load product data');
+    }
+    const parawings = await response.json();
+    
+    // Get the current page's product information
+    const reviewsContainer = document.querySelector('.product-reviews');
+    if (!reviewsContainer) return;
+    
+    const brandName = reviewsContainer.getAttribute('data-brand');
+    const productName = reviewsContainer.getAttribute('data-product');
+    
+    // Find the matching parawing
+    const parawing = parawings.find(p => p.brandName === brandName && p.name === productName);
+    if (!parawing || !parawing.reviews || parawing.reviews.length === 0) return;
+    
+    // Get the dynamic reviews container
+    const dynamicReviewsContainer = document.getElementById('dynamic-reviews');
+    if (!dynamicReviewsContainer) return;
+    
+    // Sort reviews by date, newest first
+    const sortedReviews = parawing.reviews.sort((a, b) => 
+      new Date(b.date) - new Date(a.date)
+    );
+    
+    document.querySelectorAll('.empty-review').forEach(el => el.style.display = 'none');
+    
+    // Calculate the total number of reviews (both static and dynamic)
+    const staticReviewsCount = document.querySelectorAll('.review-container .review').length;
+    const totalReviewsCount = staticReviewsCount + sortedReviews.length;
+    
+    // Calculate the average rating
+    let totalStars = 0;
+    
+    // Count stars from dynamic reviews
+    sortedReviews.forEach(review => {
+      totalStars += review.stars;
+    });
+    
+    // Count stars from static reviews
+    document.querySelectorAll('.review-container .review').forEach(reviewElement => {
+      const starsElement = reviewElement.querySelector('.stars');
+      if (starsElement) {
+        const rating = parseFloat(getComputedStyle(starsElement).getPropertyValue('--rating'));
+        if (!isNaN(rating)) {
+          totalStars += rating;
+        }
+      }
+    });
+    
+    const averageRating = totalReviewsCount > 0 ? totalStars / totalReviewsCount : 0;
+    
+    // Update the rating text and stars
+    const ratingTextElement = document.querySelector('.rating-text');
+    const starsElement = document.querySelector('.rating-link .stars');
+    const reviewCountElement = document.querySelector('.review-count');
+    
+    if (ratingTextElement) {
+      ratingTextElement.textContent = averageRating.toFixed(1);
+    }
+    
+    if (starsElement) {
+      starsElement.style.setProperty('--rating', averageRating);
+    }
+    
+    if (reviewCountElement) {
+      reviewCountElement.textContent = `(${totalReviewsCount})`;
+    }
+    
+    // Generate HTML for each review
+    let reviewsHTML = '';
+    
+    sortedReviews.forEach(review => {
+      // Format the date
+      const formattedDate = formatReviewDate(review.date);
+      
+      // Create stars string
+      const stars = `<div class="stars small" style="--rating: ${review.stars};"></div>`;
+      
+      // Website link
+      const websiteLinkStart = review.website ? 
+        `<a href="${review.website}" class="user-website" target="_blank">` : 
+        '';
+      const websiteLinkEnd = review.website ? '</a>' : '';
+      
+      // Format text with line breaks
+      const textHTML = review.text.replace(/\n/g, '<br>');
+      
+      reviewsHTML += `
+        <div class="review" data-user="${review.userName}">
+          <div class="review-header">
+            <p>${websiteLinkStart}<span class="user-name">${review.userName}</span>${websiteLinkEnd}${stars}</p>
+            </div>
+            <div class="review-date">${formattedDate}</div>
+          <p class="review-text">${textHTML}</p>
+        </div>
+      `;
+    });
+    
+    // Add the reviews to the dynamic reviews container
+    dynamicReviewsContainer.innerHTML = reviewsHTML;
+    
+  } catch (error) {
+    console.error('Error loading dynamic reviews:', error);
+  }
+}
+
+// Helper function to format the date string to "April 3, 2025" format
+function formatReviewDate(dateString) {
+  const date = new Date(dateString);
+  if (isNaN(date.getTime())) {
+    return dateString;
+  }
+  
+  // Use en-US locale to get "Month Day, Year" format
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return date.toLocaleDateString('en-US', options);
+}
+
+// Load reviews when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', loadDynamicReviews);
+        document.addEventListener('DOMContentLoaded', function() {
+  const reviewBtn = document.getElementById('add-review-btn');
+  const formContainer = document.getElementById('review-form-container');
+  const form = document.getElementById('review-form');
+  const productReviews = document.querySelector('.product-reviews');
+  
+  // Set the hidden fields with the data attributes from the product-reviews div
+  document.getElementById('brandName').value = productReviews.dataset.brand;
+  document.getElementById('productName').value = productReviews.dataset.product;
+  
+  // Show the form when the button is clicked
+  reviewBtn.addEventListener('click', function() {
+    reviewBtn.style.display = 'none';
+    formContainer.style.display = 'block';
+  });
+  
+  // Handle form submission
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(form);
+    
+    fetch('/foildata/submit-review.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        // Show success message
+        alert('Review submitted successfully!');
+        
+        // Hide the form and show the button again
+        formContainer.style.display = 'none';
+        reviewBtn.style.display = 'inline-block';
+        
+        // Optionally, refresh the page to show the new review
+        location.reload();
+      } else {
+        alert('Error submitting review: ' + data.message);
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('An error occurred while submitting your review.');
+    });
+  });
+});
+    </script>
+</body>
+</html>
