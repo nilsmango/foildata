@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7III foildata map</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="map"></div>
+    
+    <div class="map-controls">
+        <div class="logo">
+            <a href="/foildata">
+                <h1><span class="iii">7III</span> foildata</h1>
+            </a>
+        </div>
+        
+        <div class="add-spot">
+            <button id="add-spot-btn" class="main-button">
+                + Mark new Spot
+            </button>
+            <div id="add-mode-hint" class="hint hidden">
+                Click on the map to add a point, click on a point to remove it.
+                <br>For SUP Tours or Downwind Runs, add multiple points to accurately mark the route. 
+                <div class="margin-top">
+                <button id="cancel-add" class="small-button">Cancel</button></div>
+            </div>
+            <button id="add-spot-form-btn" class="main-button hidden">Add Spot</button>
+            <button id="add-route-form-btn" class="main-button hidden">Add Route</button>
+        </div>
+        
+        <div class="filter-container">
+            <div class="filter-header" id="filter-header">
+                <h3>Filter Spots</h3>
+                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+            <div class="filter-options" id="filter-options">
+                <div class="filter-buttons" style="margin-bottom: 8px; display: flex; gap: 10px;">
+                            <button id="check-all" class="badge badge-outline active">Check All</button>
+                            <button id="uncheck-all" class="badge badge-outline active">Uncheck All</button>
+                        </div>
+                <label class="filter-option">
+                    <input type="checkbox" name="spot-type" value="pump-foil-dock" checked>
+                    Pump Foil Dock
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="spot-type" value="wake-thief-spot" checked>
+                    Wake Thief Spot
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="spot-type" value="wave-wind-spot" checked>
+                    Wave Wind Spot
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="spot-type" value="wind-spot" checked>
+                    Wind Spot
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="spot-type" value="wave-spot" checked>
+                    Wave Spot
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="spot-type" value="rental-station" checked>
+                    Rental Station
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="spot-type" value="shop" checked>
+                    Shop
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="spot-type" value="school" checked>
+                    School
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="spot-type" value="wake-boat" checked>
+                    Wake Boat
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="spot-type" value="downwind-run" checked>
+                    Downwind Run
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="spot-type" value="paddle-tour" checked>
+                    Paddle Tour
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="spot-type" value="pending" checked>
+                    Show Pending
+                </label>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Spot Info Card -->
+    <div id="spot-info-card" class="spot-info-card hidden">
+        <div class="card-header">
+            <h2 id="spot-name"></h2>
+            <button id="close-info-card" class="close-btn">&times;</button>
+        </div>
+        <div class="card-content">
+            <p id="spot-type"></p>
+            <p id="spot-distance" class="hidden"></p>
+            <div id="spot-description"></div>
+            <div id="spot-pending-notice" class="hidden">
+                <p class="pending-notice">This spot is pending approval.</p>
+            </div>
+            <button id="spot-details-btn" class="main-button">View Details</button>
+        </div>
+    </div>
+    
+    <!-- Add Spot/Route Form Modal -->
+    <div id="add-form-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="form-title">Add Spot</h2>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="spot-form">
+                    <input type="hidden" id="form-type" name="form-type" value="spot">
+                    <input type="hidden" id="form-coordinates" name="coordinates">
+                    
+                    <div class="form-group">
+                        <label for="spot-name-input" class="required">Spot Name</label>
+                        <input type="text" id="spot-name-input" name="name" required>
+                        <p id="location-name" class="location-name"></p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country" class="required">Country</label>
+                        <select id="country" name="country" required></select>
+                    </div>
+                    
+                    <div id="state-container" class="form-group hidden">
+                        <label for="state" class="required">State</label>
+                        <select id="state" name="state"></select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="spot-kind" class="required">Kind</label>
+                        <select id="spot-kind" name="kind" required>
+                            <option value="">Select Kind</option>
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                    
+                    <div id="distance-container" class="form-group hidden">
+                        <label for="distance" class="required">Distance (km)</label>
+                        <input type="number" id="distance" name="distance" step="0.1" min="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <h3>Info</h3>
+                        <div id="info-sections">
+                            <div class="info-section">
+                                <div class="info-header">
+                                    <select class="info-tag" name="info-tag[]" required>
+                                        <option value="">Select Tag</option>
+                                        <option value="description">Description</option>
+                                        <option value="wind-direction">Wind Direction</option>
+                                        <option value="wind-measurements">Wind Measurements</option>
+                                        <option value="wind-predictions">Wind Predictions</option>
+                                        <option value="conditions">Conditions</option>
+                                        <option value="logistics">Logistics</option>
+                                        <option value="local-contact">Local Contact</option>
+                                    </select>
+                                    <button type="button" class="remove-info-btn small-button hidden">Remove</button>
+                                </div>
+                                <textarea class="info-text" name="info-text[]" rows="4" required></textarea>
+                                <div class="user-info">
+                                    <label for="username" class="required">Your Name</label>
+                                    <input type="text" class="username" name="username[]" required>
+                                    <label for="user-url">Your URL (optional)</label>
+                                    <input type="url" class="user-url" name="user-url[]">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" id="add-info-btn" class="small-button">+ Add Another Info</button>
+                    </div>
+                    
+                    <div class="form-group">
+                        <h3>Videos</h3>
+                        <div id="video-sections">
+                            <div class="video-section">
+                                <input type="url" class="video-url" name="video-url[]" placeholder="YouTube or Instagram URL">
+                                <button type="button" class="remove-video-btn small-button hidden">Remove</button>
+                            </div>
+                        </div>
+                        <button type="button" id="add-video-btn" class="small-button">+ Add Another Video</button>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="main-button">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="map.js"></script>
+    <script src="form.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // ====== FILTER TOGGLE FUNCTIONALITY ======
+        const filterHeader = document.getElementById('filter-header');
+        const filterOptions = document.getElementById('filter-options');
+        const chevron = document.querySelector('.chevron');
+        
+        // Check if we're on mobile and collapse the filter by default only on mobile
+        function checkMobile() {
+            if (window.innerWidth <= 768) {
+                filterOptions.classList.remove('expanded');
+                chevron.classList.add('collapsed');
+            } else {
+                filterOptions.classList.add('expanded');
+                chevron.classList.remove('collapsed');
+            }
+        }
+        
+        // Initial check
+        checkMobile();
+        
+        // Toggle filter options when header is clicked (on any screen size)
+        filterHeader.addEventListener('click', function() {
+            filterOptions.classList.toggle('expanded');
+            chevron.classList.toggle('collapsed');
+        });
+        
+        // Re-check on window resize
+        window.addEventListener('resize', checkMobile);
+        
+        // ====== SPOT INFO CARD DYNAMIC HEIGHT HANDLING ======
+        const spotInfoCard = document.getElementById('spot-info-card');
+        
+        // Function to adjust card size based on content
+        function adjustSpotInfoCardSize() {
+            if (spotInfoCard && spotInfoCard.classList.contains('hidden')) return;
+            
+            // Reset any existing max-height to measure content naturally
+            if (spotInfoCard) {
+                spotInfoCard.style.maxHeight = 'none';
+                
+                const cardHeight = spotInfoCard.offsetHeight;
+                const windowHeight = window.innerHeight;
+                
+                // If card is taller than 80% of viewport, limit its height
+                if (cardHeight > windowHeight * 0.8) {
+                    spotInfoCard.style.maxHeight = (windowHeight * 0.8) + 'px';
+                    spotInfoCard.style.overflowY = 'auto';
+                } else {
+                    // Otherwise let it grow naturally with its content
+                    spotInfoCard.style.overflowY = 'visible';
+                }
+            }
+        }
+        
+        // Monitor for spot info card becoming visible
+        if (spotInfoCard) {
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.attributeName === 'class') {
+                        if (!spotInfoCard.classList.contains('hidden')) {
+                            adjustSpotInfoCardSize();
+                        }
+                    }
+                });
+            });
+            
+            observer.observe(spotInfoCard, { attributes: true });
+        }
+        
+        // Also adjust when window is resized
+        window.addEventListener('resize', adjustSpotInfoCardSize);
+        
+        // ====== CHECK/UNCHECK ALL FUNCTIONALITY ======
+        const checkAllButton = document.getElementById('check-all');
+        const uncheckAllButton = document.getElementById('uncheck-all');
+        const checkboxes = document.querySelectorAll('input[name="spot-type"]');
+        
+        // Function to update button visibility
+        function updateButtonVisibility() {
+            if (!checkAllButton || !uncheckAllButton) return;
+            
+            const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+            const allUnchecked = Array.from(checkboxes).every(checkbox => !checkbox.checked);
+            
+            checkAllButton.style.display = allChecked ? 'none' : 'inline-block';
+            uncheckAllButton.style.display = allUnchecked ? 'none' : 'inline-block';
+        }
+        
+        // Trigger map update by dispatching change events
+        function triggerMapUpdate() {
+            // Dispatch a change event on the last checkbox to trigger any map update listeners
+            const eventChange = new Event('change', { bubbles: true });
+            if (checkboxes.length > 0) {
+                checkboxes[checkboxes.length - 1].dispatchEvent(eventChange);
+            }
+        }
+        
+        // Call initially to set correct state
+        updateButtonVisibility();
+        
+        // Add click handlers for check/uncheck buttons
+        if (checkAllButton) {
+            checkAllButton.addEventListener('click', function() {
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = true;
+                    // Dispatch change event on each checkbox
+                    checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+                });
+                updateButtonVisibility();
+                triggerMapUpdate();
+            });
+        }
+        
+        if (uncheckAllButton) {
+            uncheckAllButton.addEventListener('click', function() {
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = false;
+                    // Dispatch change event on each checkbox
+                    checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+                });
+                updateButtonVisibility();
+                triggerMapUpdate();
+            });
+        }
+        
+        // Listen for individual checkbox changes
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                updateButtonVisibility();
+                updateURLWithFilters();
+            });
+        });
+    
+        // ====== URL PARAMETER HANDLING FOR FILTERS ======
+        
+        // Function to read filter parameters from URL
+        function readFiltersFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const filterParam = urlParams.get('filters');
+            
+            if (filterParam) {
+                try {
+                    // Format is expected to be comma-separated list of filter values to be enabled
+                    // e.g., ?filters=pump-foil-dock,wave-spot,school
+                    const enabledFilters = filterParam.split(',');
+                    
+                    // First, uncheck all filters
+                    checkboxes.forEach(checkbox => {
+                        checkbox.checked = false;
+                    });
+                    
+                    // Then check only those in the URL
+                    checkboxes.forEach(checkbox => {
+                        if (enabledFilters.includes(checkbox.value)) {
+                            checkbox.checked = true;
+                        }
+                    });
+                    
+                    // Trigger map update
+                    triggerMapUpdate();
+                    updateButtonVisibility();
+                    
+                } catch (e) {
+                    console.error('Error parsing filter parameters:', e);
+                }
+            }
+        }
+        
+        // Function to update URL with current filters without reloading page
+        function updateURLWithFilters() {
+            const enabledFilters = Array.from(checkboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.value);
+            
+            // Create new URL object
+            const url = new URL(window.location.href);
+            
+            if (enabledFilters.length === 0 || enabledFilters.length === checkboxes.length) {
+                // If all checked or none checked, remove the filter parameter
+                url.searchParams.delete('filters');
+            } else {
+                // Otherwise, update with current selection
+                url.searchParams.set('filters', enabledFilters.join(','));
+            }
+            
+            // Update URL without reloading the page
+            window.history.replaceState({}, '', url);
+        }
+        
+        // Initialize filters from URL on page load
+        readFiltersFromURL();
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+[
+    {
+        "id": "info1",
+        "spotId": "example1",
+        "tag": "description",
+        "text": "Maliko is a famous downwind run starting point on Maui's north shore. Great for foiling in trade winds.",
+        "date": "2023-04-15T10:30:00Z",
+        "userName": "WindFoiler",
+        "userUrl": "https:\/\/example.com\/windfoiler",
+        "votes": 5
+    },
+    {
+        "id": "info2",
+        "spotId": "example2",
+        "tag": "wind-direction",
+        "text": "Best with NE trade winds 15-25 knots. Usually strongest in the afternoon.",
+        "date": "2023-04-17T09:15:00Z",
+        "userName": "MauiRider",
+        "userUrl": null,
+        "votes": 3
+    },
+    {
+        "id": "info3",
+        "spotId": "example1",
+        "tag": "logistics",
+        "text": "Parking available at Maliko Bay. Launch from the small beach or boat ramp depending on conditions.",
+        "date": "2023-04-18T16:45:00Z",
+        "userName": "FoilGuru",
+        "userUrl": "https:\/\/foilguru.com",
+        "votes": 2
+    },
+    {
+        "id": "m9lg6e1ysya0n",
+        "tag": "description",
+        "text": "Testing",
+        "date": "2025-04-17T14:20:12.838Z",
+        "userName": "tester",
+        "userUrl": null,
+        "spotId": "m9lg6e1yksdhb",
+        "votes": 1
+    },
+    {
+        "id": "m9lg9spixdy66",
+        "tag": "description",
+        "text": "test",
+        "date": "2025-04-17T14:22:51.798Z",
+        "userName": "testeer",
+        "userUrl": null,
+        "spotId": "m9lg9spihwwvh"
+    },
+    {
+        "spotId": "m9lg6e1yksdhb",
+        "tag": "wind-direction",
+        "text": "Best when windy",
+        "userName": "Nilser",
+        "userUrl": "",
+        "id": "68011cacc4214",
+        "date": "2025-04-17T15:22:20+00:00",
+        "votes": 1
+    },
+    {
+        "id": "princess-alice-highway-bridgetown-m9n4bd5r-obqoz",
+        "tag": "description",
+        "text": "This is just a test",
+        "date": "2025-04-18T18:23:41.919Z",
+        "userName": "Tester",
+        "userUrl": null,
+        "spotId": "princess-alice-highway-bridgetown-m9n4bd5r-pzivs",
+        "votes": 1
+    },
+    {
+        "id": "utoquai-z-rich-m9n4nhm3-phojz",
+        "tag": "description",
+        "text": "test",
+        "date": "2025-04-18T18:33:07.563Z",
+        "userName": "tester",
+        "userUrl": null,
+        "spotId": "utoquai-z-rich-m9n4nhm3-8lhwd",
+        "votes": 1
+    },
+    {
+        "spotId": "m9lg6e1yksdhb",
+        "tag": "wind-direction",
+        "text": "other wind direction thing\nlet's also test links: https:\/\/nilsmango.ch",
+        "userName": "Tester Man",
+        "userUrl": "https:\/\/project7iii.com",
+        "id": "6804a3a09a7af",
+        "date": "2025-04-20T07:34:56+00:00",
+        "votes": 1
+    },
+    {
+        "spotId": "princess-alice-highway-bridgetown-m9n4bd5r-pzivs",
+        "tag": "description",
+        "text": "Another description",
+        "userName": "Tester2",
+        "userUrl": "",
+        "id": "68068fb1de8fd",
+        "date": "2025-04-21T18:34:25+00:00"
+    },
+    {
+        "id": "turmweg-nidau-m9s8v4op-no1n3",
+        "tag": "description",
+        "text": "Great in Summer",
+        "date": "2025-04-22T08:29:53.401Z",
+        "userName": "Nils",
+        "userUrl": null,
+        "spotId": "turmweg-nidau-m9s8v4op-i1v1s"
+    },
+    {
+        "id": "oberer-kanalweg-nidau-m9s9cg4l-q96jg",
+        "tag": "description",
+        "text": "Nice low dock",
+        "date": "2025-04-22T08:43:21.381Z",
+        "userName": "Nils",
+        "userUrl": null,
+        "spotId": "balaine-nidau"
+    },
+    {
+        "id": "oberer-kanalweg-nidau-m9s9dvfz-822da",
+        "tag": "description",
+        "text": "Testing",
+        "date": "2025-04-22T08:44:27.887Z",
+        "userName": "test",
+        "userUrl": null,
+        "spotId": "balaine-nidau-2",
+        "votes": 2
+    },
+    {
+        "spotId": "balaine-nidau-2",
+        "tag": "wind-direction",
+        "text": "Also a test",
+        "userName": "tst",
+        "userUrl": "",
+        "id": "680758c68a8cf",
+        "date": "2025-04-22T08:52:22+00:00"
+    },
+    {
+        "spotId": "balaine-nidau-2",
+        "tag": "description",
+        "text": "more tests",
+        "userName": "test",
+        "userUrl": "",
+        "id": "680758dbe0d91",
+        "date": "2025-04-22T08:52:43+00:00",
+        "votes": 1
+    }
+]
