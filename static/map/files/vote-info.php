@@ -79,9 +79,38 @@ try {
     }
     
     if (!$infoFound) {
-        http_response_code(404);
-        echo json_encode(['success' => false, 'message' => 'Information not found']);
-        exit;
+        // Try to find in pending-infos.json
+        $pendingFile = 'pending-infos.json';
+        if (file_exists($pendingFile)) {
+            $pendingJson = file_get_contents($pendingFile);
+            $pendingInfos = json_decode($pendingJson, true);
+            
+            if (is_array($pendingInfos)) {
+                foreach ($pendingInfos as &$info) {
+                    if ($info['id'] === $infoId) {
+                        $infoFound = true;
+    
+                        if (!isset($info['votes'])) {
+                            $info['votes'] = 0;
+                        }
+    
+                        $info['votes']++;
+                        $votes[$voteKey] = time();
+    
+                        // Save the updated pending infos
+                        file_put_contents($pendingFile, json_encode($pendingInfos, JSON_PRETTY_PRINT));
+    
+                        break;
+                    }
+                }
+            }
+        }
+    
+        if (!$infoFound) {
+            http_response_code(404);
+            echo json_encode(['success' => false, 'message' => 'Information not found']);
+            exit;
+        }
     }
     
     // Save the updated infos
