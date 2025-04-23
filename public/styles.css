@@ -924,8 +924,15 @@ footer {
     header {
         flex-direction: column;
         align-items: center;
+        padding-left: 0rem;
+        padding-right: 0rem;
     }
-
+    
+    footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
     .nav {
         margin-top: 0.75rem;
         width: 100%;
@@ -934,6 +941,22 @@ footer {
     .nav-list {
         justify-content: space-between;
         width: 100%;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        min-height: calc(100vh - 126px);
+    }
+    
+    .card-header {
+        padding-left: 0rem;
+        padding-top: 1.5rem;
+    }
+
+    .card-content {
+        padding: 1.5rem 0rem;
     }
 }
 

@@ -288,7 +288,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":true,"kind":"wave-spot","locations":[{"lat":47.125629435057554,"lng":7.22428321838379}],"infos":[{"id":"oberer-kanalweg-nidau-m9s9dvfz-822da","text":"Testing","userName":"test","spotId":"balaine-nidau-2","tag":"description","votes":2,"date":"2025-04-22T08:44:27.887Z"},{"spotId":"balaine-nidau-2","userName":"tst","date":"2025-04-22T08:52:22+00:00","id":"680758c68a8cf","userUrl":"","text":"Also a test","tag":"wind-direction"},{"votes":1,"spotId":"balaine-nidau-2","date":"2025-04-22T08:52:43+00:00","text":"more tests","id":"680758dbe0d91","userName":"test","tag":"description","userUrl":""}],"name":"Balaine, Nidau","country":"CH","id":"balaine-nidau-2"};
+            const spotData = {"country":"CH","id":"balaine-nidau-2","pending":true,"kind":"wave-spot","name":"Balaine, Nidau","locations":[{"lat":47.125629435057554,"lng":7.22428321838379}],"infos":[{"text":"Testing","id":"oberer-kanalweg-nidau-m9s9dvfz-822da","userName":"test","votes":2,"date":"2025-04-22T08:44:27.887Z","tag":"description","spotId":"balaine-nidau-2"},{"text":"Also a test","tag":"wind-direction","id":"680758c68a8cf","date":"2025-04-22T08:52:22+00:00","userName":"tst","spotId":"balaine-nidau-2","userUrl":""},{"text":"more tests","date":"2025-04-22T08:52:43+00:00","userName":"test","userUrl":"","tag":"description","spotId":"balaine-nidau-2","votes":1,"id":"680758dbe0d91"}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -388,33 +388,46 @@
             });
             
             // Vote functionality
-            document.querySelectorAll('.vote-btn').forEach(button => {
-                button.addEventListener('click', async () => {
-                    const infoId = button.getAttribute('data-info-id');
-                    const voteCount = button.querySelector('.vote-count');
-                    
-                    try {
-                        const response = await fetch('vote-info.php', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({ infoId })
-                        });
-                        
-                        const data = await response.json();
-                        
-                        if (data.success) {
-                            voteCount.textContent = data.votes;
-                            button.classList.add('voted');
-                        } else {
-                            alert(data.message);
+            const infoContainer = document.querySelector('.info-container');
+
+            if (infoContainer) {
+                infoContainer.addEventListener('click', async (event) => {
+                    // Use event.target.closest() to find the nearest ancestor (or the element itself)
+                    // that has the class 'vote-btn'.
+                    const button = event.target.closest('.vote-btn');
+
+                    // If a .vote-btn was clicked (or a child element inside it)
+                    if (button) {
+                        const infoId = button.getAttribute('data-info-id');
+                        const voteCount = button.querySelector('.vote-count');
+
+                        try {
+                            const response = await fetch('vote-info.php', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ infoId })
+                            });
+
+                            const data = await response.json();
+
+                            if (data.success) {
+                                voteCount.textContent = data.votes;
+                                button.classList.add('voted'); // Optional: Add a class to change appearance after voting
+                            } else {
+                                // Handle error message from server (e.g., user already voted)
+                                alert(data.message);
+                            }
+                        } catch (error) {
+                            console.error('Error voting:', error);
+                            alert('An error occurred while trying to vote.');
                         }
-                    } catch (error) {
-                        console.error('Error voting:', error);
                     }
                 });
-            });
+            } else {
+                console.error("'.info-container' element not found. Event delegation for voting cannot be set up.");
+            }
             
             // Add info form submission
             document.getElementById('add-info-form').addEventListener('submit', async (event) => {
@@ -431,7 +444,7 @@
                 };
                 
                 try {
-                    const response = await fetch('submit-info.php', {
+                    const response = await fetch('submit-pending-info.php', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -517,6 +530,65 @@
                     });
                 }
             });
+
+            fetch('pending-infos.json')
+              .then(res => {
+                console.log('Response status:', res.status);
+                return res.json();
+              })
+              .then(data => {
+                console.log('Loaded data:', data);
+                if (!Array.isArray(data) || data.length === 0) {
+                  console.log('No info entries found.');
+                  return;
+                }
+                
+                const filtered = data.filter(info => info.spotId === 'balaine-nidau-2');
+                if (filtered.length === 0) {
+                  console.log('No matching spotId entries.');
+                  return;
+                }
+                
+                const container = document.querySelector('.info-container');
+
+                filtered.forEach(info => {
+                  console.log('Processing info:', info);
+                  const item = document.createElement('div');
+                  const date = new Date(info.date);
+                  const formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                  const infoTextWithLinks = info.text.replace(/\bhttp[^\s]*/g, url => `<a href="${url}" target="_blank" rel="nofollow">${url}</a>`);
+                  item.className = 'info-item';
+                  item.dataset.tag = info.tag;
+
+                  item.innerHTML = `
+                    <div class="info-header">
+                      <h3>${info.tag.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}</h3>
+                      <div>•</div>
+                      <div class="info-meta">
+                        <span class="info-date">${formattedDate}</span>
+                        <span class="info-author">by ${info.userName}</span>
+                      </div>
+                    </div>
+                    <div class="info-content">${infoTextWithLinks}</div>
+                    <div class="info-actions">
+                      <div class="vote-btn" data-info-id="${info.id}" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+                        <span class="vote-icon">
+                          <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
+                            <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
+                          </svg>
+                        </span>
+                        <span class="vote-count">${info.votes ?? 0}</span>
+                      </div>
+                    </div>
+                    <hr class="info-separator">
+                  `;
+
+                  container.appendChild(item);
+                });
+
+              })
+              .catch(err => console.error('Error loading pending infos:', err));
+
             async function loadVideos() {
   const jsonFile = "spots.json";
   const res = await fetch(jsonFile);
@@ -548,7 +620,7 @@
 
   // Get all videos and remove duplicates by URL
   let allVideos = spots
-    .filter(p => p.spotId === spotId)
+    .filter(p => p.id === spotId)
     .flatMap((p) => p.videos?.map((v) => ({ ...v, name: p.name })) || []);
 
   // Track seen URLs to filter out duplicates

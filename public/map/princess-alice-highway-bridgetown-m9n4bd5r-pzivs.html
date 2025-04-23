@@ -261,7 +261,7 @@
             }
             
             // Get spot data
-            const spotData = {"country":"BB","infos":[{"id":"princess-alice-highway-bridgetown-m9n4bd5r-obqoz","text":"This is just a test","userName":"Tester","spotId":"princess-alice-highway-bridgetown-m9n4bd5r-pzivs","tag":"description","votes":1,"date":"2025-04-18T18:23:41.919Z"},{"spotId":"princess-alice-highway-bridgetown-m9n4bd5r-pzivs","text":"Another description","date":"2025-04-21T18:34:25+00:00","userUrl":"","id":"68068fb1de8fd","userName":"Tester2","tag":"description"}],"name":"Princess Alice Highway, Bridgetown","kind":"wave-spot","pending":true,"locations":[{"lat":13.092185756228707,"lng":-59.62005615234376}],"id":"princess-alice-highway-bridgetown-m9n4bd5r-pzivs"};
+            const spotData = {"kind":"wave-spot","infos":[{"spotId":"princess-alice-highway-bridgetown-m9n4bd5r-pzivs","votes":1,"text":"This is just a test","date":"2025-04-18T18:23:41.919Z","tag":"description","userName":"Tester","id":"princess-alice-highway-bridgetown-m9n4bd5r-obqoz"},{"userName":"Tester2","userUrl":"","id":"68068fb1de8fd","date":"2025-04-21T18:34:25+00:00","tag":"description","spotId":"princess-alice-highway-bridgetown-m9n4bd5r-pzivs","text":"Another description"}],"locations":[{"lat":13.092185756228707,"lng":-59.62005615234376}],"name":"Princess Alice Highway, Bridgetown","country":"BB","id":"princess-alice-highway-bridgetown-m9n4bd5r-pzivs","pending":true};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -361,33 +361,46 @@
             });
             
             // Vote functionality
-            document.querySelectorAll('.vote-btn').forEach(button => {
-                button.addEventListener('click', async () => {
-                    const infoId = button.getAttribute('data-info-id');
-                    const voteCount = button.querySelector('.vote-count');
-                    
-                    try {
-                        const response = await fetch('vote-info.php', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({ infoId })
-                        });
-                        
-                        const data = await response.json();
-                        
-                        if (data.success) {
-                            voteCount.textContent = data.votes;
-                            button.classList.add('voted');
-                        } else {
-                            alert(data.message);
+            const infoContainer = document.querySelector('.info-container');
+
+            if (infoContainer) {
+                infoContainer.addEventListener('click', async (event) => {
+                    // Use event.target.closest() to find the nearest ancestor (or the element itself)
+                    // that has the class 'vote-btn'.
+                    const button = event.target.closest('.vote-btn');
+
+                    // If a .vote-btn was clicked (or a child element inside it)
+                    if (button) {
+                        const infoId = button.getAttribute('data-info-id');
+                        const voteCount = button.querySelector('.vote-count');
+
+                        try {
+                            const response = await fetch('vote-info.php', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ infoId })
+                            });
+
+                            const data = await response.json();
+
+                            if (data.success) {
+                                voteCount.textContent = data.votes;
+                                button.classList.add('voted'); // Optional: Add a class to change appearance after voting
+                            } else {
+                                // Handle error message from server (e.g., user already voted)
+                                alert(data.message);
+                            }
+                        } catch (error) {
+                            console.error('Error voting:', error);
+                            alert('An error occurred while trying to vote.');
                         }
-                    } catch (error) {
-                        console.error('Error voting:', error);
                     }
                 });
-            });
+            } else {
+                console.error("'.info-container' element not found. Event delegation for voting cannot be set up.");
+            }
             
             // Add info form submission
             document.getElementById('add-info-form').addEventListener('submit', async (event) => {
@@ -404,7 +417,7 @@
                 };
                 
                 try {
-                    const response = await fetch('submit-info.php', {
+                    const response = await fetch('submit-pending-info.php', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -490,6 +503,65 @@
                     });
                 }
             });
+
+            fetch('pending-infos.json')
+              .then(res => {
+                console.log('Response status:', res.status);
+                return res.json();
+              })
+              .then(data => {
+                console.log('Loaded data:', data);
+                if (!Array.isArray(data) || data.length === 0) {
+                  console.log('No info entries found.');
+                  return;
+                }
+                
+                const filtered = data.filter(info => info.spotId === 'princess-alice-highway-bridgetown-m9n4bd5r-pzivs');
+                if (filtered.length === 0) {
+                  console.log('No matching spotId entries.');
+                  return;
+                }
+                
+                const container = document.querySelector('.info-container');
+
+                filtered.forEach(info => {
+                  console.log('Processing info:', info);
+                  const item = document.createElement('div');
+                  const date = new Date(info.date);
+                  const formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                  const infoTextWithLinks = info.text.replace(/\bhttp[^\s]*/g, url => `<a href="${url}" target="_blank" rel="nofollow">${url}</a>`);
+                  item.className = 'info-item';
+                  item.dataset.tag = info.tag;
+
+                  item.innerHTML = `
+                    <div class="info-header">
+                      <h3>${info.tag.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}</h3>
+                      <div>•</div>
+                      <div class="info-meta">
+                        <span class="info-date">${formattedDate}</span>
+                        <span class="info-author">by ${info.userName}</span>
+                      </div>
+                    </div>
+                    <div class="info-content">${infoTextWithLinks}</div>
+                    <div class="info-actions">
+                      <div class="vote-btn" data-info-id="${info.id}" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+                        <span class="vote-icon">
+                          <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
+                            <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
+                          </svg>
+                        </span>
+                        <span class="vote-count">${info.votes ?? 0}</span>
+                      </div>
+                    </div>
+                    <hr class="info-separator">
+                  `;
+
+                  container.appendChild(item);
+                });
+
+              })
+              .catch(err => console.error('Error loading pending infos:', err));
+
             async function loadVideos() {
   const jsonFile = "spots.json";
   const res = await fetch(jsonFile);
@@ -521,7 +593,7 @@
 
   // Get all videos and remove duplicates by URL
   let allVideos = spots
-    .filter(p => p.spotId === spotId)
+    .filter(p => p.id === spotId)
     .flatMap((p) => p.videos?.map((v) => ({ ...v, name: p.name })) || []);
 
   // Track seen URLs to filter out duplicates
