@@ -29,7 +29,7 @@ async function loadVideos() {
 
   // Get all videos and remove duplicates by URL
   let allVideos = spots
-    .filter(p => p.spotId === spotId)
+    .filter(p => p.id === spotId)
     .flatMap((p) => p.videos?.map((v) => ({ ...v, name: p.name })) || []);
 
   // Track seen URLs to filter out duplicates
