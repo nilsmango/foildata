@@ -935,6 +935,22 @@ footer {
         justify-content: space-between;
         width: 100%;
     }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        min-height: calc(100vh - 126px);
+    }
+    
+    .card-header {
+        padding-left: 0rem;
+        padding-top: 1.5rem;
+    }
+
+    .card-content {
+        padding: 1.5rem 0rem;
+    }
 }
 
 @media (max-width: 600px) {
