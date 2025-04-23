@@ -1,0 +1,272 @@
+[
+  {
+    "pending" : false,
+    "name" : "Maui Maliko",
+    "id" : "example1",
+    "infos" : [
+      {
+        "date" : "2023-04-15T10:30:00Z",
+        "id" : "info1",
+        "userName" : "WindFoiler",
+        "userUrl" : "https:\/\/example.com\/windfoiler",
+        "tag" : "description",
+        "text" : "Maliko is a famous downwind run starting point on Maui's north shore. Great for foiling in trade winds."
+      }
+    ],
+    "locations" : [
+      {
+        "lat" : 20.9175,
+        "lng" : -156.38249999999999
+      }
+    ],
+    "state" : "HI",
+    "videos" : [
+      {
+        "url" : "https:\/\/www.youtube.com\/watch?v=dQw4w9WgXcQ",
+        "kind" : "YouTube",
+        "date" : "2023-04-16T14:20:00Z"
+      }
+    ],
+    "country" : "US",
+    "kind" : "wave-wind-spot"
+  },
+  {
+    "state" : "HI",
+    "name" : "Kanaha → Kihei",
+    "kind" : "downwind-run",
+    "distance" : 12.5,
+    "pending" : false,
+    "country" : "US",
+    "id" : "example2",
+    "locations" : [
+      {
+        "lat" : 20.897500000000001,
+        "lng" : -156.4325
+      },
+      {
+        "lat" : 20.782499999999999,
+        "lng" : -156.465
+      }
+    ],
+    "infos" : [
+      {
+        "date" : "2023-04-17T09:15:00Z",
+        "id" : "info2",
+        "userName" : "MauiRider",
+        "userUrl" : null,
+        "tag" : "wind-direction",
+        "text" : "Best with NE trade winds 15-25 knots. Usually strongest in the afternoon."
+      }
+    ]
+  },
+  {
+    "locations" : [
+      {
+        "lat" : 43.512704904648189,
+        "lng" : 3.9440917968750004
+      },
+      {
+        "lat" : 43.403052024326158,
+        "lng" : 4.0429687500000009
+      },
+      {
+        "lat" : 43.359135197357809,
+        "lng" : 4.3121337890625009
+      },
+      {
+        "lat" : 43.271206115959806,
+        "lng" : 4.6142578125000009
+      },
+      {
+        "lat" : 43.229195113965005,
+        "lng" : 4.9163818359375009
+      },
+      {
+        "lat" : 43.153101551466385,
+        "lng" : 5.0674438476562509
+      },
+      {
+        "lat" : 42.968482211280353,
+        "lng" : 5.2047729492187509
+      },
+      {
+        "lat" : 42.839723547640837,
+        "lng" : 5.3063964843750009
+      },
+      {
+        "lat" : 42.93430692117159,
+        "lng" : 5.5288696289062509
+      },
+      {
+        "lat" : 43.036775857610579,
+        "lng" : 5.7733154296875
+      },
+      {
+        "lat" : 43.08493742707595,
+        "lng" : 5.8804321289062509
+      }
+    ],
+    "kind" : "downwind-run",
+    "videos" : [
+      {
+        "url" : "https:\/\/www.youtube.com\/watch?v=28caZd9x6hQ",
+        "kind" : "YouTube",
+        "date" : "2025-04-17T15:39:30+00:00"
+      }
+    ],
+    "country" : "FR",
+    "id" : "m9lg6e1yksdhb",
+    "pending" : false,
+    "infos" : [
+      {
+        "date" : "2025-04-17T14:20:12.838Z",
+        "id" : "m9lg6e1ysya0n",
+        "userName" : "tester",
+        "userUrl" : null,
+        "tag" : "description",
+        "text" : "Testing"
+      }
+    ],
+    "name" : "Test",
+    "distance" : 197
+  },
+  {
+    "infos" : [
+      {
+        "date" : "2025-04-17T14:22:51.798Z",
+        "id" : "m9lg9spixdy66",
+        "userName" : "testeer",
+        "userUrl" : null,
+        "tag" : "description",
+        "text" : "test"
+      }
+    ],
+    "kind" : "wave-spot",
+    "id" : "m9lg9spihwwvh",
+    "pending" : false,
+    "country" : "US",
+    "state" : "HI",
+    "locations" : [
+      {
+        "lat" : 20.909813769365538,
+        "lng" : -156.47312164306643
+      }
+    ],
+    "name" : "Paukukalo"
+  },
+  {
+    "locations" : [
+      {
+        "lat" : 13.092185756228707,
+        "lng" : -59.620056152343757
+      }
+    ],
+    "name" : "Princess Alice Highway, Bridgetown",
+    "id" : "princess-alice-highway-bridgetown-m9n4bd5r-pzivs",
+    "kind" : "wave-spot",
+    "pending" : false,
+    "country" : "BB",
+    "infos" : [
+      {
+        "date" : "2025-04-18T18:23:41.919Z",
+        "id" : "princess-alice-highway-bridgetown-m9n4bd5r-obqoz",
+        "userName" : "Tester",
+        "userUrl" : null,
+        "tag" : "description",
+        "text" : "This is just a test"
+      }
+    ]
+  },
+  {
+    "kind" : "pump-foil-dock",
+    "pending" : false,
+    "country" : "CH",
+    "id" : "utoquai-z-rich-m9n4nhm3-8lhwd",
+    "name" : "Utoquai, Zürich",
+    "locations" : [
+      {
+        "lat" : 47.362061429928389,
+        "lng" : 8.5467302799224871
+      }
+    ],
+    "infos" : [
+      {
+        "date" : "2025-04-18T18:33:07.563Z",
+        "id" : "utoquai-z-rich-m9n4nhm3-phojz",
+        "userName" : "tester",
+        "userUrl" : null,
+        "tag" : "description",
+        "text" : "test"
+      }
+    ]
+  },
+  {
+    "infos" : [
+      {
+        "date" : "2025-04-22T08:29:53.401Z",
+        "id" : "turmweg-nidau-m9s8v4op-no1n3",
+        "userName" : "Nils",
+        "userUrl" : null,
+        "tag" : "description",
+        "text" : "Great in Summer"
+      }
+    ],
+    "country" : "CH",
+    "id" : "turmweg-nidau-m9s8v4op-i1v1s",
+    "locations" : [
+      {
+        "lat" : 47.122727674980766,
+        "lng" : 7.2384184598922738
+      }
+    ],
+    "name" : "Balaine, Nidau",
+    "pending" : false,
+    "kind" : "wake-thief-spot"
+  },
+  {
+    "pending" : false,
+    "country" : "CH",
+    "infos" : [
+      {
+        "date" : "2025-04-22T08:43:21.381Z",
+        "id" : "oberer-kanalweg-nidau-m9s9cg4l-q96jg",
+        "userName" : "Nils",
+        "userUrl" : null,
+        "tag" : "description",
+        "text" : "Nice low dock"
+      }
+    ],
+    "kind" : "pump-foil-dock",
+    "name" : "Balaine, Nidau",
+    "locations" : [
+      {
+        "lat" : 47.122720374755815,
+        "lng" : 7.2385203838348398
+      }
+    ],
+    "id" : "balaine-nidau"
+  },
+  {
+    "pending" : false,
+    "infos" : [
+      {
+        "date" : "2025-04-22T08:44:27.887Z",
+        "id" : "oberer-kanalweg-nidau-m9s9dvfz-822da",
+        "userName" : "test",
+        "userUrl" : null,
+        "tag" : "description",
+        "text" : "Testing"
+      }
+    ],
+    "id" : "balaine-nidau-2",
+    "locations" : [
+      {
+        "lat" : 47.125629435057554,
+        "lng" : 7.22428321838379
+      }
+    ],
+    "kind" : "wave-spot",
+    "name" : "Balaine, Nidau",
+    "country" : "CH"
+  }
+]
