@@ -406,6 +406,13 @@ textarea {
     border-color: var(--badge-active-background);
 }
 
+#spot-description {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    white-space: normal;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .map-controls {

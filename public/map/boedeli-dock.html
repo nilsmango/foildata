@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rue du Port, Saint-Blaise</title>
+    <title>Bödeli/Dock</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Rue du Port, Saint-Blaise Pump Foil Dock Info">
+    <meta name="description" content="Bödeli/Dock Pump Foil Dock Info">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -40,7 +40,7 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Rue du Port, Saint-Blaise</h1>
+            <h1 class="card-title">Bödeli/Dock</h1>
             </div>
           </div>
           <div class="card-content">
@@ -61,15 +61,17 @@
         <div class="info-meta">
             <span class="info-date">April 24, 2025</span>
             <span class="info-author">by 
-                Olivier
+                <a href="https://www.instagram.com/rob_on_rolls/" target="_blank" rel="noopener">
+    Rob_on_Rolls
+</a>
             </span>
         </div>
     </div>
     <div class="info-content">
-        <a href="http://lacdeneuchatel.roundshot.com/#/" target="_blank" rel="noopener">http://lacdeneuchatel.roundshot.com/#/</a><br>
+        Super easy concrete dock near the trainsation!
     </div>
     <div class="info-actions">
-        <div class="vote-btn" data-info-id="rue-du-port-saint-blaise-m9vdgxu1-we0to" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+        <div class="vote-btn" data-info-id="boedeli-dock-m9vdpvj1-lmni8" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
             <span class="vote-icon">
                 <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
                                 <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
@@ -84,7 +86,7 @@
             <div class="add-info-section" style="display: none;">
                 <h2>Add Information</h2>
                 <form id="add-info-form">
-                    <input type="hidden" name="spotId" value="rue-du-port-saint-blaise">
+                    <input type="hidden" name="spotId" value="boedeli-dock">
                     
                     <div class="form-group">
                         <label for="info-tag" class="required">Tag</label>
@@ -128,7 +130,7 @@
                             <div class="add-video-section" style="display: none;">
                                 <h2>Add Video</h2>
                                 <form id="add-video-form">
-                                    <input type="hidden" name="spotId" value="rue-du-port-saint-blaise">
+                                    <input type="hidden" name="spotId" value="boedeli-dock">
                                     
                                     <div class="form-group">
                                         <label for="video-url" class="required">Video URL (YouTube or Instagram)</label>
@@ -237,7 +239,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":47.00975745215339,"lng":6.987406611442567}],"id":"rue-du-port-saint-blaise","pending":false,"kind":"pump-foil-dock","name":"Rue du Port, Saint-Blaise","country":"CH","infos":[{"date":"2025-04-24T13:02:07.945Z","tag":"description","id":"rue-du-port-saint-blaise-m9vdgxu1-we0to","spotId":"rue-du-port-saint-blaise","userName":"Olivier","text":"http:\/\/lacdeneuchatel.roundshot.com\/#\/\n"}]};
+            const spotData = {"infos":[{"userName":"Rob_on_Rolls","id":"boedeli-dock-m9vdpvj1-lmni8","spotId":"boedeli-dock","tag":"description","date":"2025-04-24T13:09:04.862Z","userUrl":"https:\/\/www.instagram.com\/rob_on_rolls\/","text":"Super easy concrete dock near the trainsation!"}],"locations":[{"lat":47.207201002858724,"lng":7.541363239288331}],"country":"CH","id":"boedeli-dock","name":"Bödeli\/Dock","videos":[{"kind":"YouTube","url":"https:\/\/www.youtube.com\/watch?v=mR8adQcszx0&t=1s","date":"2025-04-24T13:09:04.864Z"}],"pending":false,"kind":"pump-foil-dock"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -492,7 +494,7 @@
                   return;
                 }
                 
-                const filtered = data.filter(info => info.spotId === 'rue-du-port-saint-blaise');
+                const filtered = data.filter(info => info.spotId === 'boedeli-dock');
                 if (filtered.length === 0) {
                   console.log('No matching spotId entries.');
                   return;
@@ -578,7 +580,7 @@
   const res = await fetch(jsonFile);
   const spots = await res.json();
   const videoContainer = document.getElementById("videos");
-  const spotId = "rue-du-port-saint-blaise";
+  const spotId = "boedeli-dock";
 
   // Add masonry container style
   videoContainer.style.columnCount = "1";
