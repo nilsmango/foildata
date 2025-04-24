@@ -82,6 +82,15 @@ blockquote {
   border-left: 3px solid var(--primary);
 }
 
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
 /* Map Styles */
 #map {
   height: 100vh;
