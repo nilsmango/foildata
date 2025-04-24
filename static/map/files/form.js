@@ -399,9 +399,9 @@ function addInfoSection() {
         </div>
         <textarea class="info-text" name="info-text[]" rows="4" required></textarea>
         <div class="user-info">
-            <label for="username" class="required">Your Name</label>
+            <label for="username" class="required">Username</label>
             <input type="text" class="username" name="username[]" required>
-            <label for="user-url">Your URL (optional)</label>
+            <label for="user-url">User URL (optional)</label>
             <input type="url" class="user-url" name="user-url[]">
         </div>
     `
@@ -574,6 +574,13 @@ async function generateSpotId(formData) {
     .replace(/ö/g, 'oe')
     .replace(/ü/g, 'ue')
     .replace(/ß/g, 'ss')
+    .replace(/[àáâãäå]/g, 'a')
+    .replace(/[èéêë]/g, 'e')
+    .replace(/[ìíîï]/g, 'i')
+    .replace(/[òóôõö]/g, 'o')
+    .replace(/[ùúûü]/g, 'u')
+    .replace(/ç/g, 'c')
+    .replace(/ñ/g, 'n')
     // Replace any other non-alphanumeric characters with hyphens
     .replace(/[^a-z0-9]/g, '-')
     // Replace multiple consecutive hyphens with a single one

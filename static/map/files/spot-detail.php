@@ -100,7 +100,7 @@ $spotTypeLabel = $spotTypes[$spot['kind']] ?? $spot['kind'];
 
 // Format text with links
 function formatTextWithLinks($text) {
-    $urlPattern = '/(https?:\/\/[^\s]+)/';
+    $urlPattern = '/(https?:\/\/[^\s<]+)/';
     return preg_replace($urlPattern, '<a href="$1" target="_blank" rel="noopener">$1</a>', $text);
 }
 ?>
@@ -235,12 +235,12 @@ function formatTextWithLinks($text) {
                         </div>
                         
                         <div class="form-group">
-                            <label for="user-name" class="required">Your Name</label>
+                            <label for="user-name" class="required">Username</label>
                             <input type="text" id="user-name" name="userName" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="user-url">Your URL (optional)</label>
+                            <label for="user-url">User URL (optional)</label>
                             <input type="url" id="user-url" name="userUrl">
                         </div>
                         
