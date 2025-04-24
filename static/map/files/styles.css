@@ -297,6 +297,7 @@ textarea {
 
 .results-count {
     color: var(--text-muted);
+    font-size: 0.75rem;
 }
 
 .info-section,

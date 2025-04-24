@@ -169,5 +169,32 @@
         "userName": "Rob_on_Rolls",
         "userUrl": null,
         "spotId": "pump-foil-solothurn"
+    },
+    {
+        "id": "yvonand-yverdon-les-bains-m9vfej4l-n0yky",
+        "tag": "description",
+        "text": "Fun Run :D",
+        "date": "2025-04-24T13:56:14.805Z",
+        "userName": "Rawham",
+        "userUrl": null,
+        "spotId": "yvonand-yverdon-les-bains"
+    },
+    {
+        "id": "brienz-be-interlaken-m9vfo2u4-c51av",
+        "tag": "description",
+        "text": "Parawing downwind run. Only works when there is a lot of S\u00fcdf\u00f6n pressure (I think it needs at least 12 hPa).\nCheck pressure here: https:\/\/www.srf.ch\/meteo\/surf-und-segelwetter\/diagramme-foehn-und-bise\n",
+        "date": "2025-04-24T14:03:40.252Z",
+        "userName": "nilsmango",
+        "userUrl": null,
+        "spotId": "brienz-be-interlaken"
+    },
+    {
+        "id": "brienz-be-interlaken-m9vfo2u4-9amg8",
+        "tag": "conditions",
+        "text": "Even if the whole lake is full with white caps I never take a smaller foil than 980 sq cm. The waves never get very big.",
+        "date": "2025-04-24T14:03:40.252Z",
+        "userName": "nilsmango",
+        "userUrl": null,
+        "spotId": "brienz-be-interlaken"
     }
 ]

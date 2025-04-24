@@ -104,24 +104,6 @@ blockquote {
   overflow-y: auto;
 }
 
-.leaflet-container {
-  cursor: default !important;
-}
-
-/* Moving/dragging cursor */
-.leaflet-dragging .leaflet-grab,
-.leaflet-dragging .leaflet-container {
-  cursor: move !important; 
-  cursor: grabbing !important;
-  cursor: -webkit-grabbing !important;
-}
-
-/* Interactive elements like markers keep the pointer cursor */
-.leaflet-marker-icon,
-.leaflet-interactive {
-  cursor: pointer !important;
-}
-
 .logo {
   margin-bottom: 20px;
   text-align: center;
@@ -315,6 +297,7 @@ textarea {
 
 .results-count {
     color: var(--text-muted);
+    font-size: 0.75rem;
 }
 
 .info-section,
