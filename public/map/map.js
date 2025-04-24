@@ -478,15 +478,28 @@ function cancelAddMode() {
   document.getElementById("add-spot-btn").classList.remove("hidden")
 }
 
-// Reverse geocode to get location name
-async function reverseGeocode(latlng) {
+// Reverse geocode to get location name for first and last markers only
+async function reverseGeocode() {
   try {
-    // Create an array to store all location data
+    // Create an array to store location data
     let locationData = [];
     
-    // For each marker, get the location data
-    for (let i = 0; i < tempMarkers.length; i++) {
-      const marker = tempMarkers[i];
+    // Check if there are any markers
+    if (tempMarkers.length === 0) {
+      return null;
+    }
+    
+    // Array of markers to geocode (first and last, or just first if only one)
+    const markersToGeocode = [];
+    markersToGeocode.push(tempMarkers[0]); // First marker
+    
+    // Add last marker if it's different from the first one
+    if (tempMarkers.length > 1) {
+      markersToGeocode.push(tempMarkers[tempMarkers.length - 1]);
+    }
+    
+    // Geocode only the selected markers
+    for (const marker of markersToGeocode) {
       const markerLatLng = marker.getLatLng();
       
       const response = await fetch(
