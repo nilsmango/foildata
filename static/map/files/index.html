@@ -428,7 +428,13 @@
           if (kind) {
             const count = counts[kind] || 0;
             const textNode = [...label.childNodes].find(n => n.nodeType === 3 && n.textContent.trim() !== '');
-            if (textNode) textNode.textContent = textNode.textContent.replace(/\s*\(\d+\)?$/, '') + ` (${count})`;
+            if (textNode) {
+              if (kind !== 'pending') {
+                textNode.textContent = textNode.textContent.replace(/\s*\(\d+\)?$/, '') + ` (${count})`;
+              } else {
+                textNode.textContent = textNode.textContent.replace(/\s*\(\d+\)?$/, '');
+              }
+            }
           }
         });
       });
