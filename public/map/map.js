@@ -1,10 +1,18 @@
 // Initialize the map
-const map = L.map("map").setView([20, 0], 2)
+// Create map without default attribution
+const map = L.map('map', {
+  attributionControl: false
+}).setView([51.505, -0.09], 13);
 
-// Add the tile layer (OpenStreetMap)
+// Add custom attribution
+L.control.attribution({
+  prefix: '<a href="/foildata/about.html">about</a> | <a href="/foildata/contact.html">contact</a> | <a href="/foildata/privacy.html">privacy policy</a> | Powered by <a href="https://leafletjs.com">Leaflet</a> | Maps &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// Add the tile layer
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-}).addTo(map)
+  attribution: ''
+}).addTo(map);
 
 // Global variables
 let spots = []

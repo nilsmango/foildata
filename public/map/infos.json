@@ -149,6 +149,25 @@
         "date": "2025-04-24T13:13:19.199Z",
         "userName": "Rob_on_Rolls",
         "userUrl": null,
-        "spotId": "pier-11"
+        "spotId": "pier-11",
+        "votes": 1
+    },
+    {
+        "id": "kuesnacht-ermitage-m9ve1hcq-0dw1k",
+        "tag": "description",
+        "text": "Good for wake thief",
+        "date": "2025-04-24T13:18:06.362Z",
+        "userName": "sorin",
+        "userUrl": null,
+        "spotId": "kuesnacht-ermitage"
+    },
+    {
+        "id": "pump-foil-solothurn-m9ve477i-k1vfe",
+        "tag": "description",
+        "text": "Book Pumpfoil-lessons with Ken Ruis!\nhttps:\/\/www.foilsolothurn.ch\/",
+        "date": "2025-04-24T13:20:13.182Z",
+        "userName": "Rob_on_Rolls",
+        "userUrl": null,
+        "spotId": "pump-foil-solothurn"
     }
 ]
