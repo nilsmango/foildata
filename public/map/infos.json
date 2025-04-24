@@ -177,7 +177,8 @@
         "date": "2025-04-24T13:56:14.805Z",
         "userName": "Rawham",
         "userUrl": null,
-        "spotId": "yvonand-yverdon-les-bains"
+        "spotId": "yvonand-yverdon-les-bains",
+        "votes": 1
     },
     {
         "id": "brienz-be-interlaken-m9vfo2u4-c51av",
@@ -196,5 +197,14 @@
         "userName": "nilsmango",
         "userUrl": null,
         "spotId": "brienz-be-interlaken"
+    },
+    {
+        "id": "estavayer-le-lac-yverdon-les-bains-m9vfwqxb-0oh97",
+        "tag": "description",
+        "text": "Very bad in the beginning, you really have to paddle out first. But nice train schedule.\nMight be good with a parawing as you could simply ride out to the center of the lake for better bumps.",
+        "date": "2025-04-24T14:10:24.719Z",
+        "userName": "nilsmango",
+        "userUrl": null,
+        "spotId": "estavayer-le-lac-yverdon-les-bains"
     }
 ]

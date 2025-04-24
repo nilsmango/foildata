@@ -75,7 +75,7 @@
                                 <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
                             </svg>
             </span>
-            <span class="vote-count">0</span>
+            <span class="vote-count">1</span>
         </div>
     </div>
     <hr class="info-separator">
@@ -237,7 +237,7 @@
             }
             
             // Get spot data
-            const spotData = {"distance":7.3,"country":"CH","name":"Yvonand → Yverdon-les-Bains","locations":[{"lng":6.726980209350587,"lat":46.80740333108803},{"lat":46.8089013603689,"lng":6.724877357482911},{"lat":46.8100468840216,"lng":6.721615791320802},{"lng":6.714277267456056,"lat":46.8094594390422},{"lat":46.80687460491035,"lng":6.700887680053712},{"lng":6.6811466217041025,"lat":46.80152830384885},{"lng":6.6544532775878915,"lat":46.79324342530679},{"lng":6.6460150480270395,"lat":46.790103211145336},{"lng":6.644958257675172,"lat":46.78969552078176},{"lng":6.6404950618743905,"lat":46.787286044407715},{"lat":46.786977506106574,"lng":6.640157103538513}],"infos":[{"date":"2025-04-24T13:56:14.805Z","spotId":"yvonand-yverdon-les-bains","userName":"Rawham","tag":"description","text":"Fun Run :D","id":"yvonand-yverdon-les-bains-m9vfej4l-n0yky"}],"kind":"downwind-run","id":"yvonand-yverdon-les-bains","pending":false};
+            const spotData = {"kind":"downwind-run","infos":[{"date":"2025-04-24T13:56:14.805Z","tag":"description","text":"Fun Run :D","id":"yvonand-yverdon-les-bains-m9vfej4l-n0yky","spotId":"yvonand-yverdon-les-bains","votes":1,"userName":"Rawham"}],"pending":false,"distance":7.3,"name":"Yvonand → Yverdon-les-Bains","country":"CH","id":"yvonand-yverdon-les-bains","locations":[{"lat":46.80740333108803,"lng":6.726980209350587},{"lat":46.8089013603689,"lng":6.724877357482911},{"lat":46.8100468840216,"lng":6.721615791320802},{"lat":46.8094594390422,"lng":6.714277267456056},{"lat":46.80687460491035,"lng":6.700887680053712},{"lng":6.6811466217041025,"lat":46.80152830384885},{"lat":46.79324342530679,"lng":6.6544532775878915},{"lng":6.6460150480270395,"lat":46.790103211145336},{"lat":46.78969552078176,"lng":6.644958257675172},{"lng":6.6404950618743905,"lat":46.787286044407715},{"lng":6.640157103538513,"lat":46.786977506106574}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
