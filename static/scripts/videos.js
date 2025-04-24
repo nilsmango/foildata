@@ -82,9 +82,10 @@ async function loadVideos() {
       // For Instagram posts/reels
       if (parsedUrl.hostname.includes('instagram.com')) {
         const path = parsedUrl.pathname.split('/').filter(Boolean);
-        if (path.length >= 2) {
-          // Return the type and ID as the normalized form
-          return `instagram:${path[0]}/${path[1]}`;
+        const types = ['reel', 'p'];
+        const typeIndex = path.findIndex(p => types.includes(p));
+        if (typeIndex !== -1 && path.length > typeIndex + 1) {
+          return `instagram:${path[typeIndex]}/${path[typeIndex + 1]}`;
         }
       }
 
