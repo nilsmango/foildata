@@ -291,8 +291,12 @@ textarea {
 
 .location-name {
   margin-top: 5px;
-  font-style: italic;
   color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.results-count {
+    color: var(--text-muted);
 }
 
 .info-section,
@@ -420,6 +424,10 @@ textarea {
 
   .spot-info-card {
     width: 250px;
+  }
+  
+  #spot-description {
+    margin-bottom: 1rem;
   }
   
   /* Auto-collapse filter on mobile */

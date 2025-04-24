@@ -1,54 +1,158 @@
 [
   {
-    "locations" : [
+    "videos" : [
       {
-        "lat" : 47.122651022568832,
-        "lng" : 7.2388261556625375
+        "url" : "https:\/\/youtube.com\/shorts\/_P-h36Wc0Y4",
+        "date" : "2025-04-24T08:10:09.577Z",
+        "kind" : "YouTube"
       }
     ],
     "pending" : false,
-    "id" : "balainen-nidau",
+    "locations" : [
+      {
+        "lng" : 7.2388261556625375,
+        "lat" : 47.122651022568832
+      }
+    ],
     "kind" : "wake-thief-spot",
     "infos" : [
       {
         "userUrl" : "https:\/\/nilsmango.ch",
         "id" : "balainen-nidau-m9v31gkp-y37n7",
         "userName" : "Nils Mango",
-        "date" : "2025-04-24T08:10:09.577Z",
+        "text" : "Nice dock to thief the wakes of boats!",
         "tag" : "description",
-        "text" : "Nice dock to thief the wakes of boats!"
+        "date" : "2025-04-24T08:10:09.577Z"
       }
     ],
     "country" : "CH",
     "name" : "Balainen, Nidau",
-    "videos" : [
-      {
-        "kind" : "YouTube",
-        "url" : "https:\/\/youtube.com\/shorts\/_P-h36Wc0Y4",
-        "date" : "2025-04-24T08:10:09.577Z"
-      }
-    ]
+    "id" : "balainen-nidau"
   },
   {
-    "kind" : "wind-spot",
-    "id" : "erlenwaeldli-ipsach",
     "name" : "Erlenwäldli, Ipsach",
+    "id" : "erlenwaeldli-ipsach",
+    "kind" : "wind-spot",
     "locations" : [
       {
-        "lng" : 7.2266596555709848,
-        "lat" : 47.121263959843674
+        "lat" : 47.121263959843674,
+        "lng" : 7.2266596555709848
       }
     ],
     "pending" : false,
-    "country" : "CH",
     "infos" : [
       {
         "userUrl" : "https:\/\/nilsmango.ch",
-        "text" : "The wind spot where to cool kids are.",
-        "date" : "2025-04-24T08:15:19.828Z",
         "id" : "erlenwaeldli-ipsach-m9v383ys-vdkm3",
+        "date" : "2025-04-24T08:15:19.828Z",
+        "text" : "The wind spot where to cool kids are.",
         "tag" : "description",
         "userName" : "Nils Mango"
+      }
+    ],
+    "country" : "CH"
+  },
+  {
+    "name" : "sevensurf, Steffisburg",
+    "locations" : [
+      {
+        "lng" : 7.6151561737060556,
+        "lat" : 46.767918165271396
+      }
+    ],
+    "infos" : [
+      {
+        "userUrl" : "https:\/\/sevensurf.ch",
+        "id" : "schwaebismattweg-steffisburg-m9v3fhpe-x9cnj",
+        "userName" : "sevensurf",
+        "text" : "surfshop\n- wing\n- kite\n- parawing\n- dw\n- pumpfoil\n- accesoirs\n\nbrands\n- f-one pro shop\n- duotone\n- north\n- and others\n\ntestpool and all year open\n\nsevensurf gmbh \nSchwäbismattweg 4           \n3613 Steffisburg \n+4177 456 06 06\nshop@sevensurf.ch\nsevensurf.ch\n\n",
+        "tag" : "description",
+        "date" : "2025-04-24T08:21:04.226Z"
+      }
+    ],
+    "id" : "sevensurf-steffisburg",
+    "kind" : "shop",
+    "pending" : false,
+    "country" : "CH"
+  },
+  {
+    "kind" : "school",
+    "country" : "CH",
+    "name" : "SUPFOIL.CH",
+    "videos" : [
+      {
+        "kind" : "YouTube",
+        "url" : "https:\/\/youtube.com\/shorts\/AZUjX3CPp9I?si=2DPgVsbQ2pDmK2D3",
+        "date" : "2025-04-24T09:27:09.156Z"
+      }
+    ],
+    "infos" : [
+      {
+        "userUrl" : "https:\/\/supfoil.ch\/",
+        "id" : "supfoil-ch-m9v5sh2c-bwpth",
+        "text" : "Learn to SUP-Foil Downwind on one of the best spots in Europe.\nhttps:\/\/supfoil.ch\/\n\n",
+        "userName" : "SUPFOIL.CH ",
+        "tag" : "description",
+        "date" : "2025-04-24T09:27:09.156Z"
+      }
+    ],
+    "locations" : [
+      {
+        "lat" : 46.959635958619572,
+        "lng" : 6.9378662109375009
+      }
+    ],
+    "id" : "supfoil-ch",
+    "pending" : false
+  },
+  {
+    "country" : "CH",
+    "name" : "Neuchâtel → Saint Blaise",
+    "distance" : 4.7000000000000002,
+    "kind" : "downwind-run",
+    "pending" : false,
+    "id" : "neuchatel-saint-blaise",
+    "infos" : [
+      {
+        "text" : "This is a great Downwind beginner run or to test new gear. Once over 17kn of wind, it starts to get tricky with backwash",
+        "id" : "neuchatel-saint-blaise-m9v6jmlq-lhn4e",
+        "date" : "2025-04-24T09:48:16.046Z",
+        "tag" : "description",
+        "userName" : "SUPFOIL.CH"
+      }
+    ],
+    "locations" : [
+      {
+        "lat" : 46.990784441640344,
+        "lng" : 6.9390785694122323
+      },
+      {
+        "lat" : 46.99079175995039,
+        "lng" : 6.9514274597167978
+      },
+      {
+        "lat" : 46.99360191693961,
+        "lng" : 6.9620704650878915
+      },
+      {
+        "lng" : 6.9735717773437509,
+        "lat" : 46.998753487649928
+      },
+      {
+        "lng" : 6.9842147827148446,
+        "lat" : 47.003787497372201
+      },
+      {
+        "lat" : 47.007065202205368,
+        "lng" : 6.9890213012695321
+      },
+      {
+        "lat" : 47.00883566445912,
+        "lng" : 6.9892358779907227
+      },
+      {
+        "lat" : 47.010167130466684,
+        "lng" : 6.9891071319580078
       }
     ]
   }

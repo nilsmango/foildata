@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erlenwäldli, Ipsach</title>
+    <title>SUPFOIL.CH</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Erlenwäldli, Ipsach Wind Spot Info">
+    <meta name="description" content="SUPFOIL.CH School Info">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -40,13 +40,13 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Erlenwäldli, Ipsach</h1>
+            <h1 class="card-title">SUPFOIL.CH</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wind Spot</p>
+            <p>School</p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -61,17 +61,17 @@
         <div class="info-meta">
             <span class="info-date">April 24, 2025</span>
             <span class="info-author">by 
-                <a href="https://nilsmango.ch" target="_blank" rel="noopener">
-    Nils Mango
+                <a href="https://supfoil.ch/" target="_blank" rel="noopener">
+    SUPFOIL.CH 
 </a>
             </span>
         </div>
     </div>
     <div class="info-content">
-        The wind spot where to cool kids are.
+        Learn to SUP-Foil Downwind on one of the best spots in Europe.<br><a href="https://supfoil.ch/" target="_blank" rel="noopener">https://supfoil.ch/</a>
     </div>
     <div class="info-actions">
-        <div class="vote-btn" data-info-id="erlenwaeldli-ipsach-m9v383ys-vdkm3" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+        <div class="vote-btn" data-info-id="supfoil-ch-m9v5sh2c-bwpth" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
             <span class="vote-icon">
                 <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
                                 <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
@@ -86,7 +86,7 @@
             <div class="add-info-section" style="display: none;">
                 <h2>Add Information</h2>
                 <form id="add-info-form">
-                    <input type="hidden" name="spotId" value="erlenwaeldli-ipsach">
+                    <input type="hidden" name="spotId" value="supfoil-ch">
                     
                     <div class="form-group">
                         <label for="info-tag" class="required">Tag</label>
@@ -130,7 +130,7 @@
                             <div class="add-video-section" style="display: none;">
                                 <h2>Add Video</h2>
                                 <form id="add-video-form">
-                                    <input type="hidden" name="spotId" value="erlenwaeldli-ipsach">
+                                    <input type="hidden" name="spotId" value="supfoil-ch">
                                     
                                     <div class="form-group">
                                         <label for="video-url" class="required">Video URL (YouTube or Instagram)</label>
@@ -239,7 +239,7 @@
             }
             
             // Get spot data
-            const spotData = {"id":"erlenwaeldli-ipsach","infos":[{"spotId":"erlenwaeldli-ipsach","userUrl":"https:\/\/nilsmango.ch","text":"The wind spot where to cool kids are.","tag":"description","userName":"Nils Mango","date":"2025-04-24T08:15:19.828Z","id":"erlenwaeldli-ipsach-m9v383ys-vdkm3"}],"country":"CH","name":"Erlenwäldli, Ipsach","kind":"wind-spot","pending":false,"locations":[{"lat":47.121263959843674,"lng":7.226659655570985}]};
+            const spotData = {"pending":false,"kind":"school","country":"CH","name":"SUPFOIL.CH","id":"supfoil-ch","infos":[{"date":"2025-04-24T09:27:09.156Z","tag":"description","spotId":"supfoil-ch","text":"Learn to SUP-Foil Downwind on one of the best spots in Europe.\nhttps:\/\/supfoil.ch\/","userName":"SUPFOIL.CH ","userUrl":"https:\/\/supfoil.ch\/","id":"supfoil-ch-m9v5sh2c-bwpth"}],"videos":[{"url":"https:\/\/youtube.com\/shorts\/AZUjX3CPp9I?si=2DPgVsbQ2pDmK2D3","date":"2025-04-24T09:27:09.156Z","kind":"YouTube"}],"locations":[{"lat":46.95963595861957,"lng":6.937866210937501}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -494,7 +494,7 @@
                   return;
                 }
                 
-                const filtered = data.filter(info => info.spotId === 'erlenwaeldli-ipsach');
+                const filtered = data.filter(info => info.spotId === 'supfoil-ch');
                 if (filtered.length === 0) {
                   console.log('No matching spotId entries.');
                   return;
@@ -580,7 +580,7 @@
   const res = await fetch(jsonFile);
   const spots = await res.json();
   const videoContainer = document.getElementById("videos");
-  const spotId = "erlenwaeldli-ipsach";
+  const spotId = "supfoil-ch";
 
   // Add masonry container style
   videoContainer.style.columnCount = "1";
