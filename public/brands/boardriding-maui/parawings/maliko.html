@@ -131,7 +131,8 @@
         </div>
       <div class="review-date">April 9, 2025</div>
     
-    <p class="review-text">Nice low end, very small to pack down.<br>Negative: Bar is very thin and the fabric can rip at the ends.</p>
+    <p class="review-text">Nice low end, very small to pack down.
+<br>Negative: Bar is very thin and the fabric can rip at the ends.</p>
   </div>  </div>
 </div>
 <div class="main-button" id="add-review-btn">+ Add Review</div>
@@ -278,9 +279,10 @@
       // For Instagram posts/reels
       if (parsedUrl.hostname.includes('instagram.com')) {
         const path = parsedUrl.pathname.split('/').filter(Boolean);
-        if (path.length >= 2) {
-          // Return the type and ID as the normalized form
-          return `instagram:${path[0]}/${path[1]}`;
+        const types = ['reel', 'p'];
+        const typeIndex = path.findIndex(p => types.includes(p));
+        if (typeIndex !== -1 && path.length > typeIndex + 1) {
+          return `instagram:${path[typeIndex]}/${path[typeIndex + 1]}`;
         }
       }
 
