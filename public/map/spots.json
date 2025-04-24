@@ -1,272 +1,55 @@
 [
   {
+    "locations" : [
+      {
+        "lat" : 47.122651022568832,
+        "lng" : 7.2388261556625375
+      }
+    ],
+    "pending" : false,
+    "id" : "balainen-nidau",
+    "kind" : "wake-thief-spot",
+    "infos" : [
+      {
+        "userUrl" : "https:\/\/nilsmango.ch",
+        "id" : "balainen-nidau-m9v31gkp-y37n7",
+        "userName" : "Nils Mango",
+        "date" : "2025-04-24T08:10:09.577Z",
+        "tag" : "description",
+        "text" : "Nice dock to thief the wakes of boats!"
+      }
+    ],
+    "country" : "CH",
+    "name" : "Balainen, Nidau",
     "videos" : [
       {
-        "url" : "https:\/\/www.youtube.com\/watch?v=dQw4w9WgXcQ",
         "kind" : "YouTube",
-        "date" : "2023-04-16T14:20:00Z"
-      }
-    ],
-    "kind" : "wave-wind-spot",
-    "name" : "Maui Maliko",
-    "locations" : [
-      {
-        "lat" : 20.9175,
-        "lng" : -156.38249999999999
-      }
-    ],
-    "infos" : [
-      {
-        "date" : "2023-04-15T10:30:00Z",
-        "id" : "info1",
-        "userName" : "WindFoiler",
-        "userUrl" : "https:\/\/example.com\/windfoiler",
-        "tag" : "description",
-        "text" : "Maliko is a famous downwind run starting point on Maui's north shore. Great for foiling in trade winds."
-      }
-    ],
-    "id" : "example1",
-    "pending" : false,
-    "state" : "HI",
-    "country" : "US"
-  },
-  {
-    "kind" : "downwind-run",
-    "infos" : [
-      {
-        "date" : "2023-04-17T09:15:00Z",
-        "id" : "info2",
-        "userName" : "MauiRider",
-        "userUrl" : null,
-        "tag" : "wind-direction",
-        "text" : "Best with NE trade winds 15-25 knots. Usually strongest in the afternoon."
-      }
-    ],
-    "id" : "example2",
-    "state" : "HI",
-    "pending" : false,
-    "distance" : 12.5,
-    "locations" : [
-      {
-        "lat" : 20.897500000000001,
-        "lng" : -156.4325
-      },
-      {
-        "lat" : 20.782499999999999,
-        "lng" : -156.465
-      }
-    ],
-    "country" : "US",
-    "name" : "Kanaha → Kihei"
-  },
-  {
-    "name" : "Test",
-    "pending" : false,
-    "distance" : 197,
-    "videos" : [
-      {
-        "url" : "https:\/\/www.youtube.com\/watch?v=28caZd9x6hQ",
-        "kind" : "YouTube",
-        "date" : "2025-04-17T15:39:30+00:00"
-      }
-    ],
-    "country" : "FR",
-    "id" : "m9lg6e1yksdhb",
-    "locations" : [
-      {
-        "lat" : 43.512704904648189,
-        "lng" : 3.9440917968750004
-      },
-      {
-        "lat" : 43.403052024326158,
-        "lng" : 4.0429687500000009
-      },
-      {
-        "lat" : 43.359135197357809,
-        "lng" : 4.3121337890625009
-      },
-      {
-        "lat" : 43.271206115959806,
-        "lng" : 4.6142578125000009
-      },
-      {
-        "lat" : 43.229195113965005,
-        "lng" : 4.9163818359375009
-      },
-      {
-        "lat" : 43.153101551466385,
-        "lng" : 5.0674438476562509
-      },
-      {
-        "lat" : 42.968482211280353,
-        "lng" : 5.2047729492187509
-      },
-      {
-        "lat" : 42.839723547640837,
-        "lng" : 5.3063964843750009
-      },
-      {
-        "lat" : 42.93430692117159,
-        "lng" : 5.5288696289062509
-      },
-      {
-        "lat" : 43.036775857610579,
-        "lng" : 5.7733154296875
-      },
-      {
-        "lat" : 43.08493742707595,
-        "lng" : 5.8804321289062509
-      }
-    ],
-    "infos" : [
-      {
-        "date" : "2025-04-17T14:20:12.838Z",
-        "id" : "m9lg6e1ysya0n",
-        "userName" : "tester",
-        "userUrl" : null,
-        "tag" : "description",
-        "text" : "Testing"
-      }
-    ],
-    "kind" : "downwind-run"
-  },
-  {
-    "country" : "US",
-    "kind" : "wave-spot",
-    "id" : "m9lg9spihwwvh",
-    "pending" : false,
-    "state" : "HI",
-    "name" : "Paukukalo",
-    "locations" : [
-      {
-        "lat" : 20.909813769365538,
-        "lng" : -156.47312164306643
-      }
-    ],
-    "infos" : [
-      {
-        "date" : "2025-04-17T14:22:51.798Z",
-        "id" : "m9lg9spixdy66",
-        "userName" : "testeer",
-        "userUrl" : null,
-        "tag" : "description",
-        "text" : "test"
+        "url" : "https:\/\/youtube.com\/shorts\/_P-h36Wc0Y4",
+        "date" : "2025-04-24T08:10:09.577Z"
       }
     ]
   },
   {
+    "kind" : "wind-spot",
+    "id" : "erlenwaeldli-ipsach",
+    "name" : "Erlenwäldli, Ipsach",
     "locations" : [
       {
-        "lat" : 13.092185756228707,
-        "lng" : -59.620056152343757
+        "lng" : 7.2266596555709848,
+        "lat" : 47.121263959843674
       }
     ],
-    "name" : "Princess Alice Highway, Bridgetown",
-    "kind" : "wave-spot",
-    "pending" : false,
-    "infos" : [
-      {
-        "date" : "2025-04-18T18:23:41.919Z",
-        "id" : "princess-alice-highway-bridgetown-m9n4bd5r-obqoz",
-        "userName" : "Tester",
-        "userUrl" : null,
-        "tag" : "description",
-        "text" : "This is just a test"
-      }
-    ],
-    "country" : "BB",
-    "id" : "princess-alice-highway-bridgetown-m9n4bd5r-pzivs"
-  },
-  {
     "pending" : false,
     "country" : "CH",
     "infos" : [
       {
-        "date" : "2025-04-18T18:33:07.563Z",
-        "id" : "utoquai-z-rich-m9n4nhm3-phojz",
-        "userName" : "tester",
-        "userUrl" : null,
+        "userUrl" : "https:\/\/nilsmango.ch",
+        "text" : "The wind spot where to cool kids are.",
+        "date" : "2025-04-24T08:15:19.828Z",
+        "id" : "erlenwaeldli-ipsach-m9v383ys-vdkm3",
         "tag" : "description",
-        "text" : "test"
+        "userName" : "Nils Mango"
       }
-    ],
-    "locations" : [
-      {
-        "lat" : 47.362061429928389,
-        "lng" : 8.5467302799224871
-      }
-    ],
-    "name" : "Utoquai, Zürich",
-    "id" : "utoquai-z-rich-m9n4nhm3-8lhwd",
-    "kind" : "pump-foil-dock"
-  },
-  {
-    "id" : "turmweg-nidau-m9s8v4op-i1v1s",
-    "country" : "CH",
-    "locations" : [
-      {
-        "lat" : 47.122727674980766,
-        "lng" : 7.2384184598922738
-      }
-    ],
-    "pending" : false,
-    "name" : "Balaine, Nidau",
-    "infos" : [
-      {
-        "date" : "2025-04-22T08:29:53.401Z",
-        "id" : "turmweg-nidau-m9s8v4op-no1n3",
-        "userName" : "Nils",
-        "userUrl" : null,
-        "tag" : "description",
-        "text" : "Great in Summer"
-      }
-    ],
-    "kind" : "wake-thief-spot"
-  },
-  {
-    "id" : "balaine-nidau",
-    "locations" : [
-      {
-        "lat" : 47.122720374755815,
-        "lng" : 7.2385203838348398
-      }
-    ],
-    "kind" : "pump-foil-dock",
-    "infos" : [
-      {
-        "date" : "2025-04-22T08:43:21.381Z",
-        "id" : "oberer-kanalweg-nidau-m9s9cg4l-q96jg",
-        "userName" : "Nils",
-        "userUrl" : null,
-        "tag" : "description",
-        "text" : "Nice low dock"
-      }
-    ],
-    "pending" : false,
-    "name" : "Balaine, Nidau",
-    "country" : "CH"
-  },
-  {
-    "kind" : "wave-spot",
-    "country" : "CH",
-    "pending" : false,
-    "id" : "balaine-nidau-2",
-    "infos" : [
-      {
-        "date" : "2025-04-22T08:44:27.887Z",
-        "id" : "oberer-kanalweg-nidau-m9s9dvfz-822da",
-        "userName" : "test",
-        "userUrl" : null,
-        "tag" : "description",
-        "text" : "Testing"
-      }
-    ],
-    "locations" : [
-      {
-        "lat" : 47.125629435057554,
-        "lng" : 7.22428321838379
-      }
-    ],
-    "name" : "Balaine, Nidau"
+    ]
   }
 ]

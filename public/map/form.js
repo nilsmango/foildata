@@ -393,7 +393,7 @@ function addInfoSection() {
                 <option value="conditions">Conditions</option>
                 <option value="logistics">Logistics</option>
                 <option value="local-contact">Local Legends & Groups</option>
-                <option value="local-contact">Local Rules</option>
+                <option value="local-rules">Local Rules</option>
             </select>
             <button type="button" class="remove-info-btn small-button">Remove</button>
         </div>

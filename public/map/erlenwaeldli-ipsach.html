@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utoquai, Zürich</title>
+    <title>Erlenwäldli, Ipsach</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Utoquai, Zürich Pump Foil Dock Info">
+    <meta name="description" content="Erlenwäldli, Ipsach Wind Spot Info">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -40,13 +40,13 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Utoquai, Zürich</h1>
+            <h1 class="card-title">Erlenwäldli, Ipsach</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Pump Foil Dock</p>
+            <p>Wind Spot</p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -59,23 +59,25 @@
         <h3>Description</h3>
         <div>•</div>
         <div class="info-meta">
-            <span class="info-date">April 18, 2025</span>
+            <span class="info-date">April 24, 2025</span>
             <span class="info-author">by 
-                tester
+                <a href="https://nilsmango.ch" target="_blank" rel="noopener">
+    Nils Mango
+</a>
             </span>
         </div>
     </div>
     <div class="info-content">
-        test
+        The wind spot where to cool kids are.
     </div>
     <div class="info-actions">
-        <div class="vote-btn" data-info-id="utoquai-z-rich-m9n4nhm3-phojz" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+        <div class="vote-btn" data-info-id="erlenwaeldli-ipsach-m9v383ys-vdkm3" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
             <span class="vote-icon">
                 <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
                                 <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
                             </svg>
             </span>
-            <span class="vote-count">1</span>
+            <span class="vote-count">0</span>
         </div>
     </div>
     <hr class="info-separator">
@@ -84,7 +86,7 @@
             <div class="add-info-section" style="display: none;">
                 <h2>Add Information</h2>
                 <form id="add-info-form">
-                    <input type="hidden" name="spotId" value="utoquai-z-rich-m9n4nhm3-8lhwd">
+                    <input type="hidden" name="spotId" value="erlenwaeldli-ipsach">
                     
                     <div class="form-group">
                         <label for="info-tag" class="required">Tag</label>
@@ -127,7 +129,7 @@
                             <div class="add-video-section" style="display: none;">
                                 <h2>Add Video</h2>
                                 <form id="add-video-form">
-                                    <input type="hidden" name="spotId" value="utoquai-z-rich-m9n4nhm3-8lhwd">
+                                    <input type="hidden" name="spotId" value="erlenwaeldli-ipsach">
                                     
                                     <div class="form-group">
                                         <label for="video-url" class="required">Video URL (YouTube or Instagram)</label>
@@ -236,7 +238,7 @@
             }
             
             // Get spot data
-            const spotData = {"country":"CH","locations":[{"lat":47.36206142992839,"lng":8.546730279922487}],"infos":[{"id":"utoquai-z-rich-m9n4nhm3-phojz","spotId":"utoquai-z-rich-m9n4nhm3-8lhwd","date":"2025-04-18T18:33:07.563Z","userName":"tester","tag":"description","votes":1,"text":"test"}],"name":"Utoquai, Zürich","kind":"pump-foil-dock","pending":true,"id":"utoquai-z-rich-m9n4nhm3-8lhwd"};
+            const spotData = {"infos":[{"userName":"Nils Mango","id":"erlenwaeldli-ipsach-m9v383ys-vdkm3","tag":"description","date":"2025-04-24T08:15:19.828Z","userUrl":"https:\/\/nilsmango.ch","spotId":"erlenwaeldli-ipsach","text":"The wind spot where to cool kids are."}],"kind":"wind-spot","name":"Erlenwäldli, Ipsach","locations":[{"lng":7.226659655570985,"lat":47.121263959843674}],"pending":false,"id":"erlenwaeldli-ipsach","country":"CH"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -491,7 +493,7 @@
                   return;
                 }
                 
-                const filtered = data.filter(info => info.spotId === 'utoquai-z-rich-m9n4nhm3-8lhwd');
+                const filtered = data.filter(info => info.spotId === 'erlenwaeldli-ipsach');
                 if (filtered.length === 0) {
                   console.log('No matching spotId entries.');
                   return;
@@ -536,13 +538,46 @@
 
               })
               .catch(err => console.error('Error loading pending infos:', err));
+            
+            // Function to update vote counts based on infos.json data
+            function updateVoteCounts() {
+              // Fetch the infos.json file
+              fetch('infos.json')
+                .then(response => response.json())
+                .then(infos => {
+                  // Create a map of id to votes for quick lookup
+                  const votesMap = {};
+                  infos.forEach(info => {
+                    votesMap[info.id] = info.votes || 0; // Default to 0 if votes property doesn't exist
+                  });
+                  
+                  // Find all vote buttons
+                  const voteButtons = document.querySelectorAll('.vote-btn[data-info-id]');
+                  
+                  // Update each vote button with the corresponding vote count
+                  voteButtons.forEach(button => {
+                    const infoId = button.getAttribute('data-info-id');
+                    const voteCountSpan = button.querySelector('.vote-count');
+                    
+                    if (infoId && voteCountSpan && votesMap.hasOwnProperty(infoId)) {
+                      voteCountSpan.textContent = votesMap[infoId];
+                    }
+                  });
+                })
+                .catch(error => {
+                  console.error('Error fetching or processing infos.json:', error);
+                });
+            }
+
+            // Call the function when the DOM is fully loaded
+            document.addEventListener('DOMContentLoaded', updateVoteCounts);
 
             async function loadVideos() {
   const jsonFile = "spots.json";
   const res = await fetch(jsonFile);
   const spots = await res.json();
   const videoContainer = document.getElementById("videos");
-  const spotId = "utoquai-z-rich-m9n4nhm3-8lhwd";
+  const spotId = "erlenwaeldli-ipsach";
 
   // Add masonry container style
   videoContainer.style.columnCount = "1";

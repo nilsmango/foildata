@@ -223,7 +223,8 @@ function formatTextWithLinks($text) {
                                 <option value="wind-predictions">Wind Predictions</option>
                                 <option value="conditions">Conditions</option>
                                 <option value="logistics">Logistics</option>
-                                <option value="local-contact">Local Contact</option>
+                                <option value="local-contact">Local Legends & Groups</option>
+                                <option value="local-rules">Local Rules</option>
                             </select>
                         </div>
                         

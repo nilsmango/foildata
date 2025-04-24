@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanaha → Kihei</title>
+    <title>Balainen, Nidau</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Kanaha → Kihei Downwind Run Info">
+    <meta name="description" content="Balainen, Nidau Wake Thief Spot Info">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -40,42 +40,44 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Kanaha → Kihei</h1>
+            <h1 class="card-title">Balainen, Nidau</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Downwind Run<br>Distance: 12.5 km</p>
+            <p>Wake Thief Spot</p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
-<button class="badge badge-outline" data-tag="wind-direction">
-    Wind Direction
+<button class="badge badge-outline" data-tag="description">
+    Description
 </button>
 </div>
 <hr class="info-separator">
-<div class="info-container"><div class="info-item" data-tag="wind-direction">
+<div class="info-container"><div class="info-item" data-tag="description">
     <div class="info-header">
-        <h3>Wind Direction</h3>
+        <h3>Description</h3>
         <div>•</div>
         <div class="info-meta">
-            <span class="info-date">April 17, 2023</span>
+            <span class="info-date">April 24, 2025</span>
             <span class="info-author">by 
-                MauiRider
+                <a href="https://nilsmango.ch" target="_blank" rel="noopener">
+    Nils Mango
+</a>
             </span>
         </div>
     </div>
     <div class="info-content">
-        Best with NE trade winds 15-25 knots. Usually strongest in the afternoon.
+        Nice dock to thief the wakes of boats!
     </div>
     <div class="info-actions">
-        <div class="vote-btn" data-info-id="info2" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+        <div class="vote-btn" data-info-id="balainen-nidau-m9v31gkp-y37n7" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
             <span class="vote-icon">
                 <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
                                 <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
                             </svg>
             </span>
-            <span class="vote-count">3</span>
+            <span class="vote-count">0</span>
         </div>
     </div>
     <hr class="info-separator">
@@ -84,7 +86,7 @@
             <div class="add-info-section" style="display: none;">
                 <h2>Add Information</h2>
                 <form id="add-info-form">
-                    <input type="hidden" name="spotId" value="example2">
+                    <input type="hidden" name="spotId" value="balainen-nidau">
                     
                     <div class="form-group">
                         <label for="info-tag" class="required">Tag</label>
@@ -127,7 +129,7 @@
                             <div class="add-video-section" style="display: none;">
                                 <h2>Add Video</h2>
                                 <form id="add-video-form">
-                                    <input type="hidden" name="spotId" value="example2">
+                                    <input type="hidden" name="spotId" value="balainen-nidau">
                                     
                                     <div class="form-group">
                                         <label for="video-url" class="required">Video URL (YouTube or Instagram)</label>
@@ -236,7 +238,7 @@
             }
             
             // Get spot data
-            const spotData = {"id":"example2","country":"US","kind":"downwind-run","state":"HI","name":"Kanaha → Kihei","distance":12.5,"pending":false,"locations":[{"lng":-156.4325,"lat":20.8975},{"lat":20.7825,"lng":-156.465}],"infos":[{"tag":"wind-direction","userName":"MauiRider","id":"info2","spotId":"example2","text":"Best with NE trade winds 15-25 knots. Usually strongest in the afternoon.","date":"2023-04-17T09:15:00Z","votes":3}]};
+            const spotData = {"infos":[{"userName":"Nils Mango","id":"balainen-nidau-m9v31gkp-y37n7","tag":"description","date":"2025-04-24T08:10:09.577Z","userUrl":"https:\/\/nilsmango.ch","spotId":"balainen-nidau","text":"Nice dock to thief the wakes of boats!"}],"kind":"wake-thief-spot","name":"Balainen, Nidau","locations":[{"lng":7.2388261556625375,"lat":47.12265102256883}],"pending":false,"videos":[{"url":"https:\/\/youtube.com\/shorts\/_P-h36Wc0Y4","date":"2025-04-24T08:10:09.577Z","kind":"YouTube"}],"id":"balainen-nidau","country":"CH"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -491,7 +493,7 @@
                   return;
                 }
                 
-                const filtered = data.filter(info => info.spotId === 'example2');
+                const filtered = data.filter(info => info.spotId === 'balainen-nidau');
                 if (filtered.length === 0) {
                   console.log('No matching spotId entries.');
                   return;
@@ -536,13 +538,46 @@
 
               })
               .catch(err => console.error('Error loading pending infos:', err));
+            
+            // Function to update vote counts based on infos.json data
+            function updateVoteCounts() {
+              // Fetch the infos.json file
+              fetch('infos.json')
+                .then(response => response.json())
+                .then(infos => {
+                  // Create a map of id to votes for quick lookup
+                  const votesMap = {};
+                  infos.forEach(info => {
+                    votesMap[info.id] = info.votes || 0; // Default to 0 if votes property doesn't exist
+                  });
+                  
+                  // Find all vote buttons
+                  const voteButtons = document.querySelectorAll('.vote-btn[data-info-id]');
+                  
+                  // Update each vote button with the corresponding vote count
+                  voteButtons.forEach(button => {
+                    const infoId = button.getAttribute('data-info-id');
+                    const voteCountSpan = button.querySelector('.vote-count');
+                    
+                    if (infoId && voteCountSpan && votesMap.hasOwnProperty(infoId)) {
+                      voteCountSpan.textContent = votesMap[infoId];
+                    }
+                  });
+                })
+                .catch(error => {
+                  console.error('Error fetching or processing infos.json:', error);
+                });
+            }
+
+            // Call the function when the DOM is fully loaded
+            document.addEventListener('DOMContentLoaded', updateVoteCounts);
 
             async function loadVideos() {
   const jsonFile = "spots.json";
   const res = await fetch(jsonFile);
   const spots = await res.json();
   const videoContainer = document.getElementById("videos");
-  const spotId = "example2";
+  const spotId = "balainen-nidau";
 
   // Add masonry container style
   videoContainer.style.columnCount = "1";
