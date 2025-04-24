@@ -214,7 +214,8 @@
         "date": "2025-04-24T14:23:51.415Z",
         "userName": "nilsmango",
         "userUrl": null,
-        "spotId": "gorgier-yverdon-les-bains"
+        "spotId": "gorgier-yverdon-les-bains",
+        "votes": 1
     },
     {
         "id": "rolle-geneve-m9vgqav5-fwhvv",
@@ -224,5 +225,32 @@
         "userName": "nilsmango",
         "userUrl": null,
         "spotId": "rolle-geneve"
+    },
+    {
+        "id": "y-plage-m9vipbon-uoepx",
+        "tag": "description",
+        "text": "Y Plage \nSchool \/ Renting \nSup \/ Wing \/ Foil ",
+        "date": "2025-04-24T15:28:37.223Z",
+        "userName": "Ludo T ",
+        "userUrl": null,
+        "spotId": "y-plage"
+    },
+    {
+        "id": "pointe-promenthoux-plage-rocaille-m9vit8ha-5cy1o",
+        "tag": "description",
+        "text": "Easy small downwind  run by bise \nTo learn Foil \nOr sup race ",
+        "date": "2025-04-24T15:31:39.694Z",
+        "userName": "Ludo ",
+        "userUrl": null,
+        "spotId": "pointe-promenthoux-plage-rocaille"
+    },
+    {
+        "spotId": "y-plage",
+        "tag": "description",
+        "text": "Website: https:\/\/y-plage.ch\/en\/",
+        "userName": "Nils Mango",
+        "userUrl": "",
+        "id": "680a80647208e",
+        "date": "2025-04-24T20:18:12+02:00"
     }
 ]
