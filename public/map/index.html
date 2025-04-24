@@ -412,6 +412,26 @@
         // Initialize filters from URL on page load
         readFiltersFromURL();
     });
+    // adding up the spot kind numbers
+    fetch('spots.json')
+      .then(res => res.json())
+      .then(spots => {
+        const counts = {};
+        spots.forEach(spot => {
+          const kind = spot.kind || (spot.pending ? 'pending' : null);
+          if (kind) counts[kind] = (counts[kind] || 0) + 1;
+        });
+    
+        document.querySelectorAll('#filter-options .filter-option').forEach(label => {
+          const input = label.querySelector('input');
+          const kind = input?.value;
+          if (kind) {
+            const count = counts[kind] || 0;
+            const textNode = [...label.childNodes].find(n => n.nodeType === 3 && n.textContent.trim() !== '');
+            if (textNode) textNode.textContent = textNode.textContent.replace(/\s*\(\d+\)?$/, '') + ` (${count})`;
+          }
+        });
+      });
     </script>
 </body>
 </html>
