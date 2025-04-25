@@ -104,7 +104,7 @@
         "id": "concise-saint-blaise-m9vbnq5k-pxnc0",
         "spotId": "concise-saint-blaise",
         "tag": "description",
-        "text": "Great run with north-west wind. Train directly to the start.\nBest waves are on the inside in my opinion.\n"
+        "text": "Great run with south-west wind. Train directly to the start.\nBest waves are on the inside in my opinion.\n"
     },
     {
         "tag": "local-contact",
@@ -159,7 +159,8 @@
         "date": "2025-04-24T13:18:06.362Z",
         "userName": "sorin",
         "userUrl": null,
-        "spotId": "kuesnacht-ermitage"
+        "spotId": "kuesnacht-ermitage",
+        "votes": 1
     },
     {
         "id": "pump-foil-solothurn-m9ve477i-k1vfe",
