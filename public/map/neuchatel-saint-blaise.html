@@ -345,7 +345,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"kind":"downwind-run","locations":[{"lng":6.939078569412232,"lat":46.99078444164034},{"lat":46.99079175995039,"lng":6.951427459716798},{"lat":46.99360191693961,"lng":6.9620704650878915},{"lng":6.973571777343751,"lat":46.99875348764993},{"lat":47.0037874973722,"lng":6.984214782714845},{"lat":47.00706520220537,"lng":6.989021301269532},{"lng":6.989235877990723,"lat":47.00883566445912},{"lat":47.010167130466684,"lng":6.989107131958008}],"distance":4.7,"id":"neuchatel-saint-blaise","name":"Neuchâtel → Saint Blaise","country":"CH","infos":[{"spotId":"neuchatel-saint-blaise","id":"neuchatel-saint-blaise-m9v6jmlq-okpx2","tag":"logistics","text":"Train: Get on the tain at St Blaise Lac (has to be spelled like this to be found on the SBB app) to Neuchatel. \nDepartures are normally at \nxx:36\nxx:49\n(as of April 2025) verify yourself!\nhttps:\/\/www.sbb.ch\/","userName":"SUPFOIL.CH","date":"2025-04-24T09:48:16.046Z"},{"votes":1,"date":"2025-04-24T09:48:16.046Z","spotId":"neuchatel-saint-blaise","userName":"SUPFOIL.CH","text":"South-West","id":"neuchatel-saint-blaise-m9v6jmlq-ts7ml","tag":"wind-direction"},{"text":"Webcam gives you a good impression about the current conditions:\nhttps:\/\/lacdeneuchatel.roundshot.co\/#\/","userName":"SUPFOIL.CH","spotId":"neuchatel-saint-blaise","id":"neuchatel-saint-blaise-m9v6jmlq-czymv","date":"2025-04-24T09:48:16.046Z","votes":1,"tag":"conditions"},{"id":"680a21ca9a4af","votes":1,"spotId":"neuchatel-saint-blaise","date":"2025-04-24T13:34:34+02:00","tag":"conditions","userName":"Nils Mango","userUrl":"https:\/\/nilsmango.ch","text":"For wind check: https:\/\/letskite.ch\/en\nFor waves in Neuchâtel check this webcam link: https:\/\/jeunesrives.roundshot.com\/#\/"},{"id":"680a29868dea9","text":"Group chat for this run: https:\/\/chat.whatsapp.com\/DPFmgw7m15T0iZ0P1pbe53\n","userUrl":"","userName":"Nils Mango","date":"2025-04-24T14:07:34+02:00","spotId":"neuchatel-saint-blaise","tag":"local-contact"}]};
+            const spotData = {"country":"CH","distance":4.7,"id":"neuchatel-saint-blaise","kind":"downwind-run","infos":[{"tag":"logistics","text":"Train: Get on the tain at St Blaise Lac (has to be spelled like this to be found on the SBB app) to Neuchatel. \nDepartures are normally at \nxx:36\nxx:49\n(as of April 2025) verify yourself!\nhttps:\/\/www.sbb.ch\/","userName":"SUPFOIL.CH","date":"2025-04-24T09:48:16.046Z","spotId":"neuchatel-saint-blaise","id":"neuchatel-saint-blaise-m9v6jmlq-okpx2"},{"votes":1,"id":"neuchatel-saint-blaise-m9v6jmlq-ts7ml","tag":"wind-direction","text":"South-West","date":"2025-04-24T09:48:16.046Z","spotId":"neuchatel-saint-blaise","userName":"SUPFOIL.CH"},{"votes":1,"id":"neuchatel-saint-blaise-m9v6jmlq-czymv","tag":"conditions","text":"Webcam gives you a good impression about the current conditions:\nhttps:\/\/lacdeneuchatel.roundshot.co\/#\/","date":"2025-04-24T09:48:16.046Z","spotId":"neuchatel-saint-blaise","userName":"SUPFOIL.CH"},{"votes":1,"id":"680a21ca9a4af","userUrl":"https:\/\/nilsmango.ch","tag":"conditions","text":"For wind check: https:\/\/letskite.ch\/en\nFor waves in Neuchâtel check this webcam link: https:\/\/jeunesrives.roundshot.com\/#\/","date":"2025-04-24T13:34:34+02:00","spotId":"neuchatel-saint-blaise","userName":"Nils Mango"},{"id":"680a29868dea9","userUrl":"","tag":"local-contact","text":"Group chat for this run: https:\/\/chat.whatsapp.com\/DPFmgw7m15T0iZ0P1pbe53\n","date":"2025-04-24T14:07:34+02:00","spotId":"neuchatel-saint-blaise","userName":"Nils Mango"}],"name":"Neuchâtel → Saint Blaise","pending":false,"locations":[{"lat":46.99078444164034,"lng":6.939078569412232},{"lat":46.99079175995039,"lng":6.951427459716798},{"lat":46.99360191693961,"lng":6.9620704650878915},{"lat":46.99875348764993,"lng":6.973571777343751},{"lat":47.0037874973722,"lng":6.984214782714845},{"lat":47.00706520220537,"lng":6.989021301269532},{"lat":47.00883566445912,"lng":6.989235877990723},{"lat":47.010167130466684,"lng":6.989107131958008}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -763,12 +763,14 @@
 
       // For Instagram posts/reels
       if (parsedUrl.hostname.includes('instagram.com')) {
-        const path = parsedUrl.pathname.split('/').filter(Boolean);
-        const types = ['reel', 'p'];
-        const typeIndex = path.findIndex(p => types.includes(p));
-        if (typeIndex !== -1 && path.length > typeIndex + 1) {
-          return `instagram:${path[typeIndex]}/${path[typeIndex + 1]}`;
-        }
+          // Use a regex to match the pattern /optional_username/(reel|p)/identifier
+          const match = parsedUrl.pathname.match(/^\/(?:[a-zA-Z0-9_.]+\/)?(reel|p)\/([a-zA-Z0-9_-]+)/);
+      
+          // If the regex finds a match and captures the type (reel or p) and the identifier
+          if (match && match[1] && match[2]) {
+              // Construct the desired string in the format instagram:type/identifier
+              return `instagram:${match[1]}/${match[2]}`;
+          }
       }
 
       // For URLs that don't match patterns, return the full URL

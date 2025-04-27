@@ -239,7 +239,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"SUPFOIL.CH","country":"CH","infos":[{"id":"supfoil-ch-m9v5sh2c-bwpth","userUrl":"https:\/\/supfoil.ch\/","userName":"SUPFOIL.CH ","text":"Learn to SUP-Foil Downwind on one of the best spots in Europe.\nhttps:\/\/supfoil.ch\/","spotId":"supfoil-ch","date":"2025-04-24T09:27:09.156Z","tag":"description"}],"videos":[{"url":"https:\/\/youtube.com\/shorts\/AZUjX3CPp9I?si=2DPgVsbQ2pDmK2D3","kind":"YouTube","date":"2025-04-24T09:27:09.156Z"}],"pending":false,"id":"supfoil-ch","kind":"school","locations":[{"lat":46.95963595861957,"lng":6.937866210937501}]};
+            const spotData = {"infos":[{"date":"2025-04-24T09:27:09.156Z","userName":"SUPFOIL.CH ","spotId":"supfoil-ch","tag":"description","id":"supfoil-ch-m9v5sh2c-bwpth","text":"Learn to SUP-Foil Downwind on one of the best spots in Europe.\nhttps:\/\/supfoil.ch\/","userUrl":"https:\/\/supfoil.ch\/"}],"country":"CH","id":"supfoil-ch","name":"SUPFOIL.CH","kind":"school","videos":[{"url":"https:\/\/youtube.com\/shorts\/AZUjX3CPp9I?si=2DPgVsbQ2pDmK2D3","date":"2025-04-24T09:27:09.156Z","kind":"YouTube"}],"locations":[{"lng":6.937866210937501,"lat":46.95963595861957}],"pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -657,12 +657,14 @@
 
       // For Instagram posts/reels
       if (parsedUrl.hostname.includes('instagram.com')) {
-        const path = parsedUrl.pathname.split('/').filter(Boolean);
-        const types = ['reel', 'p'];
-        const typeIndex = path.findIndex(p => types.includes(p));
-        if (typeIndex !== -1 && path.length > typeIndex + 1) {
-          return `instagram:${path[typeIndex]}/${path[typeIndex + 1]}`;
-        }
+          // Use a regex to match the pattern /optional_username/(reel|p)/identifier
+          const match = parsedUrl.pathname.match(/^\/(?:[a-zA-Z0-9_.]+\/)?(reel|p)\/([a-zA-Z0-9_-]+)/);
+      
+          // If the regex finds a match and captures the type (reel or p) and the identifier
+          if (match && match[1] && match[2]) {
+              // Construct the desired string in the format instagram:type/identifier
+              return `instagram:${match[1]}/${match[2]}`;
+          }
       }
 
       // For URLs that don't match patterns, return the full URL

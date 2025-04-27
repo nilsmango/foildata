@@ -239,7 +239,7 @@
             }
             
             // Get spot data
-            const spotData = {"videos":[{"date":"2025-04-24T13:09:04.864Z","url":"https:\/\/www.youtube.com\/watch?v=mR8adQcszx0&t=1s","kind":"YouTube"}],"pending":false,"kind":"pump-foil-dock","locations":[{"lat":47.207201002858724,"lng":7.541363239288331}],"id":"boedeli-dock","name":"Bödeli\/Dock","country":"CH","infos":[{"id":"boedeli-dock-m9vdpvj1-lmni8","userUrl":"https:\/\/www.instagram.com\/rob_on_rolls\/","date":"2025-04-24T13:09:04.862Z","text":"Super easy concrete dock near the trainsation!","spotId":"boedeli-dock","tag":"description","userName":"Rob_on_Rolls"}]};
+            const spotData = {"pending":false,"kind":"pump-foil-dock","id":"boedeli-dock","infos":[{"spotId":"boedeli-dock","userName":"Rob_on_Rolls","userUrl":"https:\/\/www.instagram.com\/rob_on_rolls\/","id":"boedeli-dock-m9vdpvj1-lmni8","text":"Super easy concrete dock near the trainsation!","tag":"description","date":"2025-04-24T13:09:04.862Z"}],"videos":[{"url":"https:\/\/www.youtube.com\/watch?v=mR8adQcszx0&t=1s","date":"2025-04-24T13:09:04.864Z","kind":"YouTube"}],"locations":[{"lng":7.541363239288331,"lat":47.207201002858724}],"name":"Bödeli\/Dock","country":"CH"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -657,12 +657,14 @@
 
       // For Instagram posts/reels
       if (parsedUrl.hostname.includes('instagram.com')) {
-        const path = parsedUrl.pathname.split('/').filter(Boolean);
-        const types = ['reel', 'p'];
-        const typeIndex = path.findIndex(p => types.includes(p));
-        if (typeIndex !== -1 && path.length > typeIndex + 1) {
-          return `instagram:${path[typeIndex]}/${path[typeIndex + 1]}`;
-        }
+          // Use a regex to match the pattern /optional_username/(reel|p)/identifier
+          const match = parsedUrl.pathname.match(/^\/(?:[a-zA-Z0-9_.]+\/)?(reel|p)\/([a-zA-Z0-9_-]+)/);
+      
+          // If the regex finds a match and captures the type (reel or p) and the identifier
+          if (match && match[1] && match[2]) {
+              // Construct the desired string in the format instagram:type/identifier
+              return `instagram:${match[1]}/${match[2]}`;
+          }
       }
 
       // For URLs that don't match patterns, return the full URL

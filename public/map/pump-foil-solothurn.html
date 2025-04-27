@@ -237,7 +237,7 @@
             }
             
             // Get spot data
-            const spotData = {"id":"pump-foil-solothurn","locations":[{"lat":47.20723385066725,"lng":7.541508078575135}],"country":"CH","infos":[{"text":"Book Pumpfoil-lessons with Ken Ruis!\nhttps:\/\/www.foilsolothurn.ch\/","date":"2025-04-24T13:20:13.182Z","spotId":"pump-foil-solothurn","userName":"Rob_on_Rolls","id":"pump-foil-solothurn-m9ve477i-k1vfe","tag":"description"}],"name":"Pump Foil Solothurn","pending":false,"kind":"school","videos":[{"url":"https:\/\/www.instagram.com\/foilsolothurn\/","kind":"Insta","date":"2025-04-24T13:20:13.182Z"},{"url":"https:\/\/www.instagram.com\/p\/C_Gybs6qoko\/","date":"2025-04-24T20:40:05+02:00","kind":"Insta"}]};
+            const spotData = {"name":"Pump Foil Solothurn","id":"pump-foil-solothurn","pending":false,"infos":[{"id":"pump-foil-solothurn-m9ve477i-k1vfe","userName":"Rob_on_Rolls","spotId":"pump-foil-solothurn","tag":"description","text":"Book Pumpfoil-lessons with Ken Ruis!\nhttps:\/\/www.foilsolothurn.ch\/","date":"2025-04-24T13:20:13.182Z"}],"videos":[{"url":"https:\/\/www.instagram.com\/foilsolothurn\/","date":"2025-04-24T13:20:13.182Z","kind":"Insta"},{"url":"https:\/\/www.instagram.com\/p\/C_Gybs6qoko\/","date":"2025-04-24T20:40:05+02:00","kind":"Insta"}],"kind":"school","country":"CH","locations":[{"lng":7.541508078575135,"lat":47.20723385066725}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -655,12 +655,14 @@
 
       // For Instagram posts/reels
       if (parsedUrl.hostname.includes('instagram.com')) {
-        const path = parsedUrl.pathname.split('/').filter(Boolean);
-        const types = ['reel', 'p'];
-        const typeIndex = path.findIndex(p => types.includes(p));
-        if (typeIndex !== -1 && path.length > typeIndex + 1) {
-          return `instagram:${path[typeIndex]}/${path[typeIndex + 1]}`;
-        }
+          // Use a regex to match the pattern /optional_username/(reel|p)/identifier
+          const match = parsedUrl.pathname.match(/^\/(?:[a-zA-Z0-9_.]+\/)?(reel|p)\/([a-zA-Z0-9_-]+)/);
+      
+          // If the regex finds a match and captures the type (reel or p) and the identifier
+          if (match && match[1] && match[2]) {
+              // Construct the desired string in the format instagram:type/identifier
+              return `instagram:${match[1]}/${match[2]}`;
+          }
       }
 
       // For URLs that don't match patterns, return the full URL

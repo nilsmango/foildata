@@ -239,7 +239,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":46.767918165271396,"lng":7.615156173706056}],"id":"sevensurf-steffisburg","kind":"shop","infos":[{"date":"2025-04-24T08:21:04.226Z","tag":"description","id":"sevensurf-steffisburg-m9v3fhpe-x9cnj","spotId":"sevensurf-steffisburg","userUrl":"https:\/\/sevensurf.ch","userName":"sevensurf","text":"surfshop\n- wing\n- kite\n- parawing\n- dw\n- pumpfoil\n- accesoirs\n\nbrands\n- f-one pro shop\n- duotone\n- north\n- and others\n\ntestpool and all year open\n\nsevensurf gmbh \nSchwäbismattweg 4           \n3613 Steffisburg \n+4177 456 06 06\nshop@sevensurf.ch\nsevensurf.ch\n\n","votes":1}],"country":"CH","pending":false,"name":"sevensurf, Steffisburg"};
+            const spotData = {"kind":"shop","locations":[{"lat":46.767918165271396,"lng":7.615156173706056}],"name":"sevensurf, Steffisburg","infos":[{"text":"surfshop\n- wing\n- kite\n- parawing\n- dw\n- pumpfoil\n- accesoirs\n\nbrands\n- f-one pro shop\n- duotone\n- north\n- and others\n\ntestpool and all year open\n\nsevensurf gmbh \nSchwäbismattweg 4           \n3613 Steffisburg \n+4177 456 06 06\nshop@sevensurf.ch\nsevensurf.ch\n\n","date":"2025-04-24T08:21:04.226Z","votes":1,"tag":"description","userName":"sevensurf","id":"sevensurf-steffisburg-m9v3fhpe-x9cnj","spotId":"sevensurf-steffisburg","userUrl":"https:\/\/sevensurf.ch"}],"pending":false,"id":"sevensurf-steffisburg","country":"CH"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -657,12 +657,14 @@
 
       // For Instagram posts/reels
       if (parsedUrl.hostname.includes('instagram.com')) {
-        const path = parsedUrl.pathname.split('/').filter(Boolean);
-        const types = ['reel', 'p'];
-        const typeIndex = path.findIndex(p => types.includes(p));
-        if (typeIndex !== -1 && path.length > typeIndex + 1) {
-          return `instagram:${path[typeIndex]}/${path[typeIndex + 1]}`;
-        }
+          // Use a regex to match the pattern /optional_username/(reel|p)/identifier
+          const match = parsedUrl.pathname.match(/^\/(?:[a-zA-Z0-9_.]+\/)?(reel|p)\/([a-zA-Z0-9_-]+)/);
+      
+          // If the regex finds a match and captures the type (reel or p) and the identifier
+          if (match && match[1] && match[2]) {
+              // Construct the desired string in the format instagram:type/identifier
+              return `instagram:${match[1]}/${match[2]}`;
+          }
       }
 
       // For URLs that don't match patterns, return the full URL

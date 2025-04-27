@@ -262,7 +262,7 @@
             }
             
             // Get spot data
-            const spotData = {"id":"y-plage","name":"Y-Plage ","locations":[{"lat":46.78583846182295,"lng":6.651577949523927}],"country":"CH","infos":[{"id":"y-plage-m9vipbon-uoepx","tag":"description","spotId":"y-plage","text":"Y Plage \nSchool \/ Renting \nSup \/ Wing \/ Foil ","userName":"Ludo T ","date":"2025-04-24T15:28:37.223Z"},{"id":"680a80647208e","userUrl":"","date":"2025-04-24T20:18:12+02:00","text":"Website: https:\/\/y-plage.ch\/en\/","spotId":"y-plage","tag":"description","userName":"Nils Mango"}],"kind":"school","pending":false};
+            const spotData = {"pending":false,"id":"y-plage","locations":[{"lat":46.78583846182295,"lng":6.651577949523927}],"kind":"school","infos":[{"text":"Y Plage \nSchool \/ Renting \nSup \/ Wing \/ Foil ","tag":"description","userName":"Ludo T ","date":"2025-04-24T15:28:37.223Z","id":"y-plage-m9vipbon-uoepx","spotId":"y-plage"},{"text":"Website: https:\/\/y-plage.ch\/en\/","userUrl":"","tag":"description","userName":"Nils Mango","id":"680a80647208e","date":"2025-04-24T20:18:12+02:00","spotId":"y-plage"}],"name":"Y-Plage ","country":"CH"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -680,12 +680,14 @@
 
       // For Instagram posts/reels
       if (parsedUrl.hostname.includes('instagram.com')) {
-        const path = parsedUrl.pathname.split('/').filter(Boolean);
-        const types = ['reel', 'p'];
-        const typeIndex = path.findIndex(p => types.includes(p));
-        if (typeIndex !== -1 && path.length > typeIndex + 1) {
-          return `instagram:${path[typeIndex]}/${path[typeIndex + 1]}`;
-        }
+          // Use a regex to match the pattern /optional_username/(reel|p)/identifier
+          const match = parsedUrl.pathname.match(/^\/(?:[a-zA-Z0-9_.]+\/)?(reel|p)\/([a-zA-Z0-9_-]+)/);
+      
+          // If the regex finds a match and captures the type (reel or p) and the identifier
+          if (match && match[1] && match[2]) {
+              // Construct the desired string in the format instagram:type/identifier
+              return `instagram:${match[1]}/${match[2]}`;
+          }
       }
 
       // For URLs that don't match patterns, return the full URL
