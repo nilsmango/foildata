@@ -155,6 +155,17 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
+    </div>
+
+    <script>
+
+    fetch('/foildata/.maintenance', { cache: 'no-store' })
+
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
+
+    </script>
                 
         <script>
             // Initialize the map
@@ -241,7 +252,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lng":8.593550920486452,"lat":46.90127253104248},{"lng":8.594398498535158,"lat":46.90137515876062},{"lng":8.59560012817383,"lat":46.902313460217705},{"lat":46.90460050122209,"lng":8.597917556762697},{"lat":46.90741518698223,"lng":8.599548339843752},{"lat":46.91210600148905,"lng":8.601436614990236},{"lat":46.91732405022374,"lng":8.602809906005861},{"lat":46.92705523294756,"lng":8.601264953613283},{"lat":46.93197877238813,"lng":8.597488403320314},{"lat":46.939714848527586,"lng":8.599205017089846},{"lat":46.95330888012852,"lng":8.604011535644533},{"lat":46.96104187446694,"lng":8.605384826660158},{"lat":46.97088225099078,"lng":8.603668212890627},{"lat":46.977441496346614,"lng":8.602981567382814},{"lat":46.98388282922904,"lng":8.60383987426758},{"lat":46.9904697533598,"lng":8.599290847778322},{"lat":46.994714229927254,"lng":8.598475456237795},{"lat":46.99506548185025,"lng":8.598518371582033}],"country":"CH","kind":"downwind-run","distance":10.9,"id":"seedorf-ur-brunnen","name":"Seedorf (UR) → Brunnen","pending":false,"infos":[{"userName":"Rawham","text":"When there is Föhn above 40 knots the föhn will blow through sisikon and you can ride till brunnen. Bumps are from isleten super clean, gets messy before sisikon and are getting better from sisikon till Brunnen. Check the Webcam in Sisikon or\/and in Brunnen if the Wind blows through","userUrl":"https:\/\/www.bhs.swiss\/wetter-webcam","date":"2025-04-25T16:17:27.890Z","tag":"description","id":"seedorf-ur-brunnen-m9wzvzo2-8y89a","spotId":"seedorf-ur-brunnen"}]};
+            const spotData = {"kind":"downwind-run","id":"seedorf-ur-brunnen","locations":[{"lat":46.90127253104248,"lng":8.593550920486452},{"lat":46.90137515876062,"lng":8.594398498535158},{"lng":8.59560012817383,"lat":46.902313460217705},{"lng":8.597917556762697,"lat":46.90460050122209},{"lng":8.599548339843752,"lat":46.90741518698223},{"lng":8.601436614990236,"lat":46.91210600148905},{"lng":8.602809906005861,"lat":46.91732405022374},{"lng":8.601264953613283,"lat":46.92705523294756},{"lng":8.597488403320314,"lat":46.93197877238813},{"lng":8.599205017089846,"lat":46.939714848527586},{"lng":8.604011535644533,"lat":46.95330888012852},{"lng":8.605384826660158,"lat":46.96104187446694},{"lng":8.603668212890627,"lat":46.97088225099078},{"lng":8.602981567382814,"lat":46.977441496346614},{"lng":8.60383987426758,"lat":46.98388282922904},{"lng":8.599290847778322,"lat":46.9904697533598},{"lng":8.598475456237795,"lat":46.994714229927254},{"lng":8.598518371582033,"lat":46.99506548185025}],"distance":10.9,"infos":[{"userName":"Rawham","text":"When there is Föhn above 40 knots the föhn will blow through sisikon and you can ride till brunnen. Bumps are from isleten super clean, gets messy before sisikon and are getting better from sisikon till Brunnen. Check the Webcam in Sisikon or\/and in Brunnen if the Wind blows through","date":"2025-04-25T16:17:27.890Z","spotId":"seedorf-ur-brunnen","id":"seedorf-ur-brunnen-m9wzvzo2-8y89a","userUrl":"https:\/\/www.bhs.swiss\/wetter-webcam","tag":"description"}],"country":"CH","pending":false,"name":"Seedorf (UR) → Brunnen"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

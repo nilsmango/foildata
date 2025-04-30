@@ -153,6 +153,17 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
+    </div>
+
+    <script>
+
+    fetch('/foildata/.maintenance', { cache: 'no-store' })
+
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
+
+    </script>
                 
         <script>
             // Initialize the map
@@ -239,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Versoix → Genthod","pending":false,"locations":[{"lng":6.170883178710938,"lat":46.276087729559244},{"lng":6.172385215759277,"lat":46.274285708966346},{"lng":6.172106266021729,"lat":46.271504696707595},{"lat":46.268204379068834,"lng":6.170539855957032},{"lat":46.262841866241814,"lng":6.168737411499024},{"lat":46.262033364447184,"lng":6.166323423385621},{"lat":46.26258967430098,"lng":6.161999702453613}],"infos":[{"text":"Bise very cool and easy run to learn dockstart downwind. Lot of docks to restart in case of falling on the way.","spotId":"versoix-genthod","id":"versoix-genthod-m9x0oism-i0j43","tag":"wind-direction","date":"2025-04-25T16:39:39.046Z","userName":"Yvonvite"}],"videos":[{"kind":"YouTube","date":"2025-04-25T16:39:39.047Z","url":"https:\/\/youtu.be\/Va3-dYBmQQo?si=geQUOuCMk7GINAYK"}],"distance":2.1,"kind":"downwind-run","id":"versoix-genthod","country":"CH"};
+            const spotData = {"distance":2.1,"country":"CH","kind":"downwind-run","infos":[{"tag":"wind-direction","date":"2025-04-25T16:39:39.046Z","text":"Bise very cool and easy run to learn dockstart downwind. Lot of docks to restart in case of falling on the way.","userName":"Yvonvite","id":"versoix-genthod-m9x0oism-i0j43","spotId":"versoix-genthod"}],"locations":[{"lng":6.170883178710938,"lat":46.276087729559244},{"lng":6.172385215759277,"lat":46.274285708966346},{"lng":6.172106266021729,"lat":46.271504696707595},{"lng":6.170539855957032,"lat":46.268204379068834},{"lng":6.168737411499024,"lat":46.262841866241814},{"lng":6.166323423385621,"lat":46.262033364447184},{"lng":6.161999702453613,"lat":46.26258967430098}],"videos":[{"date":"2025-04-25T16:39:39.047Z","url":"https:\/\/youtu.be\/Va3-dYBmQQo?si=geQUOuCMk7GINAYK","kind":"YouTube"}],"id":"versoix-genthod","pending":false,"name":"Versoix → Genthod"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

@@ -325,7 +325,17 @@ function formatTextWithLinks($text) {
         </div>
         <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+            🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
+            </div>
     
+            <script>
+    
+            fetch('/foildata/.maintenance', { cache: 'no-store' })
+    
+              .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
+    
+            </script>
     <script>
         // Initialize the map
         const spotMap = L.map('spot-map');

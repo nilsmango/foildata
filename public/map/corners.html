@@ -153,6 +153,17 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
+    </div>
+
+    <script>
+
+    fetch('/foildata/.maintenance', { cache: 'no-store' })
+
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
+
+    </script>
                 
         <script>
             // Initialize the map
@@ -239,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Corners ","locations":[{"lng":-80.06657838821413,"lat":26.923045652573776}],"pending":false,"state":"FL","infos":[{"text":"Great sandbar for prone, also good area to launch kites and wing from. Works in all east wind directions shore-break is factor in strong east winds. ","spotId":"corners","id":"corners-ma3wr75y-mvbdl","tag":"description","date":"2025-04-30T12:24:08.710Z","userName":"rick_neeser"}],"country":"US","kind":"wave-wind-spot","id":"corners"};
+            const spotData = {"state":"FL","id":"corners","country":"US","infos":[{"spotId":"corners","tag":"description","text":"Great sandbar for prone, also good area to launch kites and wing from. Works in all east wind directions shore-break is factor in strong east winds. ","date":"2025-04-30T12:24:08.710Z","userName":"rick_neeser","id":"corners-ma3wr75y-mvbdl"}],"pending":false,"name":"Corners ","locations":[{"lat":26.923045652573776,"lng":-80.06657838821413}],"kind":"wave-wind-spot"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

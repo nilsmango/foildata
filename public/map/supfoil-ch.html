@@ -155,6 +155,17 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
+    </div>
+
+    <script>
+
+    fetch('/foildata/.maintenance', { cache: 'no-store' })
+
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
+
+    </script>
                 
         <script>
             // Initialize the map
@@ -241,7 +252,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"SUPFOIL.CH","country":"CH","kind":"school","videos":[{"date":"2025-04-24T09:27:09.156Z","kind":"YouTube","url":"https:\/\/youtube.com\/shorts\/AZUjX3CPp9I?si=2DPgVsbQ2pDmK2D3"}],"id":"supfoil-ch","infos":[{"date":"2025-04-24T09:27:09.156Z","userUrl":"https:\/\/supfoil.ch\/","tag":"description","spotId":"supfoil-ch","id":"supfoil-ch-m9v5sh2c-bwpth","userName":"SUPFOIL.CH ","text":"Learn to SUP-Foil Downwind on one of the best spots in Europe.\nhttps:\/\/supfoil.ch\/"}],"pending":false,"locations":[{"lat":46.95963595861957,"lng":6.937866210937501}]};
+            const spotData = {"id":"supfoil-ch","videos":[{"url":"https:\/\/youtube.com\/shorts\/AZUjX3CPp9I?si=2DPgVsbQ2pDmK2D3","date":"2025-04-24T09:27:09.156Z","kind":"YouTube"}],"pending":false,"kind":"school","country":"CH","locations":[{"lat":46.95963595861957,"lng":6.937866210937501}],"infos":[{"id":"supfoil-ch-m9v5sh2c-bwpth","date":"2025-04-24T09:27:09.156Z","tag":"description","userUrl":"https:\/\/supfoil.ch\/","userName":"SUPFOIL.CH ","spotId":"supfoil-ch","text":"Learn to SUP-Foil Downwind on one of the best spots in Europe.\nhttps:\/\/supfoil.ch\/"}],"name":"SUPFOIL.CH"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

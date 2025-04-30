@@ -153,6 +153,17 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
+    </div>
+
+    <script>
+
+    fetch('/foildata/.maintenance', { cache: 'no-store' })
+
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
+
+    </script>
                 
         <script>
             // Initialize the map
@@ -239,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Vista Park","state":"FL","id":"vista-park","country":"US","pending":false,"locations":[{"lng":-80.09903311729433,"lat":26.163493368893093}],"infos":[{"text":"Fun wing spot, nice grass set up area. Works in any east wind, shore-break can be an issue. ","userName":"rick_neeser","id":"vista-park-ma3w3hq0-g41hi","spotId":"vista-park","tag":"description","date":"2025-04-30T12:05:42.648Z"}],"kind":"wave-wind-spot"};
+            const spotData = {"state":"FL","id":"vista-park","country":"US","infos":[{"spotId":"vista-park","tag":"description","text":"Fun wing spot, nice grass set up area. Works in any east wind, shore-break can be an issue. ","date":"2025-04-30T12:05:42.648Z","userName":"rick_neeser","id":"vista-park-ma3w3hq0-g41hi"}],"pending":false,"name":"Vista Park","locations":[{"lat":26.163493368893093,"lng":-80.09903311729433}],"kind":"wave-wind-spot"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

@@ -232,6 +232,17 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
+    </div>
+
+    <script>
+
+    fetch('/foildata/.maintenance', { cache: 'no-store' })
+
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
+
+    </script>
                 
         <script>
             // Initialize the map
@@ -318,7 +329,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Virgina Key","state":"FL","id":"virgina-key","country":"US","pending":false,"locations":[{"lng":-80.14254391193391,"lat":25.74725036357523}],"infos":[{"text":"Virgina Key is an amazing wing foil wave spot. Best on NNW, N, E, SE, and S winds. Tide can be factor as the seagrass flats are shallow near low tide, consider bringing a 75cm mast or avoiding the 1hr on either side of low tides. In an E wind VK offers flat water upwind of the launch with progressively growing waves as you head further upwind. Be mindful of the shallow sandbar upwind where waves will be breaking. ","userName":"rick_neeser","id":"virgina-key-ma3vp0u6-blcvz","tag":"description","votes":1,"spotId":"virgina-key","date":"2025-04-30T11:54:27.582Z"},{"text":"Really nice place and very nice people! Beware of the trash pandas!\n","userName":"Nils Mango","id":"681216c1b21f5","userUrl":"","tag":"description","spotId":"virgina-key","date":"2025-04-30T14:25:37+02:00"},{"text":"Miami Winger WA Group: https:\/\/chat.whatsapp.com\/Bp9snrbKNAVKB3VFNhM311\n\n","userName":"Nils Mango","id":"681216f0a37c9","userUrl":"","tag":"local-contact","spotId":"virgina-key","date":"2025-04-30T14:26:24+02:00"},{"text":"Local website by Mickey with infos etc: \nhttps:\/\/mickeyk6000.wixsite.com\/foilers","userName":"Nils Mango","id":"6812173ea14bb","userUrl":"","tag":"conditions","spotId":"virgina-key","date":"2025-04-30T14:27:42+02:00"}],"kind":"wave-wind-spot"};
+            const spotData = {"id":"virgina-key","state":"FL","name":"Virgina Key","kind":"wave-wind-spot","locations":[{"lng":-80.14254391193391,"lat":25.74725036357523}],"pending":false,"country":"US","infos":[{"votes":1,"text":"Virgina Key is an amazing wing foil wave spot. Best on NNW, N, E, SE, and S winds. Tide can be factor as the seagrass flats are shallow near low tide, consider bringing a 75cm mast or avoiding the 1hr on either side of low tides. In an E wind VK offers flat water upwind of the launch with progressively growing waves as you head further upwind. Be mindful of the shallow sandbar upwind where waves will be breaking. ","spotId":"virgina-key","userName":"rick_neeser","id":"virgina-key-ma3vp0u6-blcvz","date":"2025-04-30T11:54:27.582Z","tag":"description"},{"text":"Really nice place and very nice people! Beware of the trash pandas!\n","tag":"description","id":"681216c1b21f5","date":"2025-04-30T14:25:37+02:00","userUrl":"","userName":"Nils Mango","spotId":"virgina-key"},{"text":"Miami Winger WA Group: https:\/\/chat.whatsapp.com\/Bp9snrbKNAVKB3VFNhM311\n\n","tag":"local-contact","id":"681216f0a37c9","date":"2025-04-30T14:26:24+02:00","userUrl":"","userName":"Nils Mango","spotId":"virgina-key"},{"text":"Local website by Mickey with infos etc: \nhttps:\/\/mickeyk6000.wixsite.com\/foilers","tag":"conditions","id":"6812173ea14bb","date":"2025-04-30T14:27:42+02:00","userUrl":"","userName":"Nils Mango","spotId":"virgina-key"}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

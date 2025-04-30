@@ -155,6 +155,17 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
+    </div>
+
+    <script>
+
+    fetch('/foildata/.maintenance', { cache: 'no-store' })
+
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
+
+    </script>
                 
         <script>
             // Initialize the map
@@ -241,7 +252,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Bödeli\/Dock","country":"CH","kind":"pump-foil-dock","videos":[{"date":"2025-04-24T13:09:04.864Z","kind":"YouTube","url":"https:\/\/www.youtube.com\/watch?v=mR8adQcszx0&t=1s"}],"id":"boedeli-dock","infos":[{"date":"2025-04-24T13:09:04.862Z","userUrl":"https:\/\/www.instagram.com\/rob_on_rolls\/","tag":"description","spotId":"boedeli-dock","id":"boedeli-dock-m9vdpvj1-lmni8","userName":"Rob_on_Rolls","text":"Super easy concrete dock near the trainsation!"}],"pending":false,"locations":[{"lat":47.207201002858724,"lng":7.541363239288331}]};
+            const spotData = {"locations":[{"lat":47.207201002858724,"lng":7.541363239288331}],"name":"Bödeli\/Dock","infos":[{"date":"2025-04-24T13:09:04.862Z","text":"Super easy concrete dock near the trainsation!","userName":"Rob_on_Rolls","userUrl":"https:\/\/www.instagram.com\/rob_on_rolls\/","tag":"description","id":"boedeli-dock-m9vdpvj1-lmni8","spotId":"boedeli-dock"}],"country":"CH","pending":false,"videos":[{"date":"2025-04-24T13:09:04.864Z","kind":"YouTube","url":"https:\/\/www.youtube.com\/watch?v=mR8adQcszx0&t=1s"}],"id":"boedeli-dock","kind":"pump-foil-dock"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

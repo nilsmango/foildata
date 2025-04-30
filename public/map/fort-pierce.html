@@ -153,6 +153,17 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
+    </div>
+
+    <script>
+
+    fetch('/foildata/.maintenance', { cache: 'no-store' })
+
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
+
+    </script>
                 
         <script>
             // Initialize the map
@@ -239,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"state":"FL","country":"US","kind":"wave-wind-spot","name":"Fort Pierce","id":"fort-pierce","infos":[{"text":"On its day one of the best wing spots on the east coast. Best set up in strong north wind. Launch under the protected jetty, get access to some well overhead north swell. If you cannot stay upwind be careful as the shore-break is very large only 1\/2 mile south of the jetty.","spotId":"fort-pierce","id":"fort-pierce-ma3wwhto-28m77","tag":"description","date":"2025-04-30T12:28:15.804Z","userName":"rick_neeser"}],"pending":false,"locations":[{"lng":-80.2914333343506,"lat":27.469744396647588}]};
+            const spotData = {"state":"FL","id":"fort-pierce","country":"US","infos":[{"spotId":"fort-pierce","tag":"description","text":"On its day one of the best wing spots on the east coast. Best set up in strong north wind. Launch under the protected jetty, get access to some well overhead north swell. If you cannot stay upwind be careful as the shore-break is very large only 1\/2 mile south of the jetty.","date":"2025-04-30T12:28:15.804Z","userName":"rick_neeser","id":"fort-pierce-ma3wwhto-28m77"}],"pending":false,"name":"Fort Pierce","locations":[{"lat":27.469744396647588,"lng":-80.2914333343506}],"kind":"wave-wind-spot"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

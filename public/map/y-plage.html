@@ -178,6 +178,17 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
+    </div>
+
+    <script>
+
+    fetch('/foildata/.maintenance', { cache: 'no-store' })
+
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
+
+    </script>
                 
         <script>
             // Initialize the map
@@ -264,7 +275,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lng":6.651577949523927,"lat":46.78583846182295}],"infos":[{"id":"y-plage-m9vipbon-uoepx","text":"Y Plage \nSchool \/ Renting \nSup \/ Wing \/ Foil ","tag":"description","spotId":"y-plage","date":"2025-04-24T15:28:37.223Z","userName":"Ludo T "},{"date":"2025-04-24T20:18:12+02:00","userName":"Nils Mango","tag":"description","userUrl":"","spotId":"y-plage","id":"680a80647208e","text":"Website: https:\/\/y-plage.ch\/en\/"}],"country":"CH","kind":"school","name":"Y-Plage ","pending":false,"id":"y-plage"};
+            const spotData = {"pending":false,"name":"Y-Plage ","country":"CH","locations":[{"lat":46.78583846182295,"lng":6.651577949523927}],"id":"y-plage","kind":"school","infos":[{"tag":"description","id":"y-plage-m9vipbon-uoepx","text":"Y Plage \nSchool \/ Renting \nSup \/ Wing \/ Foil ","date":"2025-04-24T15:28:37.223Z","spotId":"y-plage","userName":"Ludo T "},{"userName":"Nils Mango","userUrl":"","id":"680a80647208e","spotId":"y-plage","tag":"description","date":"2025-04-24T20:18:12+02:00","text":"Website: https:\/\/y-plage.ch\/en\/"}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
