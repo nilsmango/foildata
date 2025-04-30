@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <title>Pier 11</title>
     <link rel="stylesheet" href="/foildata/styles.css">
     <meta name="description" content="Pier 11 Wake Thief Spot Info">
@@ -237,7 +239,7 @@
             }
             
             // Get spot data
-            const spotData = {"kind":"wake-thief-spot","country":"CH","infos":[{"tag":"description","spotId":"pier-11","text":"Public Pumpfoildock.\nPerfect for waketiefing the wave of the Kursschiff.\nEasyer for goofy pumpers to start.","userName":"Rob_on_Rolls","date":"2025-04-24T13:13:19.199Z","id":"pier-11-m9vdvbrz-o20v7","votes":1}],"locations":[{"lat":47.197579513020045,"lng":7.5242722034454355}],"pending":false,"id":"pier-11","name":"Pier 11"};
+            const spotData = {"kind":"wake-thief-spot","country":"CH","id":"pier-11","infos":[{"spotId":"pier-11","text":"Public Pumpfoildock.\nPerfect for waketiefing the wave of the Kursschiff.\nEasyer for goofy pumpers to start.","userName":"Rob_on_Rolls","id":"pier-11-m9vdvbrz-o20v7","date":"2025-04-24T13:13:19.199Z","tag":"description","votes":1}],"pending":false,"locations":[{"lat":47.197579513020045,"lng":7.5242722034454355}],"name":"Pier 11"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

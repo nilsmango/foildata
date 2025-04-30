@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <title>Küsnacht Ermitage</title>
     <link rel="stylesheet" href="/foildata/styles.css">
     <meta name="description" content="Küsnacht Ermitage Wake Thief Spot Info">
@@ -237,7 +239,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Küsnacht Ermitage","locations":[{"lng":8.583213686943056,"lat":47.30927794697537}],"id":"kuesnacht-ermitage","kind":"wake-thief-spot","infos":[{"tag":"description","userName":"sorin","id":"kuesnacht-ermitage-m9ve1hcq-0dw1k","votes":1,"date":"2025-04-24T13:18:06.362Z","spotId":"kuesnacht-ermitage","text":"Good for wake thief"}],"pending":false,"country":"CH"};
+            const spotData = {"kind":"wake-thief-spot","country":"CH","id":"kuesnacht-ermitage","infos":[{"spotId":"kuesnacht-ermitage","text":"Good for wake thief","userName":"sorin","id":"kuesnacht-ermitage-m9ve1hcq-0dw1k","date":"2025-04-24T13:18:06.362Z","tag":"description","votes":1}],"pending":false,"locations":[{"lat":47.30927794697537,"lng":8.583213686943056}],"name":"Küsnacht Ermitage"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
