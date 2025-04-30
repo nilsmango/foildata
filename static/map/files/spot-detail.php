@@ -335,7 +335,8 @@ function formatTextWithLinks($text) {
     
             fetch('/foildata/.maintenance', { cache: 'no-store' })
     
-              .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
+              .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; })
+              .catch(() => {});
     
             </script>
     <script>
