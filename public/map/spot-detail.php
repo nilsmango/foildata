@@ -110,6 +110,8 @@ function formatTextWithLinks($text) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <title><?php echo htmlspecialchars($spot['name']); ?> - 7III foildata Spot</title>
     <link rel="stylesheet" href="https://project7iii.com/foildata/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
@@ -325,7 +327,17 @@ function formatTextWithLinks($text) {
         </div>
         <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; bottom:0; left:0; width:100%; z-index:9999;">
+            🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
+            </div>
     
+            <script>
+    
+            fetch('/foildata/.maintenance', { cache: 'no-store' })
+    
+              .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
+    
+            </script>
     <script>
         // Initialize the map
         const spotMap = L.map('spot-map');
