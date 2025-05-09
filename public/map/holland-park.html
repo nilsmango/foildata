@@ -153,16 +153,14 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
-    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; bottom:0; left:0; width:100%; z-index:9999;">
     🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
     </div>
 
     <script>
-
     fetch('/foildata/.maintenance', { cache: 'no-store' })
-
-      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
-
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; })
+      .catch(() => {});
     </script>
                 
         <script>
@@ -250,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lng":-80.11968076229097,"lat":26.02028641982586}],"infos":[{"date":"2025-04-30T12:13:20.683Z","userName":"rick_neeser","spotId":"holland-park","tag":"description","text":"Great pump foil dock. Floating with a long run up. ","id":"holland-park-ma3wdb57-at7mj"}],"state":"FL","name":"Holland Park","pending":false,"kind":"pump-foil-dock","id":"holland-park","country":"US"};
+            const spotData = {"id":"holland-park","country":"US","locations":[{"lng":-80.11968076229097,"lat":26.02028641982586}],"state":"FL","name":"Holland Park","kind":"pump-foil-dock","infos":[{"tag":"description","id":"holland-park-ma3wdb57-at7mj","text":"Great pump foil dock. Floating with a long run up. ","date":"2025-04-30T12:13:20.683Z","spotId":"holland-park","userName":"rick_neeser"}],"pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

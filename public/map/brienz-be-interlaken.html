@@ -209,16 +209,14 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
-    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; bottom:0; left:0; width:100%; z-index:9999;">
     🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
     </div>
 
     <script>
-
     fetch('/foildata/.maintenance', { cache: 'no-store' })
-
-      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
-
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; })
+      .catch(() => {});
     </script>
                 
         <script>
@@ -306,7 +304,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":46.753431788661814,"lng":8.035882115364076},{"lat":46.753196564215706,"lng":8.035919666290285},{"lat":46.75261584946832,"lng":8.03529739379883},{"lat":46.74018411306807,"lng":8.004741668701174},{"lat":46.72562408942925,"lng":7.967748641967774},{"lat":46.72050508677223,"lng":7.957105636596681},{"lat":46.70326165473646,"lng":7.920885086059571},{"lat":46.695256005314086,"lng":7.895736694335938},{"lat":46.69391670910086,"lng":7.8852224349975595},{"lat":46.69371066058152,"lng":7.880480289459229},{"lat":46.69344573990147,"lng":7.877862453460694},{"lat":46.693077792356604,"lng":7.875394821166993},{"lat":46.69281286857205,"lng":7.8750085830688485}],"name":"Brienz BE → Interlaken","country":"CH","distance":14.1,"kind":"downwind-run","videos":[{"url":"https:\/\/www.instagram.com\/p\/DG_QcDoI_a5\/","date":"2025-04-24T21:10:06+02:00","kind":"Insta"}],"infos":[{"spotId":"brienz-be-interlaken","userName":"nilsmango","id":"brienz-be-interlaken-m9vfo2u4-c51av","tag":"description","text":"Parawing downwind run. Only works when there is a lot of Südfön pressure (I think it needs at least 12 hPa).\nCheck pressure here: https:\/\/www.srf.ch\/meteo\/surf-und-segelwetter\/diagramme-foehn-und-bise\n","date":"2025-04-24T14:03:40.252Z"},{"spotId":"brienz-be-interlaken","userName":"nilsmango","id":"brienz-be-interlaken-m9vfo2u4-9amg8","tag":"conditions","text":"Even if the whole lake is full with white caps I never take a smaller foil than 980 sq cm. The waves never get very big.","date":"2025-04-24T14:03:40.252Z"},{"id":"68109e8a503ee","text":"Nice webcam to see the wind in Brienz: https:\/\/axis.webcam-brienz.ch\/axis-cgi\/mjpg\/video.cgi","userUrl":"https:\/\/nilsmango.ch","spotId":"brienz-be-interlaken","tag":"wind-measurements","date":"2025-04-29T11:40:26+02:00","userName":"nilsmango"}],"id":"brienz-be-interlaken","pending":false};
+            const spotData = {"name":"Brienz BE → Interlaken","country":"CH","id":"brienz-be-interlaken","distance":14.1,"kind":"downwind-run","pending":false,"videos":[{"url":"https:\/\/www.instagram.com\/p\/DG_QcDoI_a5\/","date":"2025-04-24T21:10:06+02:00","kind":"Insta"}],"infos":[{"tag":"description","userName":"nilsmango","id":"brienz-be-interlaken-m9vfo2u4-c51av","date":"2025-04-24T14:03:40.252Z","spotId":"brienz-be-interlaken","text":"Parawing downwind run. Only works when there is a lot of Südfön pressure (I think it needs at least 12 hPa).\nCheck pressure here: https:\/\/www.srf.ch\/meteo\/surf-und-segelwetter\/diagramme-foehn-und-bise\n"},{"tag":"conditions","userName":"nilsmango","id":"brienz-be-interlaken-m9vfo2u4-9amg8","date":"2025-04-24T14:03:40.252Z","spotId":"brienz-be-interlaken","text":"Even if the whole lake is full with white caps I never take a smaller foil than 980 sq cm. The waves never get very big."},{"date":"2025-04-29T11:40:26+02:00","userName":"nilsmango","id":"68109e8a503ee","tag":"wind-measurements","userUrl":"https:\/\/nilsmango.ch","spotId":"brienz-be-interlaken","text":"Nice webcam to see the wind in Brienz: https:\/\/axis.webcam-brienz.ch\/axis-cgi\/mjpg\/video.cgi"}],"locations":[{"lat":46.753431788661814,"lng":8.035882115364076},{"lat":46.753196564215706,"lng":8.035919666290285},{"lat":46.75261584946832,"lng":8.03529739379883},{"lat":46.74018411306807,"lng":8.004741668701174},{"lat":46.72562408942925,"lng":7.967748641967774},{"lat":46.72050508677223,"lng":7.957105636596681},{"lat":46.70326165473646,"lng":7.920885086059571},{"lat":46.695256005314086,"lng":7.895736694335938},{"lat":46.69391670910086,"lng":7.8852224349975595},{"lat":46.69371066058152,"lng":7.880480289459229},{"lat":46.69344573990147,"lng":7.877862453460694},{"lat":46.693077792356604,"lng":7.875394821166993},{"lat":46.69281286857205,"lng":7.8750085830688485}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

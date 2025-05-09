@@ -61,6 +61,31 @@
         <h3>Description</h3>
         <div>•</div>
         <div class="info-meta">
+            <span class="info-date">Mai 2, 2025</span>
+            <span class="info-author">by 
+                Wassersport Basel
+            </span>
+        </div>
+    </div>
+    <div class="info-content">
+        Please make sure to always take care with swimmers and rowers. <br><br>The rowing club is the placeholder of the area - so always remember we‘re just acting as guests at the spot. 
+    </div>
+    <div class="info-actions">
+        <div class="vote-btn" data-info-id="681464ac507df" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+            <span class="vote-icon">
+                <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
+                                <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
+                            </svg>
+            </span>
+            <span class="vote-count">1</span>
+        </div>
+    </div>
+    <hr class="info-separator">
+  </div><div class="info-item" data-tag="description">
+    <div class="info-header">
+        <h3>Description</h3>
+        <div>•</div>
+        <div class="info-meta">
             <span class="info-date">April 30, 2025</span>
             <span class="info-author">by 
                 nilsmango
@@ -153,16 +178,14 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
-    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; bottom:0; left:0; width:100%; z-index:9999;">
     🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
     </div>
 
     <script>
-
     fetch('/foildata/.maintenance', { cache: 'no-store' })
-
-      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
-
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; })
+      .catch(() => {});
     </script>
                 
         <script>
@@ -250,7 +273,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"infos":[{"tag":"description","text":"Nice little pump foil dock in Basel.","id":"inseli-pump-birsfelden-ma3nx7qa-slasc","date":"2025-04-30T08:16:52.834Z","userName":"nilsmango","spotId":"inseli-pump-birsfelden"}],"name":"Inseli Pump, Birsfelden","locations":[{"lat":47.56059667733393,"lng":7.6318126916885385}],"country":"CH","id":"inseli-pump-birsfelden","videos":[{"date":"2025-04-30T08:16:52.834Z","kind":"YouTube","url":"https:\/\/www.youtube.com\/watch?v=eCs2MFA2E7c"}],"kind":"pump-foil-dock"};
+            const spotData = {"id":"inseli-pump-birsfelden","videos":[{"kind":"YouTube","url":"https:\/\/www.youtube.com\/watch?v=eCs2MFA2E7c","date":"2025-04-30T08:16:52.834Z"}],"country":"CH","locations":[{"lng":7.6318126916885385,"lat":47.56059667733393}],"kind":"pump-foil-dock","name":"Inseli Pump, Birsfelden","infos":[{"tag":"description","userName":"nilsmango","id":"inseli-pump-birsfelden-ma3nx7qa-slasc","date":"2025-04-30T08:16:52.834Z","spotId":"inseli-pump-birsfelden","text":"Nice little pump foil dock in Basel."},{"id":"681464ac507df","userUrl":"","votes":1,"spotId":"inseli-pump-birsfelden","text":"Please make sure to always take care with swimmers and rowers. \n\nThe rowing club is the placeholder of the area - so always remember we‘re just acting as guests at the spot. ","userName":"Wassersport Basel","date":"2025-05-02T08:22:36+02:00","tag":"description"}],"pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

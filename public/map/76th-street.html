@@ -153,16 +153,14 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
-    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; bottom:0; left:0; width:100%; z-index:9999;">
     🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
     </div>
 
     <script>
-
     fetch('/foildata/.maintenance', { cache: 'no-store' })
-
-      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
-
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; })
+      .catch(() => {});
     </script>
                 
         <script>
@@ -250,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lng":-80.11916041374207,"lat":25.86139580646072}],"infos":[{"tag":"description","date":"2025-04-30T12:01:03.136Z","text":"Dedicated area to launch kites and wings on south beach. Best in any wind with some east. Can have a large shore-break in strong east winds. ","userName":"rick_neeser","id":"76th-street-ma3vxi1s-go38r","spotId":"76th-street"}],"state":"FL","name":"76th Street","pending":false,"kind":"wave-wind-spot","id":"76th-street","country":"US"};
+            const spotData = {"name":"76th Street","country":"US","id":"76th-street","kind":"wave-wind-spot","pending":false,"state":"FL","infos":[{"tag":"description","userName":"rick_neeser","id":"76th-street-ma3vxi1s-go38r","date":"2025-04-30T12:01:03.136Z","spotId":"76th-street","text":"Dedicated area to launch kites and wings on south beach. Best in any wind with some east. Can have a large shore-break in strong east winds. "}],"locations":[{"lat":25.86139580646072,"lng":-80.11916041374207}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

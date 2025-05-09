@@ -155,16 +155,14 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
-    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; bottom:0; left:0; width:100%; z-index:9999;">
     🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
     </div>
 
     <script>
-
     fetch('/foildata/.maintenance', { cache: 'no-store' })
-
-      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
-
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; })
+      .catch(() => {});
     </script>
                 
         <script>
@@ -252,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"country":"CH","infos":[{"id":"boedeli-dock-m9vdpvj1-lmni8","date":"2025-04-24T13:09:04.862Z","spotId":"boedeli-dock","userUrl":"https:\/\/www.instagram.com\/rob_on_rolls\/","userName":"Rob_on_Rolls","tag":"description","text":"Super easy concrete dock near the trainsation!"}],"name":"Bödeli\/Dock","pending":false,"kind":"pump-foil-dock","videos":[{"kind":"YouTube","date":"2025-04-24T13:09:04.864Z","url":"https:\/\/www.youtube.com\/watch?v=mR8adQcszx0&t=1s"}],"id":"boedeli-dock","locations":[{"lng":7.541363239288331,"lat":47.207201002858724}]};
+            const spotData = {"id":"boedeli-dock","videos":[{"url":"https:\/\/www.youtube.com\/watch?v=mR8adQcszx0&t=1s","date":"2025-04-24T13:09:04.864Z","kind":"YouTube"}],"country":"CH","locations":[{"lng":7.541363239288331,"lat":47.207201002858724}],"kind":"pump-foil-dock","name":"Bödeli\/Dock","infos":[{"id":"boedeli-dock-m9vdpvj1-lmni8","userUrl":"https:\/\/www.instagram.com\/rob_on_rolls\/","spotId":"boedeli-dock","text":"Super easy concrete dock near the trainsation!","userName":"Rob_on_Rolls","date":"2025-04-24T13:09:04.862Z","tag":"description"}],"pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

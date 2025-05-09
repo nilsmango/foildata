@@ -155,16 +155,14 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
-    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; bottom:0; left:0; width:100%; z-index:9999;">
     🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
     </div>
 
     <script>
-
     fetch('/foildata/.maintenance', { cache: 'no-store' })
-
-      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
-
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; })
+      .catch(() => {});
     </script>
                 
         <script>
@@ -252,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lng":-80.40266990661623,"lat":25.159502295476408}],"infos":[{"text":"Nice little bay wing spot if you stay at any of the motels on this side.\nGreat if you want to see Manatees.","userUrl":"https:\/\/nilsmango.ch","tag":"description","id":"blackwater-sound-ma3xjpcq-ljlu7","userName":"Nils Mango","spotId":"blackwater-sound","date":"2025-04-30T12:46:18.650Z"}],"state":"FL","name":"Blackwater Sound","pending":false,"kind":"wind-spot","id":"blackwater-sound","country":"US"};
+            const spotData = {"id":"blackwater-sound","country":"US","locations":[{"lat":25.159502295476408,"lng":-80.40266990661623}],"state":"FL","name":"Blackwater Sound","kind":"wind-spot","infos":[{"userUrl":"https:\/\/nilsmango.ch","id":"blackwater-sound-ma3xjpcq-ljlu7","text":"Nice little bay wing spot if you stay at any of the motels on this side.\nGreat if you want to see Manatees.","date":"2025-04-30T12:46:18.650Z","spotId":"blackwater-sound","userName":"Nils Mango","tag":"description"}],"pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

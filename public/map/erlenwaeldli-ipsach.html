@@ -207,16 +207,14 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
-    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; bottom:0; left:0; width:100%; z-index:9999;">
     🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
     </div>
 
     <script>
-
     fetch('/foildata/.maintenance', { cache: 'no-store' })
-
-      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
-
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; })
+      .catch(() => {});
     </script>
                 
         <script>
@@ -304,7 +302,7 @@
             }
             
             // Get spot data
-            const spotData = {"country":"CH","name":"Erlenwäldli, Ipsach","infos":[{"spotId":"erlenwaeldli-ipsach","date":"2025-04-24T08:15:19.828Z","userName":"Nils Mango","userUrl":"https:\/\/nilsmango.ch","id":"erlenwaeldli-ipsach-m9v383ys-vdkm3","tag":"description","text":"The wind spot where to cool kids are."},{"spotId":"erlenwaeldli-ipsach","date":"2025-04-29T12:00:37+02:00","userName":"nilsmango","userUrl":"","id":"6810a34528b16","tag":"description","text":"Webcams: https:\/\/bielersee.live\nWind Measurements: https:\/\/wsa-ipsach.meteobase.ch\/index.php\nMore Wind: https:\/\/biel-hafen.meteobase.ch\/index.php\n\n"},{"spotId":"erlenwaeldli-ipsach","date":"2025-04-29T12:01:36+02:00","userName":"nilsmango","userUrl":"","id":"6810a38070e47","tag":"local-contact","text":"Local club: https:\/\/wsci.ch\nLocal legend: https:\/\/www.instagram.com\/radiculo\/"}],"kind":"wind-spot","id":"erlenwaeldli-ipsach","pending":false,"videos":[{"url":"https:\/\/www.instagram.com\/reel\/C7CoH_foPuk\/","kind":"Insta","date":"2025-04-24T21:10:43+02:00"}],"locations":[{"lat":47.121263959843674,"lng":7.226659655570985}]};
+            const spotData = {"infos":[{"id":"erlenwaeldli-ipsach-m9v383ys-vdkm3","date":"2025-04-24T08:15:19.828Z","userUrl":"https:\/\/nilsmango.ch","text":"The wind spot where to cool kids are.","userName":"Nils Mango","spotId":"erlenwaeldli-ipsach","tag":"description"},{"userName":"nilsmango","spotId":"erlenwaeldli-ipsach","date":"2025-04-29T12:00:37+02:00","userUrl":"","tag":"description","text":"Webcams: https:\/\/bielersee.live\nWind Measurements: https:\/\/wsa-ipsach.meteobase.ch\/index.php\nMore Wind: https:\/\/biel-hafen.meteobase.ch\/index.php\n\n","id":"6810a34528b16"},{"userName":"nilsmango","spotId":"erlenwaeldli-ipsach","date":"2025-04-29T12:01:36+02:00","userUrl":"","tag":"local-contact","text":"Local club: https:\/\/wsci.ch\nLocal legend: https:\/\/www.instagram.com\/radiculo\/","id":"6810a38070e47"}],"pending":false,"country":"CH","name":"Erlenwäldli, Ipsach","videos":[{"url":"https:\/\/www.instagram.com\/reel\/C7CoH_foPuk\/","date":"2025-04-24T21:10:43+02:00","kind":"Insta"}],"kind":"wind-spot","locations":[{"lng":7.226659655570985,"lat":47.121263959843674}],"id":"erlenwaeldli-ipsach"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

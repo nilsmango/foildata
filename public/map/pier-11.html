@@ -153,16 +153,14 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
-    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; bottom:0; left:0; width:100%; z-index:9999;">
     🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
     </div>
 
     <script>
-
     fetch('/foildata/.maintenance', { cache: 'no-store' })
-
-      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
-
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; })
+      .catch(() => {});
     </script>
                 
         <script>
@@ -250,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"kind":"wake-thief-spot","locations":[{"lng":7.5242722034454355,"lat":47.197579513020045}],"country":"CH","id":"pier-11","pending":false,"name":"Pier 11","infos":[{"id":"pier-11-m9vdvbrz-o20v7","date":"2025-04-24T13:13:19.199Z","votes":1,"tag":"description","spotId":"pier-11","text":"Public Pumpfoildock.\nPerfect for waketiefing the wave of the Kursschiff.\nEasyer for goofy pumpers to start.","userName":"Rob_on_Rolls"}]};
+            const spotData = {"id":"pier-11","country":"CH","locations":[{"lng":7.5242722034454355,"lat":47.197579513020045}],"kind":"wake-thief-spot","name":"Pier 11","infos":[{"id":"pier-11-m9vdvbrz-o20v7","votes":1,"spotId":"pier-11","text":"Public Pumpfoildock.\nPerfect for waketiefing the wave of the Kursschiff.\nEasyer for goofy pumpers to start.","userName":"Rob_on_Rolls","date":"2025-04-24T13:13:19.199Z","tag":"description"}],"pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

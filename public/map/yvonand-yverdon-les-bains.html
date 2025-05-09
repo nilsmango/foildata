@@ -153,16 +153,14 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
-    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; bottom:0; left:0; width:100%; z-index:9999;">
     🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
     </div>
 
     <script>
-
     fetch('/foildata/.maintenance', { cache: 'no-store' })
-
-      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
-
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; })
+      .catch(() => {});
     </script>
                 
         <script>
@@ -250,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"infos":[{"userName":"Rawham","id":"yvonand-yverdon-les-bains-m9vfej4l-n0yky","tag":"description","text":"Fun Run :D","spotId":"yvonand-yverdon-les-bains","votes":1,"date":"2025-04-24T13:56:14.805Z"}],"country":"CH","id":"yvonand-yverdon-les-bains","name":"Yvonand → Yverdon-les-Bains","kind":"downwind-run","locations":[{"lng":6.726980209350587,"lat":46.80740333108803},{"lng":6.724877357482911,"lat":46.8089013603689},{"lng":6.721615791320802,"lat":46.8100468840216},{"lng":6.714277267456056,"lat":46.8094594390422},{"lng":6.700887680053712,"lat":46.80687460491035},{"lng":6.6811466217041025,"lat":46.80152830384885},{"lng":6.6544532775878915,"lat":46.79324342530679},{"lng":6.6460150480270395,"lat":46.790103211145336},{"lng":6.644958257675172,"lat":46.78969552078176},{"lng":6.6404950618743905,"lat":46.787286044407715},{"lng":6.640157103538513,"lat":46.786977506106574}],"distance":7.3};
+            const spotData = {"kind":"downwind-run","pending":false,"infos":[{"tag":"description","date":"2025-04-24T13:56:14.805Z","userName":"Rawham","spotId":"yvonand-yverdon-les-bains","text":"Fun Run :D","votes":1,"id":"yvonand-yverdon-les-bains-m9vfej4l-n0yky"}],"name":"Yvonand → Yverdon-les-Bains","id":"yvonand-yverdon-les-bains","locations":[{"lng":6.726980209350587,"lat":46.80740333108803},{"lng":6.724877357482911,"lat":46.8089013603689},{"lng":6.721615791320802,"lat":46.8100468840216},{"lng":6.714277267456056,"lat":46.8094594390422},{"lng":6.700887680053712,"lat":46.80687460491035},{"lng":6.6811466217041025,"lat":46.80152830384885},{"lng":6.6544532775878915,"lat":46.79324342530679},{"lng":6.6460150480270395,"lat":46.790103211145336},{"lng":6.644958257675172,"lat":46.78969552078176},{"lng":6.6404950618743905,"lat":46.787286044407715},{"lng":6.640157103538513,"lat":46.786977506106574}],"distance":7.3,"country":"CH"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

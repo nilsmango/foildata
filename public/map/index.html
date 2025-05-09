@@ -219,15 +219,16 @@
             </div>
         </div>
     </div>
-    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; bottom:0; left:0; width:100%; z-index:9999;">
+    <!-- Makes more sense to have the maintenance banner at the top in the map -->
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; top:0; left:0; width:100%; z-index:9999;">
     🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
     </div>
     
     <script>
     
     fetch('/foildata/.maintenance', { cache: 'no-store' })
-    
-      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; })
+      .catch(() => {});
     
     </script>
     <script src="map.js"></script>

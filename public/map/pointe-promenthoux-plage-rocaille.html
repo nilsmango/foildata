@@ -153,16 +153,14 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
-    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; bottom:0; left:0; width:100%; z-index:9999;">
     🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
     </div>
 
     <script>
-
     fetch('/foildata/.maintenance', { cache: 'no-store' })
-
-      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
-
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; })
+      .catch(() => {});
     </script>
                 
         <script>
@@ -250,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"kind":"downwind-run","name":"Pointe Promenthoux  → Plage Rocaille ","locations":[{"lng":6.267442703247071,"lat":46.39080363848428},{"lng":6.262121200561524,"lat":46.38624299995649},{"lng":6.252937316894532,"lat":46.3765873519179},{"lng":6.239376068115235,"lat":46.36687079594448},{"lng":6.204700469970704,"lat":46.3339729931184}],"distance":8,"country":"CH","infos":[{"tag":"description","spotId":"pointe-promenthoux-plage-rocaille","userName":"Ludo ","date":"2025-04-24T15:31:39.694Z","id":"pointe-promenthoux-plage-rocaille-m9vit8ha-5cy1o","text":"Easy small downwind  run by bise \nTo learn Foil \nOr sup race "}],"pending":false,"id":"pointe-promenthoux-plage-rocaille"};
+            const spotData = {"name":"Pointe Promenthoux  → Plage Rocaille ","locations":[{"lng":6.267442703247071,"lat":46.39080363848428},{"lng":6.262121200561524,"lat":46.38624299995649},{"lng":6.252937316894532,"lat":46.3765873519179},{"lng":6.239376068115235,"lat":46.36687079594448},{"lng":6.204700469970704,"lat":46.3339729931184}],"infos":[{"spotId":"pointe-promenthoux-plage-rocaille","userName":"Ludo ","text":"Easy small downwind  run by bise \nTo learn Foil \nOr sup race ","date":"2025-04-24T15:31:39.694Z","id":"pointe-promenthoux-plage-rocaille-m9vit8ha-5cy1o","tag":"description"}],"distance":8,"id":"pointe-promenthoux-plage-rocaille","kind":"downwind-run","country":"CH","pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

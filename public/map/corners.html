@@ -153,16 +153,14 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
-    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; bottom:0; left:0; width:100%; z-index:9999;">
     🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
     </div>
 
     <script>
-
     fetch('/foildata/.maintenance', { cache: 'no-store' })
-
-      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
-
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; })
+      .catch(() => {});
     </script>
                 
         <script>
@@ -250,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lng":-80.06657838821413,"lat":26.923045652573776}],"infos":[{"tag":"description","date":"2025-04-30T12:24:08.710Z","text":"Great sandbar for prone, also good area to launch kites and wing from. Works in all east wind directions shore-break is factor in strong east winds. ","userName":"rick_neeser","id":"corners-ma3wr75y-mvbdl","spotId":"corners"}],"state":"FL","name":"Corners ","pending":false,"kind":"wave-wind-spot","id":"corners","country":"US"};
+            const spotData = {"name":"Corners ","country":"US","id":"corners","kind":"wave-wind-spot","pending":false,"state":"FL","infos":[{"tag":"description","id":"corners-ma3wr75y-mvbdl","text":"Great sandbar for prone, also good area to launch kites and wing from. Works in all east wind directions shore-break is factor in strong east winds. ","date":"2025-04-30T12:24:08.710Z","spotId":"corners","userName":"rick_neeser"}],"locations":[{"lng":-80.06657838821413,"lat":26.923045652573776}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

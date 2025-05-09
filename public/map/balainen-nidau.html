@@ -180,16 +180,14 @@
       </div>
     <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
     </footer>
-    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; font-weight:bold; position:fixed; top:0; left:0; width:100%; z-index:9999;">
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; bottom:0; left:0; width:100%; z-index:9999;">
     🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
     </div>
 
     <script>
-
     fetch('/foildata/.maintenance', { cache: 'no-store' })
-
-      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; });
-
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; })
+      .catch(() => {});
     </script>
                 
         <script>
@@ -277,7 +275,7 @@
             }
             
             // Get spot data
-            const spotData = {"infos":[{"tag":"description","id":"balainen-nidau-m9v31gkp-y37n7","spotId":"balainen-nidau","userName":"Nils Mango","text":"Nice dock to thief the wakes of boats!","date":"2025-04-24T08:10:09.577Z","userUrl":"https:\/\/nilsmango.ch"},{"tag":"description","id":"680a36ee08ff4","spotId":"balainen-nidau","userName":"nilsmango","text":"It's a wooden dock by the way, pretty low. There is a higher plastic dock across the river too!\nMost of the time there are also some free (and higher) boat docks nearby.","votes":1,"date":"2025-04-24T15:04:46+02:00","userUrl":""}],"id":"balainen-nidau","locations":[{"lat":47.12265102256883,"lng":7.2388261556625375}],"pending":false,"kind":"wake-thief-spot","videos":[{"kind":"YouTube","date":"2025-04-24T08:10:09.577Z","url":"https:\/\/youtube.com\/shorts\/_P-h36Wc0Y4"},{"kind":"Insta","date":"2025-04-24T20:43:22+02:00","url":"https:\/\/www.instagram.com\/p\/Cw0jzU6IKLg\/"}],"country":"CH","name":"Balainen, Nidau"};
+            const spotData = {"infos":[{"spotId":"balainen-nidau","tag":"description","text":"Nice dock to thief the wakes of boats!","userUrl":"https:\/\/nilsmango.ch","id":"balainen-nidau-m9v31gkp-y37n7","userName":"Nils Mango","date":"2025-04-24T08:10:09.577Z"},{"spotId":"balainen-nidau","tag":"description","text":"It's a wooden dock by the way, pretty low. There is a higher plastic dock across the river too!\nMost of the time there are also some free (and higher) boat docks nearby.","userUrl":"","votes":1,"id":"680a36ee08ff4","userName":"nilsmango","date":"2025-04-24T15:04:46+02:00"}],"kind":"wake-thief-spot","videos":[{"url":"https:\/\/youtube.com\/shorts\/_P-h36Wc0Y4","kind":"YouTube","date":"2025-04-24T08:10:09.577Z"},{"url":"https:\/\/www.instagram.com\/p\/Cw0jzU6IKLg\/","kind":"Insta","date":"2025-04-24T20:43:22+02:00"}],"id":"balainen-nidau","country":"CH","pending":false,"locations":[{"lat":47.12265102256883,"lng":7.2388261556625375}],"name":"Balainen, Nidau"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
