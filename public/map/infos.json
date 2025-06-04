@@ -513,5 +513,33 @@
         "userName": "B\u00e4rni",
         "userUrl": null,
         "spotId": "sentier-littoral-bormes-les-mimosas"
+    },
+    {
+        "id": "plage-de-bregancon-hyeres-mbholuxb-wb1rh",
+        "tag": "wind-direction",
+        "text": "East Wind",
+        "date": "2025-06-04T08:24:31.439Z",
+        "userName": "nilsmango",
+        "userUrl": null,
+        "spotId": "plage-de-bregancon-hyeres"
+    },
+    {
+        "id": "plage-de-bregancon-hyeres-mbholuxb-79cut",
+        "tag": "local-contact",
+        "text": "There are a couple of local WhatsApp groups. Simply ask around. This is the community Instagram account: https:\/\/www.instagram.com\/med_gliders\/",
+        "date": "2025-06-04T08:24:31.439Z",
+        "userName": "nilsmango",
+        "userUrl": "https:\/\/nilsmango.ch",
+        "spotId": "plage-de-bregancon-hyeres"
+    },
+    {
+        "id": "plage-de-bregancon-hyeres-mbholuxb-zrda6",
+        "tag": "description",
+        "text": "Best east wind run in Hy\u00e8res. Pretty long paddle out in the beginning. \nStay outside of the buoy.\nParking at the start ca. 10 EUR, free in winter.\n",
+        "date": "2025-06-04T08:24:31.439Z",
+        "userName": "berni",
+        "userUrl": null,
+        "spotId": "plage-de-bregancon-hyeres",
+        "votes": 1
     }
 ]
