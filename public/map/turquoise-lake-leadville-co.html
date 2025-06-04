@@ -77,7 +77,7 @@
                                 <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
                             </svg>
             </span>
-            <span class="vote-count">0</span>
+            <span class="vote-count">1</span>
         </div>
     </div>
     <hr class="info-separator">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"kind":"wind-spot","id":"turquoise-lake-leadville-co","locations":[{"lng":-106.3603860139847,"lat":39.25872934228937}],"country":"US","videos":[{"date":"2025-05-10T01:46:37+02:00","url":"https:\/\/youtu.be\/2Oq0jYlmSAw","kind":"YouTube"}],"infos":[{"spotId":"turquoise-lake-leadville-co","id":"turquoise-lake-leadville-co-mahg1cbm-s5mef","tag":"description","text":"Great spot when wind from due west, it’s possible to shuttle a DWer from west to east. ","date":"2025-05-09T23:44:54.946Z","userName":"Foil4Fun"}],"name":"Turquoise Lake, Leadville, Co","state":"CO"};
+            const spotData = {"locations":[{"lat":39.25872934228937,"lng":-106.3603860139847}],"name":"Turquoise Lake, Leadville, Co","videos":[{"date":"2025-05-10T01:46:37+02:00","url":"https:\/\/youtu.be\/2Oq0jYlmSAw","kind":"YouTube"}],"id":"turquoise-lake-leadville-co","infos":[{"id":"turquoise-lake-leadville-co-mahg1cbm-s5mef","date":"2025-05-09T23:44:54.946Z","votes":1,"userName":"Foil4Fun","tag":"description","spotId":"turquoise-lake-leadville-co","text":"Great spot when wind from due west, it’s possible to shuttle a DWer from west to east. "}],"pending":false,"kind":"wind-spot","state":"CO","country":"US"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

@@ -493,6 +493,25 @@
         "date": "2025-05-09T23:44:54.946Z",
         "userName": "Foil4Fun",
         "userUrl": null,
-        "spotId": "turquoise-lake-leadville-co"
+        "spotId": "turquoise-lake-leadville-co",
+        "votes": 1
+    },
+    {
+        "id": "via-gardesana-orientale-navene-mbc8rl37-57eq5",
+        "tag": "description",
+        "text": "Downwind from here to Malcesine (bus parking) then walk back upwind. Ideal for beginners. Good steep bumps in morning Pel\u00e8r winds. Get up EARLY! \ud83e\udd19",
+        "date": "2025-05-31T13:02:13.891Z",
+        "userName": "Pit",
+        "userUrl": null,
+        "spotId": "via-gardesana-orientale-navene"
+    },
+    {
+        "id": "sentier-littoral-bormes-les-mimosas-mbgxg1sr-5hkvm",
+        "tag": "description",
+        "text": "DW Bregancon-Hy\u00e8res\n\n",
+        "date": "2025-06-03T19:44:10.779Z",
+        "userName": "B\u00e4rni",
+        "userUrl": null,
+        "spotId": "sentier-littoral-bormes-les-mimosas"
     }
 ]

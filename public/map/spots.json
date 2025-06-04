@@ -1,20 +1,21 @@
 [
   {
-    "pending" : false,
+    "kind" : "wake-thief-spot",
     "id" : "balainen-nidau",
+    "country" : "CH",
     "videos" : [
       {
-        "url" : "https:\/\/youtube.com\/shorts\/_P-h36Wc0Y4",
+        "date" : "2025-04-24T08:10:09.577Z",
         "kind" : "YouTube",
-        "date" : "2025-04-24T08:10:09.577Z"
+        "url" : "https:\/\/youtube.com\/shorts\/_P-h36Wc0Y4"
       },
       {
-        "url" : "https:\/\/www.instagram.com\/p\/Cw0jzU6IKLg\/",
+        "date" : "2025-04-24T20:43:22+02:00",
         "kind" : "Insta",
-        "date" : "2025-04-24T20:43:22+02:00"
+        "url" : "https:\/\/www.instagram.com\/p\/Cw0jzU6IKLg\/"
       }
     ],
-    "kind" : "wake-thief-spot",
+    "name" : "Balainen, Nidau",
     "locations" : [
       {
         "lng" : 7.2388261556625375,
@@ -23,88 +24,78 @@
     ],
     "infos" : [
       {
-        "userUrl" : "https:\/\/nilsmango.ch",
-        "date" : "2025-04-24T08:10:09.577Z",
+        "text" : "Nice dock to thief the wakes of boats!",
         "id" : "balainen-nidau-m9v31gkp-y37n7",
-        "userName" : "Nils Mango",
+        "date" : "2025-04-24T08:10:09.577Z",
+        "userUrl" : "https:\/\/nilsmango.ch",
         "tag" : "description",
-        "text" : "Nice dock to thief the wakes of boats!"
+        "userName" : "Nils Mango"
       }
     ],
-    "country" : "CH",
-    "name" : "Balainen, Nidau"
+    "pending" : false
   },
   {
+    "country" : "CH",
     "name" : "Erlenwäldli, Ipsach",
     "id" : "erlenwaeldli-ipsach",
-    "country" : "CH",
+    "kind" : "wind-spot",
+    "videos" : [
+      {
+        "date" : "2025-04-24T21:10:43+02:00",
+        "kind" : "Insta",
+        "url" : "https:\/\/www.instagram.com\/reel\/C7CoH_foPuk\/"
+      }
+    ],
+    "infos" : [
+      {
+        "text" : "The wind spot where to cool kids are.",
+        "id" : "erlenwaeldli-ipsach-m9v383ys-vdkm3",
+        "date" : "2025-04-24T08:15:19.828Z",
+        "userUrl" : "https:\/\/nilsmango.ch",
+        "tag" : "description",
+        "userName" : "Nils Mango"
+      }
+    ],
     "locations" : [
       {
         "lng" : 7.2266596555709848,
         "lat" : 47.121263959843674
       }
     ],
-    "infos" : [
-      {
-        "date" : "2025-04-24T08:15:19.828Z",
-        "userUrl" : "https:\/\/nilsmango.ch",
-        "id" : "erlenwaeldli-ipsach-m9v383ys-vdkm3",
-        "text" : "The wind spot where to cool kids are.",
-        "tag" : "description",
-        "userName" : "Nils Mango"
-      }
-    ],
-    "kind" : "wind-spot",
-    "pending" : false,
-    "videos" : [
-      {
-        "url" : "https:\/\/www.instagram.com\/reel\/C7CoH_foPuk\/",
-        "date" : "2025-04-24T21:10:43+02:00",
-        "kind" : "Insta"
-      }
-    ]
+    "pending" : false
   },
   {
     "country" : "CH",
-    "pending" : false,
     "locations" : [
       {
         "lng" : 7.6151561737060556,
         "lat" : 46.767918165271396
       }
     ],
+    "kind" : "shop",
+    "name" : "sevensurf, Steffisburg",
+    "id" : "sevensurf-steffisburg",
+    "pending" : false,
     "infos" : [
       {
-        "userUrl" : "https:\/\/sevensurf.ch",
-        "id" : "schwaebismattweg-steffisburg-m9v3fhpe-x9cnj",
-        "userName" : "sevensurf",
         "text" : "surfshop\n- wing\n- kite\n- parawing\n- dw\n- pumpfoil\n- accesoirs\n\nbrands\n- f-one pro shop\n- duotone\n- north\n- and others\n\ntestpool and all year open\n\nsevensurf gmbh \nSchwäbismattweg 4           \n3613 Steffisburg \n+4177 456 06 06\nshop@sevensurf.ch\nsevensurf.ch\n\n",
+        "userUrl" : "https:\/\/sevensurf.ch",
+        "date" : "2025-04-24T08:21:04.226Z",
+        "id" : "schwaebismattweg-steffisburg-m9v3fhpe-x9cnj",
         "tag" : "description",
-        "date" : "2025-04-24T08:21:04.226Z"
+        "userName" : "sevensurf"
       }
-    ],
-    "kind" : "shop",
-    "id" : "sevensurf-steffisburg",
-    "name" : "sevensurf, Steffisburg"
+    ]
   },
   {
-    "locations" : [
-      {
-        "lng" : 6.9378662109375009,
-        "lat" : 46.959635958619572
-      }
-    ],
-    "name" : "SUPFOIL.CH",
+    "country" : "CH",
     "videos" : [
       {
-        "url" : "https:\/\/youtube.com\/shorts\/AZUjX3CPp9I?si=2DPgVsbQ2pDmK2D3",
         "date" : "2025-04-24T09:27:09.156Z",
-        "kind" : "YouTube"
+        "kind" : "YouTube",
+        "url" : "https:\/\/youtube.com\/shorts\/AZUjX3CPp9I?si=2DPgVsbQ2pDmK2D3"
       }
     ],
-    "kind" : "school",
-    "country" : "CH",
-    "id" : "supfoil-ch",
     "infos" : [
       {
         "userUrl" : "https:\/\/supfoil.ch\/",
@@ -115,9 +106,22 @@
         "date" : "2025-04-24T09:27:09.156Z"
       }
     ],
-    "pending" : false
+    "id" : "supfoil-ch",
+    "kind" : "school",
+    "locations" : [
+      {
+        "lat" : 46.959635958619572,
+        "lng" : 6.9378662109375009
+      }
+    ],
+    "pending" : false,
+    "name" : "SUPFOIL.CH"
   },
   {
+    "kind" : "downwind-run",
+    "id" : "neuchatel-saint-blaise",
+    "distance" : 4.7000000000000002,
+    "country" : "CH",
     "locations" : [
       {
         "lng" : 6.9390785694122323,
@@ -152,23 +156,49 @@
         "lat" : 47.010167130466684
       }
     ],
-    "kind" : "downwind-run",
-    "country" : "CH",
+    "pending" : false,
     "name" : "Neuchâtel → Saint Blaise",
     "infos" : [
       {
-        "text" : "This is a great Downwind beginner run or to test new gear. Once over 17kn of wind, it starts to get tricky with backwash",
         "userName" : "SUPFOIL.CH",
         "id" : "neuchatel-saint-blaise-m9v6jmlq-lhn4e",
+        "text" : "This is a great Downwind beginner run or to test new gear. Once over 17kn of wind, it starts to get tricky with backwash",
         "tag" : "description",
         "date" : "2025-04-24T09:48:16.046Z"
       }
-    ],
-    "pending" : false,
-    "id" : "neuchatel-saint-blaise",
-    "distance" : 4.7000000000000002
+    ]
   },
   {
+    "infos" : [
+      {
+        "userName" : "nilsmango",
+        "id" : "neuchatel-yverdon-les-bains-m9vbgr51-0ai7u",
+        "text" : "Longest possible Bise run.\nCheck wind: https:\/\/letskite.ch\/en\nCheck waves in Neuchâtel: https:\/\/jeunesrives.roundshot.com\/",
+        "userUrl" : "https:\/\/nilsmango.ch",
+        "tag" : "description",
+        "date" : "2025-04-24T12:06:00.037Z"
+      },
+      {
+        "userName" : "nilsmango",
+        "id" : "neuchatel-yverdon-les-bains-m9vbgr51-7x549",
+        "text" : "We have a group chat for this run: https:\/\/chat.whatsapp.com\/DPFmgw7m15T0iZ0P1pbe53\nLocal people:\nhttps:\/\/instagram.com\/nilsmango\nhttps:\/\/www.instagram.com\/supfoil.ch\n",
+        "userUrl" : "https:\/\/nilsmango.ch",
+        "tag" : "local-contact",
+        "date" : "2025-04-24T12:06:00.037Z"
+      }
+    ],
+    "kind" : "downwind-run",
+    "videos" : [
+      {
+        "date" : "2025-04-24T20:22:07+02:00",
+        "kind" : "Insta",
+        "url" : "https:\/\/www.instagram.com\/p\/DAtqQKEII3o\/"
+      }
+    ],
+    "country" : "CH",
+    "pending" : false,
+    "name" : "Neuchâtel → Yverdon-les-Bains",
+    "id" : "neuchatel-yverdon-les-bains",
     "locations" : [
       {
         "lng" : 6.9381237030029306,
@@ -215,99 +245,59 @@
         "lat" : 46.854086972433336
       },
       {
-        "lat" : 46.835300948700002,
-        "lng" : 6.7291259765625009
+        "lng" : 6.7291259765625009,
+        "lat" : 46.835300948700002
       },
       {
-        "lat" : 46.817683084899905,
-        "lng" : 6.6937637329101571
+        "lng" : 6.6937637329101571,
+        "lat" : 46.817683084899905
       },
       {
-        "lat" : 46.806757109498449,
-        "lng" : 6.6740226745605478
+        "lng" : 6.6740226745605478,
+        "lat" : 46.806757109498449
       },
       {
-        "lat" : 46.79935438115394,
-        "lng" : 6.6565132141113281
+        "lng" : 6.6565132141113281,
+        "lat" : 46.79935438115394
       },
       {
-        "lat" : 46.792773323035391,
-        "lng" : 6.6494750976562509
+        "lng" : 6.6494750976562509,
+        "lat" : 46.792773323035391
       },
       {
-        "lat" : 46.790011389260819,
-        "lng" : 6.6453552246093759
+        "lng" : 6.6453552246093759,
+        "lat" : 46.790011389260819
       },
       {
-        "lat" : 46.789188658185751,
-        "lng" : 6.6437673568725595
+        "lng" : 6.6437673568725595,
+        "lat" : 46.789188658185751
       },
       {
-        "lat" : 46.78757988876459,
-        "lng" : 6.6408169269561776
+        "lng" : 6.6408169269561776,
+        "lat" : 46.78757988876459
       },
       {
-        "lat" : 46.787124429327676,
-        "lng" : 6.640183925628663
+        "lng" : 6.640183925628663,
+        "lat" : 46.787124429327676
       },
       {
-        "lat" : 46.786911390526257,
-        "lng" : 6.6400015354156503
+        "lng" : 6.6400015354156503,
+        "lat" : 46.786911390526257
       }
     ],
-    "name" : "Neuchâtel → Yverdon-les-Bains",
-    "kind" : "downwind-run",
-    "infos" : [
-      {
-        "userUrl" : "https:\/\/nilsmango.ch",
-        "id" : "neuchatel-yverdon-les-bains-m9vbgr51-0ai7u",
-        "date" : "2025-04-24T12:06:00.037Z",
-        "userName" : "nilsmango",
-        "tag" : "description",
-        "text" : "Longest possible Bise run.\nCheck wind: https:\/\/letskite.ch\/en\nCheck waves in Neuchâtel: https:\/\/jeunesrives.roundshot.com\/"
-      },
-      {
-        "userUrl" : "https:\/\/nilsmango.ch",
-        "id" : "neuchatel-yverdon-les-bains-m9vbgr51-7x549",
-        "date" : "2025-04-24T12:06:00.037Z",
-        "userName" : "nilsmango",
-        "tag" : "local-contact",
-        "text" : "We have a group chat for this run: https:\/\/chat.whatsapp.com\/DPFmgw7m15T0iZ0P1pbe53\nLocal people:\nhttps:\/\/instagram.com\/nilsmango\nhttps:\/\/www.instagram.com\/supfoil.ch\n"
-      }
-    ],
-    "id" : "neuchatel-yverdon-les-bains",
-    "country" : "CH",
-    "distance" : 32.399999999999999,
-    "videos" : [
-      {
-        "kind" : "Insta",
-        "date" : "2025-04-24T20:22:07+02:00",
-        "url" : "https:\/\/www.instagram.com\/p\/DAtqQKEII3o\/"
-      }
-    ],
-    "pending" : false
+    "distance" : 32.399999999999999
   },
   {
     "name" : "Concise → Saint-Blaise",
+    "kind" : "downwind-run",
+    "country" : "CH",
     "infos" : [
       {
-        "date" : "2025-04-24T12:11:25.352Z",
-        "id" : "concise-saint-blaise-m9vbnq5k-pxnc0",
         "userName" : "Nils Mango",
+        "id" : "concise-saint-blaise-m9vbnq5k-pxnc0",
+        "text" : "Great run with south-west wind. Train directly to the start.\nBest waves are on the inside in my opinion.\n",
         "tag" : "description",
-        "text" : "Great run with south-west wind. Train directly to the start.\nBest waves are on the inside in my opinion.\n"
-      }
-    ],
-    "kind" : "downwind-run",
-    "id" : "concise-saint-blaise",
-    "country" : "CH",
-    "pending" : false,
-    "distance" : 27.800000000000001,
-    "videos" : [
-      {
-        "kind" : "Insta",
-        "date" : "2025-04-24T20:23:29+02:00",
-        "url" : "https:\/\/www.instagram.com\/reel\/C8-BHyhItUv"
+        "date" : "2025-04-24T12:11:25.352Z"
       }
     ],
     "locations" : [
@@ -387,9 +377,30 @@
         "lat" : 47.010489018365519,
         "lng" : 6.9885277748107919
       }
-    ]
+    ],
+    "distance" : 27.800000000000001,
+    "videos" : [
+      {
+        "date" : "2025-04-24T20:23:29+02:00",
+        "kind" : "Insta",
+        "url" : "https:\/\/www.instagram.com\/reel\/C8-BHyhItUv"
+      }
+    ],
+    "id" : "concise-saint-blaise",
+    "pending" : false
   },
   {
+    "name" : "Rue du Port, Saint-Blaise",
+    "pending" : false,
+    "kind" : "pump-foil-dock",
+    "locations" : [
+      {
+        "lat" : 47.009757452153387,
+        "lng" : 6.9874066114425668
+      }
+    ],
+    "id" : "rue-du-port-saint-blaise",
+    "country" : "CH",
     "infos" : [
       {
         "userName" : "Olivier",
@@ -398,51 +409,50 @@
         "tag" : "description",
         "date" : "2025-04-24T13:02:07.945Z"
       }
-    ],
-    "pending" : false,
-    "id" : "rue-du-port-saint-blaise",
-    "name" : "Rue du Port, Saint-Blaise",
-    "kind" : "pump-foil-dock",
-    "locations" : [
-      {
-        "lat" : 47.009757452153387,
-        "lng" : 6.9874066114425668
-      }
-    ],
-    "country" : "CH"
+    ]
   },
   {
+    "kind" : "pump-foil-dock",
     "pending" : false,
     "country" : "CH",
-    "kind" : "pump-foil-dock",
-    "id" : "boedeli-dock",
-    "videos" : [
-      {
-        "kind" : "YouTube",
-        "date" : "2025-04-24T13:09:04.864Z",
-        "url" : "https:\/\/www.youtube.com\/watch?v=mR8adQcszx0&t=1s"
-      }
-    ],
-    "name" : "Bödeli\/Dock",
-    "infos" : [
-      {
-        "userUrl" : "https:\/\/www.instagram.com\/rob_on_rolls\/",
-        "id" : "boedeli-dock-m9vdpvj1-lmni8",
-        "userName" : "Rob_on_Rolls",
-        "text" : "Super easy concrete dock near the trainstation!",
-        "tag" : "description",
-        "date" : "2025-04-24T13:09:04.862Z"
-      }
-    ],
     "locations" : [
       {
         "lat" : 47.207201002858724,
         "lng" : 7.541363239288331
       }
+    ],
+    "infos" : [
+      {
+        "userName" : "Rob_on_Rolls",
+        "userUrl" : "https:\/\/www.instagram.com\/rob_on_rolls\/",
+        "id" : "boedeli-dock-m9vdpvj1-lmni8",
+        "text" : "Super easy concrete dock near the trainstation!",
+        "tag" : "description",
+        "date" : "2025-04-24T13:09:04.862Z"
+      }
+    ],
+    "id" : "boedeli-dock",
+    "name" : "Bödeli\/Dock",
+    "videos" : [
+      {
+        "date" : "2025-04-24T13:09:04.864Z",
+        "kind" : "YouTube",
+        "url" : "https:\/\/www.youtube.com\/watch?v=mR8adQcszx0&t=1s"
+      }
     ]
   },
   {
+    "name" : "Pier 11",
+    "country" : "CH",
+    "locations" : [
+      {
+        "lat" : 47.197579513020045,
+        "lng" : 7.5242722034454355
+      }
+    ],
+    "kind" : "wake-thief-spot",
     "pending" : false,
+    "id" : "pier-11",
     "infos" : [
       {
         "userName" : "Rob_on_Rolls",
@@ -451,27 +461,19 @@
         "tag" : "description",
         "date" : "2025-04-24T13:13:19.199Z"
       }
-    ],
-    "id" : "pier-11",
-    "kind" : "wake-thief-spot",
-    "locations" : [
-      {
-        "lat" : 47.197579513020045,
-        "lng" : 7.5242722034454355
-      }
-    ],
-    "name" : "Pier 11",
-    "country" : "CH"
+    ]
   },
   {
+    "pending" : false,
     "locations" : [
       {
         "lat" : 47.309277946975371,
         "lng" : 8.583213686943056
       }
     ],
+    "kind" : "wake-thief-spot",
     "name" : "Küsnacht Ermitage",
-    "country" : "CH",
+    "id" : "kuesnacht-ermitage",
     "infos" : [
       {
         "userName" : "sorin",
@@ -481,21 +483,29 @@
         "date" : "2025-04-24T13:18:06.362Z"
       }
     ],
-    "kind" : "wake-thief-spot",
-    "id" : "kuesnacht-ermitage",
-    "pending" : false
+    "country" : "CH"
   },
   {
-    "kind" : "school",
-    "locations" : [
+    "country" : "CH",
+    "name" : "Pump Foil Solothurn",
+    "infos" : [
       {
-        "lat" : 47.207233850667251,
-        "lng" : 7.5415080785751352
+        "text" : "Book Pumpfoil-lessons with Ken Ruis!\nhttps:\/\/www.foilsolothurn.ch\/",
+        "id" : "pump-foil-solothurn-m9ve477i-k1vfe",
+        "date" : "2025-04-24T13:20:13.182Z",
+        "tag" : "description",
+        "userName" : "Rob_on_Rolls"
       }
     ],
     "id" : "pump-foil-solothurn",
-    "country" : "CH",
-    "name" : "Pump Foil Solothurn",
+    "kind" : "school",
+    "locations" : [
+      {
+        "lng" : 7.5415080785751352,
+        "lat" : 47.207233850667251
+      }
+    ],
+    "pending" : false,
     "videos" : [
       {
         "date" : "2025-04-24T13:20:13.182Z",
@@ -507,34 +517,24 @@
         "kind" : "Insta",
         "url" : "https:\/\/www.instagram.com\/p\/C_Gybs6qoko\/"
       }
-    ],
-    "pending" : false,
-    "infos" : [
-      {
-        "date" : "2025-04-24T13:20:13.182Z",
-        "id" : "pump-foil-solothurn-m9ve477i-k1vfe",
-        "userName" : "Rob_on_Rolls",
-        "tag" : "description",
-        "text" : "Book Pumpfoil-lessons with Ken Ruis!\nhttps:\/\/www.foilsolothurn.ch\/"
-      }
     ]
   },
   {
-    "distance" : 7.2999999999999998,
-    "pending" : false,
-    "name" : "Yvonand → Yverdon-les-Bains",
     "kind" : "downwind-run",
-    "country" : "CH",
+    "distance" : 7.2999999999999998,
     "infos" : [
       {
-        "date" : "2025-04-24T13:56:14.805Z",
         "userName" : "Rawham",
         "id" : "yvonand-yverdon-les-bains-m9vfej4l-n0yky",
+        "text" : "Fun Run :D",
         "tag" : "description",
-        "text" : "Fun Run :D"
+        "date" : "2025-04-24T13:56:14.805Z"
       }
     ],
+    "pending" : false,
     "id" : "yvonand-yverdon-les-bains",
+    "country" : "CH",
+    "name" : "Yvonand → Yverdon-les-Bains",
     "locations" : [
       {
         "lng" : 6.7269802093505868,
@@ -583,32 +583,24 @@
     ]
   },
   {
+    "id" : "brienz-be-interlaken",
     "infos" : [
       {
-        "date" : "2025-04-24T14:03:40.252Z",
         "userName" : "nilsmango",
         "id" : "brienz-be-interlaken-m9vfo2u4-c51av",
+        "text" : "Parawing downwind run. Only works when there is a lot of Südfön pressure (I think it needs at least 12 hPa).\nCheck pressure here: https:\/\/www.srf.ch\/meteo\/surf-und-segelwetter\/diagramme-foehn-und-bise\n",
         "tag" : "description",
-        "text" : "Parawing downwind run. Only works when there is a lot of Südfön pressure (I think it needs at least 12 hPa).\nCheck pressure here: https:\/\/www.srf.ch\/meteo\/surf-und-segelwetter\/diagramme-foehn-und-bise\n"
+        "date" : "2025-04-24T14:03:40.252Z"
       },
       {
-        "date" : "2025-04-24T14:03:40.252Z",
         "userName" : "nilsmango",
         "id" : "brienz-be-interlaken-m9vfo2u4-9amg8",
+        "text" : "Even if the whole lake is full with white caps I never take a smaller foil than 980 sq cm. The waves never get very big.",
         "tag" : "conditions",
-        "text" : "Even if the whole lake is full with white caps I never take a smaller foil than 980 sq cm. The waves never get very big."
+        "date" : "2025-04-24T14:03:40.252Z"
       }
     ],
-    "country" : "CH",
-    "pending" : false,
-    "name" : "Brienz BE → Interlaken",
-    "videos" : [
-      {
-        "date" : "2025-04-24T21:10:06+02:00",
-        "kind" : "Insta",
-        "url" : "https:\/\/www.instagram.com\/p\/DG_QcDoI_a5\/"
-      }
-    ],
+    "kind" : "downwind-run",
     "locations" : [
       {
         "lng" : 8.0358821153640765,
@@ -663,16 +655,36 @@
         "lng" : 7.8750085830688485
       }
     ],
+    "country" : "CH",
+    "name" : "Brienz BE → Interlaken",
+    "videos" : [
+      {
+        "date" : "2025-04-24T21:10:06+02:00",
+        "kind" : "Insta",
+        "url" : "https:\/\/www.instagram.com\/p\/DG_QcDoI_a5\/"
+      }
+    ],
     "distance" : 14.1,
-    "id" : "brienz-be-interlaken",
-    "kind" : "downwind-run"
+    "pending" : false
   },
   {
+    "id" : "estavayer-le-lac-yverdon-les-bains",
+    "distance" : 17.300000000000001,
     "videos" : [
       {
         "date" : "2025-04-24T20:41:24+02:00",
         "kind" : "Insta",
         "url" : "https:\/\/www.instagram.com\/reel\/C-5BzhdoCMe\/"
+      }
+    ],
+    "name" : "Estavayer-le-Lac → Yverdon-les-Bains",
+    "infos" : [
+      {
+        "userName" : "nilsmango",
+        "id" : "estavayer-le-lac-yverdon-les-bains-m9vfwqxb-0oh97",
+        "text" : "Very bad in the beginning, you really have to paddle out first. But nice train schedule.\nMight be good with a parawing as you could simply ride out to the center of the lake for better bumps.",
+        "tag" : "description",
+        "date" : "2025-04-24T14:10:24.719Z"
       }
     ],
     "locations" : [
@@ -721,66 +733,65 @@
         "lat" : 46.820384865493999
       },
       {
-        "lng" : 6.7095565795898438,
-        "lat" : 46.812807789482491
+        "lat" : 46.812807789482491,
+        "lng" : 6.7095565795898438
       },
       {
-        "lng" : 6.7011451721191415,
-        "lat" : 46.805523392178522
+        "lat" : 46.805523392178522,
+        "lng" : 6.7011451721191415
       },
       {
-        "lng" : 6.6765117645263681,
-        "lat" : 46.798355522357454
+        "lat" : 46.798355522357454,
+        "lng" : 6.6765117645263681
       },
       {
-        "lng" : 6.656341552734375,
-        "lat" : 46.792597033624958
+        "lat" : 46.792597033624958,
+        "lng" : 6.656341552734375
       },
       {
-        "lng" : 6.6451406478881845,
-        "lat" : 46.790011389260819
+        "lat" : 46.790011389260819,
+        "lng" : 6.6451406478881845
       },
       {
-        "lng" : 6.6447865962982187,
-        "lat" : 46.789813053455646
+        "lat" : 46.789813053455646,
+        "lng" : 6.6447865962982187
       },
       {
-        "lng" : 6.6400980949401864,
-        "lat" : 46.787264006016272
+        "lat" : 46.787264006016272,
+        "lng" : 6.6400980949401864
       },
       {
-        "lng" : 6.6399157047271729,
-        "lat" : 46.786889351981429
+        "lat" : 46.786889351981429,
+        "lng" : 6.6399157047271729
       }
     ],
-    "pending" : false,
-    "distance" : 17.300000000000001,
     "country" : "CH",
-    "id" : "estavayer-le-lac-yverdon-les-bains",
-    "infos" : [
-      {
-        "date" : "2025-04-24T14:10:24.719Z",
-        "userName" : "nilsmango",
-        "id" : "estavayer-le-lac-yverdon-les-bains-m9vfwqxb-0oh97",
-        "tag" : "description",
-        "text" : "Very bad in the beginning, you really have to paddle out first. But nice train schedule.\nMight be good with a parawing as you could simply ride out to the center of the lake for better bumps."
-      }
-    ],
-    "name" : "Estavayer-le-Lac → Yverdon-les-Bains",
-    "kind" : "downwind-run"
+    "kind" : "downwind-run",
+    "pending" : false
   },
   {
+    "pending" : false,
+    "id" : "gorgier-yverdon-les-bains",
+    "distance" : 17.399999999999999,
+    "name" : "Gorgier → Yverdon-les-Bains",
     "infos" : [
       {
-        "date" : "2025-04-24T14:23:51.415Z",
         "userName" : "nilsmango",
         "id" : "gorgier-yverdon-les-bains-m9vge1dj-el8l6",
+        "text" : "Great Bise run when there is not enough wind in Neuchâtel.\nFor wind measurements check: https:\/\/letskite.ch\/en\nNice train connections, also good parking at start or at end.\nI like to stay at the shore as I find the waves there the cleanest.\nYou can also go out at Concise or Grandson.",
         "tag" : "description",
-        "text" : "Great Bise run when there is not enough wind in Neuchâtel.\nFor wind measurements check: https:\/\/letskite.ch\/en\nNice train connections, also good parking at start or at end.\nI like to stay at the shore as I find the waves there the cleanest.\nYou can also go out at Concise or Grandson."
+        "date" : "2025-04-24T14:23:51.415Z"
       }
     ],
-    "name" : "Gorgier → Yverdon-les-Bains",
     "kind" : "downwind-run",
+    "videos" : [
+      {
+        "date" : "2025-04-24T20:24:54+02:00",
+        "kind" : "Insta",
+        "url" : "https:\/\/www.instagram.com\/reel\/DIhEY70omzd\/"
+      }
+    ],
+    "country" : "CH",
     "locations" : [
       {
         "lng" : 6.7869061231613168,
@@ -827,209 +838,191 @@
         "lat" : 46.877560263986247
       },
       {
-        "lat" : 46.871634226529316,
-        "lng" : 6.7660331726074228
+        "lng" : 6.7660331726074228,
+        "lat" : 46.871634226529316
       },
       {
-        "lat" : 46.867057234911371,
-        "lng" : 6.7656898498535165
+        "lng" : 6.7656898498535165,
+        "lat" : 46.867057234911371
       },
       {
-        "lat" : 46.863242777083912,
-        "lng" : 6.7613983154296884
+        "lng" : 6.7613983154296884,
+        "lat" : 46.863242777083912
       },
       {
-        "lat" : 46.843755472354736,
-        "lng" : 6.7308425903320321
+        "lng" : 6.7308425903320321,
+        "lat" : 46.843755472354736
       },
       {
-        "lat" : 46.839528376819452,
-        "lng" : 6.7171096801757821
+        "lng" : 6.7171096801757821,
+        "lat" : 46.839528376819452
       },
       {
-        "lat" : 46.832482478516468,
-        "lng" : 6.69891357421875
+        "lng" : 6.69891357421875,
+        "lat" : 46.832482478516468
       },
       {
-        "lat" : 46.824496010262052,
-        "lng" : 6.6906738281250009
+        "lng" : 6.6906738281250009,
+        "lat" : 46.824496010262052
       },
       {
-        "lat" : 46.810869296213873,
-        "lng" : 6.6738510131835946
+        "lng" : 6.6738510131835946,
+        "lat" : 46.810869296213873
       },
       {
-        "lat" : 46.795006272251854,
-        "lng" : 6.6503763198852548
+        "lng" : 6.6503763198852548,
+        "lat" : 46.795006272251854
       },
       {
-        "lat" : 46.790290527304023,
-        "lng" : 6.645451784133912
+        "lng" : 6.645451784133912,
+        "lat" : 46.790290527304023
       },
       {
-        "lat" : 46.789761632942401,
-        "lng" : 6.6444540023803711
+        "lng" : 6.6444540023803711,
+        "lat" : 46.789761632942401
       },
       {
-        "lat" : 46.787168506215799,
-        "lng" : 6.6400766372680673
+        "lng" : 6.6400766372680673,
+        "lat" : 46.787168506215799
       },
       {
-        "lat" : 46.78705096776725,
-        "lng" : 6.6400444507598886
+        "lng" : 6.6400444507598886,
+        "lat" : 46.78705096776725
       }
-    ],
-    "videos" : [
-      {
-        "date" : "2025-04-24T20:24:54+02:00",
-        "kind" : "Insta",
-        "url" : "https:\/\/www.instagram.com\/reel\/DIhEY70omzd\/"
-      }
-    ],
-    "pending" : false,
-    "country" : "CH",
-    "id" : "gorgier-yverdon-les-bains",
-    "distance" : 17.399999999999999
+    ]
   },
   {
     "name" : "Rolle → Genève",
-    "country" : "CH",
-    "kind" : "downwind-run",
-    "locations" : [
-      {
-        "lng" : 6.3367724418640146,
-        "lat" : 46.453270536931079
-      },
-      {
-        "lng" : 6.3367938995361328,
-        "lat" : 46.453070963685413
-      },
-      {
-        "lng" : 6.3368904590606698,
-        "lat" : 46.452693990003745
-      },
-      {
-        "lng" : 6.3369333744049081,
-        "lat" : 46.452176570897954
-      },
-      {
-        "lng" : 6.3367295265197763,
-        "lat" : 46.451659146876416
-      },
-      {
-        "lng" : 6.3366007804870614,
-        "lat" : 46.451378257491818
-      },
-      {
-        "lng" : 6.3366651535034189,
-        "lat" : 46.451089974774995
-      },
-      {
-        "lng" : 6.3370943069458017,
-        "lat" : 46.450631676032813
-      },
-      {
-        "lng" : 6.3377702236175546,
-        "lat" : 46.450254685467009
-      },
-      {
-        "lng" : 6.3405704498291025,
-        "lat" : 46.442943509341582
-      },
-      {
-        "lng" : 6.3403987884521493,
-        "lat" : 46.43590492857556
-      },
-      {
-        "lng" : 6.3353347778320321,
-        "lat" : 46.404012911875355
-      },
-      {
-        "lng" : 6.3274383544921884,
-        "lat" : 46.39454230328689
-      },
-      {
-        "lng" : 6.3161087036132821,
-        "lat" : 46.38578052681784
-      },
-      {
-        "lng" : 6.2903594970703134,
-        "lat" : 46.374411801963404
-      },
-      {
-        "lng" : 6.2725067138671884,
-        "lat" : 46.371095477977924
-      },
-      {
-        "lng" : 6.2567138671875009,
-        "lat" : 46.361619156955747
-      },
-      {
-        "lng" : 6.2319946289062509,
-        "lat" : 46.34005440245803
-      },
-      {
-        "lng" : 6.2213516235351571,
-        "lat" : 46.323223245368716
-      },
-      {
-        "lng" : 6.2010955810546884,
-        "lat" : 46.291443286533173
-      },
-      {
-        "lng" : 6.1811828613281259,
-        "lat" : 46.269613527764193
-      },
-      {
-        "lng" : 6.1774063110351571,
-        "lat" : 46.256796357689581
-      },
-      {
-        "lng" : 6.1671066284179688,
-        "lat" : 46.239464679024088
-      },
-      {
-        "lng" : 6.1658191680908203,
-        "lat" : 46.233349800884646
-      },
-      {
-        "lng" : 6.1609268188476571,
-        "lat" : 46.223018264717773
-      },
-      {
-        "lng" : 6.15860939025879,
-        "lat" : 46.214525948735094
-      },
-      {
-        "lng" : 6.1554980278015146,
-        "lat" : 46.210450061463632
-      },
-      {
-        "lng" : 6.1552190780639648,
-        "lat" : 46.21020505313755
-      }
-    ],
     "distance" : 32.200000000000003,
     "pending" : false,
     "id" : "rolle-geneve",
     "infos" : [
       {
-        "date" : "2025-04-24T14:33:23.585Z",
         "userName" : "nilsmango",
         "id" : "rolle-geneve-m9vgqav5-fwhvv",
+        "text" : "Top train connections, good with strong Bise.\nBe careful to fly well around Pointe de Promenthoux due to backwash.\nOtherwise, stay more in the middle towards the end.",
         "tag" : "description",
-        "text" : "Top train connections, good with strong Bise.\nBe careful to fly well around Pointe de Promenthoux due to backwash.\nOtherwise, stay more in the middle towards the end."
-      }
-    ]
-  },
-  {
-    "country" : "CH",
-    "locations" : [
-      {
-        "lat" : 46.785838461822948,
-        "lng" : 6.6515779495239267
+        "date" : "2025-04-24T14:33:23.585Z"
       }
     ],
+    "kind" : "downwind-run",
+    "locations" : [
+      {
+        "lat" : 46.453270536931079,
+        "lng" : 6.3367724418640146
+      },
+      {
+        "lat" : 46.453070963685413,
+        "lng" : 6.3367938995361328
+      },
+      {
+        "lat" : 46.452693990003745,
+        "lng" : 6.3368904590606698
+      },
+      {
+        "lat" : 46.452176570897954,
+        "lng" : 6.3369333744049081
+      },
+      {
+        "lat" : 46.451659146876416,
+        "lng" : 6.3367295265197763
+      },
+      {
+        "lat" : 46.451378257491818,
+        "lng" : 6.3366007804870614
+      },
+      {
+        "lat" : 46.451089974774995,
+        "lng" : 6.3366651535034189
+      },
+      {
+        "lat" : 46.450631676032813,
+        "lng" : 6.3370943069458017
+      },
+      {
+        "lat" : 46.450254685467009,
+        "lng" : 6.3377702236175546
+      },
+      {
+        "lat" : 46.442943509341582,
+        "lng" : 6.3405704498291025
+      },
+      {
+        "lat" : 46.43590492857556,
+        "lng" : 6.3403987884521493
+      },
+      {
+        "lat" : 46.404012911875355,
+        "lng" : 6.3353347778320321
+      },
+      {
+        "lat" : 46.39454230328689,
+        "lng" : 6.3274383544921884
+      },
+      {
+        "lat" : 46.38578052681784,
+        "lng" : 6.3161087036132821
+      },
+      {
+        "lat" : 46.374411801963404,
+        "lng" : 6.2903594970703134
+      },
+      {
+        "lat" : 46.371095477977924,
+        "lng" : 6.2725067138671884
+      },
+      {
+        "lat" : 46.361619156955747,
+        "lng" : 6.2567138671875009
+      },
+      {
+        "lat" : 46.34005440245803,
+        "lng" : 6.2319946289062509
+      },
+      {
+        "lat" : 46.323223245368716,
+        "lng" : 6.2213516235351571
+      },
+      {
+        "lat" : 46.291443286533173,
+        "lng" : 6.2010955810546884
+      },
+      {
+        "lat" : 46.269613527764193,
+        "lng" : 6.1811828613281259
+      },
+      {
+        "lat" : 46.256796357689581,
+        "lng" : 6.1774063110351571
+      },
+      {
+        "lat" : 46.239464679024088,
+        "lng" : 6.1671066284179688
+      },
+      {
+        "lat" : 46.233349800884646,
+        "lng" : 6.1658191680908203
+      },
+      {
+        "lat" : 46.223018264717773,
+        "lng" : 6.1609268188476571
+      },
+      {
+        "lat" : 46.214525948735094,
+        "lng" : 6.15860939025879
+      },
+      {
+        "lat" : 46.210450061463632,
+        "lng" : 6.1554980278015146
+      },
+      {
+        "lat" : 46.21020505313755,
+        "lng" : 6.1552190780639648
+      }
+    ],
+    "country" : "CH"
+  },
+  {
     "id" : "y-plage",
     "infos" : [
       {
@@ -1042,92 +1035,105 @@
     ],
     "kind" : "school",
     "name" : "Y-Plage ",
-    "pending" : false
-  },
-  {
     "pending" : false,
-    "id" : "pointe-promenthoux-plage-rocaille",
-    "distance" : 8,
-    "name" : "Pointe Promenthoux  → Plage Rocaille ",
-    "infos" : [
-      {
-        "date" : "2025-04-24T15:31:39.694Z",
-        "userName" : "Ludo ",
-        "id" : "pointe-promenthoux-plage-rocaille-m9vit8ha-5cy1o",
-        "tag" : "description",
-        "text" : "Easy small downwind  run by bise \nTo learn Foil \nOr sup race "
-      }
-    ],
-    "kind" : "downwind-run",
     "locations" : [
       {
-        "lat" : 46.390803638484279,
-        "lng" : 6.2674427032470712
-      },
-      {
-        "lat" : 46.386242999956487,
-        "lng" : 6.2621212005615243
-      },
-      {
-        "lat" : 46.376587351917898,
-        "lng" : 6.2529373168945321
-      },
-      {
-        "lat" : 46.366870795944479,
-        "lng" : 6.2393760681152353
-      },
-      {
-        "lat" : 46.333972993118401,
-        "lng" : 6.204700469970704
+        "lng" : 6.6515779495239267,
+        "lat" : 46.785838461822948
       }
     ],
     "country" : "CH"
   },
   {
+    "country" : "CH",
+    "name" : "Pointe Promenthoux  → Plage Rocaille ",
     "locations" : [
       {
-        "lng" : 8.593550920486452,
-        "lat" : 46.90127253104248
+        "lng" : 6.2674427032470712,
+        "lat" : 46.390803638484279
       },
       {
-        "lng" : 8.594398498535158,
-        "lat" : 46.901375158760622
+        "lng" : 6.2621212005615243,
+        "lat" : 46.386242999956487
       },
       {
-        "lng" : 8.5956001281738299,
-        "lat" : 46.902313460217705
+        "lng" : 6.2529373168945321,
+        "lat" : 46.376587351917898
       },
       {
-        "lng" : 8.5979175567626971,
-        "lat" : 46.904600501222092
+        "lng" : 6.2393760681152353,
+        "lat" : 46.366870795944479
       },
       {
-        "lng" : 8.5995483398437518,
-        "lat" : 46.907415186982227
+        "lng" : 6.204700469970704,
+        "lat" : 46.333972993118401
+      }
+    ],
+    "pending" : false,
+    "distance" : 8,
+    "infos" : [
+      {
+        "userName" : "Ludo ",
+        "id" : "pointe-promenthoux-plage-rocaille-m9vit8ha-5cy1o",
+        "text" : "Easy small downwind  run by bise \nTo learn Foil \nOr sup race ",
+        "tag" : "description",
+        "date" : "2025-04-24T15:31:39.694Z"
+      }
+    ],
+    "kind" : "downwind-run",
+    "id" : "pointe-promenthoux-plage-rocaille"
+  },
+  {
+    "pending" : false,
+    "country" : "CH",
+    "distance" : 10.9,
+    "name" : "Seedorf (UR) → Brunnen",
+    "id" : "seedorf-ur-brunnen",
+    "kind" : "downwind-run",
+    "locations" : [
+      {
+        "lat" : 46.90127253104248,
+        "lng" : 8.593550920486452
       },
       {
-        "lng" : 8.6014366149902362,
-        "lat" : 46.91210600148905
+        "lat" : 46.901375158760622,
+        "lng" : 8.594398498535158
       },
       {
-        "lng" : 8.6028099060058612,
-        "lat" : 46.917324050223741
+        "lat" : 46.902313460217705,
+        "lng" : 8.5956001281738299
       },
       {
-        "lng" : 8.601264953613283,
-        "lat" : 46.927055232947559
+        "lat" : 46.904600501222092,
+        "lng" : 8.5979175567626971
       },
       {
-        "lng" : 8.5974884033203143,
-        "lat" : 46.931978772388128
+        "lat" : 46.907415186982227,
+        "lng" : 8.5995483398437518
       },
       {
-        "lng" : 8.5992050170898455,
-        "lat" : 46.939714848527586
+        "lat" : 46.91210600148905,
+        "lng" : 8.6014366149902362
       },
       {
-        "lng" : 8.604011535644533,
-        "lat" : 46.953308880128517
+        "lat" : 46.917324050223741,
+        "lng" : 8.6028099060058612
+      },
+      {
+        "lat" : 46.927055232947559,
+        "lng" : 8.601264953613283
+      },
+      {
+        "lat" : 46.931978772388128,
+        "lng" : 8.5974884033203143
+      },
+      {
+        "lat" : 46.939714848527586,
+        "lng" : 8.5992050170898455
+      },
+      {
+        "lat" : 46.953308880128517,
+        "lng" : 8.604011535644533
       },
       {
         "lat" : 46.961041874466943,
@@ -1158,25 +1164,19 @@
         "lng" : 8.598518371582033
       }
     ],
-    "country" : "CH",
-    "pending" : false,
-    "name" : "Seedorf (UR) → Brunnen",
-    "kind" : "downwind-run",
-    "distance" : 10.9,
     "infos" : [
       {
-        "date" : "2025-04-25T16:17:27.890Z",
         "userName" : "Rawham",
         "id" : "seedorf-ur-brunnen-m9wzvzo2-8y89a",
+        "text" : "When there is Föhn above 40 knots the föhn will blow through sisikon and you can ride till brunnen. Bumps are from isleten super clean, gets messy before sisikon and are getting better from sisikon till Brunnen. Check the Webcam in Sisikon or\/and in Brunnen if the Wind blows through",
         "userUrl" : "https:\/\/www.bhs.swiss\/wetter-webcam",
         "tag" : "description",
-        "text" : "When there is Föhn above 40 knots the föhn will blow through sisikon and you can ride till brunnen. Bumps are from isleten super clean, gets messy before sisikon and are getting better from sisikon till Brunnen. Check the Webcam in Sisikon or\/and in Brunnen if the Wind blows through"
+        "date" : "2025-04-25T16:17:27.890Z"
       }
-    ],
-    "id" : "seedorf-ur-brunnen"
+    ]
   },
   {
-    "kind" : "downwind-run",
+    "name" : "Versoix → Genthod",
     "videos" : [
       {
         "date" : "2025-04-25T16:39:39.047Z",
@@ -1184,52 +1184,53 @@
         "url" : "https:\/\/youtu.be\/Va3-dYBmQQo?si=geQUOuCMk7GINAYK"
       }
     ],
+    "kind" : "downwind-run",
+    "pending" : false,
+    "distance" : 2.1000000000000001,
+    "country" : "CH",
+    "id" : "versoix-genthod",
     "infos" : [
       {
-        "date" : "2025-04-25T16:39:39.046Z",
         "userName" : "Yvonvite",
         "id" : "versoix-genthod-m9x0oism-i0j43",
+        "text" : "Bise very cool and easy run to learn dockstart downwind. Lot of docks to restart in case of falling on the way.",
         "tag" : "wind-direction",
-        "text" : "Bise very cool and easy run to learn dockstart downwind. Lot of docks to restart in case of falling on the way."
+        "date" : "2025-04-25T16:39:39.046Z"
       }
     ],
-    "country" : "CH",
-    "distance" : 2.1000000000000001,
     "locations" : [
       {
-        "lng" : 6.1708831787109384,
-        "lat" : 46.276087729559244
+        "lat" : 46.276087729559244,
+        "lng" : 6.1708831787109384
       },
       {
-        "lng" : 6.1723852157592773,
-        "lat" : 46.274285708966346
+        "lat" : 46.274285708966346,
+        "lng" : 6.1723852157592773
       },
       {
-        "lng" : 6.1721062660217294,
-        "lat" : 46.271504696707595
+        "lat" : 46.271504696707595,
+        "lng" : 6.1721062660217294
       },
       {
-        "lng" : 6.1705398559570321,
-        "lat" : 46.268204379068834
+        "lat" : 46.268204379068834,
+        "lng" : 6.1705398559570321
       },
       {
-        "lng" : 6.1687374114990243,
-        "lat" : 46.262841866241814
+        "lat" : 46.262841866241814,
+        "lng" : 6.1687374114990243
       },
       {
-        "lng" : 6.166323423385621,
-        "lat" : 46.262033364447184
+        "lat" : 46.262033364447184,
+        "lng" : 6.166323423385621
       },
       {
-        "lng" : 6.1619997024536133,
-        "lat" : 46.262589674300983
+        "lat" : 46.262589674300983,
+        "lng" : 6.1619997024536133
       }
-    ],
-    "name" : "Versoix → Genthod",
-    "id" : "versoix-genthod",
-    "pending" : false
+    ]
   },
   {
+    "id" : "coppet-rolle",
     "videos" : [
       {
         "date" : "2025-04-25T16:45:44.288Z",
@@ -1237,9 +1238,17 @@
         "url" : "https:\/\/youtu.be\/Bci5peqkgP4?si=ZqJpN7UVbmyIpotx"
       }
     ],
-    "country" : "CH",
-    "pending" : false,
-    "kind" : "downwind-run",
+    "infos" : [
+      {
+        "userName" : "Yvonvite",
+        "id" : "coppet-rolle-m9x0wcm8-ksw5m",
+        "text" : "South west wind or Bise, both direction works to downwind, around 1h run if you don't fall.",
+        "userUrl" : "https:\/\/www.instagram.com\/stories\/yvonvite\/",
+        "tag" : "wind-direction",
+        "date" : "2025-04-25T16:45:44.288Z"
+      }
+    ],
+    "distance" : 19.100000000000001,
     "locations" : [
       {
         "lat" : 46.314924290063686,
@@ -1266,19 +1275,10 @@
         "lng" : 6.3361072540283212
       }
     ],
-    "infos" : [
-      {
-        "date" : "2025-04-25T16:45:44.288Z",
-        "userName" : "Yvonvite",
-        "id" : "coppet-rolle-m9x0wcm8-ksw5m",
-        "userUrl" : "https:\/\/www.instagram.com\/stories\/yvonvite\/",
-        "tag" : "wind-direction",
-        "text" : "South west wind or Bise, both direction works to downwind, around 1h run if you don't fall."
-      }
-    ],
     "name" : "Coppet → Rolle",
-    "distance" : 19.100000000000001,
-    "id" : "coppet-rolle"
+    "country" : "CH",
+    "kind" : "downwind-run",
+    "pending" : false
   },
   {
     "infos" : [
@@ -1297,21 +1297,15 @@
         "date" : "2025-04-30T08:15:23.068Z"
       },
       {
+        "userName" : "nilsmango",
         "userUrl" : "https:\/\/nilsmango.ch",
         "id" : "inseli-birsfelden-ma3nvags-7x5bi",
-        "userName" : "nilsmango",
         "text" : "Meine Notizen von früher:\nOstwind\nJeden morgen im Sommer (wahrscheinlich nicht genug)\nMuss mind. 10 km\/h Wetterstation, damit es funktioniert - aber schwierig zu sagen, muss man schauen gehen - nur bei richtig viel wind!! 20 kn vorhersage, 20 km\/h durchschnitt fast schon.\n\nWestwind\nWenn in Binningen so 10 kn: ab 16-17 Uhr\nMuss mind 8-10 kn und dann noch Thermik!\n\nWetterstation Binningen ab 8 km\/h und Spitzen ab ca. 20 km\/h - dann ist der Wind wahrscheinlich Spitzen etwa 10 Knoten, Durchschnitt 6 Knoten. Das ist was ich brauche mit 210er und 4.5.\n\nWetterstation Binningen:\nhttps:\/\/www.meteoschweiz.admin.ch\/service-und-publikationen\/applikationen\/messwerte-und-messnetze.html#param=messwerte-windgeschwindigkeit-kmh-10min&table=false&station=BAS",
         "tag" : "description",
         "date" : "2025-04-30T08:15:23.068Z"
       }
     ],
-    "locations" : [
-      {
-        "lat" : 47.560839214316516,
-        "lng" : 7.6346987485885629
-      }
-    ],
-    "id" : "inseli-birsfelden",
+    "pending" : false,
     "country" : "CH",
     "videos" : [
       {
@@ -1320,133 +1314,140 @@
         "url" : "https:\/\/www.youtube.com\/watch?v=8fbHXbp0mxo"
       }
     ],
-    "kind" : "wind-spot",
     "name" : "Inseli, Birsfelden",
-    "pending" : false
+    "kind" : "wind-spot",
+    "locations" : [
+      {
+        "lat" : 47.560839214316516,
+        "lng" : 7.6346987485885629
+      }
+    ],
+    "id" : "inseli-birsfelden"
   },
   {
+    "infos" : [
+      {
+        "userName" : "nilsmango",
+        "id" : "inseli-pump-birsfelden-ma3nx7qa-slasc",
+        "text" : "Nice little pump foil dock in Basel.",
+        "tag" : "description",
+        "date" : "2025-04-30T08:16:52.834Z"
+      }
+    ],
     "pending" : false,
-    "country" : "CH",
+    "kind" : "pump-foil-dock",
     "locations" : [
       {
         "lat" : 47.560596677333933,
         "lng" : 7.6318126916885385
       }
     ],
+    "country" : "CH",
+    "id" : "inseli-pump-birsfelden",
+    "name" : "Inseli Pump, Birsfelden",
     "videos" : [
       {
-        "url" : "https:\/\/www.youtube.com\/watch?v=eCs2MFA2E7c",
-        "kind" : "YouTube",
-        "date" : "2025-04-30T08:16:52.834Z"
-      }
-    ],
-    "infos" : [
-      {
-        "text" : "Nice little pump foil dock in Basel.",
-        "id" : "inseli-pump-birsfelden-ma3nx7qa-slasc",
         "date" : "2025-04-30T08:16:52.834Z",
-        "tag" : "description",
-        "userName" : "nilsmango"
+        "kind" : "YouTube",
+        "url" : "https:\/\/www.youtube.com\/watch?v=eCs2MFA2E7c"
       }
-    ],
-    "id" : "inseli-pump-birsfelden",
-    "kind" : "pump-foil-dock",
-    "name" : "Inseli Pump, Birsfelden"
+    ]
   },
   {
-    "state" : "FL",
     "name" : "Virgina Key",
-    "kind" : "wave-wind-spot",
-    "id" : "virgina-key",
     "infos" : [
       {
-        "text" : "Virgina Key is an amazing wing foil wave spot. Best on NNW, N, E, SE, and S winds. Tide can be factor as the seagrass flats are shallow near low tide, consider bringing a 75cm mast or avoiding the 1hr on either side of low tides. In an E wind VK offers flat water upwind of the launch with progressively growing waves as you head further upwind. Be mindful of the shallow sandbar upwind where waves will be breaking. ",
+        "userName" : "rick_neeser",
         "id" : "virgina-key-ma3vp0u6-blcvz",
-        "date" : "2025-04-30T11:54:27.582Z",
+        "text" : "Virgina Key is an amazing wing foil wave spot. Best on NNW, N, E, SE, and S winds. Tide can be factor as the seagrass flats are shallow near low tide, consider bringing a 75cm mast or avoiding the 1hr on either side of low tides. In an E wind VK offers flat water upwind of the launch with progressively growing waves as you head further upwind. Be mindful of the shallow sandbar upwind where waves will be breaking. ",
         "tag" : "description",
-        "userName" : "rick_neeser"
+        "date" : "2025-04-30T11:54:27.582Z"
       }
     ],
-    "country" : "US",
+    "id" : "virgina-key",
     "pending" : false,
+    "state" : "FL",
+    "country" : "US",
     "locations" : [
       {
         "lat" : 25.74725036357523,
         "lng" : -80.142543911933913
       }
-    ]
+    ],
+    "kind" : "wave-wind-spot"
   },
   {
     "state" : "FL",
     "country" : "US",
-    "pending" : false,
-    "kind" : "wave-wind-spot",
     "locations" : [
       {
         "lat" : 25.86139580646072,
         "lng" : -80.119160413742065
       }
     ],
+    "pending" : false,
     "id" : "76th-street",
     "infos" : [
       {
-        "text" : "Dedicated area to launch kites and wings on south beach. Best in any wind with some east. Can have a large shore-break in strong east winds. ",
+        "userName" : "rick_neeser",
         "id" : "76th-street-ma3vxi1s-go38r",
-        "date" : "2025-04-30T12:01:03.136Z",
+        "text" : "Dedicated area to launch kites and wings on south beach. Best in any wind with some east. Can have a large shore-break in strong east winds. ",
         "tag" : "description",
-        "userName" : "rick_neeser"
+        "date" : "2025-04-30T12:01:03.136Z"
       }
     ],
-    "name" : "76th Street"
+    "name" : "76th Street",
+    "kind" : "wave-wind-spot"
   },
   {
-    "pending" : false,
+    "infos" : [
+      {
+        "userName" : "rick_neeser",
+        "id" : "jetty-juice-bar-ma3w0z1y-7cdwo",
+        "text" : "In northeast winds the port everglades jetty cleans up the wind chops, combined with some outgoing current hood river style bumps form. This is an advanced spot with ship traffic and a challenging chip in prone. ",
+        "tag" : "description",
+        "date" : "2025-04-30T12:03:45.142Z"
+      }
+    ],
+    "kind" : "wave-spot",
     "state" : "FL",
+    "name" : "Jetty Juice Bar",
+    "id" : "jetty-juice-bar",
+    "country" : "US",
     "locations" : [
       {
         "lat" : 26.094843356428296,
         "lng" : -80.105223655700684
       }
     ],
-    "kind" : "wave-spot",
-    "country" : "US",
-    "id" : "jetty-juice-bar",
-    "name" : "Jetty Juice Bar",
-    "infos" : [
-      {
-        "text" : "In northeast winds the port everglades jetty cleans up the wind chops, combined with some outgoing current hood river style bumps form. This is an advanced spot with ship traffic and a challenging chip in prone. ",
-        "id" : "jetty-juice-bar-ma3w0z1y-7cdwo",
-        "date" : "2025-04-30T12:03:45.142Z",
-        "tag" : "description",
-        "userName" : "rick_neeser"
-      }
-    ]
+    "pending" : false
   },
   {
-    "pending" : false,
-    "country" : "US",
-    "state" : "FL",
     "locations" : [
       {
         "lat" : 26.163493368893093,
         "lng" : -80.099033117294326
       }
     ],
-    "infos" : [
-      {
-        "text" : "Fun wing spot, nice grass set up area. Works in any east wind, shore-break can be an issue. ",
-        "id" : "vista-park-ma3w3hq0-g41hi",
-        "date" : "2025-04-30T12:05:42.648Z",
-        "tag" : "description",
-        "userName" : "rick_neeser"
-      }
-    ],
+    "pending" : false,
+    "id" : "vista-park",
     "kind" : "wave-wind-spot",
     "name" : "Vista Park",
-    "id" : "vista-park"
+    "state" : "FL",
+    "country" : "US",
+    "infos" : [
+      {
+        "userName" : "rick_neeser",
+        "id" : "vista-park-ma3w3hq0-g41hi",
+        "text" : "Fun wing spot, nice grass set up area. Works in any east wind, shore-break can be an issue. ",
+        "tag" : "description",
+        "date" : "2025-04-30T12:05:42.648Z"
+      }
+    ]
   },
   {
-    "pending" : false,
+    "id" : "holland-park",
+    "state" : "FL",
     "country" : "US",
     "locations" : [
       {
@@ -1454,224 +1455,245 @@
         "lng" : -80.119680762290969
       }
     ],
-    "state" : "FL",
     "name" : "Holland Park",
     "infos" : [
       {
-        "text" : "Great pump foil dock. Floating with a long run up. ",
+        "userName" : "rick_neeser",
         "id" : "holland-park-ma3wdb57-at7mj",
-        "date" : "2025-04-30T12:13:20.683Z",
+        "text" : "Great pump foil dock. Floating with a long run up. ",
         "tag" : "description",
-        "userName" : "rick_neeser"
+        "date" : "2025-04-30T12:13:20.683Z"
       }
     ],
-    "kind" : "pump-foil-dock",
-    "id" : "holland-park"
+    "pending" : false,
+    "kind" : "pump-foil-dock"
   },
   {
-    "name" : "Pompano Beach (16th Street)",
-    "country" : "US",
-    "state" : "FL",
-    "pending" : false,
-    "kind" : "wave-wind-spot",
+    "id" : "pompano-beach-16th-street",
     "infos" : [
       {
-        "text" : "Great wingfoil and kite spot. The reef near Hillsboro inlet lessens the shorebreak. Works on any wind with east. ",
+        "userName" : "rick_neeser",
         "id" : "pompano-beach-16th-street-ma3wjrn5-aszk3",
-        "date" : "2025-04-30T12:18:22.001Z",
+        "text" : "Great wingfoil and kite spot. The reef near Hillsboro inlet lessens the shorebreak. Works on any wind with east. ",
         "tag" : "description",
-        "userName" : "rick_neeser"
+        "date" : "2025-04-30T12:18:22.001Z"
       }
     ],
+    "pending" : false,
     "locations" : [
       {
         "lat" : 26.252162248022881,
         "lng" : -80.084420442581191
       }
     ],
-    "id" : "pompano-beach-16th-street"
+    "name" : "Pompano Beach (16th Street)",
+    "kind" : "wave-wind-spot",
+    "country" : "US",
+    "state" : "FL"
   },
   {
-    "country" : "US",
-    "name" : "Corners ",
     "infos" : [
       {
-        "text" : "Great sandbar for prone, also good area to launch kites and wing from. Works in all east wind directions shore-break is factor in strong east winds. ",
+        "userName" : "rick_neeser",
         "id" : "corners-ma3wr75y-mvbdl",
-        "date" : "2025-04-30T12:24:08.710Z",
+        "text" : "Great sandbar for prone, also good area to launch kites and wing from. Works in all east wind directions shore-break is factor in strong east winds. ",
         "tag" : "description",
-        "userName" : "rick_neeser"
+        "date" : "2025-04-30T12:24:08.710Z"
       }
     ],
     "kind" : "wave-wind-spot",
+    "name" : "Corners ",
+    "id" : "corners",
+    "state" : "FL",
+    "country" : "US",
+    "pending" : false,
     "locations" : [
       {
         "lat" : 26.923045652573776,
         "lng" : -80.066578388214126
       }
-    ],
-    "pending" : false,
-    "id" : "corners",
-    "state" : "FL"
+    ]
   },
   {
-    "kind" : "wave-wind-spot",
     "state" : "FL",
-    "name" : "Fort Pierce",
-    "id" : "fort-pierce",
-    "country" : "US",
     "locations" : [
       {
         "lat" : 27.469744396647588,
         "lng" : -80.2914333343506
       }
     ],
+    "name" : "Fort Pierce",
+    "pending" : false,
+    "id" : "fort-pierce",
+    "country" : "US",
     "infos" : [
       {
-        "text" : "On its day one of the best wing spots on the east coast. Best set up in strong north wind. Launch under the protected jetty, get access to some well overhead north swell. If you cannot stay upwind be careful as the shore-break is very large only 1\/2 mile south of the jetty.",
+        "userName" : "rick_neeser",
         "id" : "fort-pierce-ma3wwhto-28m77",
-        "date" : "2025-04-30T12:28:15.804Z",
+        "text" : "On its day one of the best wing spots on the east coast. Best set up in strong north wind. Launch under the protected jetty, get access to some well overhead north swell. If you cannot stay upwind be careful as the shore-break is very large only 1\/2 mile south of the jetty.",
         "tag" : "description",
-        "userName" : "rick_neeser"
+        "date" : "2025-04-30T12:28:15.804Z"
       }
     ],
-    "pending" : false
+    "kind" : "wave-wind-spot"
   },
   {
+    "id" : "vacuum-bar",
     "state" : "FL",
+    "infos" : [
+      {
+        "userName" : "rick_neeser",
+        "id" : "vacuum-bar-ma3wyyt1-dzskd",
+        "text" : "Prone\/Sup spot on east wind. Very strong outgoing tide creates standing waves. Can also be a fun wing spot but wind is often fickle. Advanced spot as you can be swept out into 2x overhead waves.",
+        "tag" : "description",
+        "date" : "2025-04-30T12:30:11.125Z"
+      }
+    ],
+    "kind" : "wave-wind-spot",
+    "videos" : [
+      {
+        "date" : "2025-04-30T14:43:09+02:00",
+        "kind" : "YouTube",
+        "url" : "https:\/\/www.youtube.com\/watch?v=Vqew86Gmo48"
+      }
+    ],
     "name" : "Vacuum Bar",
+    "country" : "US",
+    "pending" : false,
     "locations" : [
       {
         "lat" : 29.077494314703301,
         "lng" : -80.914778709411635
       }
-    ],
-    "infos" : [
-      {
-        "text" : "Prone\/Sup spot on east wind. Very strong outgoing tide creates standing waves. Can also be a fun wing spot but wind is often fickle. Advanced spot as you can be swept out into 2x overhead waves.",
-        "id" : "vacuum-bar-ma3wyyt1-dzskd",
-        "date" : "2025-04-30T12:30:11.125Z",
-        "tag" : "description",
-        "userName" : "rick_neeser"
-      }
-    ],
-    "videos" : [
-      {
-        "url" : "https:\/\/www.youtube.com\/watch?v=Vqew86Gmo48",
-        "kind" : "YouTube",
-        "date" : "2025-04-30T14:43:09+02:00"
-      }
-    ],
-    "country" : "US",
-    "kind" : "wave-wind-spot",
-    "pending" : false,
-    "id" : "vacuum-bar"
+    ]
   },
   {
-    "name" : "Blackwater Sound",
+    "country" : "US",
+    "state" : "FL",
+    "infos" : [
+      {
+        "userName" : "Nils Mango",
+        "id" : "blackwater-sound-ma3xjpcq-ljlu7",
+        "text" : "Nice little bay wing spot if you stay at any of the motels on this side.\nGreat if you want to see Manatees.",
+        "userUrl" : "https:\/\/nilsmango.ch",
+        "tag" : "description",
+        "date" : "2025-04-30T12:46:18.650Z"
+      }
+    ],
     "pending" : false,
-    "id" : "blackwater-sound",
+    "kind" : "wind-spot",
+    "name" : "Blackwater Sound",
     "locations" : [
       {
         "lat" : 25.159502295476408,
         "lng" : -80.402669906616225
       }
     ],
-    "state" : "FL",
-    "country" : "US",
-    "infos" : [
-      {
-        "userUrl" : "https:\/\/nilsmango.ch",
-        "id" : "blackwater-sound-ma3xjpcq-ljlu7",
-        "text" : "Nice little bay wing spot if you stay at any of the motels on this side.\nGreat if you want to see Manatees.",
-        "date" : "2025-04-30T12:46:18.650Z",
-        "tag" : "description",
-        "userName" : "Nils Mango"
-      }
-    ],
-    "kind" : "wind-spot"
+    "id" : "blackwater-sound"
   },
   {
-    "id" : "dillon-reservoir-dillon-colorado",
-    "pending" : false,
-    "state" : "CO",
-    "kind" : "wind-spot",
-    "infos" : [
-      {
-        "text" : "Great spot when there is wind if you are a mountain dwelling wingfoiler",
-        "id" : "dillon-reservoir-dillon-colorado-mahfwlfd-11085",
-        "date" : "2025-05-09T23:41:13.465Z",
-        "tag" : "description",
-        "userName" : "Foil4Fun"
-      }
-    ],
     "name" : "Dillon Reservoir, Dillon Colorado",
-    "country" : "US",
     "locations" : [
       {
         "lat" : 39.626044420236902,
         "lng" : -106.04862213134767
       }
+    ],
+    "kind" : "wind-spot",
+    "id" : "dillon-reservoir-dillon-colorado",
+    "pending" : false,
+    "country" : "US",
+    "state" : "CO",
+    "infos" : [
+      {
+        "userName" : "Foil4Fun",
+        "id" : "dillon-reservoir-dillon-colorado-mahfwlfd-11085",
+        "text" : "Great spot when there is wind if you are a mountain dwelling wingfoiler",
+        "tag" : "description",
+        "date" : "2025-05-09T23:41:13.465Z"
+      }
     ]
   },
   {
+    "country" : "US",
     "videos" : [
       {
-        "url" : "https:\/\/youtu.be\/LPNagmc7pXg",
+        "date" : "2025-05-10T01:47:27+02:00",
         "kind" : "YouTube",
-        "date" : "2025-05-10T01:47:27+02:00"
+        "url" : "https:\/\/youtu.be\/LPNagmc7pXg"
       }
     ],
-    "state" : "CO",
-    "id" : "twin-lakes-colorado",
-    "infos" : [
-      {
-        "text" : "Another beautiful high mountain reservoir with great wind sometimes.",
-        "id" : "twin-lakes-colorado-mahfyqrb-uanam",
-        "date" : "2025-05-09T23:42:53.687Z",
-        "tag" : "description",
-        "userName" : "Foil4Fun"
-      }
-    ],
-    "country" : "US",
-    "name" : "Twin Lakes, Colorado",
-    "kind" : "wind-spot",
-    "pending" : false,
     "locations" : [
       {
         "lat" : 39.090433889411834,
         "lng" : -106.31984710693361
       }
-    ]
+    ],
+    "pending" : false,
+    "state" : "CO",
+    "name" : "Twin Lakes, Colorado",
+    "infos" : [
+      {
+        "userName" : "Foil4Fun",
+        "id" : "twin-lakes-colorado-mahfyqrb-uanam",
+        "text" : "Another beautiful high mountain reservoir with great wind sometimes.",
+        "tag" : "description",
+        "date" : "2025-05-09T23:42:53.687Z"
+      }
+    ],
+    "kind" : "wind-spot",
+    "id" : "twin-lakes-colorado"
   },
   {
-    "pending" : false,
     "locations" : [
       {
         "lat" : 39.258729342289371,
         "lng" : -106.36038601398469
       }
     ],
-    "videos" : [
+    "id" : "turquoise-lake-leadville-co",
+    "country" : "US",
+    "infos" : [
       {
-        "url" : "https:\/\/youtu.be\/2Oq0jYlmSAw",
-        "kind" : "YouTube",
-        "date" : "2025-05-10T01:46:37+02:00"
+        "userName" : "Foil4Fun",
+        "id" : "turquoise-lake-leadville-co-mahg1cbm-s5mef",
+        "text" : "Great spot when wind from due west, it’s possible to shuttle a DWer from west to east. ",
+        "tag" : "description",
+        "date" : "2025-05-09T23:44:54.946Z"
       }
     ],
     "kind" : "wind-spot",
     "state" : "CO",
-    "infos" : [
+    "name" : "Turquoise Lake, Leadville, Co",
+    "videos" : [
       {
-        "text" : "Great spot when wind from due west, it’s possible to shuttle a DWer from west to east. ",
-        "id" : "turquoise-lake-leadville-co-mahg1cbm-s5mef",
-        "date" : "2025-05-09T23:44:54.946Z",
-        "tag" : "description",
-        "userName" : "Foil4Fun"
+        "date" : "2025-05-10T01:46:37+02:00",
+        "kind" : "YouTube",
+        "url" : "https:\/\/youtu.be\/2Oq0jYlmSAw"
       }
     ],
-    "id" : "turquoise-lake-leadville-co",
-    "name" : "Turquoise Lake, Leadville, Co",
-    "country" : "US"
+    "pending" : false
+  },
+  {
+    "infos" : [
+      {
+        "userName" : "Pit",
+        "id" : "via-gardesana-orientale-navene-mbc8rl37-57eq5",
+        "text" : "Downwind from here to Malcesine (bus parking) then walk back upwind. Ideal for beginners. Good steep bumps in morning Pelèr winds. Get up EARLY! 🤙",
+        "tag" : "description",
+        "date" : "2025-05-31T13:02:13.891Z"
+      }
+    ],
+    "id" : "via-gardesana-orientale-navene",
+    "country" : "IT",
+    "name" : "Via Gardesana Orientale, Navene",
+    "locations" : [
+      {
+        "lat" : 45.791826115723843,
+        "lng" : 10.828700065612793
+      }
+    ],
+    "kind" : "wave-wind-spot",
+    "pending" : false
   }
 ]
