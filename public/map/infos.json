@@ -541,5 +541,77 @@
         "userUrl": null,
         "spotId": "plage-de-bregancon-hyeres",
         "votes": 1
+    },
+    {
+        "id": "campobello-di-mazara-sciacca-mbhp6zb9-b36kx",
+        "tag": "description",
+        "text": "Great run if you\u2019re comfortable with 20km+ runs.\n\nEasy entry thanks to sandy beach close to Puzziteddu Surf Center\nSan Marco Beach is nice and sandy to exit and thanks to some outer banks the shore brake isn\u2019t to (at lest with the 20kn of wind I had there)\nAccording to google maps it looks like most of the coast you\u2019re passing along is sandy so shorter runs and\/or emergency exits shouldn\u2019t be that difficult \n",
+        "date": "2025-06-04T08:40:56.901Z",
+        "userName": "JH1",
+        "userUrl": "https:\/\/supfoil.ch\/",
+        "spotId": "campobello-di-mazara-sciacca"
+    },
+    {
+        "id": "campobello-di-mazara-sciacca-mbhp6zb9-b2cv5",
+        "tag": "wind-direction",
+        "text": "West",
+        "date": "2025-06-04T08:40:56.901Z",
+        "userName": "JH1",
+        "userUrl": "https:\/\/supfoil.ch\/",
+        "spotId": "campobello-di-mazara-sciacca"
+    },
+    {
+        "id": "campobello-di-mazara-sciacca-mbhp6zb9-pxfv5",
+        "tag": "logistics",
+        "text": "You\u2019ll need to car shuttle\u2026 drive is almost 1h one way\u2026",
+        "date": "2025-06-04T08:40:56.901Z",
+        "userName": "JH1",
+        "userUrl": "https:\/\/supfoil.ch\/",
+        "spotId": "campobello-di-mazara-sciacca"
+    },
+    {
+        "id": "altenteil-puttgarden-md8j8l2s-judbr",
+        "tag": "wind-direction",
+        "text": "SW, W, NW",
+        "date": "2025-07-18T08:03:43.156Z",
+        "userName": "supfoil.ch ",
+        "userUrl": null,
+        "spotId": "altenteil-puttgarden"
+    },
+    {
+        "id": "altenteil-puttgarden-md8j8l2s-k4u70",
+        "tag": "logistics",
+        "text": "Car Shuttle only\nStart: Park at Ahoi Camping and walk to the peak (past the Aussichtsplattform Westermarkelsdorfer Huk)\nEnd: Come in, at the corner of the harbor, sea wall, and shore. Sand bank to land on(one big stone you don't want to hit. You'll see it if you zoom in on Google Maps) \nBig parking lot right at the end of the run",
+        "date": "2025-07-18T08:03:43.156Z",
+        "userName": "Supfoil.ch ",
+        "userUrl": null,
+        "spotId": "altenteil-puttgarden"
+    },
+    {
+        "id": "altenteil-puttgarden-md8j8l2s-rdx2d",
+        "tag": "local-contact",
+        "text": "Malte & Basti from wingfoil-fehmarn.de",
+        "date": "2025-07-18T08:03:43.156Z",
+        "userName": "Supfoil.ch ",
+        "userUrl": null,
+        "spotId": "altenteil-puttgarden"
+    },
+    {
+        "id": "altenteil-puttgarden-md8j8l2s-6twdw",
+        "tag": "description",
+        "text": "Nice, steep and surfy bumps for the first half of the run (also worth doing up and DW runs with a parawing).\nThe second part gets technical. \nMake sure you stay far enough out at Gr\u00fcner Brink, as the sandbank \u201ckills\u201d all the bumps ",
+        "date": "2025-07-18T08:03:43.156Z",
+        "userName": "supfoil.ch ",
+        "userUrl": null,
+        "spotId": "altenteil-puttgarden"
+    },
+    {
+        "id": "nyon-villeneuve-mdmtii3o-9ikn5",
+        "tag": "description",
+        "text": "Longest possible single downwind run in Switzerland. Be careful with possible thunderstorms.",
+        "date": "2025-07-28T08:00:08.484Z",
+        "userName": "nilsmango",
+        "userUrl": "https:\/\/nilsmango.ch",
+        "spotId": "nyon-villeneuve"
     }
 ]
