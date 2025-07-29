@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Pump Foil Dock<br>Coordinates: <a href="geo: 47.56059667733393,7.6318126916885385">47.56059667733393,7.6318126916885385</a></p>
+            <p>Pump Foil Dock<br>Coordinates: 47.56059667733393, 7.6318126916885385 | <a href="https://www.google.com/maps?q=47.56059667733393,7.6318126916885385" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -273,7 +273,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Inseli Pump, Birsfelden","videos":[{"date":"2025-04-30T08:16:52.834Z","url":"https:\/\/www.youtube.com\/watch?v=eCs2MFA2E7c","kind":"YouTube"}],"infos":[{"userName":"nilsmango","tag":"description","spotId":"inseli-pump-birsfelden","date":"2025-04-30T08:16:52.834Z","text":"Nice little pump foil dock in Basel.","id":"inseli-pump-birsfelden-ma3nx7qa-slasc"},{"date":"2025-05-02T08:22:36+02:00","tag":"description","userUrl":"","spotId":"inseli-pump-birsfelden","userName":"Wassersport Basel","text":"Please make sure to always take care with swimmers and rowers. \n\nThe rowing club is the placeholder of the area - so always remember we‘re just acting as guests at the spot. ","id":"681464ac507df","votes":1}],"pending":false,"country":"CH","id":"inseli-pump-birsfelden","locations":[{"lat":47.56059667733393,"lng":7.6318126916885385}],"kind":"pump-foil-dock"};
+            const spotData = {"videos":[{"kind":"YouTube","url":"https:\/\/www.youtube.com\/watch?v=eCs2MFA2E7c","date":"2025-04-30T08:16:52.834Z"}],"locations":[{"lng":7.6318126916885385,"lat":47.56059667733393}],"pending":false,"infos":[{"id":"inseli-pump-birsfelden-ma3nx7qa-slasc","text":"Nice little pump foil dock in Basel.","spotId":"inseli-pump-birsfelden","userName":"nilsmango","tag":"description","date":"2025-04-30T08:16:52.834Z"},{"userName":"Wassersport Basel","text":"Please make sure to always take care with swimmers and rowers. \n\nThe rowing club is the placeholder of the area - so always remember we‘re just acting as guests at the spot. ","date":"2025-05-02T08:22:36+02:00","tag":"description","votes":1,"spotId":"inseli-pump-birsfelden","id":"681464ac507df","userUrl":""}],"name":"Inseli Pump, Birsfelden","kind":"pump-foil-dock","id":"inseli-pump-birsfelden","country":"CH"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -895,10 +895,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

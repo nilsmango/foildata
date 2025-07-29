@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wake Thief Spot<br>Coordinates: <a href="geo: 47.12265102256883,7.2388261556625375">47.12265102256883,7.2388261556625375</a></p>
+            <p>Wake Thief Spot<br>Coordinates: 47.12265102256883, 7.2388261556625375 | <a href="https://www.google.com/maps?q=47.12265102256883,7.2388261556625375" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -275,7 +275,7 @@
             }
             
             // Get spot data
-            const spotData = {"id":"balainen-nidau","videos":[{"date":"2025-04-24T08:10:09.577Z","kind":"YouTube","url":"https:\/\/youtube.com\/shorts\/_P-h36Wc0Y4"},{"date":"2025-04-24T20:43:22+02:00","kind":"Insta","url":"https:\/\/www.instagram.com\/p\/Cw0jzU6IKLg\/"}],"infos":[{"date":"2025-04-24T08:10:09.577Z","tag":"description","userUrl":"https:\/\/nilsmango.ch","spotId":"balainen-nidau","text":"Nice dock to thief the wakes of boats!","userName":"Nils Mango","id":"balainen-nidau-m9v31gkp-y37n7"},{"date":"2025-04-24T15:04:46+02:00","tag":"description","userUrl":"","spotId":"balainen-nidau","text":"It's a wooden dock by the way, pretty low. There is a higher plastic dock across the river too!\nMost of the time there are also some free (and higher) boat docks nearby.","userName":"nilsmango","id":"680a36ee08ff4","votes":1}],"pending":false,"country":"CH","kind":"wake-thief-spot","name":"Balainen, Nidau","locations":[{"lng":7.2388261556625375,"lat":47.12265102256883}]};
+            const spotData = {"infos":[{"tag":"description","date":"2025-04-24T08:10:09.577Z","id":"balainen-nidau-m9v31gkp-y37n7","userName":"Nils Mango","text":"Nice dock to thief the wakes of boats!","spotId":"balainen-nidau","userUrl":"https:\/\/nilsmango.ch"},{"tag":"description","date":"2025-04-24T15:04:46+02:00","id":"680a36ee08ff4","votes":1,"userName":"nilsmango","text":"It's a wooden dock by the way, pretty low. There is a higher plastic dock across the river too!\nMost of the time there are also some free (and higher) boat docks nearby.","spotId":"balainen-nidau","userUrl":""}],"name":"Balainen, Nidau","country":"CH","videos":[{"url":"https:\/\/youtube.com\/shorts\/_P-h36Wc0Y4","date":"2025-04-24T08:10:09.577Z","kind":"YouTube"},{"url":"https:\/\/www.instagram.com\/p\/Cw0jzU6IKLg\/","date":"2025-04-24T20:43:22+02:00","kind":"Insta"}],"id":"balainen-nidau","locations":[{"lng":7.2388261556625375,"lat":47.12265102256883}],"kind":"wake-thief-spot","pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -897,10 +897,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

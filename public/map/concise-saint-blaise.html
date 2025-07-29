@@ -50,7 +50,7 @@
             <h2>Information</h2>
             <p>Downwind Run<br>Distance: 27.8 km    <br><a href="#" onclick="downloadGPX(); return false;">
     Download GPX Track
-</a></p>
+</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="conditions">
@@ -279,7 +279,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"infos":[{"userName":"Nils Mango","tag":"description","spotId":"concise-saint-blaise","date":"2025-04-24T12:11:25.352Z","text":"Great run with south-west wind. Train directly to the start.\nBest waves are on the inside in my opinion.\n","id":"concise-saint-blaise-m9vbnq5k-pxnc0"},{"votes":1,"text":"Amazing concise webcam: http:\/\/46.14.58.189\/mjpg\/video.mjpg","userName":"Nils Mango","tag":"conditions","spotId":"concise-saint-blaise","id":"681b17778186e","userUrl":"https:\/\/nilsmango.ch","date":"2025-05-07T10:19:03+02:00"}],"videos":[{"date":"2025-04-24T20:23:29+02:00","kind":"Insta","url":"https:\/\/www.instagram.com\/reel\/C8-BHyhItUv"}],"name":"Concise → Saint-Blaise","locations":[{"lng":6.721664071083069,"lat":46.84946079000733},{"lng":6.724357008934022,"lat":46.849027867535355},{"lng":6.7275381088256845,"lat":46.84862796147362},{"lng":6.732859611511231,"lat":46.84908290024656},{"lat":46.850565093391374,"lng":6.737666130065919},{"lat":46.865590167823065,"lng":6.761827468872071},{"lat":46.87087142169702,"lng":6.767234802246095},{"lat":46.87814696476453,"lng":6.773414611816407},{"lat":46.885714829667954,"lng":6.788606643676759},{"lat":46.90712199744462,"lng":6.82577133178711},{"lat":46.91791031608275,"lng":6.838130950927734},{"lat":46.927406929345565,"lng":6.854610443115235},{"lat":46.939714848527586,"lng":6.894264221191407},{"lat":46.94920759633604,"lng":6.915550231933595},{"lat":46.956355344639555,"lng":6.92413330078125},{"lat":46.96361929090372,"lng":6.930999755859376},{"lat":46.999690083512,"lng":6.982154846191407},{"lat":47.00829428966807,"lng":6.98833465576172},{"lat":47.01048901836552,"lng":6.988527774810792}],"distance":27.8,"id":"concise-saint-blaise","country":"CH","kind":"downwind-run"};
+            const spotData = {"infos":[{"id":"concise-saint-blaise-m9vbnq5k-pxnc0","text":"Great run with south-west wind. Train directly to the start.\nBest waves are on the inside in my opinion.\n","spotId":"concise-saint-blaise","userName":"Nils Mango","tag":"description","date":"2025-04-24T12:11:25.352Z"},{"text":"Amazing concise webcam: http:\/\/46.14.58.189\/mjpg\/video.mjpg","tag":"conditions","spotId":"concise-saint-blaise","userName":"Nils Mango","date":"2025-05-07T10:19:03+02:00","votes":1,"id":"681b17778186e","userUrl":"https:\/\/nilsmango.ch"}],"country":"CH","name":"Concise → Saint-Blaise","locations":[{"lng":6.721664071083069,"lat":46.84946079000733},{"lng":6.724357008934022,"lat":46.849027867535355},{"lng":6.7275381088256845,"lat":46.84862796147362},{"lng":6.732859611511231,"lat":46.84908290024656},{"lng":6.737666130065919,"lat":46.850565093391374},{"lng":6.761827468872071,"lat":46.865590167823065},{"lng":6.767234802246095,"lat":46.87087142169702},{"lng":6.773414611816407,"lat":46.87814696476453},{"lng":6.788606643676759,"lat":46.885714829667954},{"lng":6.82577133178711,"lat":46.90712199744462},{"lng":6.838130950927734,"lat":46.91791031608275},{"lng":6.854610443115235,"lat":46.927406929345565},{"lng":6.894264221191407,"lat":46.939714848527586},{"lng":6.915550231933595,"lat":46.94920759633604},{"lng":6.92413330078125,"lat":46.956355344639555},{"lng":6.930999755859376,"lat":46.96361929090372},{"lng":6.982154846191407,"lat":46.999690083512},{"lng":6.98833465576172,"lat":47.00829428966807},{"lng":6.988527774810792,"lat":47.01048901836552}],"distance":27.8,"videos":[{"url":"https:\/\/www.instagram.com\/reel\/C8-BHyhItUv","date":"2025-04-24T20:23:29+02:00","kind":"Insta"}],"kind":"downwind-run","id":"concise-saint-blaise","pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -901,10 +901,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

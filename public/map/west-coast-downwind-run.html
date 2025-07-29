@@ -50,7 +50,7 @@
             <h2>Information</h2>
             <p>Downwind Run<br>Distance: 19.5 km    <br><a href="#" onclick="downloadGPX(); return false;">
     Download GPX Track
-</a></p>
+</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -250,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":28.71345865531742,"lng":-14.02009835105782},{"lat":28.54313517986712,"lng":-14.066877314511263}],"videos":[{"date":"2025-07-28T10:04:48.912Z","url":"https:\/\/youtube.com\/shorts\/FXpg5nloFKk?si=OKjlXO9cNoscatJh","kind":"YouTube"}],"infos":[{"userName":"Tommy Ftv","date":"2025-07-28T10:04:48.911Z","id":"west-coast-downwind-run-mdmxyu1b-kwhhw","spotId":"west-coast-downwind-run","text":"Great dw run on North-east wind and small to no ground swell","tag":"description"}],"distance":19.5,"pending":false,"country":"ES","id":"west-coast-downwind-run","kind":"downwind-run","name":"West coast downwind run"};
+            const spotData = {"distance":19.5,"videos":[{"url":"https:\/\/youtube.com\/shorts\/FXpg5nloFKk?si=OKjlXO9cNoscatJh","date":"2025-07-28T10:04:48.912Z","kind":"YouTube"}],"locations":[{"lng":-14.02009835105782,"lat":28.71345865531742},{"lng":-14.066877314511263,"lat":28.54313517986712}],"pending":false,"infos":[{"id":"west-coast-downwind-run-mdmxyu1b-kwhhw","text":"Great dw run on North-east wind and small to no ground swell","spotId":"west-coast-downwind-run","userName":"Tommy Ftv","tag":"description","date":"2025-07-28T10:04:48.911Z"}],"name":"West coast downwind run","kind":"downwind-run","id":"west-coast-downwind-run","country":"ES"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -872,10 +872,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

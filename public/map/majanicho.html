@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wave Spot<br>Coordinates: <a href="geo: 28.74556312881593,-13.938187611648582">28.74556312881593,-13.938187611648582</a></p>
+            <p>Wave Spot<br>Coordinates: 28.74556312881593, -13.938187611648582 | <a href="https://www.google.com/maps?q=28.74556312881593,-13.938187611648582" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Majanicho","videos":[{"date":"2025-07-28T10:06:42.477Z","url":"https:\/\/youtube.com\/shorts\/xUsRHW4v9Qc?si=WiLaQDVmBgYkX183","kind":"YouTube"}],"infos":[{"userName":"Tommy FTV","tag":"description","spotId":"majanicho","date":"2025-07-28T10:06:42.477Z","text":"The bay offers great prone and tow-in conditions according to the tides and winds. ","id":"majanicho-mdmy19nx-favu2"}],"pending":false,"country":"ES","id":"majanicho","locations":[{"lat":28.74556312881593,"lng":-13.938187611648582}],"kind":"wave-spot"};
+            const spotData = {"infos":[{"id":"majanicho-mdmy19nx-favu2","text":"The bay offers great prone and tow-in conditions according to the tides and winds. ","spotId":"majanicho","userName":"Tommy FTV","tag":"description","date":"2025-07-28T10:06:42.477Z"}],"id":"majanicho","kind":"wave-spot","videos":[{"kind":"YouTube","url":"https:\/\/youtube.com\/shorts\/xUsRHW4v9Qc?si=WiLaQDVmBgYkX183","date":"2025-07-28T10:06:42.477Z"}],"name":"Majanicho","pending":false,"locations":[{"lng":-13.938187611648582,"lat":28.74556312881593}],"country":"ES"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -870,10 +870,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

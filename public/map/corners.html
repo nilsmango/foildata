@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wave Wind Spot<br>Coordinates: <a href="geo: 26.923045652573776,-80.06657838821413">26.923045652573776,-80.06657838821413</a></p>
+            <p>Wave Wind Spot<br>Coordinates: 26.923045652573776, -80.06657838821413 | <a href="https://www.google.com/maps?q=26.923045652573776,-80.06657838821413" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":26.923045652573776,"lng":-80.06657838821413}],"infos":[{"userName":"rick_neeser","date":"2025-04-30T12:24:08.710Z","id":"corners-ma3wr75y-mvbdl","spotId":"corners","text":"Great sandbar for prone, also good area to launch kites and wing from. Works in all east wind directions shore-break is factor in strong east winds. ","tag":"description"}],"state":"FL","pending":false,"country":"US","id":"corners","kind":"wave-wind-spot","name":"Corners "};
+            const spotData = {"infos":[{"text":"Great sandbar for prone, also good area to launch kites and wing from. Works in all east wind directions shore-break is factor in strong east winds. ","userName":"rick_neeser","spotId":"corners","tag":"description","id":"corners-ma3wr75y-mvbdl","date":"2025-04-30T12:24:08.710Z"}],"id":"corners","kind":"wave-wind-spot","state":"FL","name":"Corners ","pending":false,"country":"US","locations":[{"lng":-80.06657838821413,"lat":26.923045652573776}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -870,10 +870,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

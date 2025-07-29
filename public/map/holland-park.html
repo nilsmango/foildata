@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Pump Foil Dock<br>Coordinates: <a href="geo: 26.02028641982586,-80.11968076229097">26.02028641982586,-80.11968076229097</a></p>
+            <p>Pump Foil Dock<br>Coordinates: 26.02028641982586, -80.11968076229097 | <a href="https://www.google.com/maps?q=26.02028641982586,-80.11968076229097" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":26.02028641982586,"lng":-80.11968076229097}],"infos":[{"userName":"rick_neeser","tag":"description","spotId":"holland-park","date":"2025-04-30T12:13:20.683Z","text":"Great pump foil dock. Floating with a long run up. ","id":"holland-park-ma3wdb57-at7mj"}],"pending":false,"state":"FL","country":"US","kind":"pump-foil-dock","name":"Holland Park","id":"holland-park"};
+            const spotData = {"infos":[{"text":"Great pump foil dock. Floating with a long run up. ","userName":"rick_neeser","spotId":"holland-park","tag":"description","id":"holland-park-ma3wdb57-at7mj","date":"2025-04-30T12:13:20.683Z"}],"id":"holland-park","kind":"pump-foil-dock","state":"FL","name":"Holland Park","pending":false,"country":"US","locations":[{"lng":-80.11968076229097,"lat":26.02028641982586}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -870,10 +870,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wave Wind Spot<br>Coordinates: <a href="geo: 25.74725036357523,-80.14254391193391">25.74725036357523,-80.14254391193391</a></p>
+            <p>Wave Wind Spot<br>Coordinates: 25.74725036357523, -80.14254391193391 | <a href="https://www.google.com/maps?q=25.74725036357523,-80.14254391193391" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="conditions">
@@ -327,7 +327,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":25.74725036357523,"lng":-80.14254391193391}],"infos":[{"id":"virgina-key-ma3vp0u6-blcvz","userName":"rick_neeser","spotId":"virgina-key","text":"Virgina Key is an amazing wing foil wave spot. Best on NNW, N, E, SE, and S winds. Tide can be factor as the seagrass flats are shallow near low tide, consider bringing a 75cm mast or avoiding the 1hr on either side of low tides. In an E wind VK offers flat water upwind of the launch with progressively growing waves as you head further upwind. Be mindful of the shallow sandbar upwind where waves will be breaking. ","tag":"description","date":"2025-04-30T11:54:27.582Z","votes":1},{"id":"681216c1b21f5","userName":"Nils Mango","spotId":"virgina-key","text":"Really nice place and very nice people! Beware of the trash pandas!\n","tag":"description","userUrl":"","date":"2025-04-30T14:25:37+02:00"},{"id":"681216f0a37c9","userName":"Nils Mango","spotId":"virgina-key","text":"Miami Winger WA Group: https:\/\/chat.whatsapp.com\/Bp9snrbKNAVKB3VFNhM311\n\n","tag":"local-contact","userUrl":"","date":"2025-04-30T14:26:24+02:00"},{"id":"6812173ea14bb","userName":"Nils Mango","spotId":"virgina-key","text":"Local website by Mickey with infos etc: \nhttps:\/\/mickeyk6000.wixsite.com\/foilers","tag":"conditions","userUrl":"","date":"2025-04-30T14:27:42+02:00"}],"state":"FL","pending":false,"country":"US","id":"virgina-key","kind":"wave-wind-spot","name":"Virgina Key"};
+            const spotData = {"infos":[{"userName":"rick_neeser","text":"Virgina Key is an amazing wing foil wave spot. Best on NNW, N, E, SE, and S winds. Tide can be factor as the seagrass flats are shallow near low tide, consider bringing a 75cm mast or avoiding the 1hr on either side of low tides. In an E wind VK offers flat water upwind of the launch with progressively growing waves as you head further upwind. Be mindful of the shallow sandbar upwind where waves will be breaking. ","date":"2025-04-30T11:54:27.582Z","tag":"description","votes":1,"spotId":"virgina-key","id":"virgina-key-ma3vp0u6-blcvz"},{"userName":"Nils Mango","text":"Really nice place and very nice people! Beware of the trash pandas!\n","date":"2025-04-30T14:25:37+02:00","tag":"description","spotId":"virgina-key","id":"681216c1b21f5","userUrl":""},{"userName":"Nils Mango","text":"Miami Winger WA Group: https:\/\/chat.whatsapp.com\/Bp9snrbKNAVKB3VFNhM311\n\n","date":"2025-04-30T14:26:24+02:00","tag":"local-contact","spotId":"virgina-key","id":"681216f0a37c9","userUrl":""},{"userName":"Nils Mango","text":"Local website by Mickey with infos etc: \nhttps:\/\/mickeyk6000.wixsite.com\/foilers","date":"2025-04-30T14:27:42+02:00","tag":"conditions","spotId":"virgina-key","id":"6812173ea14bb","userUrl":""}],"id":"virgina-key","kind":"wave-wind-spot","state":"FL","name":"Virgina Key","pending":false,"country":"US","locations":[{"lng":-80.14254391193391,"lat":25.74725036357523}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -949,10 +949,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

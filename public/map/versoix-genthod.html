@@ -50,7 +50,7 @@
             <h2>Information</h2>
             <p>Downwind Run<br>Distance: 2.1 km    <br><a href="#" onclick="downloadGPX(); return false;">
     Download GPX Track
-</a></p>
+</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="wind-direction">
@@ -250,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"infos":[{"userName":"Yvonvite","tag":"wind-direction","spotId":"versoix-genthod","date":"2025-04-25T16:39:39.046Z","text":"Bise very cool and easy run to learn dockstart downwind. Lot of docks to restart in case of falling on the way.","id":"versoix-genthod-m9x0oism-i0j43"}],"country":"CH","name":"Versoix → Genthod","locations":[{"lat":46.276087729559244,"lng":6.170883178710938},{"lat":46.274285708966346,"lng":6.172385215759277},{"lat":46.271504696707595,"lng":6.172106266021729},{"lat":46.268204379068834,"lng":6.170539855957032},{"lat":46.262841866241814,"lng":6.168737411499024},{"lat":46.262033364447184,"lng":6.166323423385621},{"lat":46.26258967430098,"lng":6.161999702453613}],"kind":"downwind-run","videos":[{"date":"2025-04-25T16:39:39.047Z","kind":"YouTube","url":"https:\/\/youtu.be\/Va3-dYBmQQo?si=geQUOuCMk7GINAYK"}],"id":"versoix-genthod","distance":2.1,"pending":false};
+            const spotData = {"id":"versoix-genthod","name":"Versoix → Genthod","distance":2.1,"pending":false,"country":"CH","locations":[{"lat":46.276087729559244,"lng":6.170883178710938},{"lat":46.274285708966346,"lng":6.172385215759277},{"lat":46.271504696707595,"lng":6.172106266021729},{"lat":46.268204379068834,"lng":6.170539855957032},{"lat":46.262841866241814,"lng":6.168737411499024},{"lat":46.262033364447184,"lng":6.166323423385621},{"lat":46.26258967430098,"lng":6.161999702453613}],"infos":[{"text":"Bise very cool and easy run to learn dockstart downwind. Lot of docks to restart in case of falling on the way.","spotId":"versoix-genthod","tag":"wind-direction","date":"2025-04-25T16:39:39.046Z","userName":"Yvonvite","id":"versoix-genthod-m9x0oism-i0j43"}],"kind":"downwind-run","videos":[{"date":"2025-04-25T16:39:39.047Z","kind":"YouTube","url":"https:\/\/youtu.be\/Va3-dYBmQQo?si=geQUOuCMk7GINAYK"}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -872,10 +872,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

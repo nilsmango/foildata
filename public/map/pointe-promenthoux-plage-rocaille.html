@@ -50,7 +50,7 @@
             <h2>Information</h2>
             <p>Downwind Run<br>Distance: 8.0 km    <br><a href="#" onclick="downloadGPX(); return false;">
     Download GPX Track
-</a></p>
+</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -250,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"infos":[{"userName":"Ludo ","date":"2025-04-24T15:31:39.694Z","id":"pointe-promenthoux-plage-rocaille-m9vit8ha-5cy1o","spotId":"pointe-promenthoux-plage-rocaille","text":"Easy small downwind  run by bise \nTo learn Foil \nOr sup race ","tag":"description"}],"country":"CH","name":"Pointe Promenthoux  → Plage Rocaille ","locations":[{"lat":46.39080363848428,"lng":6.267442703247071},{"lat":46.38624299995649,"lng":6.262121200561524},{"lat":46.3765873519179,"lng":6.252937316894532},{"lat":46.36687079594448,"lng":6.239376068115235},{"lat":46.3339729931184,"lng":6.204700469970704}],"kind":"downwind-run","id":"pointe-promenthoux-plage-rocaille","distance":8,"pending":false};
+            const spotData = {"infos":[{"id":"pointe-promenthoux-plage-rocaille-m9vit8ha-5cy1o","text":"Easy small downwind  run by bise \nTo learn Foil \nOr sup race ","spotId":"pointe-promenthoux-plage-rocaille","userName":"Ludo ","tag":"description","date":"2025-04-24T15:31:39.694Z"}],"name":"Pointe Promenthoux  → Plage Rocaille ","country":"CH","id":"pointe-promenthoux-plage-rocaille","distance":8,"locations":[{"lng":6.267442703247071,"lat":46.39080363848428},{"lng":6.262121200561524,"lat":46.38624299995649},{"lng":6.252937316894532,"lat":46.3765873519179},{"lng":6.239376068115235,"lat":46.36687079594448},{"lng":6.204700469970704,"lat":46.3339729931184}],"kind":"downwind-run","pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -872,10 +872,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

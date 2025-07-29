@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wake Thief Spot<br>Coordinates: <a href="geo: 47.197579513020045,7.5242722034454355">47.197579513020045,7.5242722034454355</a></p>
+            <p>Wake Thief Spot<br>Coordinates: 47.197579513020045, 7.5242722034454355 | <a href="https://www.google.com/maps?q=47.197579513020045,7.5242722034454355" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"kind":"wake-thief-spot","name":"Pier 11","country":"CH","id":"pier-11","pending":false,"infos":[{"userName":"Rob_on_Rolls","text":"Public Pumpfoildock.\nPerfect for waketiefing the wave of the Kursschiff.\nEasyer for goofy pumpers to start.","id":"pier-11-m9vdvbrz-o20v7","tag":"description","votes":1,"date":"2025-04-24T13:13:19.199Z","spotId":"pier-11"}],"locations":[{"lng":7.5242722034454355,"lat":47.197579513020045}]};
+            const spotData = {"pending":false,"locations":[{"lng":7.5242722034454355,"lat":47.197579513020045}],"country":"CH","name":"Pier 11","kind":"wake-thief-spot","id":"pier-11","infos":[{"text":"Public Pumpfoildock.\nPerfect for waketiefing the wave of the Kursschiff.\nEasyer for goofy pumpers to start.","tag":"description","userName":"Rob_on_Rolls","votes":1,"date":"2025-04-24T13:13:19.199Z","spotId":"pier-11","id":"pier-11-m9vdvbrz-o20v7"}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -870,10 +870,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

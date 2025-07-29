@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wave Wind Spot<br>Coordinates: <a href="geo: 26.25216224802288,-80.08442044258119">26.25216224802288,-80.08442044258119</a></p>
+            <p>Wave Wind Spot<br>Coordinates: 26.25216224802288, -80.08442044258119 | <a href="https://www.google.com/maps?q=26.25216224802288,-80.08442044258119" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":26.25216224802288,"lng":-80.08442044258119}],"infos":[{"userName":"rick_neeser","date":"2025-04-30T12:18:22.001Z","id":"pompano-beach-16th-street-ma3wjrn5-aszk3","spotId":"pompano-beach-16th-street","text":"Great wingfoil and kite spot. The reef near Hillsboro inlet lessens the shorebreak. Works on any wind with east. ","tag":"description"}],"state":"FL","pending":false,"country":"US","id":"pompano-beach-16th-street","kind":"wave-wind-spot","name":"Pompano Beach (16th Street)"};
+            const spotData = {"locations":[{"lng":-80.08442044258119,"lat":26.25216224802288}],"pending":false,"infos":[{"id":"pompano-beach-16th-street-ma3wjrn5-aszk3","text":"Great wingfoil and kite spot. The reef near Hillsboro inlet lessens the shorebreak. Works on any wind with east. ","spotId":"pompano-beach-16th-street","userName":"rick_neeser","tag":"description","date":"2025-04-30T12:18:22.001Z"}],"name":"Pompano Beach (16th Street)","kind":"wave-wind-spot","state":"FL","id":"pompano-beach-16th-street","country":"US"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -870,10 +870,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

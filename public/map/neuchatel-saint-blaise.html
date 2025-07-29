@@ -50,7 +50,7 @@
             <h2>Information</h2>
             <p>Downwind Run<br>Distance: 4.7 km    <br><a href="#" onclick="downloadGPX(); return false;">
     Download GPX Track
-</a></p>
+</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="conditions">
@@ -358,7 +358,7 @@
             }
             
             // Get spot data
-            const spotData = {"kind":"downwind-run","distance":4.7,"id":"neuchatel-saint-blaise","country":"CH","name":"Neuchâtel → Saint Blaise","infos":[{"userName":"SUPFOIL.CH","tag":"logistics","spotId":"neuchatel-saint-blaise","date":"2025-04-24T09:48:16.046Z","text":"Train: Get on the tain at St Blaise Lac (has to be spelled like this to be found on the SBB app) to Neuchatel. \nDepartures are normally at \nxx:36\nxx:49\n(as of April 2025) verify yourself!\nhttps:\/\/www.sbb.ch\/","id":"neuchatel-saint-blaise-m9v6jmlq-okpx2"},{"spotId":"neuchatel-saint-blaise","userName":"SUPFOIL.CH","id":"neuchatel-saint-blaise-m9v6jmlq-ts7ml","votes":1,"text":"South-West","date":"2025-04-24T09:48:16.046Z","tag":"wind-direction"},{"spotId":"neuchatel-saint-blaise","userName":"SUPFOIL.CH","id":"neuchatel-saint-blaise-m9v6jmlq-czymv","votes":1,"text":"Webcam gives you a good impression about the current conditions:\nhttps:\/\/lacdeneuchatel.roundshot.co\/#\/","date":"2025-04-24T09:48:16.046Z","tag":"conditions"},{"spotId":"neuchatel-saint-blaise","userName":"Nils Mango","id":"680a21ca9a4af","votes":1,"text":"For wind check: https:\/\/letskite.ch\/en\nFor waves in Neuchâtel check this webcam link: https:\/\/jeunesrives.roundshot.com\/#\/","date":"2025-04-24T13:34:34+02:00","userUrl":"https:\/\/nilsmango.ch","tag":"conditions"},{"spotId":"neuchatel-saint-blaise","userName":"Nils Mango","id":"680a29868dea9","text":"Group chat for this run: https:\/\/chat.whatsapp.com\/DPFmgw7m15T0iZ0P1pbe53\n","date":"2025-04-24T14:07:34+02:00","userUrl":"","tag":"local-contact"}],"pending":false,"locations":[{"lng":6.939078569412232,"lat":46.99078444164034},{"lng":6.951427459716798,"lat":46.99079175995039},{"lng":6.9620704650878915,"lat":46.99360191693961},{"lng":6.973571777343751,"lat":46.99875348764993},{"lat":47.0037874973722,"lng":6.984214782714845},{"lat":47.00706520220537,"lng":6.989021301269532},{"lat":47.00883566445912,"lng":6.989235877990723},{"lat":47.010167130466684,"lng":6.989107131958008}]};
+            const spotData = {"id":"neuchatel-saint-blaise","kind":"downwind-run","distance":4.7,"pending":false,"country":"CH","name":"Neuchâtel → Saint Blaise","locations":[{"lng":6.939078569412232,"lat":46.99078444164034},{"lng":6.951427459716798,"lat":46.99079175995039},{"lng":6.9620704650878915,"lat":46.99360191693961},{"lng":6.973571777343751,"lat":46.99875348764993},{"lng":6.984214782714845,"lat":47.0037874973722},{"lng":6.989021301269532,"lat":47.00706520220537},{"lng":6.989235877990723,"lat":47.00883566445912},{"lng":6.989107131958008,"lat":47.010167130466684}],"infos":[{"id":"neuchatel-saint-blaise-m9v6jmlq-okpx2","text":"Train: Get on the tain at St Blaise Lac (has to be spelled like this to be found on the SBB app) to Neuchatel. \nDepartures are normally at \nxx:36\nxx:49\n(as of April 2025) verify yourself!\nhttps:\/\/www.sbb.ch\/","spotId":"neuchatel-saint-blaise","userName":"SUPFOIL.CH","tag":"logistics","date":"2025-04-24T09:48:16.046Z"},{"votes":1,"spotId":"neuchatel-saint-blaise","userName":"SUPFOIL.CH","tag":"wind-direction","id":"neuchatel-saint-blaise-m9v6jmlq-ts7ml","text":"South-West","date":"2025-04-24T09:48:16.046Z"},{"votes":1,"spotId":"neuchatel-saint-blaise","userName":"SUPFOIL.CH","tag":"conditions","id":"neuchatel-saint-blaise-m9v6jmlq-czymv","text":"Webcam gives you a good impression about the current conditions:\nhttps:\/\/lacdeneuchatel.roundshot.co\/#\/","date":"2025-04-24T09:48:16.046Z"},{"votes":1,"spotId":"neuchatel-saint-blaise","userName":"Nils Mango","tag":"conditions","id":"680a21ca9a4af","text":"For wind check: https:\/\/letskite.ch\/en\nFor waves in Neuchâtel check this webcam link: https:\/\/jeunesrives.roundshot.com\/#\/","date":"2025-04-24T13:34:34+02:00","userUrl":"https:\/\/nilsmango.ch"},{"spotId":"neuchatel-saint-blaise","userName":"Nils Mango","tag":"local-contact","id":"680a29868dea9","text":"Group chat for this run: https:\/\/chat.whatsapp.com\/DPFmgw7m15T0iZ0P1pbe53\n","date":"2025-04-24T14:07:34+02:00","userUrl":""}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -980,10 +980,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

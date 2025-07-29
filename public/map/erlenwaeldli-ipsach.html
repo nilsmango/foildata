@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wind Spot<br>Coordinates: <a href="geo: 47.121263959843674,7.226659655570985">47.121263959843674,7.226659655570985</a></p>
+            <p>Wind Spot<br>Coordinates: 47.121263959843674, 7.226659655570985 | <a href="https://www.google.com/maps?q=47.121263959843674,7.226659655570985" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -302,7 +302,7 @@
             }
             
             // Get spot data
-            const spotData = {"id":"erlenwaeldli-ipsach","videos":[{"date":"2025-04-24T21:10:43+02:00","kind":"Insta","url":"https:\/\/www.instagram.com\/reel\/C7CoH_foPuk\/"}],"infos":[{"date":"2025-04-24T08:15:19.828Z","tag":"description","userUrl":"https:\/\/nilsmango.ch","spotId":"erlenwaeldli-ipsach","text":"The wind spot where to cool kids are.","userName":"Nils Mango","id":"erlenwaeldli-ipsach-m9v383ys-vdkm3"},{"date":"2025-04-29T12:00:37+02:00","tag":"description","userUrl":"","spotId":"erlenwaeldli-ipsach","text":"Webcams: https:\/\/bielersee.live\nWind Measurements: https:\/\/wsa-ipsach.meteobase.ch\/index.php\nMore Wind: https:\/\/biel-hafen.meteobase.ch\/index.php\n\n","userName":"nilsmango","id":"6810a34528b16"},{"date":"2025-04-29T12:01:36+02:00","tag":"local-contact","userUrl":"","spotId":"erlenwaeldli-ipsach","text":"Local club: https:\/\/wsci.ch\nLocal legend: https:\/\/www.instagram.com\/radiculo\/","userName":"nilsmango","id":"6810a38070e47"}],"pending":false,"country":"CH","kind":"wind-spot","name":"Erlenwäldli, Ipsach","locations":[{"lng":7.226659655570985,"lat":47.121263959843674}]};
+            const spotData = {"infos":[{"tag":"description","date":"2025-04-24T08:15:19.828Z","id":"erlenwaeldli-ipsach-m9v383ys-vdkm3","userName":"Nils Mango","text":"The wind spot where to cool kids are.","spotId":"erlenwaeldli-ipsach","userUrl":"https:\/\/nilsmango.ch"},{"tag":"description","date":"2025-04-29T12:00:37+02:00","id":"6810a34528b16","userName":"nilsmango","text":"Webcams: https:\/\/bielersee.live\nWind Measurements: https:\/\/wsa-ipsach.meteobase.ch\/index.php\nMore Wind: https:\/\/biel-hafen.meteobase.ch\/index.php\n\n","spotId":"erlenwaeldli-ipsach","userUrl":""},{"tag":"local-contact","date":"2025-04-29T12:01:36+02:00","id":"6810a38070e47","userName":"nilsmango","text":"Local club: https:\/\/wsci.ch\nLocal legend: https:\/\/www.instagram.com\/radiculo\/","spotId":"erlenwaeldli-ipsach","userUrl":""}],"name":"Erlenwäldli, Ipsach","country":"CH","videos":[{"kind":"Insta","url":"https:\/\/www.instagram.com\/reel\/C7CoH_foPuk\/","date":"2025-04-24T21:10:43+02:00"}],"id":"erlenwaeldli-ipsach","locations":[{"lng":7.226659655570985,"lat":47.121263959843674}],"kind":"wind-spot","pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -924,10 +924,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

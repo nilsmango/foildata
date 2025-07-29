@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>School<br>Coordinates: <a href="geo: 46.78583846182295,6.651577949523927">46.78583846182295,6.651577949523927</a></p>
+            <p>School<br>Coordinates: 46.78583846182295, 6.651577949523927 | <a href="https://www.google.com/maps?q=46.78583846182295,6.651577949523927" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -273,7 +273,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Y-Plage ","infos":[{"userName":"Ludo T ","tag":"description","spotId":"y-plage","date":"2025-04-24T15:28:37.223Z","text":"Y Plage \nSchool \/ Renting \nSup \/ Wing \/ Foil ","id":"y-plage-m9vipbon-uoepx"},{"date":"2025-04-24T20:18:12+02:00","tag":"description","userUrl":"","spotId":"y-plage","userName":"Nils Mango","text":"Website: https:\/\/y-plage.ch\/en\/","id":"680a80647208e"}],"pending":false,"country":"CH","id":"y-plage","locations":[{"lat":46.78583846182295,"lng":6.651577949523927}],"kind":"school"};
+            const spotData = {"infos":[{"id":"y-plage-m9vipbon-uoepx","text":"Y Plage \nSchool \/ Renting \nSup \/ Wing \/ Foil ","date":"2025-04-24T15:28:37.223Z","tag":"description","spotId":"y-plage","userName":"Ludo T "},{"id":"680a80647208e","text":"Website: https:\/\/y-plage.ch\/en\/","date":"2025-04-24T20:18:12+02:00","tag":"description","spotId":"y-plage","userName":"Nils Mango","userUrl":""}],"id":"y-plage","kind":"school","name":"Y-Plage ","pending":false,"locations":[{"lng":6.651577949523927,"lat":46.78583846182295}],"country":"CH"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -895,10 +895,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

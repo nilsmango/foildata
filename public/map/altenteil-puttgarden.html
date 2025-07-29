@@ -50,7 +50,7 @@
             <h2>Information</h2>
             <p>Downwind Run<br>Distance: 12.3 km    <br><a href="#" onclick="downloadGPX(); return false;">
     Download GPX Track
-</a></p>
+</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -331,7 +331,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Altenteil → Puttgarden","kind":"downwind-run","id":"altenteil-puttgarden","distance":12.3,"locations":[{"lat":54.536023687177504,"lng":11.065979003906252},{"lat":54.5387127009217,"lng":11.063232421875002},{"lat":54.54000734805476,"lng":11.068553924560549},{"lat":54.54060486364826,"lng":11.075420379638672},{"lat":54.53901146929013,"lng":11.107177734375},{"lat":54.537019638851795,"lng":11.138763427734375},{"lat":54.53164121107758,"lng":11.17034912109375},{"lat":54.524468871558625,"lng":11.200561523437502},{"lat":54.519885883842456,"lng":11.212577819824219},{"lat":54.51410660096453,"lng":11.219444274902346},{"lat":54.50488794903561,"lng":11.225366592407228}],"country":"DE","pending":false,"infos":[{"userName":"supfoil.ch ","date":"2025-07-18T08:03:43.156Z","id":"altenteil-puttgarden-md8j8l2s-judbr","spotId":"altenteil-puttgarden","text":"SW, W, NW","tag":"wind-direction"},{"userName":"Supfoil.ch ","date":"2025-07-18T08:03:43.156Z","id":"altenteil-puttgarden-md8j8l2s-k4u70","spotId":"altenteil-puttgarden","text":"Car Shuttle only\nStart: Park at Ahoi Camping and walk to the peak (past the Aussichtsplattform Westermarkelsdorfer Huk)\nEnd: Come in, at the corner of the harbor, sea wall, and shore. Sand bank to land on(one big stone you don't want to hit. You'll see it if you zoom in on Google Maps) \nBig parking lot right at the end of the run","tag":"logistics"},{"userName":"Supfoil.ch ","date":"2025-07-18T08:03:43.156Z","id":"altenteil-puttgarden-md8j8l2s-rdx2d","spotId":"altenteil-puttgarden","text":"Malte & Basti from wingfoil-fehmarn.de","tag":"local-contact"},{"userName":"supfoil.ch ","date":"2025-07-18T08:03:43.156Z","id":"altenteil-puttgarden-md8j8l2s-6twdw","spotId":"altenteil-puttgarden","text":"Nice, steep and surfy bumps for the first half of the run (also worth doing up and DW runs with a parawing).\nThe second part gets technical. \nMake sure you stay far enough out at Grüner Brink, as the sandbank “kills” all the bumps ","tag":"description"}]};
+            const spotData = {"id":"altenteil-puttgarden","kind":"downwind-run","distance":12.3,"pending":false,"country":"DE","name":"Altenteil → Puttgarden","locations":[{"lng":11.065979003906252,"lat":54.536023687177504},{"lng":11.063232421875002,"lat":54.5387127009217},{"lng":11.068553924560549,"lat":54.54000734805476},{"lng":11.075420379638672,"lat":54.54060486364826},{"lng":11.107177734375,"lat":54.53901146929013},{"lng":11.138763427734375,"lat":54.537019638851795},{"lng":11.17034912109375,"lat":54.53164121107758},{"lng":11.200561523437502,"lat":54.524468871558625},{"lng":11.212577819824219,"lat":54.519885883842456},{"lng":11.219444274902346,"lat":54.51410660096453},{"lng":11.225366592407228,"lat":54.50488794903561}],"infos":[{"id":"altenteil-puttgarden-md8j8l2s-judbr","text":"SW, W, NW","spotId":"altenteil-puttgarden","userName":"supfoil.ch ","tag":"wind-direction","date":"2025-07-18T08:03:43.156Z"},{"id":"altenteil-puttgarden-md8j8l2s-k4u70","text":"Car Shuttle only\nStart: Park at Ahoi Camping and walk to the peak (past the Aussichtsplattform Westermarkelsdorfer Huk)\nEnd: Come in, at the corner of the harbor, sea wall, and shore. Sand bank to land on(one big stone you don't want to hit. You'll see it if you zoom in on Google Maps) \nBig parking lot right at the end of the run","spotId":"altenteil-puttgarden","userName":"Supfoil.ch ","tag":"logistics","date":"2025-07-18T08:03:43.156Z"},{"id":"altenteil-puttgarden-md8j8l2s-rdx2d","text":"Malte & Basti from wingfoil-fehmarn.de","spotId":"altenteil-puttgarden","userName":"Supfoil.ch ","tag":"local-contact","date":"2025-07-18T08:03:43.156Z"},{"id":"altenteil-puttgarden-md8j8l2s-6twdw","text":"Nice, steep and surfy bumps for the first half of the run (also worth doing up and DW runs with a parawing).\nThe second part gets technical. \nMake sure you stay far enough out at Grüner Brink, as the sandbank “kills” all the bumps ","spotId":"altenteil-puttgarden","userName":"supfoil.ch ","tag":"description","date":"2025-07-18T08:03:43.156Z"}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -953,10 +953,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>School<br>Coordinates: <a href="geo: 28.679062485073114,-13.94146263599396">28.679062485073114,-13.94146263599396</a></p>
+            <p>School<br>Coordinates: 28.679062485073114, -13.94146263599396 | <a href="https://www.google.com/maps?q=28.679062485073114,-13.94146263599396" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -250,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"id":"foilsurfing-club","videos":[{"date":"2025-07-28T10:11:32.939Z","kind":"YouTube","url":"https:\/\/youtube.com\/shorts\/Ho86dzXRU2Y?si=plMO53iRd3ZzXmDz"},{"date":"2025-07-28T10:11:32.939Z","kind":"YouTube","url":"https:\/\/youtube.com\/shorts\/j7VoCKjE6ro?si=2tp5gOfqHqO7pilO"}],"infos":[{"date":"2025-07-28T10:11:32.939Z","tag":"description","userUrl":"https:\/\/www.instagram.com\/foilsurfing.club?igsh=MXUzZnRzdTAzdzkwaQ%3D%3D&utm_source=qr","spotId":"foilsurfing-club","userName":"Tommy FTV","text":"Foilsurfing.club offers coaching and teaching for all kind of riders. From beginner to advanced: wingfoil, downwind sup foil, parawing and tow-in in waves","id":"foilsurfing-club-mdmy7hsb-yu2jc"}],"pending":false,"country":"ES","kind":"school","name":"Foilsurfing.club","locations":[{"lat":28.679062485073114,"lng":-13.94146263599396}]};
+            const spotData = {"videos":[{"kind":"YouTube","url":"https:\/\/youtube.com\/shorts\/Ho86dzXRU2Y?si=plMO53iRd3ZzXmDz","date":"2025-07-28T10:11:32.939Z"},{"kind":"YouTube","url":"https:\/\/youtube.com\/shorts\/j7VoCKjE6ro?si=2tp5gOfqHqO7pilO","date":"2025-07-28T10:11:32.939Z"}],"locations":[{"lng":-13.94146263599396,"lat":28.679062485073114}],"pending":false,"infos":[{"userName":"Tommy FTV","text":"Foilsurfing.club offers coaching and teaching for all kind of riders. From beginner to advanced: wingfoil, downwind sup foil, parawing and tow-in in waves","date":"2025-07-28T10:11:32.939Z","tag":"description","spotId":"foilsurfing-club","id":"foilsurfing-club-mdmy7hsb-yu2jc","userUrl":"https:\/\/www.instagram.com\/foilsurfing.club?igsh=MXUzZnRzdTAzdzkwaQ%3D%3D&utm_source=qr"}],"name":"Foilsurfing.club","kind":"school","id":"foilsurfing-club","country":"ES"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -872,10 +872,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

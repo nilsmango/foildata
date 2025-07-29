@@ -50,7 +50,7 @@
             <h2>Information</h2>
             <p>Downwind Run<br>Distance: 19.1 km    <br><a href="#" onclick="downloadGPX(); return false;">
     Download GPX Track
-</a></p>
+</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="wind-direction">
@@ -252,7 +252,7 @@
             }
             
             // Get spot data
-            const spotData = {"infos":[{"votes":1,"spotId":"coppet-rolle","id":"coppet-rolle-m9x0wcm8-ksw5m","text":"South west wind or Bise, both direction works to downwind, around 1h run if you don't fall.","tag":"wind-direction","userName":"Yvonvite","date":"2025-04-25T16:45:44.288Z","userUrl":"https:\/\/www.instagram.com\/stories\/yvonvite\/"}],"country":"CH","name":"Coppet → Rolle","locations":[{"lat":46.314924290063686,"lng":6.194229125976563},{"lat":46.341358008326225,"lng":6.224098205566406},{"lat":46.38530687721014,"lng":6.271133422851563},{"lat":46.412535054149465,"lng":6.309070587158203},{"lat":46.4356091699836,"lng":6.335506439208984},{"lat":46.45246484786335,"lng":6.336107254028321}],"kind":"downwind-run","videos":[{"date":"2025-04-25T16:45:44.288Z","url":"https:\/\/youtu.be\/Bci5peqkgP4?si=ZqJpN7UVbmyIpotx","kind":"YouTube"}],"id":"coppet-rolle","distance":19.1,"pending":false};
+            const spotData = {"infos":[{"spotId":"coppet-rolle","tag":"wind-direction","id":"coppet-rolle-m9x0wcm8-ksw5m","text":"South west wind or Bise, both direction works to downwind, around 1h run if you don't fall.","date":"2025-04-25T16:45:44.288Z","userName":"Yvonvite","userUrl":"https:\/\/www.instagram.com\/stories\/yvonvite\/","votes":1}],"name":"Coppet → Rolle","country":"CH","videos":[{"kind":"YouTube","url":"https:\/\/youtu.be\/Bci5peqkgP4?si=ZqJpN7UVbmyIpotx","date":"2025-04-25T16:45:44.288Z"}],"id":"coppet-rolle","distance":19.1,"locations":[{"lng":6.194229125976563,"lat":46.314924290063686},{"lng":6.224098205566406,"lat":46.341358008326225},{"lng":6.271133422851563,"lat":46.38530687721014},{"lng":6.309070587158203,"lat":46.412535054149465},{"lng":6.335506439208984,"lat":46.4356091699836},{"lng":6.336107254028321,"lat":46.45246484786335}],"kind":"downwind-run","pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -874,10 +874,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>

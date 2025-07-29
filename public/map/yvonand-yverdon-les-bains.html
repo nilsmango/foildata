@@ -50,7 +50,7 @@
             <h2>Information</h2>
             <p>Downwind Run<br>Distance: 7.3 km    <br><a href="#" onclick="downloadGPX(); return false;">
     Download GPX Track
-</a></p>
+</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -250,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"id":"yvonand-yverdon-les-bains","country":"CH","locations":[{"lng":6.726980209350587,"lat":46.80740333108803},{"lng":6.724877357482911,"lat":46.8089013603689},{"lng":6.721615791320802,"lat":46.8100468840216},{"lng":6.714277267456056,"lat":46.8094594390422},{"lat":46.80687460491035,"lng":6.700887680053712},{"lat":46.80152830384885,"lng":6.6811466217041025},{"lat":46.79324342530679,"lng":6.6544532775878915},{"lat":46.790103211145336,"lng":6.6460150480270395},{"lat":46.78969552078176,"lng":6.644958257675172},{"lat":46.787286044407715,"lng":6.6404950618743905},{"lat":46.786977506106574,"lng":6.640157103538513}],"infos":[{"text":"Fun Run :D","userName":"Rawham","spotId":"yvonand-yverdon-les-bains","date":"2025-04-24T13:56:14.805Z","id":"yvonand-yverdon-les-bains-m9vfej4l-n0yky","votes":1,"tag":"description"}],"distance":7.3,"name":"Yvonand → Yverdon-les-Bains","pending":false,"kind":"downwind-run"};
+            const spotData = {"country":"CH","distance":7.3,"kind":"downwind-run","id":"yvonand-yverdon-les-bains","name":"Yvonand → Yverdon-les-Bains","pending":false,"locations":[{"lat":46.80740333108803,"lng":6.726980209350587},{"lat":46.8089013603689,"lng":6.724877357482911},{"lat":46.8100468840216,"lng":6.721615791320802},{"lat":46.8094594390422,"lng":6.714277267456056},{"lat":46.80687460491035,"lng":6.700887680053712},{"lng":6.6811466217041025,"lat":46.80152830384885},{"lng":6.6544532775878915,"lat":46.79324342530679},{"lng":6.6460150480270395,"lat":46.790103211145336},{"lng":6.644958257675172,"lat":46.78969552078176},{"lng":6.6404950618743905,"lat":46.787286044407715},{"lng":6.640157103538513,"lat":46.786977506106574}],"infos":[{"date":"2025-04-24T13:56:14.805Z","tag":"description","spotId":"yvonand-yverdon-les-bains","text":"Fun Run :D","votes":1,"id":"yvonand-yverdon-les-bains-m9vfej4l-n0yky","userName":"Rawham"}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -872,10 +872,19 @@ window.addEventListener("load", function() {
 
 function createGPXContent(spot) {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
     <name>${escapeXml(spot.name)}</name>
     <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
   </metadata>
   <trk>
     <name>${escapeXml(spot.name)}</name>
