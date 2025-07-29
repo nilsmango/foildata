@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-    <title>Holland Park</title>
+    <title>Chickendock</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Holland Park Pump Foil Dock Info">
+    <meta name="description" content="Chickendock Pump Foil Dock Info">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -42,13 +42,13 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Holland Park</h1>
+            <h1 class="card-title">Chickendock</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Pump Foil Dock<br>Coordinates: 26.020286, -80.119681 | <a href="https://www.google.com/maps?q=26.02028641982586,-80.11968076229097" target="_blank">See on Google Maps</a><br></p>
+            <p>Pump Foil Dock<br>Coordinates: 47.328917, 8.572759 | <a href="https://www.google.com/maps?q=47.328917,8.572759" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -61,17 +61,19 @@
         <h3>Description</h3>
         <div>•</div>
         <div class="info-meta">
-            <span class="info-date">April 30, 2025</span>
+            <span class="info-date">Juli 29, 2025</span>
             <span class="info-author">by 
-                rick_neeser
+                <a href="https://github.com/zdavatz/pumpspots/blob/main/pumpspots.csv" target="_blank" rel="noopener">
+    zdavatz
+</a>
             </span>
         </div>
     </div>
     <div class="info-content">
-        Great pump foil dock. Floating with a long run up. 
+        Spotfinder: zdavatz. Height to water: 50cm über Wasser. Immer sehr viele Leute (Taucher, Schwimmer, Pumper). Dock hat zwei Leitern. Images of spot: <a href="https://www.instagram.com/p/C_IvVANKor_/" target="_blank" rel="noopener">https://www.instagram.com/p/C_IvVANKor_/</a>
     </div>
     <div class="info-actions">
-        <div class="vote-btn" data-info-id="holland-park-ma3wdb57-at7mj" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+        <div class="vote-btn" data-info-id="chickendock-b1b71d" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
             <span class="vote-icon">
                 <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
                                 <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
@@ -86,7 +88,7 @@
             <div class="add-info-section" style="display: none;">
                 <h2>Add Information</h2>
                 <form id="add-info-form">
-                    <input type="hidden" name="spotId" value="holland-park">
+                    <input type="hidden" name="spotId" value="chickendock-b1b71d">
                     
                     <div class="form-group">
                         <label for="info-tag" class="required">Tag</label>
@@ -130,7 +132,7 @@
                             <div class="add-video-section" style="display: none;">
                                 <h2>Add Video</h2>
                                 <form id="add-video-form">
-                                    <input type="hidden" name="spotId" value="holland-park">
+                                    <input type="hidden" name="spotId" value="chickendock-b1b71d">
                                     
                                     <div class="form-group">
                                         <label for="video-url" class="required">Video URL (YouTube or Instagram)</label>
@@ -248,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"kind":"pump-foil-dock","locations":[{"lng":-80.11968076229097,"lat":26.02028641982586}],"infos":[{"text":"Great pump foil dock. Floating with a long run up. ","tag":"description","userName":"rick_neeser","spotId":"holland-park","date":"2025-04-30T12:13:20.683Z","id":"holland-park-ma3wdb57-at7mj"}],"country":"US","name":"Holland Park","id":"holland-park","state":"FL"};
+            const spotData = {"pending":false,"locations":[{"lat":47.328917,"lng":8.572759}],"name":"Chickendock","kind":"pump-foil-dock","id":"chickendock-b1b71d","infos":[{"spotId":"chickendock-b1b71d","id":"chickendock-b1b71d","text":"Spotfinder: zdavatz. Height to water: 50cm über Wasser. Immer sehr viele Leute (Taucher, Schwimmer, Pumper). Dock hat zwei Leitern. Images of spot: https:\/\/www.instagram.com\/p\/C_IvVANKor_\/","tag":"description","date":"2025-07-29T13:43:42.135402Z","userName":"zdavatz","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv"}],"country":"CH"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -503,7 +505,7 @@
                   return;
                 }
                 
-                const filtered = data.filter(info => info.spotId === 'holland-park');
+                const filtered = data.filter(info => info.spotId === 'chickendock-b1b71d');
                 if (filtered.length === 0) {
                   console.log('No matching spotId entries.');
                   return;
@@ -589,7 +591,7 @@
   const res = await fetch(jsonFile);
   const spots = await res.json();
   const videoContainer = document.getElementById("videos");
-  const spotId = "holland-park";
+  const spotId = "chickendock-b1b71d";
 
   // Add masonry container style
   videoContainer.style.columnCount = "1";
