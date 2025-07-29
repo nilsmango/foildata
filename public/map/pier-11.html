@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wake Thief Spot</p>
+            <p>Wake Thief Spot<br>Coordinates: <a href="geo: 47.197579513020045,7.5242722034454355">47.197579513020045,7.5242722034454355</a></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":47.197579513020045,"lng":7.5242722034454355}],"infos":[{"id":"pier-11-m9vdvbrz-o20v7","date":"2025-04-24T13:13:19.199Z","spotId":"pier-11","text":"Public Pumpfoildock.\nPerfect for waketiefing the wave of the Kursschiff.\nEasyer for goofy pumpers to start.","tag":"description","userName":"Rob_on_Rolls","votes":1}],"id":"pier-11","country":"CH","pending":false,"name":"Pier 11","kind":"wake-thief-spot"};
+            const spotData = {"kind":"wake-thief-spot","name":"Pier 11","country":"CH","id":"pier-11","pending":false,"infos":[{"userName":"Rob_on_Rolls","text":"Public Pumpfoildock.\nPerfect for waketiefing the wave of the Kursschiff.\nEasyer for goofy pumpers to start.","id":"pier-11-m9vdvbrz-o20v7","tag":"description","votes":1,"date":"2025-04-24T13:13:19.199Z","spotId":"pier-11"}],"locations":[{"lng":7.5242722034454355,"lat":47.197579513020045}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -842,4 +842,70 @@ window.addEventListener("load", function() {
     window.instgrm.Embeds.process();
   }
 });
+            async function downloadGPX() {
+  try {
+    const spot = spotData;
+    
+    if (!spot.locations || spot.locations.length <= 1) {
+      console.error("Not enough locations for GPX track:", spot.locations?.length || 0);
+      return;
+    }
+    
+    const gpxContent = createGPXContent(spot);
+    const blob = new Blob([gpxContent], { type: 'application/gpx+xml' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${spot.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_track.gpx`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+  } catch (error) {
+    console.error("Error downloading GPX:", error);
+  }
+}
+
+function createGPXContent(spot) {
+  const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>${escapeXml(spot.name)}</name>
+    <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+  </metadata>
+  <trk>
+    <name>${escapeXml(spot.name)}</name>
+    <type>${escapeXml(spot.kind)}</type>
+    <trkseg>`;
+
+  const trackPoints = spot.locations.map((location, index) => 
+    `      <trkpt lat="${location.lat}" lon="${location.lng}">
+        <name>Point ${index + 1}</name>
+      </trkpt>`
+  ).join('\n');
+
+  const gpxFooter = `    </trkseg>
+  </trk>
+</gpx>`;
+
+  return gpxHeader + '\n' + trackPoints + '\n' + gpxFooter;
+}
+
+function escapeXml(unsafe) {
+  if (typeof unsafe !== 'string') {
+    return String(unsafe);
+  }
+  return unsafe.replace(/[<>&'"]/g, function (c) {
+    switch (c) {
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '&': return '&amp;';
+      case '\'': return '&apos;';
+      case '"': return '&quot;';
+      default: return c;
+    }
+  });
+}
         </script>

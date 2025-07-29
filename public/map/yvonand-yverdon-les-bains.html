@@ -48,7 +48,9 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Downwind Run<br>Distance: 7.3 km</p>
+            <p>Downwind Run<br>Distance: 7.3 km    <br><a href="#" onclick="downloadGPX(); return false;">
+    Download GPX Track
+</a></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"country":"CH","locations":[{"lat":46.80740333108803,"lng":6.726980209350587},{"lng":6.724877357482911,"lat":46.8089013603689},{"lng":6.721615791320802,"lat":46.8100468840216},{"lng":6.714277267456056,"lat":46.8094594390422},{"lng":6.700887680053712,"lat":46.80687460491035},{"lng":6.6811466217041025,"lat":46.80152830384885},{"lng":6.6544532775878915,"lat":46.79324342530679},{"lng":6.6460150480270395,"lat":46.790103211145336},{"lng":6.644958257675172,"lat":46.78969552078176},{"lng":6.6404950618743905,"lat":46.787286044407715},{"lng":6.640157103538513,"lat":46.786977506106574}],"pending":false,"kind":"downwind-run","name":"Yvonand → Yverdon-les-Bains","infos":[{"id":"yvonand-yverdon-les-bains-m9vfej4l-n0yky","userName":"Rawham","tag":"description","text":"Fun Run :D","date":"2025-04-24T13:56:14.805Z","votes":1,"spotId":"yvonand-yverdon-les-bains"}],"distance":7.3,"id":"yvonand-yverdon-les-bains"};
+            const spotData = {"id":"yvonand-yverdon-les-bains","country":"CH","locations":[{"lng":6.726980209350587,"lat":46.80740333108803},{"lng":6.724877357482911,"lat":46.8089013603689},{"lng":6.721615791320802,"lat":46.8100468840216},{"lng":6.714277267456056,"lat":46.8094594390422},{"lat":46.80687460491035,"lng":6.700887680053712},{"lat":46.80152830384885,"lng":6.6811466217041025},{"lat":46.79324342530679,"lng":6.6544532775878915},{"lat":46.790103211145336,"lng":6.6460150480270395},{"lat":46.78969552078176,"lng":6.644958257675172},{"lat":46.787286044407715,"lng":6.6404950618743905},{"lat":46.786977506106574,"lng":6.640157103538513}],"infos":[{"text":"Fun Run :D","userName":"Rawham","spotId":"yvonand-yverdon-les-bains","date":"2025-04-24T13:56:14.805Z","id":"yvonand-yverdon-les-bains-m9vfej4l-n0yky","votes":1,"tag":"description"}],"distance":7.3,"name":"Yvonand → Yverdon-les-Bains","pending":false,"kind":"downwind-run"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -842,4 +844,70 @@ window.addEventListener("load", function() {
     window.instgrm.Embeds.process();
   }
 });
+            async function downloadGPX() {
+  try {
+    const spot = spotData;
+    
+    if (!spot.locations || spot.locations.length <= 1) {
+      console.error("Not enough locations for GPX track:", spot.locations?.length || 0);
+      return;
+    }
+    
+    const gpxContent = createGPXContent(spot);
+    const blob = new Blob([gpxContent], { type: 'application/gpx+xml' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${spot.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_track.gpx`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+  } catch (error) {
+    console.error("Error downloading GPX:", error);
+  }
+}
+
+function createGPXContent(spot) {
+  const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>${escapeXml(spot.name)}</name>
+    <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+  </metadata>
+  <trk>
+    <name>${escapeXml(spot.name)}</name>
+    <type>${escapeXml(spot.kind)}</type>
+    <trkseg>`;
+
+  const trackPoints = spot.locations.map((location, index) => 
+    `      <trkpt lat="${location.lat}" lon="${location.lng}">
+        <name>Point ${index + 1}</name>
+      </trkpt>`
+  ).join('\n');
+
+  const gpxFooter = `    </trkseg>
+  </trk>
+</gpx>`;
+
+  return gpxHeader + '\n' + trackPoints + '\n' + gpxFooter;
+}
+
+function escapeXml(unsafe) {
+  if (typeof unsafe !== 'string') {
+    return String(unsafe);
+  }
+  return unsafe.replace(/[<>&'"]/g, function (c) {
+    switch (c) {
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '&': return '&amp;';
+      case '\'': return '&apos;';
+      case '"': return '&quot;';
+      default: return c;
+    }
+  });
+}
         </script>

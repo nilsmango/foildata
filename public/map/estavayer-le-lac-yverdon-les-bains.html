@@ -48,7 +48,9 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Downwind Run<br>Distance: 17.3 km</p>
+            <p>Downwind Run<br>Distance: 17.3 km    <br><a href="#" onclick="downloadGPX(); return false;">
+    Download GPX Track
+</a></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"country":"CH","kind":"downwind-run","name":"Estavayer-le-Lac → Yverdon-les-Bains","infos":[{"tag":"description","text":"Very bad in the beginning, you really have to paddle out first. But nice train schedule.\nMight be good with a parawing as you could simply ride out to the center of the lake for better bumps.","userName":"nilsmango","date":"2025-04-24T14:10:24.719Z","spotId":"estavayer-le-lac-yverdon-les-bains","id":"estavayer-le-lac-yverdon-les-bains-m9vfwqxb-0oh97"}],"locations":[{"lat":46.852920375581604,"lng":6.837363839149476},{"lat":46.85315149583878,"lng":6.836382150650025},{"lat":46.853485334454284,"lng":6.834118366241455},{"lat":46.85379349133437,"lng":6.833147406578065},{"lat":46.854380451928506,"lng":6.829290390014649},{"lat":46.8561412952187,"lng":6.823797225952149},{"lat":46.854028276341865,"lng":6.8143558502197275},{"lat":46.847571314616985,"lng":6.795043945312501},{"lat":46.83993935903636,"lng":6.771869659423828},{"lat":46.82614038014424,"lng":6.73290252685547},{"lat":46.820384865494,"lng":6.723461151123048},{"lat":46.81280778948249,"lng":6.709556579589844},{"lat":46.80552339217852,"lng":6.7011451721191415},{"lat":46.798355522357454,"lng":6.676511764526368},{"lat":46.79259703362496,"lng":6.656341552734375},{"lat":46.79001138926082,"lng":6.6451406478881845},{"lat":46.789813053455646,"lng":6.644786596298219},{"lat":46.78726400601627,"lng":6.640098094940186},{"lat":46.78688935198143,"lng":6.639915704727173}],"id":"estavayer-le-lac-yverdon-les-bains","distance":17.3,"pending":false,"videos":[{"url":"https:\/\/www.instagram.com\/reel\/C-5BzhdoCMe\/","date":"2025-04-24T20:41:24+02:00","kind":"Insta"}]};
+            const spotData = {"locations":[{"lat":46.852920375581604,"lng":6.837363839149476},{"lat":46.85315149583878,"lng":6.836382150650025},{"lat":46.853485334454284,"lng":6.834118366241455},{"lat":46.85379349133437,"lng":6.833147406578065},{"lat":46.854380451928506,"lng":6.829290390014649},{"lat":46.8561412952187,"lng":6.823797225952149},{"lat":46.854028276341865,"lng":6.8143558502197275},{"lat":46.847571314616985,"lng":6.795043945312501},{"lat":46.83993935903636,"lng":6.771869659423828},{"lat":46.82614038014424,"lng":6.73290252685547},{"lat":46.820384865494,"lng":6.723461151123048},{"lat":46.81280778948249,"lng":6.709556579589844},{"lat":46.80552339217852,"lng":6.7011451721191415},{"lat":46.798355522357454,"lng":6.676511764526368},{"lat":46.79259703362496,"lng":6.656341552734375},{"lat":46.79001138926082,"lng":6.6451406478881845},{"lat":46.789813053455646,"lng":6.644786596298219},{"lat":46.78726400601627,"lng":6.640098094940186},{"lat":46.78688935198143,"lng":6.639915704727173}],"pending":false,"kind":"downwind-run","country":"CH","id":"estavayer-le-lac-yverdon-les-bains","infos":[{"userName":"nilsmango","tag":"description","spotId":"estavayer-le-lac-yverdon-les-bains","date":"2025-04-24T14:10:24.719Z","text":"Very bad in the beginning, you really have to paddle out first. But nice train schedule.\nMight be good with a parawing as you could simply ride out to the center of the lake for better bumps.","id":"estavayer-le-lac-yverdon-les-bains-m9vfwqxb-0oh97"}],"videos":[{"date":"2025-04-24T20:41:24+02:00","kind":"Insta","url":"https:\/\/www.instagram.com\/reel\/C-5BzhdoCMe\/"}],"distance":17.3,"name":"Estavayer-le-Lac → Yverdon-les-Bains"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -842,4 +844,70 @@ window.addEventListener("load", function() {
     window.instgrm.Embeds.process();
   }
 });
+            async function downloadGPX() {
+  try {
+    const spot = spotData;
+    
+    if (!spot.locations || spot.locations.length <= 1) {
+      console.error("Not enough locations for GPX track:", spot.locations?.length || 0);
+      return;
+    }
+    
+    const gpxContent = createGPXContent(spot);
+    const blob = new Blob([gpxContent], { type: 'application/gpx+xml' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${spot.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_track.gpx`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+  } catch (error) {
+    console.error("Error downloading GPX:", error);
+  }
+}
+
+function createGPXContent(spot) {
+  const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>${escapeXml(spot.name)}</name>
+    <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+  </metadata>
+  <trk>
+    <name>${escapeXml(spot.name)}</name>
+    <type>${escapeXml(spot.kind)}</type>
+    <trkseg>`;
+
+  const trackPoints = spot.locations.map((location, index) => 
+    `      <trkpt lat="${location.lat}" lon="${location.lng}">
+        <name>Point ${index + 1}</name>
+      </trkpt>`
+  ).join('\n');
+
+  const gpxFooter = `    </trkseg>
+  </trk>
+</gpx>`;
+
+  return gpxHeader + '\n' + trackPoints + '\n' + gpxFooter;
+}
+
+function escapeXml(unsafe) {
+  if (typeof unsafe !== 'string') {
+    return String(unsafe);
+  }
+  return unsafe.replace(/[<>&'"]/g, function (c) {
+    switch (c) {
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '&': return '&amp;';
+      case '\'': return '&apos;';
+      case '"': return '&quot;';
+      default: return c;
+    }
+  });
+}
         </script>

@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wave Wind Spot</p>
+            <p>Wave Wind Spot<br>Coordinates: <a href="geo: 26.25216224802288,-80.08442044258119">26.25216224802288,-80.08442044258119</a></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lng":-80.08442044258119,"lat":26.25216224802288}],"pending":false,"name":"Pompano Beach (16th Street)","state":"FL","infos":[{"id":"pompano-beach-16th-street-ma3wjrn5-aszk3","spotId":"pompano-beach-16th-street","text":"Great wingfoil and kite spot. The reef near Hillsboro inlet lessens the shorebreak. Works on any wind with east. ","tag":"description","userName":"rick_neeser","date":"2025-04-30T12:18:22.001Z"}],"id":"pompano-beach-16th-street","country":"US","kind":"wave-wind-spot"};
+            const spotData = {"locations":[{"lat":26.25216224802288,"lng":-80.08442044258119}],"infos":[{"userName":"rick_neeser","date":"2025-04-30T12:18:22.001Z","id":"pompano-beach-16th-street-ma3wjrn5-aszk3","spotId":"pompano-beach-16th-street","text":"Great wingfoil and kite spot. The reef near Hillsboro inlet lessens the shorebreak. Works on any wind with east. ","tag":"description"}],"state":"FL","pending":false,"country":"US","id":"pompano-beach-16th-street","kind":"wave-wind-spot","name":"Pompano Beach (16th Street)"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -842,4 +842,70 @@ window.addEventListener("load", function() {
     window.instgrm.Embeds.process();
   }
 });
+            async function downloadGPX() {
+  try {
+    const spot = spotData;
+    
+    if (!spot.locations || spot.locations.length <= 1) {
+      console.error("Not enough locations for GPX track:", spot.locations?.length || 0);
+      return;
+    }
+    
+    const gpxContent = createGPXContent(spot);
+    const blob = new Blob([gpxContent], { type: 'application/gpx+xml' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${spot.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_track.gpx`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+  } catch (error) {
+    console.error("Error downloading GPX:", error);
+  }
+}
+
+function createGPXContent(spot) {
+  const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>${escapeXml(spot.name)}</name>
+    <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+  </metadata>
+  <trk>
+    <name>${escapeXml(spot.name)}</name>
+    <type>${escapeXml(spot.kind)}</type>
+    <trkseg>`;
+
+  const trackPoints = spot.locations.map((location, index) => 
+    `      <trkpt lat="${location.lat}" lon="${location.lng}">
+        <name>Point ${index + 1}</name>
+      </trkpt>`
+  ).join('\n');
+
+  const gpxFooter = `    </trkseg>
+  </trk>
+</gpx>`;
+
+  return gpxHeader + '\n' + trackPoints + '\n' + gpxFooter;
+}
+
+function escapeXml(unsafe) {
+  if (typeof unsafe !== 'string') {
+    return String(unsafe);
+  }
+  return unsafe.replace(/[<>&'"]/g, function (c) {
+    switch (c) {
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '&': return '&amp;';
+      case '\'': return '&apos;';
+      case '"': return '&quot;';
+      default: return c;
+    }
+  });
+}
         </script>

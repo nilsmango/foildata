@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wake Thief Spot</p>
+            <p>Wake Thief Spot<br>Coordinates: <a href="geo: 47.30927794697537,8.583213686943056">47.30927794697537,8.583213686943056</a></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -72,6 +72,31 @@
     </div>
     <div class="info-actions">
         <div class="vote-btn" data-info-id="kuesnacht-ermitage-m9ve1hcq-0dw1k" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+            <span class="vote-icon">
+                <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
+                                <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
+                            </svg>
+            </span>
+            <span class="vote-count">2</span>
+        </div>
+    </div>
+    <hr class="info-separator">
+  </div><div class="info-item" data-tag="description">
+    <div class="info-header">
+        <h3>Description</h3>
+        <div>•</div>
+        <div class="info-meta">
+            <span class="info-date">Juli 29, 2025</span>
+            <span class="info-author">by 
+                nilsmango
+            </span>
+        </div>
+    </div>
+    <div class="info-content">
+        This is the Badi, not Ermitage!! I don‘t think you can use it, maybe in winter?
+    </div>
+    <div class="info-actions">
+        <div class="vote-btn" data-info-id="68887cc8c0dbd" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
             <span class="vote-icon">
                 <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
                                 <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
@@ -248,7 +273,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":47.30927794697537,"lng":8.583213686943056}],"infos":[{"id":"kuesnacht-ermitage-m9ve1hcq-0dw1k","date":"2025-04-24T13:18:06.362Z","spotId":"kuesnacht-ermitage","text":"Good for wake thief","tag":"description","userName":"sorin","votes":1}],"id":"kuesnacht-ermitage","country":"CH","pending":false,"name":"Küsnacht Ermitage","kind":"wake-thief-spot"};
+            const spotData = {"kind":"wake-thief-spot","id":"kuesnacht-ermitage","infos":[{"tag":"description","id":"kuesnacht-ermitage-m9ve1hcq-0dw1k","userName":"sorin","spotId":"kuesnacht-ermitage","date":"2025-04-24T13:18:06.362Z","text":"Good for wake thief","votes":2},{"tag":"description","id":"68887cc8c0dbd","userName":"nilsmango","spotId":"kuesnacht-ermitage","date":"2025-07-29T07:48:24+00:00","text":"This is the Badi, not Ermitage!! I don‘t think you can use it, maybe in winter?","votes":1,"userUrl":""}],"locations":[{"lng":8.583213686943056,"lat":47.30927794697537}],"pending":false,"name":"Küsnacht Ermitage","country":"CH"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -842,4 +867,70 @@ window.addEventListener("load", function() {
     window.instgrm.Embeds.process();
   }
 });
+            async function downloadGPX() {
+  try {
+    const spot = spotData;
+    
+    if (!spot.locations || spot.locations.length <= 1) {
+      console.error("Not enough locations for GPX track:", spot.locations?.length || 0);
+      return;
+    }
+    
+    const gpxContent = createGPXContent(spot);
+    const blob = new Blob([gpxContent], { type: 'application/gpx+xml' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${spot.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_track.gpx`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+  } catch (error) {
+    console.error("Error downloading GPX:", error);
+  }
+}
+
+function createGPXContent(spot) {
+  const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>${escapeXml(spot.name)}</name>
+    <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+  </metadata>
+  <trk>
+    <name>${escapeXml(spot.name)}</name>
+    <type>${escapeXml(spot.kind)}</type>
+    <trkseg>`;
+
+  const trackPoints = spot.locations.map((location, index) => 
+    `      <trkpt lat="${location.lat}" lon="${location.lng}">
+        <name>Point ${index + 1}</name>
+      </trkpt>`
+  ).join('\n');
+
+  const gpxFooter = `    </trkseg>
+  </trk>
+</gpx>`;
+
+  return gpxHeader + '\n' + trackPoints + '\n' + gpxFooter;
+}
+
+function escapeXml(unsafe) {
+  if (typeof unsafe !== 'string') {
+    return String(unsafe);
+  }
+  return unsafe.replace(/[<>&'"]/g, function (c) {
+    switch (c) {
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '&': return '&amp;';
+      case '\'': return '&apos;';
+      case '"': return '&quot;';
+      default: return c;
+    }
+  });
+}
         </script>

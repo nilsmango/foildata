@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Pump Foil Dock</p>
+            <p>Pump Foil Dock<br>Coordinates: <a href="geo: 47.56059667733393,7.6318126916885385">47.56059667733393,7.6318126916885385</a></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -273,7 +273,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Inseli Pump, Birsfelden","locations":[{"lat":47.56059667733393,"lng":7.6318126916885385}],"pending":false,"id":"inseli-pump-birsfelden","videos":[{"url":"https:\/\/www.youtube.com\/watch?v=eCs2MFA2E7c","date":"2025-04-30T08:16:52.834Z","kind":"YouTube"}],"kind":"pump-foil-dock","country":"CH","infos":[{"id":"inseli-pump-birsfelden-ma3nx7qa-slasc","tag":"description","date":"2025-04-30T08:16:52.834Z","userName":"nilsmango","text":"Nice little pump foil dock in Basel.","spotId":"inseli-pump-birsfelden"},{"spotId":"inseli-pump-birsfelden","text":"Please make sure to always take care with swimmers and rowers. \n\nThe rowing club is the placeholder of the area - so always remember we‘re just acting as guests at the spot. ","id":"681464ac507df","date":"2025-05-02T08:22:36+02:00","tag":"description","userName":"Wassersport Basel","votes":1,"userUrl":""}]};
+            const spotData = {"name":"Inseli Pump, Birsfelden","videos":[{"date":"2025-04-30T08:16:52.834Z","url":"https:\/\/www.youtube.com\/watch?v=eCs2MFA2E7c","kind":"YouTube"}],"infos":[{"userName":"nilsmango","tag":"description","spotId":"inseli-pump-birsfelden","date":"2025-04-30T08:16:52.834Z","text":"Nice little pump foil dock in Basel.","id":"inseli-pump-birsfelden-ma3nx7qa-slasc"},{"date":"2025-05-02T08:22:36+02:00","tag":"description","userUrl":"","spotId":"inseli-pump-birsfelden","userName":"Wassersport Basel","text":"Please make sure to always take care with swimmers and rowers. \n\nThe rowing club is the placeholder of the area - so always remember we‘re just acting as guests at the spot. ","id":"681464ac507df","votes":1}],"pending":false,"country":"CH","id":"inseli-pump-birsfelden","locations":[{"lat":47.56059667733393,"lng":7.6318126916885385}],"kind":"pump-foil-dock"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -867,4 +867,70 @@ window.addEventListener("load", function() {
     window.instgrm.Embeds.process();
   }
 });
+            async function downloadGPX() {
+  try {
+    const spot = spotData;
+    
+    if (!spot.locations || spot.locations.length <= 1) {
+      console.error("Not enough locations for GPX track:", spot.locations?.length || 0);
+      return;
+    }
+    
+    const gpxContent = createGPXContent(spot);
+    const blob = new Blob([gpxContent], { type: 'application/gpx+xml' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${spot.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_track.gpx`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+  } catch (error) {
+    console.error("Error downloading GPX:", error);
+  }
+}
+
+function createGPXContent(spot) {
+  const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>${escapeXml(spot.name)}</name>
+    <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+  </metadata>
+  <trk>
+    <name>${escapeXml(spot.name)}</name>
+    <type>${escapeXml(spot.kind)}</type>
+    <trkseg>`;
+
+  const trackPoints = spot.locations.map((location, index) => 
+    `      <trkpt lat="${location.lat}" lon="${location.lng}">
+        <name>Point ${index + 1}</name>
+      </trkpt>`
+  ).join('\n');
+
+  const gpxFooter = `    </trkseg>
+  </trk>
+</gpx>`;
+
+  return gpxHeader + '\n' + trackPoints + '\n' + gpxFooter;
+}
+
+function escapeXml(unsafe) {
+  if (typeof unsafe !== 'string') {
+    return String(unsafe);
+  }
+  return unsafe.replace(/[<>&'"]/g, function (c) {
+    switch (c) {
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '&': return '&amp;';
+      case '\'': return '&apos;';
+      case '"': return '&quot;';
+      default: return c;
+    }
+  });
+}
         </script>

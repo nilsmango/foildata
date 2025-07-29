@@ -48,7 +48,9 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Downwind Run<br>Distance: 12.3 km</p>
+            <p>Downwind Run<br>Distance: 12.3 km    <br><a href="#" onclick="downloadGPX(); return false;">
+    Download GPX Track
+</a></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -329,7 +331,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":54.536023687177504,"lng":11.065979003906252},{"lat":54.5387127009217,"lng":11.063232421875002},{"lat":54.54000734805476,"lng":11.068553924560549},{"lat":54.54060486364826,"lng":11.075420379638672},{"lat":54.53901146929013,"lng":11.107177734375},{"lat":54.537019638851795,"lng":11.138763427734375},{"lat":54.53164121107758,"lng":11.17034912109375},{"lat":54.524468871558625,"lng":11.200561523437502},{"lat":54.519885883842456,"lng":11.212577819824219},{"lat":54.51410660096453,"lng":11.219444274902346},{"lat":54.50488794903561,"lng":11.225366592407228}],"infos":[{"id":"altenteil-puttgarden-md8j8l2s-judbr","tag":"wind-direction","date":"2025-07-18T08:03:43.156Z","userName":"supfoil.ch ","text":"SW, W, NW","spotId":"altenteil-puttgarden"},{"id":"altenteil-puttgarden-md8j8l2s-k4u70","tag":"logistics","date":"2025-07-18T08:03:43.156Z","userName":"Supfoil.ch ","text":"Car Shuttle only\nStart: Park at Ahoi Camping and walk to the peak (past the Aussichtsplattform Westermarkelsdorfer Huk)\nEnd: Come in, at the corner of the harbor, sea wall, and shore. Sand bank to land on(one big stone you don't want to hit. You'll see it if you zoom in on Google Maps) \nBig parking lot right at the end of the run","spotId":"altenteil-puttgarden"},{"id":"altenteil-puttgarden-md8j8l2s-rdx2d","tag":"local-contact","date":"2025-07-18T08:03:43.156Z","userName":"Supfoil.ch ","text":"Malte & Basti from wingfoil-fehmarn.de","spotId":"altenteil-puttgarden"},{"id":"altenteil-puttgarden-md8j8l2s-6twdw","tag":"description","date":"2025-07-18T08:03:43.156Z","userName":"supfoil.ch ","text":"Nice, steep and surfy bumps for the first half of the run (also worth doing up and DW runs with a parawing).\nThe second part gets technical. \nMake sure you stay far enough out at Grüner Brink, as the sandbank “kills” all the bumps ","spotId":"altenteil-puttgarden"}],"id":"altenteil-puttgarden","country":"DE","pending":false,"name":"Altenteil → Puttgarden","kind":"downwind-run","distance":12.3};
+            const spotData = {"name":"Altenteil → Puttgarden","kind":"downwind-run","id":"altenteil-puttgarden","distance":12.3,"locations":[{"lat":54.536023687177504,"lng":11.065979003906252},{"lat":54.5387127009217,"lng":11.063232421875002},{"lat":54.54000734805476,"lng":11.068553924560549},{"lat":54.54060486364826,"lng":11.075420379638672},{"lat":54.53901146929013,"lng":11.107177734375},{"lat":54.537019638851795,"lng":11.138763427734375},{"lat":54.53164121107758,"lng":11.17034912109375},{"lat":54.524468871558625,"lng":11.200561523437502},{"lat":54.519885883842456,"lng":11.212577819824219},{"lat":54.51410660096453,"lng":11.219444274902346},{"lat":54.50488794903561,"lng":11.225366592407228}],"country":"DE","pending":false,"infos":[{"userName":"supfoil.ch ","date":"2025-07-18T08:03:43.156Z","id":"altenteil-puttgarden-md8j8l2s-judbr","spotId":"altenteil-puttgarden","text":"SW, W, NW","tag":"wind-direction"},{"userName":"Supfoil.ch ","date":"2025-07-18T08:03:43.156Z","id":"altenteil-puttgarden-md8j8l2s-k4u70","spotId":"altenteil-puttgarden","text":"Car Shuttle only\nStart: Park at Ahoi Camping and walk to the peak (past the Aussichtsplattform Westermarkelsdorfer Huk)\nEnd: Come in, at the corner of the harbor, sea wall, and shore. Sand bank to land on(one big stone you don't want to hit. You'll see it if you zoom in on Google Maps) \nBig parking lot right at the end of the run","tag":"logistics"},{"userName":"Supfoil.ch ","date":"2025-07-18T08:03:43.156Z","id":"altenteil-puttgarden-md8j8l2s-rdx2d","spotId":"altenteil-puttgarden","text":"Malte & Basti from wingfoil-fehmarn.de","tag":"local-contact"},{"userName":"supfoil.ch ","date":"2025-07-18T08:03:43.156Z","id":"altenteil-puttgarden-md8j8l2s-6twdw","spotId":"altenteil-puttgarden","text":"Nice, steep and surfy bumps for the first half of the run (also worth doing up and DW runs with a parawing).\nThe second part gets technical. \nMake sure you stay far enough out at Grüner Brink, as the sandbank “kills” all the bumps ","tag":"description"}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -923,4 +925,70 @@ window.addEventListener("load", function() {
     window.instgrm.Embeds.process();
   }
 });
+            async function downloadGPX() {
+  try {
+    const spot = spotData;
+    
+    if (!spot.locations || spot.locations.length <= 1) {
+      console.error("Not enough locations for GPX track:", spot.locations?.length || 0);
+      return;
+    }
+    
+    const gpxContent = createGPXContent(spot);
+    const blob = new Blob([gpxContent], { type: 'application/gpx+xml' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${spot.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_track.gpx`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+  } catch (error) {
+    console.error("Error downloading GPX:", error);
+  }
+}
+
+function createGPXContent(spot) {
+  const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="FoilData" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>${escapeXml(spot.name)}</name>
+    <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+  </metadata>
+  <trk>
+    <name>${escapeXml(spot.name)}</name>
+    <type>${escapeXml(spot.kind)}</type>
+    <trkseg>`;
+
+  const trackPoints = spot.locations.map((location, index) => 
+    `      <trkpt lat="${location.lat}" lon="${location.lng}">
+        <name>Point ${index + 1}</name>
+      </trkpt>`
+  ).join('\n');
+
+  const gpxFooter = `    </trkseg>
+  </trk>
+</gpx>`;
+
+  return gpxHeader + '\n' + trackPoints + '\n' + gpxFooter;
+}
+
+function escapeXml(unsafe) {
+  if (typeof unsafe !== 'string') {
+    return String(unsafe);
+  }
+  return unsafe.replace(/[<>&'"]/g, function (c) {
+    switch (c) {
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '&': return '&amp;';
+      case '\'': return '&apos;';
+      case '"': return '&quot;';
+      default: return c;
+    }
+  });
+}
         </script>
