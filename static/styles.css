@@ -829,15 +829,16 @@ footer {
     margin-bottom: -1rem;
 }
 
+
 .footer-nav-list {
     display: flex;
     list-style: none;
     gap: 1rem;
-    
-    ul {
+}
+
+.footer-nav-list ul {
     padding-left: 0;
     padding-inline-start: 0;
-    }
 }
 
 .footer-nav-item {
