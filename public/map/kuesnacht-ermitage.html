@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wake Thief Spot<br>Coordinates: 47.30927794697537, 8.583213686943056 | <a href="https://www.google.com/maps?q=47.30927794697537,8.583213686943056" target="_blank">See on Google Maps</a><br></p>
+            <p>Wake Thief Spot<br>Coordinates: 47.309278, 8.583214 | <a href="https://www.google.com/maps?q=47.30927794697537,8.583213686943056" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -273,7 +273,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"name":"Küsnacht Ermitage","kind":"wake-thief-spot","infos":[{"tag":"description","spotId":"kuesnacht-ermitage","id":"kuesnacht-ermitage-m9ve1hcq-0dw1k","userName":"sorin","date":"2025-04-24T13:18:06.362Z","votes":2,"text":"Good for wake thief"},{"tag":"description","spotId":"kuesnacht-ermitage","id":"68887cc8c0dbd","userUrl":"","userName":"nilsmango","date":"2025-07-29T07:48:24+00:00","votes":1,"text":"This is the Badi, not Ermitage!! I don‘t think you can use it, maybe in winter?"}],"id":"kuesnacht-ermitage","country":"CH","locations":[{"lng":8.583213686943056,"lat":47.30927794697537}]};
+            const spotData = {"kind":"wake-thief-spot","name":"Küsnacht Ermitage","infos":[{"text":"Good for wake thief","id":"kuesnacht-ermitage-m9ve1hcq-0dw1k","spotId":"kuesnacht-ermitage","userName":"sorin","tag":"description","votes":2,"date":"2025-04-24T13:18:06.362Z"},{"text":"This is the Badi, not Ermitage!! I don‘t think you can use it, maybe in winter?","spotId":"kuesnacht-ermitage","userUrl":"","date":"2025-07-29T07:48:24+00:00","id":"68887cc8c0dbd","tag":"description","userName":"nilsmango","votes":1}],"country":"CH","pending":false,"id":"kuesnacht-ermitage","locations":[{"lng":8.583213686943056,"lat":47.30927794697537}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

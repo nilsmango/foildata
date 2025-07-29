@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Shop<br>Coordinates: 46.767918165271396, 7.615156173706056 | <a href="https://www.google.com/maps?q=46.767918165271396,7.615156173706056" target="_blank">See on Google Maps</a><br></p>
+            <p>Shop<br>Coordinates: 46.767918, 7.615156 | <a href="https://www.google.com/maps?q=46.767918165271396,7.615156173706056" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -250,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":46.767918165271396,"lng":7.615156173706056}],"name":"sevensurf, Steffisburg","country":"CH","pending":false,"kind":"shop","id":"sevensurf-steffisburg","infos":[{"tag":"description","date":"2025-04-24T08:21:04.226Z","userUrl":"https:\/\/sevensurf.ch","text":"surfshop\n- wing\n- kite\n- parawing\n- dw\n- pumpfoil\n- accesoirs\n\nbrands\n- f-one pro shop\n- duotone\n- north\n- and others\n\ntestpool and all year open\n\nsevensurf gmbh \nSchwäbismattweg 4           \n3613 Steffisburg \n+4177 456 06 06\nshop@sevensurf.ch\nsevensurf.ch\n\n","userName":"sevensurf","spotId":"sevensurf-steffisburg","id":"sevensurf-steffisburg-m9v3fhpe-x9cnj","votes":1}]};
+            const spotData = {"kind":"shop","name":"sevensurf, Steffisburg","infos":[{"text":"surfshop\n- wing\n- kite\n- parawing\n- dw\n- pumpfoil\n- accesoirs\n\nbrands\n- f-one pro shop\n- duotone\n- north\n- and others\n\ntestpool and all year open\n\nsevensurf gmbh \nSchwäbismattweg 4           \n3613 Steffisburg \n+4177 456 06 06\nshop@sevensurf.ch\nsevensurf.ch\n\n","id":"sevensurf-steffisburg-m9v3fhpe-x9cnj","spotId":"sevensurf-steffisburg","userName":"sevensurf","tag":"description","votes":1,"date":"2025-04-24T08:21:04.226Z","userUrl":"https:\/\/sevensurf.ch"}],"country":"CH","pending":false,"id":"sevensurf-steffisburg","locations":[{"lng":7.615156173706056,"lat":46.767918165271396}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

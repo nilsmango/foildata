@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wave Wind Spot<br>Coordinates: 26.25216224802288, -80.08442044258119 | <a href="https://www.google.com/maps?q=26.25216224802288,-80.08442044258119" target="_blank">See on Google Maps</a><br></p>
+            <p>Wave Wind Spot<br>Coordinates: 26.252162, -80.084420 | <a href="https://www.google.com/maps?q=26.25216224802288,-80.08442044258119" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"state":"FL","id":"pompano-beach-16th-street","infos":[{"date":"2025-04-30T12:18:22.001Z","userName":"rick_neeser","tag":"description","text":"Great wingfoil and kite spot. The reef near Hillsboro inlet lessens the shorebreak. Works on any wind with east. ","id":"pompano-beach-16th-street-ma3wjrn5-aszk3","spotId":"pompano-beach-16th-street"}],"kind":"wave-wind-spot","country":"US","locations":[{"lat":26.25216224802288,"lng":-80.08442044258119}],"pending":false,"name":"Pompano Beach (16th Street)"};
+            const spotData = {"id":"pompano-beach-16th-street","pending":false,"name":"Pompano Beach (16th Street)","state":"FL","country":"US","kind":"wave-wind-spot","locations":[{"lat":26.25216224802288,"lng":-80.08442044258119}],"infos":[{"spotId":"pompano-beach-16th-street","text":"Great wingfoil and kite spot. The reef near Hillsboro inlet lessens the shorebreak. Works on any wind with east. ","id":"pompano-beach-16th-street-ma3wjrn5-aszk3","date":"2025-04-30T12:18:22.001Z","userName":"rick_neeser","tag":"description"}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

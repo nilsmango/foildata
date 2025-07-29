@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wave Spot<br>Coordinates: 26.094843356428296, -80.10522365570068 | <a href="https://www.google.com/maps?q=26.094843356428296,-80.10522365570068" target="_blank">See on Google Maps</a><br></p>
+            <p>Wave Spot<br>Coordinates: 26.094843, -80.105224 | <a href="https://www.google.com/maps?q=26.094843356428296,-80.10522365570068" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"kind":"wave-spot","state":"FL","country":"US","infos":[{"date":"2025-04-30T12:03:45.142Z","userName":"rick_neeser","spotId":"jetty-juice-bar","tag":"description","id":"jetty-juice-bar-ma3w0z1y-7cdwo","text":"In northeast winds the port everglades jetty cleans up the wind chops, combined with some outgoing current hood river style bumps form. This is an advanced spot with ship traffic and a challenging chip in prone. "}],"id":"jetty-juice-bar","name":"Jetty Juice Bar","locations":[{"lat":26.094843356428296,"lng":-80.10522365570068}]};
+            const spotData = {"country":"US","infos":[{"id":"jetty-juice-bar-ma3w0z1y-7cdwo","spotId":"jetty-juice-bar","tag":"description","text":"In northeast winds the port everglades jetty cleans up the wind chops, combined with some outgoing current hood river style bumps form. This is an advanced spot with ship traffic and a challenging chip in prone. ","date":"2025-04-30T12:03:45.142Z","userName":"rick_neeser"}],"id":"jetty-juice-bar","kind":"wave-spot","pending":false,"state":"FL","name":"Jetty Juice Bar","locations":[{"lng":-80.10522365570068,"lat":26.094843356428296}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

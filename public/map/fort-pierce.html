@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wave Wind Spot<br>Coordinates: 27.469744396647588, -80.2914333343506 | <a href="https://www.google.com/maps?q=27.469744396647588,-80.2914333343506" target="_blank">See on Google Maps</a><br></p>
+            <p>Wave Wind Spot<br>Coordinates: 27.469744, -80.291433 | <a href="https://www.google.com/maps?q=27.469744396647588,-80.2914333343506" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"country":"US","infos":[{"userName":"rick_neeser","spotId":"fort-pierce","date":"2025-04-30T12:28:15.804Z","text":"On its day one of the best wing spots on the east coast. Best set up in strong north wind. Launch under the protected jetty, get access to some well overhead north swell. If you cannot stay upwind be careful as the shore-break is very large only 1\/2 mile south of the jetty.","tag":"description","id":"fort-pierce-ma3wwhto-28m77"}],"kind":"wave-wind-spot","state":"FL","pending":false,"id":"fort-pierce","name":"Fort Pierce","locations":[{"lat":27.469744396647588,"lng":-80.2914333343506}]};
+            const spotData = {"infos":[{"text":"On its day one of the best wing spots on the east coast. Best set up in strong north wind. Launch under the protected jetty, get access to some well overhead north swell. If you cannot stay upwind be careful as the shore-break is very large only 1\/2 mile south of the jetty.","id":"fort-pierce-ma3wwhto-28m77","userName":"rick_neeser","spotId":"fort-pierce","tag":"description","date":"2025-04-30T12:28:15.804Z"}],"country":"US","pending":false,"state":"FL","name":"Fort Pierce","kind":"wave-wind-spot","id":"fort-pierce","locations":[{"lat":27.469744396647588,"lng":-80.2914333343506}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

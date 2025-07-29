@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wave Spot<br>Coordinates: 28.74556312881593, -13.938187611648582 | <a href="https://www.google.com/maps?q=28.74556312881593,-13.938187611648582" target="_blank">See on Google Maps</a><br></p>
+            <p>Wave Spot<br>Coordinates: 28.745563, -13.938188 | <a href="https://www.google.com/maps?q=28.74556312881593,-13.938187611648582" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Majanicho","videos":[{"url":"https:\/\/youtube.com\/shorts\/xUsRHW4v9Qc?si=WiLaQDVmBgYkX183","date":"2025-07-28T10:06:42.477Z","kind":"YouTube"}],"locations":[{"lat":28.74556312881593,"lng":-13.938187611648582}],"country":"ES","kind":"wave-spot","pending":false,"id":"majanicho","infos":[{"date":"2025-07-28T10:06:42.477Z","text":"The bay offers great prone and tow-in conditions according to the tides and winds. ","userName":"Tommy FTV","id":"majanicho-mdmy19nx-favu2","spotId":"majanicho","tag":"description"}]};
+            const spotData = {"infos":[{"spotId":"majanicho","text":"The bay offers great prone and tow-in conditions according to the tides and winds. ","id":"majanicho-mdmy19nx-favu2","date":"2025-07-28T10:06:42.477Z","userName":"Tommy FTV","tag":"description"}],"pending":false,"videos":[{"date":"2025-07-28T10:06:42.477Z","kind":"YouTube","url":"https:\/\/youtube.com\/shorts\/xUsRHW4v9Qc?si=WiLaQDVmBgYkX183"}],"locations":[{"lat":28.74556312881593,"lng":-13.938187611648582}],"id":"majanicho","name":"Majanicho","kind":"wave-spot","country":"ES"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

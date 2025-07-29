@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wave Wind Spot<br>Coordinates: 26.163493368893093, -80.09903311729433 | <a href="https://www.google.com/maps?q=26.163493368893093,-80.09903311729433" target="_blank">See on Google Maps</a><br></p>
+            <p>Wave Wind Spot<br>Coordinates: 26.163493, -80.099033 | <a href="https://www.google.com/maps?q=26.163493368893093,-80.09903311729433" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"state":"FL","id":"vista-park","infos":[{"date":"2025-04-30T12:05:42.648Z","userName":"rick_neeser","tag":"description","text":"Fun wing spot, nice grass set up area. Works in any east wind, shore-break can be an issue. ","id":"vista-park-ma3w3hq0-g41hi","spotId":"vista-park"}],"kind":"wave-wind-spot","country":"US","locations":[{"lat":26.163493368893093,"lng":-80.09903311729433}],"pending":false,"name":"Vista Park"};
+            const spotData = {"country":"US","infos":[{"id":"vista-park-ma3w3hq0-g41hi","spotId":"vista-park","tag":"description","text":"Fun wing spot, nice grass set up area. Works in any east wind, shore-break can be an issue. ","date":"2025-04-30T12:05:42.648Z","userName":"rick_neeser"}],"id":"vista-park","kind":"wave-wind-spot","pending":false,"state":"FL","name":"Vista Park","locations":[{"lng":-80.09903311729433,"lat":26.163493368893093}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

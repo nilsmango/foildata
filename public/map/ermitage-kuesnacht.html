@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wake Thief Spot<br>Coordinates: 47.321530568320036, 8.577167987823488 | <a href="https://www.google.com/maps?q=47.321530568320036,8.577167987823488" target="_blank">See on Google Maps</a><br></p>
+            <p>Wake Thief Spot<br>Coordinates: 47.321531, 8.577168 | <a href="https://www.google.com/maps?q=47.321530568320036,8.577167987823488" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"country":"CH","kind":"wake-thief-spot","infos":[{"text":"The real Ermitage Küsnacht spot!","tag":"description","date":"2025-07-29T07:47:28.099Z","id":"ermitage-kuesnacht-mdo8i21v-bar7i","userName":"Nilsmango","spotId":"ermitage-kuesnacht"}],"name":"Ermitage Küsnacht","pending":false,"locations":[{"lng":8.577167987823488,"lat":47.321530568320036}],"id":"ermitage-kuesnacht"};
+            const spotData = {"country":"CH","infos":[{"spotId":"ermitage-kuesnacht","id":"ermitage-kuesnacht-mdo8i21v-bar7i","tag":"description","date":"2025-07-29T07:47:28.099Z","text":"The real Ermitage Küsnacht spot!","userName":"Nilsmango"}],"id":"ermitage-kuesnacht","kind":"wake-thief-spot","pending":false,"name":"Ermitage Küsnacht","locations":[{"lng":8.577167987823488,"lat":47.321530568320036}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

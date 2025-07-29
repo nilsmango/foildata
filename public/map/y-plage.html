@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>School<br>Coordinates: 46.78583846182295, 6.651577949523927 | <a href="https://www.google.com/maps?q=46.78583846182295,6.651577949523927" target="_blank">See on Google Maps</a><br></p>
+            <p>School<br>Coordinates: 46.785838, 6.651578 | <a href="https://www.google.com/maps?q=46.78583846182295,6.651577949523927" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -273,7 +273,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Y-Plage ","locations":[{"lng":6.651577949523927,"lat":46.78583846182295}],"pending":false,"id":"y-plage","country":"CH","infos":[{"id":"y-plage-m9vipbon-uoepx","text":"Y Plage \nSchool \/ Renting \nSup \/ Wing \/ Foil ","date":"2025-04-24T15:28:37.223Z","userName":"Ludo T ","spotId":"y-plage","tag":"description"},{"text":"Website: https:\/\/y-plage.ch\/en\/","userName":"Nils Mango","spotId":"y-plage","tag":"description","id":"680a80647208e","userUrl":"","date":"2025-04-24T20:18:12+02:00"}],"kind":"school"};
+            const spotData = {"country":"CH","locations":[{"lng":6.651577949523927,"lat":46.78583846182295}],"infos":[{"date":"2025-04-24T15:28:37.223Z","tag":"description","userName":"Ludo T ","id":"y-plage-m9vipbon-uoepx","spotId":"y-plage","text":"Y Plage \nSchool \/ Renting \nSup \/ Wing \/ Foil "},{"userName":"Nils Mango","date":"2025-04-24T20:18:12+02:00","id":"680a80647208e","tag":"description","userUrl":"","spotId":"y-plage","text":"Website: https:\/\/y-plage.ch\/en\/"}],"id":"y-plage","pending":false,"kind":"school","name":"Y-Plage "};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

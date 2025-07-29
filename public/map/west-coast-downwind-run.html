@@ -48,7 +48,9 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Downwind Run<br>Distance: 19.5 km    <br><a href="#" onclick="downloadGPX(); return false;">
+            <p>Downwind Run<br>Distance: 19.5 km    <br>Start Coordinates: 28.713459, -14.020098  | <a href="https://www.google.com/maps?q=28.71345865531742,-14.02009835105782" target="_blank">See on Google Maps</a>
+    <br>End Coordinates: 28.543135, -14.066877  | <a href="https://www.google.com/maps?q=28.54313517986712,-14.066877314511263" target="_blank">See on Google Maps</a>
+    <br><a href="#" onclick="downloadGPX(); return false;">
     Download GPX Track
 </a><br></p>
             <div class="badge-container">
@@ -250,7 +252,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lng":-14.02009835105782,"lat":28.71345865531742},{"lng":-14.066877314511263,"lat":28.54313517986712}],"pending":false,"infos":[{"id":"west-coast-downwind-run-mdmxyu1b-kwhhw","date":"2025-07-28T10:04:48.911Z","tag":"description","userName":"Tommy Ftv","spotId":"west-coast-downwind-run","text":"Great dw run on North-east wind and small to no ground swell","votes":1}],"id":"west-coast-downwind-run","distance":19.5,"kind":"downwind-run","country":"ES","name":"West coast downwind run","videos":[{"url":"https:\/\/youtube.com\/shorts\/FXpg5nloFKk?si=OKjlXO9cNoscatJh","date":"2025-07-28T10:04:48.912Z","kind":"YouTube"}]};
+            const spotData = {"distance":19.5,"infos":[{"spotId":"west-coast-downwind-run","text":"Great dw run on North-east wind and small to no ground swell","date":"2025-07-28T10:04:48.911Z","id":"west-coast-downwind-run-mdmxyu1b-kwhhw","tag":"description","userName":"Tommy Ftv","votes":1}],"id":"west-coast-downwind-run","locations":[{"lng":-14.02009835105782,"lat":28.71345865531742},{"lng":-14.066877314511263,"lat":28.54313517986712}],"kind":"downwind-run","country":"ES","name":"West coast downwind run","pending":false,"videos":[{"url":"https:\/\/youtube.com\/shorts\/FXpg5nloFKk?si=OKjlXO9cNoscatJh","date":"2025-07-28T10:04:48.912Z","kind":"YouTube"}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

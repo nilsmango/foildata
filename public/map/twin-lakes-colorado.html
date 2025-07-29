@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wind Spot<br>Coordinates: 39.090433889411834, -106.31984710693361 | <a href="https://www.google.com/maps?q=39.090433889411834,-106.31984710693361" target="_blank">See on Google Maps</a><br></p>
+            <p>Wind Spot<br>Coordinates: 39.090434, -106.319847 | <a href="https://www.google.com/maps?q=39.090433889411834,-106.31984710693361" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Twin Lakes, Colorado","id":"twin-lakes-colorado","country":"US","state":"CO","videos":[{"url":"https:\/\/youtu.be\/LPNagmc7pXg","date":"2025-05-10T01:47:27+02:00","kind":"YouTube"}],"locations":[{"lat":39.090433889411834,"lng":-106.31984710693361}],"infos":[{"text":"Another beautiful high mountain reservoir with great wind sometimes.","userName":"Foil4Fun","id":"twin-lakes-colorado-mahfyqrb-uanam","spotId":"twin-lakes-colorado","tag":"description","date":"2025-05-09T23:42:53.687Z"}],"kind":"wind-spot","pending":false};
+            const spotData = {"pending":false,"locations":[{"lng":-106.31984710693361,"lat":39.090433889411834}],"state":"CO","infos":[{"id":"twin-lakes-colorado-mahfyqrb-uanam","date":"2025-05-09T23:42:53.687Z","tag":"description","userName":"Foil4Fun","text":"Another beautiful high mountain reservoir with great wind sometimes.","spotId":"twin-lakes-colorado"}],"name":"Twin Lakes, Colorado","kind":"wind-spot","videos":[{"url":"https:\/\/youtu.be\/LPNagmc7pXg","date":"2025-05-10T01:47:27+02:00","kind":"YouTube"}],"id":"twin-lakes-colorado","country":"US"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

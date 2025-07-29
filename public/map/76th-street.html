@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wave Wind Spot<br>Coordinates: 25.86139580646072, -80.11916041374207 | <a href="https://www.google.com/maps?q=25.86139580646072,-80.11916041374207" target="_blank">See on Google Maps</a><br></p>
+            <p>Wave Wind Spot<br>Coordinates: 25.861396, -80.119160 | <a href="https://www.google.com/maps?q=25.86139580646072,-80.11916041374207" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"id":"76th-street","name":"76th Street","kind":"wave-wind-spot","country":"US","pending":false,"infos":[{"date":"2025-04-30T12:01:03.136Z","tag":"description","userName":"rick_neeser","text":"Dedicated area to launch kites and wings on south beach. Best in any wind with some east. Can have a large shore-break in strong east winds. ","spotId":"76th-street","id":"76th-street-ma3vxi1s-go38r"}],"locations":[{"lat":25.86139580646072,"lng":-80.11916041374207}],"state":"FL"};
+            const spotData = {"country":"US","infos":[{"id":"76th-street-ma3vxi1s-go38r","spotId":"76th-street","tag":"description","text":"Dedicated area to launch kites and wings on south beach. Best in any wind with some east. Can have a large shore-break in strong east winds. ","date":"2025-04-30T12:01:03.136Z","userName":"rick_neeser"}],"id":"76th-street","kind":"wave-wind-spot","pending":false,"state":"FL","name":"76th Street","locations":[{"lng":-80.11916041374207,"lat":25.86139580646072}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

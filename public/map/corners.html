@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wave Wind Spot<br>Coordinates: 26.923045652573776, -80.06657838821413 | <a href="https://www.google.com/maps?q=26.923045652573776,-80.06657838821413" target="_blank">See on Google Maps</a><br></p>
+            <p>Wave Wind Spot<br>Coordinates: 26.923046, -80.066578 | <a href="https://www.google.com/maps?q=26.923045652573776,-80.06657838821413" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"locations":[{"lng":-80.06657838821413,"lat":26.923045652573776}],"state":"FL","id":"corners","kind":"wave-wind-spot","infos":[{"date":"2025-04-30T12:24:08.710Z","tag":"description","userName":"rick_neeser","text":"Great sandbar for prone, also good area to launch kites and wing from. Works in all east wind directions shore-break is factor in strong east winds. ","spotId":"corners","id":"corners-ma3wr75y-mvbdl"}],"country":"US","name":"Corners "};
+            const spotData = {"id":"corners","pending":false,"name":"Corners ","state":"FL","country":"US","kind":"wave-wind-spot","locations":[{"lat":26.923045652573776,"lng":-80.06657838821413}],"infos":[{"spotId":"corners","text":"Great sandbar for prone, also good area to launch kites and wing from. Works in all east wind directions shore-break is factor in strong east winds. ","id":"corners-ma3wr75y-mvbdl","date":"2025-04-30T12:24:08.710Z","userName":"rick_neeser","tag":"description"}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

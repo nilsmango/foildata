@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wind Spot<br>Coordinates: 39.25872934228937, -106.3603860139847 | <a href="https://www.google.com/maps?q=39.25872934228937,-106.3603860139847" target="_blank">See on Google Maps</a><br></p>
+            <p>Wind Spot<br>Coordinates: 39.258729, -106.360386 | <a href="https://www.google.com/maps?q=39.25872934228937,-106.3603860139847" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -248,7 +248,7 @@
             }
             
             // Get spot data
-            const spotData = {"kind":"wind-spot","id":"turquoise-lake-leadville-co","state":"CO","infos":[{"id":"turquoise-lake-leadville-co-mahg1cbm-s5mef","spotId":"turquoise-lake-leadville-co","votes":1,"tag":"description","text":"Great spot when wind from due west, it’s possible to shuttle a DWer from west to east. ","date":"2025-05-09T23:44:54.946Z","userName":"Foil4Fun"}],"pending":false,"videos":[{"kind":"YouTube","date":"2025-05-10T01:46:37+02:00","url":"https:\/\/youtu.be\/2Oq0jYlmSAw"}],"country":"US","locations":[{"lng":-106.3603860139847,"lat":39.25872934228937}],"name":"Turquoise Lake, Leadville, Co"};
+            const spotData = {"id":"turquoise-lake-leadville-co","pending":false,"name":"Turquoise Lake, Leadville, Co","state":"CO","country":"US","kind":"wind-spot","locations":[{"lat":39.25872934228937,"lng":-106.3603860139847}],"videos":[{"date":"2025-05-10T01:46:37+02:00","kind":"YouTube","url":"https:\/\/youtu.be\/2Oq0jYlmSAw"}],"infos":[{"date":"2025-05-09T23:44:54.946Z","spotId":"turquoise-lake-leadville-co","id":"turquoise-lake-leadville-co-mahg1cbm-s5mef","userName":"Foil4Fun","text":"Great spot when wind from due west, it’s possible to shuttle a DWer from west to east. ","tag":"description","votes":1}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

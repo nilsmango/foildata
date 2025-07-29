@@ -48,7 +48,7 @@
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Pump Foil Dock<br>Coordinates: 47.56059667733393, 7.6318126916885385 | <a href="https://www.google.com/maps?q=47.56059667733393,7.6318126916885385" target="_blank">See on Google Maps</a><br></p>
+            <p>Pump Foil Dock<br>Coordinates: 47.560597, 7.631813 | <a href="https://www.google.com/maps?q=47.56059667733393,7.6318126916885385" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -273,7 +273,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Inseli Pump, Birsfelden","country":"CH","infos":[{"userName":"nilsmango","spotId":"inseli-pump-birsfelden","date":"2025-04-30T08:16:52.834Z","text":"Nice little pump foil dock in Basel.","tag":"description","id":"inseli-pump-birsfelden-ma3nx7qa-slasc"},{"userName":"Wassersport Basel","text":"Please make sure to always take care with swimmers and rowers. \n\nThe rowing club is the placeholder of the area - so always remember we‘re just acting as guests at the spot. ","votes":1,"userUrl":"","date":"2025-05-02T08:22:36+02:00","spotId":"inseli-pump-birsfelden","tag":"description","id":"681464ac507df"}],"pending":false,"videos":[{"date":"2025-04-30T08:16:52.834Z","url":"https:\/\/www.youtube.com\/watch?v=eCs2MFA2E7c","kind":"YouTube"}],"locations":[{"lat":47.56059667733393,"lng":7.6318126916885385}],"kind":"pump-foil-dock","id":"inseli-pump-birsfelden"};
+            const spotData = {"locations":[{"lat":47.56059667733393,"lng":7.6318126916885385}],"infos":[{"date":"2025-04-30T08:16:52.834Z","tag":"description","userName":"nilsmango","id":"inseli-pump-birsfelden-ma3nx7qa-slasc","spotId":"inseli-pump-birsfelden","text":"Nice little pump foil dock in Basel."},{"votes":1,"spotId":"inseli-pump-birsfelden","tag":"description","userName":"Wassersport Basel","text":"Please make sure to always take care with swimmers and rowers. \n\nThe rowing club is the placeholder of the area - so always remember we‘re just acting as guests at the spot. ","userUrl":"","date":"2025-05-02T08:22:36+02:00","id":"681464ac507df"}],"country":"CH","pending":false,"videos":[{"date":"2025-04-30T08:16:52.834Z","url":"https:\/\/www.youtube.com\/watch?v=eCs2MFA2E7c","kind":"YouTube"}],"id":"inseli-pump-birsfelden","kind":"pump-foil-dock","name":"Inseli Pump, Birsfelden"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
