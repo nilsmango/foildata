@@ -34,7 +34,8 @@
         "tag": "description",
         "spotId": "supfoil-ch",
         "date": "2025-04-24T09:27:09.156Z",
-        "text": "Learn to SUP-Foil Downwind on one of the best spots in Europe.\nhttps:\/\/supfoil.ch\/"
+        "text": "Learn to SUP-Foil Downwind on one of the best spots in Europe.\nhttps:\/\/supfoil.ch\/",
+        "votes": 1
     },
     {
         "id": "neuenburg-saint-blaise-m9v6jmlq-lhn4e",
@@ -588,7 +589,7 @@
     {
         "spotId": "nyon-villeneuve",
         "id": "nyon-villeneuve-mdmtii3o-9ikn5",
-        "votes": 1,
+        "votes": 2,
         "text": "Longest possible single downwind run in Switzerland. Be careful with possible thunderstorms.",
         "tag": "description",
         "userName": "nilsmango",

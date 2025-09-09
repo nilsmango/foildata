@@ -35,6 +35,7 @@
             <li class="nav-item"><a href="/foildata/about.html">about</a></li>
 <li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
+<li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
 
         </ul>
       </div>
@@ -248,7 +249,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Pompano Beach (16th Street)","pending":false,"kind":"wave-wind-spot","state":"FL","locations":[{"lng":-80.08442044258119,"lat":26.25216224802288}],"id":"pompano-beach-16th-street","infos":[{"tag":"description","spotId":"pompano-beach-16th-street","id":"pompano-beach-16th-street-ma3wjrn5-aszk3","text":"Great wingfoil and kite spot. The reef near Hillsboro inlet lessens the shorebreak. Works on any wind with east. ","date":"2025-04-30T12:18:22.001Z","userName":"rick_neeser"}],"country":"US"};
+            const spotData = {"name":"Pompano Beach (16th Street)","id":"pompano-beach-16th-street","infos":[{"spotId":"pompano-beach-16th-street","date":"2025-04-30T12:18:22.001Z","id":"pompano-beach-16th-street-ma3wjrn5-aszk3","text":"Great wingfoil and kite spot. The reef near Hillsboro inlet lessens the shorebreak. Works on any wind with east. ","userName":"rick_neeser","tag":"description"}],"locations":[{"lat":26.25216224802288,"lng":-80.08442044258119}],"state":"FL","pending":false,"kind":"wave-wind-spot","country":"US"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

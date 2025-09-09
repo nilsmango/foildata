@@ -35,6 +35,7 @@
             <li class="nav-item"><a href="/foildata/about.html">about</a></li>
 <li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
+<li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
 
         </ul>
       </div>
@@ -248,7 +249,7 @@
             }
             
             // Get spot data
-            const spotData = {"kind":"wave-wind-spot","id":"vista-park","name":"Vista Park","state":"FL","locations":[{"lng":-80.09903311729433,"lat":26.163493368893093}],"pending":false,"infos":[{"tag":"description","text":"Fun wing spot, nice grass set up area. Works in any east wind, shore-break can be an issue. ","date":"2025-04-30T12:05:42.648Z","userName":"rick_neeser","spotId":"vista-park","id":"vista-park-ma3w3hq0-g41hi"}],"country":"US"};
+            const spotData = {"name":"Vista Park","id":"vista-park","infos":[{"spotId":"vista-park","date":"2025-04-30T12:05:42.648Z","id":"vista-park-ma3w3hq0-g41hi","text":"Fun wing spot, nice grass set up area. Works in any east wind, shore-break can be an issue. ","userName":"rick_neeser","tag":"description"}],"locations":[{"lat":26.163493368893093,"lng":-80.09903311729433}],"state":"FL","pending":false,"kind":"wave-wind-spot","country":"US"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

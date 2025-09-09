@@ -35,6 +35,7 @@
             <li class="nav-item"><a href="/foildata/about.html">about</a></li>
 <li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
+<li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
 
         </ul>
       </div>
@@ -79,7 +80,7 @@
                                 <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
                             </svg>
             </span>
-            <span class="vote-count">0</span>
+            <span class="vote-count">1</span>
         </div>
     </div>
     <hr class="info-separator">
@@ -250,7 +251,7 @@
             }
             
             // Get spot data
-            const spotData = {"country":"CH","id":"supfoil-ch","locations":[{"lng":6.937866210937501,"lat":46.95963595861957}],"pending":false,"name":"SUPFOIL.CH","kind":"school","videos":[{"date":"2025-04-24T09:27:09.156Z","url":"https:\/\/youtube.com\/shorts\/AZUjX3CPp9I?si=2DPgVsbQ2pDmK2D3","kind":"YouTube"}],"infos":[{"spotId":"supfoil-ch","date":"2025-04-24T09:27:09.156Z","id":"supfoil-ch-m9v5sh2c-bwpth","tag":"description","text":"Learn to SUP-Foil Downwind on one of the best spots in Europe.\nhttps:\/\/supfoil.ch\/","userName":"SUPFOIL.CH ","userUrl":"https:\/\/supfoil.ch\/"}]};
+            const spotData = {"videos":[{"date":"2025-04-24T09:27:09.156Z","kind":"YouTube","url":"https:\/\/youtube.com\/shorts\/AZUjX3CPp9I?si=2DPgVsbQ2pDmK2D3"}],"pending":false,"country":"CH","infos":[{"userUrl":"https:\/\/supfoil.ch\/","text":"Learn to SUP-Foil Downwind on one of the best spots in Europe.\nhttps:\/\/supfoil.ch\/","userName":"SUPFOIL.CH ","spotId":"supfoil-ch","tag":"description","id":"supfoil-ch-m9v5sh2c-bwpth","date":"2025-04-24T09:27:09.156Z","votes":1}],"id":"supfoil-ch","locations":[{"lng":6.937866210937501,"lat":46.95963595861957}],"name":"SUPFOIL.CH","kind":"school"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
