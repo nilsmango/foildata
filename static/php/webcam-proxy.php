@@ -11,4 +11,3 @@ if (isset($headers['Content-Type'])) {
 
 // Just pass through the stream
 readfile($url);
-?>

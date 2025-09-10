@@ -778,8 +778,9 @@ header {
 /* Navigation */
 .nav-list {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
-    gap: 2rem;
+    column-gap: 1rem;
 }
 
 .nav-item {
@@ -950,7 +951,7 @@ footer {
     }
 
     .nav-list {
-        justify-content: space-between;
+        justify-content: center;
         width: 100%;
     }
     

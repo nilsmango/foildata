@@ -828,5 +828,23 @@
         "id": "steg-faellanden-a7a293",
         "userName": "aloulier",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv"
+    },
+    {
+        "id": "bjelland-mfd4hmht-2ejvt",
+        "tag": "wind-direction",
+        "text": "World in ENE, NE, SSW and SW",
+        "date": "2025-09-09T22:29:06.209Z",
+        "userName": "South Coast Sessions",
+        "userUrl": "https:\/\/youtube.com\/@south_coast_sessions?feature=shared",
+        "spotId": "bjelland"
+    },
+    {
+        "spotId": "bjelland",
+        "tag": "conditions",
+        "text": "This is maybe the best spot for downwinding in the Arendal region in both NE and SW wind directions because it is exposed and there are no islands blocking the swell here. A shallow reef maybe 500m offshore provides great bumps. Not yet tested on foil but can confirm from windsurfing here many times .",
+        "userName": "South Coast Sessions",
+        "userUrl": "https:\/\/youtube.com\/@south_coast_sessions?feature=shared",
+        "id": "68c0ab80143ce",
+        "date": "2025-09-09T22:34:40+00:00"
     }
 ]
