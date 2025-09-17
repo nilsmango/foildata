@@ -855,5 +855,23 @@
         "userName": "Nils Mango",
         "userUrl": "https:\/\/nilsmango.ch",
         "spotId": "nonnenhorn-bregenz"
+    },
+    {
+        "id": "gorgier-saint-blaise-mfo31t9a-i4m8x",
+        "tag": "description",
+        "text": "The very best west wind run on lake Neuch\u00e2tel. ",
+        "date": "2025-09-17T14:34:16.798Z",
+        "userName": "Nils Mango",
+        "userUrl": null,
+        "spotId": "gorgier-saint-blaise"
+    },
+    {
+        "id": "gorgier-saint-blaise-mfo31t9a-crxfg",
+        "tag": "conditions",
+        "text": "Forecasts: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-forecasts.html\n\nWebcams: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-webcams.html",
+        "date": "2025-09-17T14:34:16.798Z",
+        "userName": "Nils Mango",
+        "userUrl": null,
+        "spotId": "gorgier-saint-blaise"
     }
 ]
