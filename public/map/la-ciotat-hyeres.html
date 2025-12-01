@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-    <title>Silvaplana Camping Dockstart Dock</title>
+    <title>La Ciotat → Hyères</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Silvaplana Camping Dockstart Dock Pump Foil Dock Info">
+    <meta name="description" content="La Ciotat → Hyères Downwind Run Info">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -43,13 +43,17 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Silvaplana Camping Dockstart Dock</h1>
+            <h1 class="card-title">La Ciotat → Hyères</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Pump Foil Dock<br>Coordinates: 46.454726, 9.793014 | <a href="https://www.google.com/maps?q=46.454726,9.793014" target="_blank">See on Google Maps</a><br></p>
+            <p>Downwind Run<br>Distance: 50.3 km    <br>Start Coordinates: 43.166312, 5.606010  | <a href="https://www.google.com/maps?q=43.166312089035365,5.606009960174561" target="_blank">See on Google Maps</a>
+    <br>End Coordinates: 43.079656, 6.123848  | <a href="https://www.google.com/maps?q=43.079655925304806,6.123847961425782" target="_blank">See on Google Maps</a>
+    <br><a href="#" onclick="downloadGPX(); return false;">
+    Download GPX Track
+</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -62,19 +66,19 @@
         <h3>Description</h3>
         <div>•</div>
         <div class="info-meta">
-            <span class="info-date">Juli 29, 2025</span>
+            <span class="info-date">Dezember 1, 2025</span>
             <span class="info-author">by 
-                <a href="https://github.com/zdavatz/pumpspots/blob/main/pumpspots.csv" target="_blank" rel="noopener">
-    zdavatz
+                <a href="https://nilsmango.ch" target="_blank" rel="noopener">
+    nilsmango
 </a>
             </span>
         </div>
     </div>
     <div class="info-content">
-        Spotfinder: zdavatz. Height to water: About 40cm over the water. Good for Goofy and Regular, very popular Images of spot: <a href="https://www.instagram.com/p/CxBkhkDq1QT/" target="_blank" rel="noopener">https://www.instagram.com/p/CxBkhkDq1QT/</a>
+        Big Hyères run. Get in at the beach, then paddle out to the wind line.<br>Huge rollers.<br>Be carful with the police, I heard you are not really allowed to paddle on the open ocean in France.
     </div>
     <div class="info-actions">
-        <div class="vote-btn" data-info-id="silvaplana-camping-dockstart-dock-1c9123" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+        <div class="vote-btn" data-info-id="la-ciotat-hyeres-min955nx-kl9f3" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
             <span class="vote-icon">
                 <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
                                 <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
@@ -89,7 +93,7 @@
             <div class="add-info-section" style="display: none;">
                 <h2>Add Information</h2>
                 <form id="add-info-form">
-                    <input type="hidden" name="spotId" value="silvaplana-camping-dockstart-dock-1c9123">
+                    <input type="hidden" name="spotId" value="la-ciotat-hyeres">
                     
                     <div class="form-group">
                         <label for="info-tag" class="required">Tag</label>
@@ -133,7 +137,7 @@
                             <div class="add-video-section" style="display: none;">
                                 <h2>Add Video</h2>
                                 <form id="add-video-form">
-                                    <input type="hidden" name="spotId" value="silvaplana-camping-dockstart-dock-1c9123">
+                                    <input type="hidden" name="spotId" value="la-ciotat-hyeres">
                                     
                                     <div class="form-group">
                                         <label for="video-url" class="required">Video URL (YouTube or Instagram)</label>
@@ -251,7 +255,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":46.454726,"lng":9.793014}],"pending":false,"country":"CH","infos":[{"text":"Spotfinder: zdavatz. Height to water: About 40cm over the water. Good for Goofy and Regular, very popular Images of spot: https:\/\/www.instagram.com\/p\/CxBkhkDq1QT\/","userName":"zdavatz","id":"silvaplana-camping-dockstart-dock-1c9123","tag":"description","spotId":"silvaplana-camping-dockstart-dock-1c9123","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","date":"2025-07-29T13:43:42.134653Z"}],"id":"silvaplana-camping-dockstart-dock-1c9123","kind":"pump-foil-dock","name":"Silvaplana Camping Dockstart Dock"};
+            const spotData = {"locations":[{"lat":43.166312089035365,"lng":5.606009960174561},{"lat":43.165858219845404,"lng":5.606718063354493},{"lat":43.164825263601045,"lng":5.607748031616211},{"lat":43.163307099239525,"lng":5.608520507812501},{"lat":43.160959348110886,"lng":5.6084561347961435},{"lat":43.16014543999371,"lng":5.607898235321045},{"lat":43.1591436920423,"lng":5.606911182403565},{"lat":43.1582984544333,"lng":5.606353282928467},{"lat":43.14934447891639,"lng":5.631179809570313},{"lat":43.13230952002388,"lng":5.637359619140626},{"lat":43.11552043320657,"lng":5.641479492187501},{"lat":43.09822536380049,"lng":5.651779174804688},{"lat":43.08443593905345,"lng":5.679588317871095},{"lat":43.06086137134326,"lng":5.742416381835938},{"lat":43.05157953305728,"lng":5.784988403320313},{"lat":43.026235471393235,"lng":5.903778076171876},{"lat":43.03401545523317,"lng":5.9326171875},{"lat":43.043801776082425,"lng":5.960083007812501},{"lat":43.05358653605547,"lng":5.987548828125001},{"lat":43.06236640192197,"lng":6.034927368164063},{"lat":43.068887774169625,"lng":6.070289611816406},{"lat":43.07641157238102,"lng":6.105308532714845},{"lat":43.07872338734617,"lng":6.123579740524293},{"lat":43.07924843147216,"lng":6.123794317245484},{"lat":43.079655925304806,"lng":6.123847961425782}],"distance":50.3,"pending":false,"country":"FR","infos":[{"userName":"nilsmango","spotId":"la-ciotat-hyeres","date":"2025-12-01T14:36:11.373Z","text":"Big Hyères run. Get in at the beach, then paddle out to the wind line.\nHuge rollers.\nBe carful with the police, I heard you are not really allowed to paddle on the open ocean in France.","id":"la-ciotat-hyeres-min955nx-kl9f3","tag":"description","userUrl":"https:\/\/nilsmango.ch"}],"id":"la-ciotat-hyeres","kind":"downwind-run","name":"La Ciotat → Hyères"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -506,7 +510,7 @@
                   return;
                 }
                 
-                const filtered = data.filter(info => info.spotId === 'silvaplana-camping-dockstart-dock-1c9123');
+                const filtered = data.filter(info => info.spotId === 'la-ciotat-hyeres');
                 if (filtered.length === 0) {
                   console.log('No matching spotId entries.');
                   return;
@@ -592,7 +596,7 @@
   const res = await fetch(jsonFile);
   const spots = await res.json();
   const videoContainer = document.getElementById("videos");
-  const spotId = "silvaplana-camping-dockstart-dock-1c9123";
+  const spotId = "la-ciotat-hyeres";
 
   // Add masonry container style
   videoContainer.style.columnCount = "1";

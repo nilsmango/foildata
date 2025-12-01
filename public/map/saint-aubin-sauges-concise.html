@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-    <title>Silvaplana Camping Dockstart Dock</title>
+    <title>Saint-Aubin-Sauges → Concise</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Silvaplana Camping Dockstart Dock Pump Foil Dock Info">
+    <meta name="description" content="Saint-Aubin-Sauges → Concise Downwind Run Info">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -43,13 +43,17 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Silvaplana Camping Dockstart Dock</h1>
+            <h1 class="card-title">Saint-Aubin-Sauges → Concise</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Pump Foil Dock<br>Coordinates: 46.454726, 9.793014 | <a href="https://www.google.com/maps?q=46.454726,9.793014" target="_blank">See on Google Maps</a><br></p>
+            <p>Downwind Run<br>Distance: 6.8 km    <br>Start Coordinates: 46.891427, 6.778404  | <a href="https://www.google.com/maps?q=46.89142668732807,6.778403520584107" target="_blank">See on Google Maps</a>
+    <br>End Coordinates: 46.849497, 6.721879  | <a href="https://www.google.com/maps?q=46.84949747819203,6.721878647804261" target="_blank">See on Google Maps</a>
+    <br><a href="#" onclick="downloadGPX(); return false;">
+    Download GPX Track
+</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -62,19 +66,17 @@
         <h3>Description</h3>
         <div>•</div>
         <div class="info-meta">
-            <span class="info-date">Juli 29, 2025</span>
+            <span class="info-date">Oktober 29, 2025</span>
             <span class="info-author">by 
-                <a href="https://github.com/zdavatz/pumpspots/blob/main/pumpspots.csv" target="_blank" rel="noopener">
-    zdavatz
-</a>
+                Supfoil.vh
             </span>
         </div>
     </div>
     <div class="info-content">
-        Spotfinder: zdavatz. Height to water: About 40cm over the water. Good for Goofy and Regular, very popular Images of spot: <a href="https://www.instagram.com/p/CxBkhkDq1QT/" target="_blank" rel="noopener">https://www.instagram.com/p/CxBkhkDq1QT/</a>
+        Great beginner run in NE (Bise) conditions 
     </div>
     <div class="info-actions">
-        <div class="vote-btn" data-info-id="silvaplana-camping-dockstart-dock-1c9123" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+        <div class="vote-btn" data-info-id="saint-aubin-sauges-concise-mhbom4hd-9hfl9" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
             <span class="vote-icon">
                 <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
                                 <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
@@ -89,7 +91,7 @@
             <div class="add-info-section" style="display: none;">
                 <h2>Add Information</h2>
                 <form id="add-info-form">
-                    <input type="hidden" name="spotId" value="silvaplana-camping-dockstart-dock-1c9123">
+                    <input type="hidden" name="spotId" value="saint-aubin-sauges-concise">
                     
                     <div class="form-group">
                         <label for="info-tag" class="required">Tag</label>
@@ -133,7 +135,7 @@
                             <div class="add-video-section" style="display: none;">
                                 <h2>Add Video</h2>
                                 <form id="add-video-form">
-                                    <input type="hidden" name="spotId" value="silvaplana-camping-dockstart-dock-1c9123">
+                                    <input type="hidden" name="spotId" value="saint-aubin-sauges-concise">
                                     
                                     <div class="form-group">
                                         <label for="video-url" class="required">Video URL (YouTube or Instagram)</label>
@@ -251,7 +253,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":46.454726,"lng":9.793014}],"pending":false,"country":"CH","infos":[{"text":"Spotfinder: zdavatz. Height to water: About 40cm over the water. Good for Goofy and Regular, very popular Images of spot: https:\/\/www.instagram.com\/p\/CxBkhkDq1QT\/","userName":"zdavatz","id":"silvaplana-camping-dockstart-dock-1c9123","tag":"description","spotId":"silvaplana-camping-dockstart-dock-1c9123","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","date":"2025-07-29T13:43:42.134653Z"}],"id":"silvaplana-camping-dockstart-dock-1c9123","kind":"pump-foil-dock","name":"Silvaplana Camping Dockstart Dock"};
+            const spotData = {"locations":[{"lat":46.89142668732807,"lng":6.778403520584107},{"lat":46.88916108101427,"lng":6.775667667388916},{"lat":46.88248835114525,"lng":6.771011352539063},{"lat":46.87380522709684,"lng":6.765174865722656},{"lat":46.86864162233212,"lng":6.762084960937501},{"lat":46.862890659620035,"lng":6.756591796875001},{"lat":46.85983887819072,"lng":6.752471923828126},{"lat":46.85831292242506,"lng":6.748352050781251},{"lat":46.855847825346586,"lng":6.744575500488282},{"lat":46.853030432970975,"lng":6.741657257080079},{"lat":46.85162168135421,"lng":6.737709045410157},{"lat":46.84927367987556,"lng":6.733074188232423},{"lat":46.84927367987556,"lng":6.729469299316407},{"lat":46.849097575626686,"lng":6.727452278137208},{"lat":46.84908290024656,"lng":6.725735664367677},{"lat":46.849288355203555,"lng":6.72391176223755},{"lat":46.84949380937467,"lng":6.722474098205567},{"lat":46.84949747819203,"lng":6.721878647804261}],"distance":6.8,"pending":false,"country":"CH","infos":[{"date":"2025-10-29T07:36:20.785Z","text":"Great beginner run in NE (Bise) conditions ","userName":"Supfoil.vh","id":"saint-aubin-sauges-concise-mhbom4hd-9hfl9","spotId":"saint-aubin-sauges-concise","tag":"description"}],"id":"saint-aubin-sauges-concise","kind":"downwind-run","name":"Saint-Aubin-Sauges → Concise"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -506,7 +508,7 @@
                   return;
                 }
                 
-                const filtered = data.filter(info => info.spotId === 'silvaplana-camping-dockstart-dock-1c9123');
+                const filtered = data.filter(info => info.spotId === 'saint-aubin-sauges-concise');
                 if (filtered.length === 0) {
                   console.log('No matching spotId entries.');
                   return;
@@ -592,7 +594,7 @@
   const res = await fetch(jsonFile);
   const spots = await res.json();
   const videoContainer = document.getElementById("videos");
-  const spotId = "silvaplana-camping-dockstart-dock-1c9123";
+  const spotId = "saint-aubin-sauges-concise";
 
   // Add masonry container style
   videoContainer.style.columnCount = "1";
