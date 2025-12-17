@@ -208,6 +208,61 @@ a:hover {
   cursor: pointer;
 }
 
+/* ===== INFO CONTAINER ===== */
+
+.info-container {
+  margin-top: 16px;
+}
+
+/* Reuse filter-header styling implicitly */
+
+/* Info content behaves like filter-options */
+.info-content {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+
+  /* Space & readability */
+  font-size: 14px;
+  line-height: 1.45;
+
+  /* Constrain height for narrow panels */
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 6px; /* room for scrollbar */
+}
+
+/* Expanded state */
+.info-content.expanded {
+  display: flex;
+}
+
+/* Optional: subtle scrollbar styling (safe & minimal) */
+.info-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.info-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.info-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Headings inside info */
+.info-content h3 {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+}
+
+/* Paragraph spacing */
+.info-content p {
+  margin: 0;
+}
+
 /* Spot Info Card */
 .spot-info-card {
   position: absolute;

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-    <title>Steg Faellanden</title>
+    <title>Isleten → Seedorf (UR)</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Steg Faellanden Pump Foil Dock Info">
+    <meta name="description" content="Isleten → Seedorf (UR) Downwind Run Info">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -43,13 +43,17 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Steg Faellanden</h1>
+            <h1 class="card-title">Isleten → Seedorf (UR)</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Pump Foil Dock<br>Coordinates: 47.361111, 8.653751 | <a href="https://www.google.com/maps?q=47.361111,8.6537514" target="_blank">See on Google Maps</a><br></p>
+            <p>Downwind Run<br>Distance: 3.3 km    <br>Start Coordinates: 46.918980, 8.597263  | <a href="https://www.google.com/maps?q=46.918980234740246,8.597263097763063" target="_blank">See on Google Maps</a>
+    <br>End Coordinates: 46.890781, 8.597864  | <a href="https://www.google.com/maps?q=46.890781475859036,8.5978639125824" target="_blank">See on Google Maps</a>
+    <br><a href="#" onclick="downloadGPX(); return false;">
+    Download GPX Track
+</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -62,19 +66,19 @@
         <h3>Description</h3>
         <div>•</div>
         <div class="info-meta">
-            <span class="info-date">Juli 29, 2025</span>
+            <span class="info-date">Dezember 17, 2025</span>
             <span class="info-author">by 
-                <a href="https://github.com/zdavatz/pumpspots/blob/main/pumpspots.csv" target="_blank" rel="noopener">
-    aloulier
+                <a href="https://nilsmango.ch" target="_blank" rel="noopener">
+    nilsmango
 </a>
             </span>
         </div>
     </div>
     <div class="info-content">
-        Spotfinder: aloulier. Height to water: Steg sieht gut aus. Alle Starts möglich, einige Wellen von den Schiffen Images of spot: <a href="https://maps.app.goo.gl/RWbpJ8o3opRZx7xK7?g_st=aw" target="_blank" rel="noopener">https://maps.app.goo.gl/RWbpJ8o3opRZx7xK7?g_st=aw</a>
+        This is a run that is actually not bad if there is weak Fön, meaning it's Fön Bise from the north. There is a bus back to the start, but only once an hour (I think), so the best way to foil here is Parawing Up-, and Downwinder. Don't go all the way down, as the wind stops just at Bolzbach, most of the time.<br>Tips: Use a foil of around 1300 for this downwind foil run + Bise will be freaking cold :D
     </div>
     <div class="info-actions">
-        <div class="vote-btn" data-info-id="steg-faellanden-a7a293" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+        <div class="vote-btn" data-info-id="isleten-seedorf-ur-mj9srmfd-c2foh" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
             <span class="vote-icon">
                 <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
                                 <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
@@ -89,7 +93,7 @@
             <div class="add-info-section" style="display: none;">
                 <h2>Add Information</h2>
                 <form id="add-info-form">
-                    <input type="hidden" name="spotId" value="steg-faellanden-a7a293">
+                    <input type="hidden" name="spotId" value="isleten-seedorf-ur">
                     
                     <div class="form-group">
                         <label for="info-tag" class="required">Tag</label>
@@ -133,7 +137,7 @@
                             <div class="add-video-section" style="display: none;">
                                 <h2>Add Video</h2>
                                 <form id="add-video-form">
-                                    <input type="hidden" name="spotId" value="steg-faellanden-a7a293">
+                                    <input type="hidden" name="spotId" value="isleten-seedorf-ur">
                                     
                                     <div class="form-group">
                                         <label for="video-url" class="required">Video URL (YouTube or Instagram)</label>
@@ -251,7 +255,7 @@
             }
             
             // Get spot data
-            const spotData = {"kind":"pump-foil-dock","pending":false,"infos":[{"tag":"description","id":"steg-faellanden-a7a293","date":"2025-07-29T13:43:42.135913Z","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","spotId":"steg-faellanden-a7a293","text":"Spotfinder: aloulier. Height to water: Steg sieht gut aus. Alle Starts möglich, einige Wellen von den Schiffen Images of spot: https:\/\/maps.app.goo.gl\/RWbpJ8o3opRZx7xK7?g_st=aw","userName":"aloulier"}],"name":"Steg Faellanden","id":"steg-faellanden-a7a293","country":"CH","locations":[{"lng":8.6537514,"lat":47.361111}]};
+            const spotData = {"kind":"downwind-run","pending":false,"infos":[{"spotId":"isleten-seedorf-ur","id":"isleten-seedorf-ur-mj9srmfd-c2foh","tag":"description","userUrl":"https:\/\/nilsmango.ch","text":"This is a run that is actually not bad if there is weak Fön, meaning it's Fön Bise from the north. There is a bus back to the start, but only once an hour (I think), so the best way to foil here is Parawing Up-, and Downwinder. Don't go all the way down, as the wind stops just at Bolzbach, most of the time.\nTips: Use a foil of around 1300 for this downwind foil run + Bise will be freaking cold :D","date":"2025-12-17T09:16:28.105Z","userName":"nilsmango"}],"name":"Isleten → Seedorf (UR)","id":"isleten-seedorf-ur","distance":3.3,"country":"CH","locations":[{"lng":8.597263097763063,"lat":46.918980234740246},{"lng":8.598915338516237,"lat":46.91876771835106},{"lng":8.599977493286135,"lat":46.916759763276296},{"lng":8.600213527679445,"lat":46.912223266591795},{"lng":8.600513935089113,"lat":46.908236109156235},{"lng":8.600621223449709,"lat":46.902753283372796},{"lng":8.60010623931885,"lat":46.8988827157726},{"lng":8.599548339843752,"lat":46.895393100934456},{"lng":8.5978639125824,"lat":46.890781475859036}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -506,7 +510,7 @@
                   return;
                 }
                 
-                const filtered = data.filter(info => info.spotId === 'steg-faellanden-a7a293');
+                const filtered = data.filter(info => info.spotId === 'isleten-seedorf-ur');
                 if (filtered.length === 0) {
                   console.log('No matching spotId entries.');
                   return;
@@ -592,7 +596,7 @@
   const res = await fetch(jsonFile);
   const spots = await res.json();
   const videoContainer = document.getElementById("videos");
-  const spotId = "steg-faellanden-a7a293";
+  const spotId = "isleten-seedorf-ur";
 
   // Add masonry container style
   videoContainer.style.columnCount = "1";

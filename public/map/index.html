@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-    <title>7III foildata map</title>
-    <meta name="description" content="The foiling map of the world.">
+    <title>Foiling map of the world – downwind runs, wing & parawing spots</title>
+    <meta name="description" content="Interactive foiling map with downwind foiling runs, wing foil spots, parawing spots, wake thief spots, and water sports locations worldwide.">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favi/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favi/favicon-32x32.png">
@@ -107,6 +107,32 @@
                     <input type="checkbox" name="spot-type" value="pending" checked>
                     Show Pending
                 </label>
+            </div>
+            
+        </div>
+        
+        <div class="info-container">
+            <div class="filter-header" id="info-header">
+                <h3>About this map</h3>
+                <svg class="chevron info-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        
+            <div class="info-content" id="info-content">
+                <h3>Foiling map with downwind runs and spots worldwide</h3>
+        
+                <p>
+                The foildata foiling map is an interactive map of foiling spots around the world.
+                Find downwind foiling runs, wing foil spots, parawing spots, wake thief spots,
+                pump foil docks, schools, and rental stations.
+                </p>
+        
+                <p>
+                Each spot can include coordinates, routes, GPX downloads, conditions, videos,
+                and community notes to help foilers plan sessions and trips.
+                </p>
             </div>
         </div>
     </div>
@@ -239,6 +265,24 @@
         const filterHeader = document.getElementById('filter-header');
         const filterOptions = document.getElementById('filter-options');
         const chevron = document.querySelector('.chevron');
+        
+        // ===== INFO TOGGLE (same pattern as filter) =====
+        const infoHeader = document.getElementById('info-header');
+        const infoContent = document.getElementById('info-content');
+        const infoChevron = infoHeader?.querySelector('.chevron');
+        
+        // Start collapsed
+        if (infoContent && infoChevron) {
+            infoContent.classList.remove('expanded');
+            infoChevron.classList.add('collapsed');
+        }
+        
+        if (infoHeader && infoContent && infoChevron) {
+            infoHeader.addEventListener('click', function () {
+                infoContent.classList.toggle('expanded');
+                infoChevron.classList.toggle('collapsed');
+            });
+        }
         
         // Check if we're on mobile and collapse the filter by default only on mobile
         function checkMobile() {
