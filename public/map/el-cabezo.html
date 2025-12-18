@@ -34,6 +34,7 @@
         <ul class="nav-list">
             <li class="nav-item"><a href="/foildata/about.html">about</a></li>
 <li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
+<li class="nav-item"><a href="/foildata/map/spots.html">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
 
@@ -249,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lng":-16.531140804290775,"lat":28.049740805382296}],"name":"El Cabezo","id":"el-cabezo","country":"ES","kind":"wave-wind-spot","videos":[{"date":"2025-12-01T14:46:41.711Z","url":"https:\/\/www.instagram.com\/p\/DLMc8qIoxSt\/","kind":"Insta"}],"infos":[{"userName":"nilsmango","tag":"description","text":"Cool wave spot. Don't go too far to the windsurfers.","date":"2025-12-01T14:46:41.711Z","id":"el-cabezo-min9io1b-ahj9r","spotId":"el-cabezo"}],"pending":false};
+            const spotData = {"kind":"wave-wind-spot","country":"ES","infos":[{"tag":"description","userName":"nilsmango","id":"el-cabezo-min9io1b-ahj9r","spotId":"el-cabezo","text":"Cool wave spot. Don't go too far to the windsurfers.","date":"2025-12-01T14:46:41.711Z"}],"locations":[{"lng":-16.531140804290775,"lat":28.049740805382296}],"pending":false,"videos":[{"url":"https:\/\/www.instagram.com\/p\/DLMc8qIoxSt\/","kind":"Insta","date":"2025-12-01T14:46:41.711Z"}],"id":"el-cabezo","name":"El Cabezo"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

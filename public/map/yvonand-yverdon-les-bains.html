@@ -34,6 +34,7 @@
         <ul class="nav-list">
             <li class="nav-item"><a href="/foildata/about.html">about</a></li>
 <li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
+<li class="nav-item"><a href="/foildata/map/spots.html">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
 
@@ -253,7 +254,7 @@
             }
             
             // Get spot data
-            const spotData = {"distance":7.3,"name":"Yvonand → Yverdon-les-Bains","id":"yvonand-yverdon-les-bains","country":"CH","locations":[{"lng":6.726980209350587,"lat":46.80740333108803},{"lng":6.724877357482911,"lat":46.8089013603689},{"lng":6.721615791320802,"lat":46.8100468840216},{"lng":6.714277267456056,"lat":46.8094594390422},{"lng":6.700887680053712,"lat":46.80687460491035},{"lng":6.6811466217041025,"lat":46.80152830384885},{"lng":6.6544532775878915,"lat":46.79324342530679},{"lng":6.6460150480270395,"lat":46.790103211145336},{"lng":6.644958257675172,"lat":46.78969552078176},{"lng":6.6404950618743905,"lat":46.787286044407715},{"lng":6.640157103538513,"lat":46.786977506106574}],"kind":"downwind-run","infos":[{"userName":"Rawham","text":"Fun Run :D","date":"2025-04-24T13:56:14.805Z","id":"yvonand-yverdon-les-bains-m9vfej4l-n0yky","votes":1,"tag":"description","spotId":"yvonand-yverdon-les-bains"}],"pending":false};
+            const spotData = {"kind":"downwind-run","country":"CH","infos":[{"userName":"Rawham","tag":"description","text":"Fun Run :D","id":"yvonand-yverdon-les-bains-m9vfej4l-n0yky","spotId":"yvonand-yverdon-les-bains","votes":1,"date":"2025-04-24T13:56:14.805Z"}],"distance":7.3,"locations":[{"lat":46.80740333108803,"lng":6.726980209350587},{"lat":46.8089013603689,"lng":6.724877357482911},{"lat":46.8100468840216,"lng":6.721615791320802},{"lat":46.8094594390422,"lng":6.714277267456056},{"lat":46.80687460491035,"lng":6.700887680053712},{"lat":46.80152830384885,"lng":6.6811466217041025},{"lat":46.79324342530679,"lng":6.6544532775878915},{"lat":46.790103211145336,"lng":6.6460150480270395},{"lat":46.78969552078176,"lng":6.644958257675172},{"lat":46.787286044407715,"lng":6.6404950618743905},{"lat":46.786977506106574,"lng":6.640157103538513}],"pending":false,"id":"yvonand-yverdon-les-bains","name":"Yvonand → Yverdon-les-Bains"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

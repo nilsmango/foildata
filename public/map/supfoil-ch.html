@@ -34,6 +34,7 @@
         <ul class="nav-list">
             <li class="nav-item"><a href="/foildata/about.html">about</a></li>
 <li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
+<li class="nav-item"><a href="/foildata/map/spots.html">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
 
@@ -251,7 +252,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lng":6.937866210937501,"lat":46.95963595861957}],"name":"SUPFOIL.CH","id":"supfoil-ch","country":"CH","kind":"school","videos":[{"date":"2025-04-24T09:27:09.156Z","url":"https:\/\/youtube.com\/shorts\/AZUjX3CPp9I?si=2DPgVsbQ2pDmK2D3","kind":"YouTube"}],"infos":[{"date":"2025-04-24T09:27:09.156Z","id":"supfoil-ch-m9v5sh2c-bwpth","votes":1,"spotId":"supfoil-ch","userName":"SUPFOIL.CH ","userUrl":"https:\/\/supfoil.ch\/","text":"Learn to SUP-Foil Downwind on one of the best spots in Europe.\nhttps:\/\/supfoil.ch\/","tag":"description"}],"pending":false};
+            const spotData = {"kind":"school","country":"CH","infos":[{"votes":1,"userName":"SUPFOIL.CH ","userUrl":"https:\/\/supfoil.ch\/","spotId":"supfoil-ch","text":"Learn to SUP-Foil Downwind on one of the best spots in Europe.\nhttps:\/\/supfoil.ch\/","tag":"description","id":"supfoil-ch-m9v5sh2c-bwpth","date":"2025-04-24T09:27:09.156Z"}],"locations":[{"lat":46.95963595861957,"lng":6.937866210937501}],"pending":false,"videos":[{"kind":"YouTube","date":"2025-04-24T09:27:09.156Z","url":"https:\/\/youtube.com\/shorts\/AZUjX3CPp9I?si=2DPgVsbQ2pDmK2D3"}],"id":"supfoil-ch","name":"SUPFOIL.CH"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

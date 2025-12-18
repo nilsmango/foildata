@@ -34,6 +34,7 @@
         <ul class="nav-list">
             <li class="nav-item"><a href="/foildata/about.html">about</a></li>
 <li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
+<li class="nav-item"><a href="/foildata/map/spots.html">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
 
@@ -249,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"76th Street","id":"76th-street","locations":[{"lng":-80.11916041374207,"lat":25.86139580646072}],"country":"US","kind":"wave-wind-spot","infos":[{"spotId":"76th-street","date":"2025-04-30T12:01:03.136Z","text":"Dedicated area to launch kites and wings on south beach. Best in any wind with some east. Can have a large shore-break in strong east winds. ","tag":"description","id":"76th-street-ma3vxi1s-go38r","userName":"rick_neeser"}],"pending":false,"state":"FL"};
+            const spotData = {"kind":"wave-wind-spot","country":"US","infos":[{"text":"Dedicated area to launch kites and wings on south beach. Best in any wind with some east. Can have a large shore-break in strong east winds. ","date":"2025-04-30T12:01:03.136Z","userName":"rick_neeser","spotId":"76th-street","id":"76th-street-ma3vxi1s-go38r","tag":"description"}],"state":"FL","locations":[{"lat":25.86139580646072,"lng":-80.11916041374207}],"pending":false,"id":"76th-street","name":"76th Street"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

@@ -34,6 +34,7 @@
         <ul class="nav-list">
             <li class="nav-item"><a href="/foildata/about.html">about</a></li>
 <li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
+<li class="nav-item"><a href="/foildata/map/spots.html">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
 
@@ -249,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Corners ","id":"corners","locations":[{"lng":-80.06657838821413,"lat":26.923045652573776}],"country":"US","kind":"wave-wind-spot","infos":[{"spotId":"corners","date":"2025-04-30T12:24:08.710Z","text":"Great sandbar for prone, also good area to launch kites and wing from. Works in all east wind directions shore-break is factor in strong east winds. ","tag":"description","id":"corners-ma3wr75y-mvbdl","userName":"rick_neeser"}],"pending":false,"state":"FL"};
+            const spotData = {"kind":"wave-wind-spot","country":"US","infos":[{"text":"Great sandbar for prone, also good area to launch kites and wing from. Works in all east wind directions shore-break is factor in strong east winds. ","date":"2025-04-30T12:24:08.710Z","userName":"rick_neeser","spotId":"corners","id":"corners-ma3wr75y-mvbdl","tag":"description"}],"state":"FL","locations":[{"lat":26.923045652573776,"lng":-80.06657838821413}],"pending":false,"id":"corners","name":"Corners "};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

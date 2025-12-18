@@ -34,6 +34,7 @@
         <ul class="nav-list">
             <li class="nav-item"><a href="/foildata/about.html">about</a></li>
 <li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
+<li class="nav-item"><a href="/foildata/map/spots.html">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
 
@@ -251,7 +252,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Blackwater Sound","id":"blackwater-sound","locations":[{"lng":-80.40266990661623,"lat":25.159502295476408}],"country":"US","kind":"wind-spot","infos":[{"userName":"Nils Mango","text":"Nice little bay wing spot if you stay at any of the motels on this side.\nGreat if you want to see Manatees.","date":"2025-04-30T12:46:18.650Z","id":"blackwater-sound-ma3xjpcq-ljlu7","userUrl":"https:\/\/nilsmango.ch","tag":"description","spotId":"blackwater-sound"}],"pending":false,"state":"FL"};
+            const spotData = {"country":"US","kind":"wind-spot","infos":[{"userName":"Nils Mango","tag":"description","userUrl":"https:\/\/nilsmango.ch","text":"Nice little bay wing spot if you stay at any of the motels on this side.\nGreat if you want to see Manatees.","id":"blackwater-sound-ma3xjpcq-ljlu7","spotId":"blackwater-sound","date":"2025-04-30T12:46:18.650Z"}],"state":"FL","locations":[{"lat":25.159502295476408,"lng":-80.40266990661623}],"pending":false,"id":"blackwater-sound","name":"Blackwater Sound"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

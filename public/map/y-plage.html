@@ -34,6 +34,7 @@
         <ul class="nav-list">
             <li class="nav-item"><a href="/foildata/about.html">about</a></li>
 <li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
+<li class="nav-item"><a href="/foildata/map/spots.html">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
 
@@ -274,7 +275,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lng":6.651577949523927,"lat":46.78583846182295}],"name":"Y-Plage ","id":"y-plage","country":"CH","kind":"school","infos":[{"userName":"Ludo T ","tag":"description","text":"Y Plage \nSchool \/ Renting \nSup \/ Wing \/ Foil ","date":"2025-04-24T15:28:37.223Z","id":"y-plage-m9vipbon-uoepx","spotId":"y-plage"},{"date":"2025-04-24T20:18:12+02:00","id":"680a80647208e","spotId":"y-plage","userName":"Nils Mango","userUrl":"","text":"Website: https:\/\/y-plage.ch\/en\/","tag":"description"}],"pending":false};
+            const spotData = {"kind":"school","country":"CH","infos":[{"id":"y-plage-m9vipbon-uoepx","userName":"Ludo T ","text":"Y Plage \nSchool \/ Renting \nSup \/ Wing \/ Foil ","spotId":"y-plage","date":"2025-04-24T15:28:37.223Z","tag":"description"},{"userName":"Nils Mango","userUrl":"","spotId":"y-plage","text":"Website: https:\/\/y-plage.ch\/en\/","tag":"description","id":"680a80647208e","date":"2025-04-24T20:18:12+02:00"}],"locations":[{"lat":46.78583846182295,"lng":6.651577949523927}],"pending":false,"id":"y-plage","name":"Y-Plage "};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

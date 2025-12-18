@@ -34,6 +34,7 @@
         <ul class="nav-list">
             <li class="nav-item"><a href="/foildata/about.html">about</a></li>
 <li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
+<li class="nav-item"><a href="/foildata/map/spots.html">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
 
@@ -249,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Jetty Juice Bar","id":"jetty-juice-bar","locations":[{"lng":-80.10522365570068,"lat":26.094843356428296}],"country":"US","kind":"wave-spot","infos":[{"spotId":"jetty-juice-bar","date":"2025-04-30T12:03:45.142Z","text":"In northeast winds the port everglades jetty cleans up the wind chops, combined with some outgoing current hood river style bumps form. This is an advanced spot with ship traffic and a challenging chip in prone. ","tag":"description","id":"jetty-juice-bar-ma3w0z1y-7cdwo","userName":"rick_neeser"}],"pending":false,"state":"FL"};
+            const spotData = {"kind":"wave-spot","country":"US","infos":[{"text":"In northeast winds the port everglades jetty cleans up the wind chops, combined with some outgoing current hood river style bumps form. This is an advanced spot with ship traffic and a challenging chip in prone. ","date":"2025-04-30T12:03:45.142Z","userName":"rick_neeser","spotId":"jetty-juice-bar","id":"jetty-juice-bar-ma3w0z1y-7cdwo","tag":"description"}],"state":"FL","locations":[{"lat":26.094843356428296,"lng":-80.10522365570068}],"pending":false,"id":"jetty-juice-bar","name":"Jetty Juice Bar"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

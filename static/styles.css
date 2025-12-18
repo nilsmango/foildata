@@ -118,7 +118,6 @@ blockquote {
 .product-header {
     display: flex;
     justify-content: space-between;
-    max-width: var(--product-image-width);
 }
 
 #edit {

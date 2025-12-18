@@ -34,6 +34,7 @@
         <ul class="nav-list">
             <li class="nav-item"><a href="/foildata/about.html">about</a></li>
 <li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
+<li class="nav-item"><a href="/foildata/map/spots.html">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
 
@@ -249,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Fort Pierce","id":"fort-pierce","locations":[{"lng":-80.2914333343506,"lat":27.469744396647588}],"country":"US","kind":"wave-wind-spot","infos":[{"spotId":"fort-pierce","date":"2025-04-30T12:28:15.804Z","text":"On its day one of the best wing spots on the east coast. Best set up in strong north wind. Launch under the protected jetty, get access to some well overhead north swell. If you cannot stay upwind be careful as the shore-break is very large only 1\/2 mile south of the jetty.","tag":"description","id":"fort-pierce-ma3wwhto-28m77","userName":"rick_neeser"}],"pending":false,"state":"FL"};
+            const spotData = {"country":"US","kind":"wave-wind-spot","infos":[{"id":"fort-pierce-ma3wwhto-28m77","userName":"rick_neeser","text":"On its day one of the best wing spots on the east coast. Best set up in strong north wind. Launch under the protected jetty, get access to some well overhead north swell. If you cannot stay upwind be careful as the shore-break is very large only 1\/2 mile south of the jetty.","spotId":"fort-pierce","date":"2025-04-30T12:28:15.804Z","tag":"description"}],"state":"FL","locations":[{"lat":27.469744396647588,"lng":-80.2914333343506}],"pending":false,"id":"fort-pierce","name":"Fort Pierce"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

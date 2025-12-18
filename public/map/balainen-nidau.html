@@ -34,6 +34,7 @@
         <ul class="nav-list">
             <li class="nav-item"><a href="/foildata/about.html">about</a></li>
 <li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
+<li class="nav-item"><a href="/foildata/map/spots.html">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
 
@@ -276,7 +277,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lng":7.2388261556625375,"lat":47.12265102256883}],"name":"Balainen, Nidau","id":"balainen-nidau","country":"CH","kind":"wake-thief-spot","videos":[{"date":"2025-04-24T08:10:09.577Z","url":"https:\/\/youtube.com\/shorts\/_P-h36Wc0Y4","kind":"YouTube"},{"date":"2025-04-24T20:43:22+02:00","url":"https:\/\/www.instagram.com\/p\/Cw0jzU6IKLg\/","kind":"Insta"}],"infos":[{"date":"2025-04-24T08:10:09.577Z","id":"balainen-nidau-m9v31gkp-y37n7","spotId":"balainen-nidau","userName":"Nils Mango","userUrl":"https:\/\/nilsmango.ch","text":"Nice dock to thief the wakes of boats!","tag":"description"},{"date":"2025-04-24T15:04:46+02:00","id":"680a36ee08ff4","votes":1,"spotId":"balainen-nidau","userName":"nilsmango","userUrl":"","text":"It's a wooden dock by the way, pretty low. There is a higher plastic dock across the river too!\nMost of the time there are also some free (and higher) boat docks nearby.","tag":"description"}],"pending":false};
+            const spotData = {"kind":"wake-thief-spot","country":"CH","infos":[{"userName":"Nils Mango","userUrl":"https:\/\/nilsmango.ch","spotId":"balainen-nidau","text":"Nice dock to thief the wakes of boats!","tag":"description","id":"balainen-nidau-m9v31gkp-y37n7","date":"2025-04-24T08:10:09.577Z"},{"votes":1,"userName":"nilsmango","userUrl":"","spotId":"balainen-nidau","text":"It's a wooden dock by the way, pretty low. There is a higher plastic dock across the river too!\nMost of the time there are also some free (and higher) boat docks nearby.","tag":"description","id":"680a36ee08ff4","date":"2025-04-24T15:04:46+02:00"}],"locations":[{"lat":47.12265102256883,"lng":7.2388261556625375}],"pending":false,"videos":[{"kind":"YouTube","date":"2025-04-24T08:10:09.577Z","url":"https:\/\/youtube.com\/shorts\/_P-h36Wc0Y4"},{"kind":"Insta","date":"2025-04-24T20:43:22+02:00","url":"https:\/\/www.instagram.com\/p\/Cw0jzU6IKLg\/"}],"id":"balainen-nidau","name":"Balainen, Nidau"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

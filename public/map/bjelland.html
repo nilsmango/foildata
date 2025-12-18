@@ -34,6 +34,7 @@
         <ul class="nav-list">
             <li class="nav-item"><a href="/foildata/about.html">about</a></li>
 <li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
+<li class="nav-item"><a href="/foildata/map/spots.html">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
 
@@ -280,7 +281,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lng":8.890342712402346,"lat":58.455003227675824}],"name":"Bjelland","id":"bjelland","country":"NO","kind":"wind-spot","videos":[{"date":"2025-09-09T22:29:06.209Z","url":"https:\/\/youtu.be\/eEkklPNxXzc?feature=shared","kind":"YouTube"},{"date":"2025-09-09T22:29:06.209Z","url":"https:\/\/youtu.be\/eEkklPNxXzc?feature=shared","kind":"YouTube"},{"date":"2025-09-09T22:31:05+00:00","url":"https:\/\/youtu.be\/jAD_Em3l0VI?feature=shared","kind":"YouTube"}],"infos":[{"date":"2025-09-09T22:29:06.209Z","id":"bjelland-mfd4hmht-2ejvt","spotId":"bjelland","userName":"South Coast Sessions","userUrl":"https:\/\/youtube.com\/@south_coast_sessions?feature=shared","text":"World in ENE, NE, SSW and SW","tag":"wind-direction"},{"date":"2025-09-09T22:34:40+00:00","id":"68c0ab80143ce","spotId":"bjelland","userName":"South Coast Sessions","userUrl":"https:\/\/youtube.com\/@south_coast_sessions?feature=shared","text":"This is maybe the best spot for downwinding in the Arendal region in both NE and SW wind directions because it is exposed and there are no islands blocking the swell here. A shallow reef maybe 500m offshore provides great bumps. Not yet tested on foil but can confirm from windsurfing here many times .","tag":"conditions"}],"pending":false};
+            const spotData = {"country":"NO","kind":"wind-spot","infos":[{"userName":"South Coast Sessions","userUrl":"https:\/\/youtube.com\/@south_coast_sessions?feature=shared","spotId":"bjelland","text":"World in ENE, NE, SSW and SW","tag":"wind-direction","id":"bjelland-mfd4hmht-2ejvt","date":"2025-09-09T22:29:06.209Z"},{"userName":"South Coast Sessions","userUrl":"https:\/\/youtube.com\/@south_coast_sessions?feature=shared","spotId":"bjelland","text":"This is maybe the best spot for downwinding in the Arendal region in both NE and SW wind directions because it is exposed and there are no islands blocking the swell here. A shallow reef maybe 500m offshore provides great bumps. Not yet tested on foil but can confirm from windsurfing here many times .","tag":"conditions","id":"68c0ab80143ce","date":"2025-09-09T22:34:40+00:00"}],"locations":[{"lng":8.890342712402346,"lat":58.455003227675824}],"pending":false,"videos":[{"date":"2025-09-09T22:29:06.209Z","kind":"YouTube","url":"https:\/\/youtu.be\/eEkklPNxXzc?feature=shared"},{"date":"2025-09-09T22:29:06.209Z","kind":"YouTube","url":"https:\/\/youtu.be\/eEkklPNxXzc?feature=shared"},{"date":"2025-09-09T22:31:05+00:00","kind":"YouTube","url":"https:\/\/youtu.be\/jAD_Em3l0VI?feature=shared"}],"id":"bjelland","name":"Bjelland"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
