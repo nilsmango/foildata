@@ -135,7 +135,9 @@ function formatTextWithLinks($text) {
                 <ul class="nav-list">
                     <li class="nav-item"><a href="/foildata/about.html">about</a></li>
                     <li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
+                    <li class="nav-item"><a href="/foildata/spots.html">spots</a></li>
                     <li class="nav-item"><a href="/foildata/map">map</a></li>
+                    <li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
                 </ul>
             </div>
         </header>
