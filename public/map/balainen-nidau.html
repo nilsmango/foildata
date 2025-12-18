@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <title>Balainen, Nidau</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Balainen, Nidau Wake Thief Spot Info">
+    <meta name="description" content="Wake Thief Spot Balainen, Nidau. Foiling spot with access information, conditions, local contact, videos.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -43,7 +43,7 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Balainen, Nidau</h1>
+            <h1 class="card-title">Balainen, Nidau Wake Thief Spot</h1>
             </div>
           </div>
           <div class="card-content">
@@ -276,7 +276,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"name":"Balainen, Nidau","id":"balainen-nidau","country":"CH","kind":"wake-thief-spot","infos":[{"userName":"Nils Mango","text":"Nice dock to thief the wakes of boats!","date":"2025-04-24T08:10:09.577Z","tag":"description","id":"balainen-nidau-m9v31gkp-y37n7","spotId":"balainen-nidau","userUrl":"https:\/\/nilsmango.ch"},{"userName":"nilsmango","text":"It's a wooden dock by the way, pretty low. There is a higher plastic dock across the river too!\nMost of the time there are also some free (and higher) boat docks nearby.","date":"2025-04-24T15:04:46+02:00","tag":"description","id":"680a36ee08ff4","votes":1,"spotId":"balainen-nidau","userUrl":""}],"videos":[{"date":"2025-04-24T08:10:09.577Z","url":"https:\/\/youtube.com\/shorts\/_P-h36Wc0Y4","kind":"YouTube"},{"date":"2025-04-24T20:43:22+02:00","url":"https:\/\/www.instagram.com\/p\/Cw0jzU6IKLg\/","kind":"Insta"}],"locations":[{"lng":7.2388261556625375,"lat":47.12265102256883}]};
+            const spotData = {"locations":[{"lng":7.2388261556625375,"lat":47.12265102256883}],"name":"Balainen, Nidau","id":"balainen-nidau","country":"CH","kind":"wake-thief-spot","videos":[{"date":"2025-04-24T08:10:09.577Z","url":"https:\/\/youtube.com\/shorts\/_P-h36Wc0Y4","kind":"YouTube"},{"date":"2025-04-24T20:43:22+02:00","url":"https:\/\/www.instagram.com\/p\/Cw0jzU6IKLg\/","kind":"Insta"}],"infos":[{"date":"2025-04-24T08:10:09.577Z","id":"balainen-nidau-m9v31gkp-y37n7","spotId":"balainen-nidau","userName":"Nils Mango","userUrl":"https:\/\/nilsmango.ch","text":"Nice dock to thief the wakes of boats!","tag":"description"},{"date":"2025-04-24T15:04:46+02:00","id":"680a36ee08ff4","votes":1,"spotId":"balainen-nidau","userName":"nilsmango","userUrl":"","text":"It's a wooden dock by the way, pretty low. There is a higher plastic dock across the river too!\nMost of the time there are also some free (and higher) boat docks nearby.","tag":"description"}],"pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

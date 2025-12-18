@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <title>Holland Park</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Holland Park Pump Foil Dock Info">
+    <meta name="description" content="Pump Foiling Spot Holland Park. Foiling spot with access information, conditions, local contact, videos.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -43,13 +43,13 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Holland Park</h1>
+            <h1 class="card-title">Holland Park Pump Foiling Spot</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Pump Foil Dock<br>Coordinates: 26.020286, -80.119681 | <a href="https://www.google.com/maps?q=26.02028641982586,-80.11968076229097" target="_blank">See on Google Maps</a><br></p>
+            <p>Pump Foiling Spot<br>Coordinates: 26.020286, -80.119681 | <a href="https://www.google.com/maps?q=26.02028641982586,-80.11968076229097" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -249,7 +249,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"name":"Holland Park","id":"holland-park","state":"FL","kind":"pump-foil-dock","country":"US","infos":[{"userName":"rick_neeser","text":"Great pump foil dock. Floating with a long run up. ","date":"2025-04-30T12:13:20.683Z","id":"holland-park-ma3wdb57-at7mj","spotId":"holland-park","tag":"description"}],"locations":[{"lng":-80.11968076229097,"lat":26.02028641982586}]};
+            const spotData = {"name":"Holland Park","id":"holland-park","locations":[{"lng":-80.11968076229097,"lat":26.02028641982586}],"country":"US","kind":"pump-foil-dock","infos":[{"spotId":"holland-park","date":"2025-04-30T12:13:20.683Z","text":"Great pump foil dock. Floating with a long run up. ","tag":"description","id":"holland-park-ma3wdb57-at7mj","userName":"rick_neeser"}],"pending":false,"state":"FL"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

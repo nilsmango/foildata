@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <title>Barkenhafen Dock</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Barkenhafen Dock Pump Foil Dock Info">
+    <meta name="description" content="Pump Foiling Spot Barkenhafen Dock. Foiling spot with access information, conditions, local contact, videos.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -43,13 +43,13 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Barkenhafen Dock</h1>
+            <h1 class="card-title">Barkenhafen Dock Pump Foiling Spot</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Pump Foil Dock<br>Coordinates: 47.127958, 7.233352 | <a href="https://www.google.com/maps?q=47.127958,7.233352" target="_blank">See on Google Maps</a><br></p>
+            <p>Pump Foiling Spot<br>Coordinates: 47.127958, 7.233352 | <a href="https://www.google.com/maps?q=47.127958,7.233352" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -251,7 +251,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"name":"Barkenhafen Dock","id":"barkenhafen-dock-510b3a","country":"CH","kind":"pump-foil-dock","infos":[{"userName":"zooosky","text":"Spotfinder: zooosky. Height to water: Pumpfoil ramp 50 cm over water mounted to the dock. The spot is near the restaurant Le Peniche in Biel. Images of spot: https:\/\/images2.imgbox.com\/20\/ab\/ut4CFllz_o.jpg","date":"2025-07-29T13:43:42.134469Z","tag":"description","id":"barkenhafen-dock-510b3a","spotId":"barkenhafen-dock-510b3a","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv"}],"locations":[{"lat":47.127958,"lng":7.233352}]};
+            const spotData = {"locations":[{"lng":7.233352,"lat":47.127958}],"name":"Barkenhafen Dock","id":"barkenhafen-dock-510b3a","country":"CH","kind":"pump-foil-dock","infos":[{"date":"2025-07-29T13:43:42.134469Z","id":"barkenhafen-dock-510b3a","spotId":"barkenhafen-dock-510b3a","userName":"zooosky","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","text":"Spotfinder: zooosky. Height to water: Pumpfoil ramp 50 cm over water mounted to the dock. The spot is near the restaurant Le Peniche in Biel. Images of spot: https:\/\/images2.imgbox.com\/20\/ab\/ut4CFllz_o.jpg","tag":"description"}],"pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

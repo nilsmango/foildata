@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <title>L'Abbaye → Le Pont</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="L'Abbaye → Le Pont Downwind Run Info">
+    <meta name="description" content="Downwind Foiling Run L'Abbaye → Le Pont. Foiling spot with access information, conditions, local contact, videos, distance, start and end coordinates, and GPX Track Download.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -43,13 +43,13 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">L'Abbaye → Le Pont</h1>
+            <h1 class="card-title">L'Abbaye → Le Pont Downwind Foiling Run</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Downwind Run<br>Distance: 2.5 km    <br>Start Coordinates: 46.648744, 6.316366  | <a href="https://www.google.com/maps?q=46.64874385638821,6.316366195678712" target="_blank">See on Google Maps</a>
+            <p>Downwind Foiling Run<br>Distance: 2.5 km    <br>Start Coordinates: 46.648744, 6.316366  | <a href="https://www.google.com/maps?q=46.64874385638821,6.316366195678712" target="_blank">See on Google Maps</a>
     <br>End Coordinates: 46.666873, 6.329300  | <a href="https://www.google.com/maps?q=46.66687348356156,6.329299807548524" target="_blank">See on Google Maps</a>
     <br><a href="#" onclick="downloadGPX(); return false;">
     Download GPX Track
@@ -255,7 +255,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"name":"L'Abbaye → Le Pont","id":"l-abbaye-le-pont","distance":2.5,"kind":"downwind-run","country":"CH","infos":[{"spotId":"l-abbaye-le-pont","date":"2025-12-01T14:08:33.502Z","userName":"nilsmango","id":"l-abbaye-le-pont-min85mfy-npofq","tag":"description","text":"Lac de Joux is something else. Ireland on one side, Canada or Sweden on the other.\nWith strong wind possible to downwind with a big foil.\nPerfect for up-down winder from L'Abbaye. Nice parking behind the hotel, great place to get out.","userUrl":"https:\/\/nilsmango.ch"}],"locations":[{"lng":6.316366195678712,"lat":46.64874385638821},{"lng":6.3154006004333505,"lat":46.650194744847134},{"lng":6.314381361007691,"lat":46.65184443875308},{"lng":6.314263343811035,"lat":46.65469446100001},{"lng":6.314885616302491,"lat":46.655430876438146},{"lng":6.3182759284973145,"lat":46.65762533497403},{"lng":6.321065425872803,"lat":46.65968716117454},{"lng":6.323747634887695,"lat":46.662544133237795},{"lng":6.325206756591798,"lat":46.664016740284204},{"lng":6.329299807548524,"lat":46.66687348356156}],"videos":[{"date":"2025-12-01T14:08:33.502Z","url":"https:\/\/www.instagram.com\/reel\/DRO8nDPjZvz","kind":"Insta"}]};
+            const spotData = {"distance":2.5,"name":"L'Abbaye → Le Pont","id":"l-abbaye-le-pont","country":"CH","locations":[{"lng":6.316366195678712,"lat":46.64874385638821},{"lng":6.3154006004333505,"lat":46.650194744847134},{"lng":6.314381361007691,"lat":46.65184443875308},{"lng":6.314263343811035,"lat":46.65469446100001},{"lng":6.314885616302491,"lat":46.655430876438146},{"lng":6.3182759284973145,"lat":46.65762533497403},{"lng":6.321065425872803,"lat":46.65968716117454},{"lng":6.323747634887695,"lat":46.662544133237795},{"lng":6.325206756591798,"lat":46.664016740284204},{"lng":6.329299807548524,"lat":46.66687348356156}],"kind":"downwind-run","videos":[{"date":"2025-12-01T14:08:33.502Z","url":"https:\/\/www.instagram.com\/reel\/DRO8nDPjZvz","kind":"Insta"}],"infos":[{"userName":"nilsmango","text":"Lac de Joux is something else. Ireland on one side, Canada or Sweden on the other.\nWith strong wind possible to downwind with a big foil.\nPerfect for up-down winder from L'Abbaye. Nice parking behind the hotel, great place to get out.","date":"2025-12-01T14:08:33.502Z","id":"l-abbaye-le-pont-min85mfy-npofq","userUrl":"https:\/\/nilsmango.ch","tag":"description","spotId":"l-abbaye-le-pont"}],"pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

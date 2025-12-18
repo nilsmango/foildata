@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <title>Steg Faellanden</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Steg Faellanden Pump Foil Dock Info">
+    <meta name="description" content="Pump Foiling Spot Steg Faellanden. Foiling spot with access information, conditions, local contact, videos.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -43,13 +43,13 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Steg Faellanden</h1>
+            <h1 class="card-title">Steg Faellanden Pump Foiling Spot</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Pump Foil Dock<br>Coordinates: 47.361111, 8.653751 | <a href="https://www.google.com/maps?q=47.361111,8.6537514" target="_blank">See on Google Maps</a><br></p>
+            <p>Pump Foiling Spot<br>Coordinates: 47.361111, 8.653751 | <a href="https://www.google.com/maps?q=47.361111,8.6537514" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -251,7 +251,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"name":"Steg Faellanden","id":"steg-faellanden-a7a293","country":"CH","kind":"pump-foil-dock","infos":[{"userName":"aloulier","text":"Spotfinder: aloulier. Height to water: Steg sieht gut aus. Alle Starts möglich, einige Wellen von den Schiffen Images of spot: https:\/\/maps.app.goo.gl\/RWbpJ8o3opRZx7xK7?g_st=aw","date":"2025-07-29T13:43:42.135913Z","tag":"description","id":"steg-faellanden-a7a293","spotId":"steg-faellanden-a7a293","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv"}],"locations":[{"lng":8.6537514,"lat":47.361111}]};
+            const spotData = {"locations":[{"lng":8.6537514,"lat":47.361111}],"name":"Steg Faellanden","id":"steg-faellanden-a7a293","country":"CH","kind":"pump-foil-dock","infos":[{"date":"2025-07-29T13:43:42.135913Z","id":"steg-faellanden-a7a293","spotId":"steg-faellanden-a7a293","userName":"aloulier","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","text":"Spotfinder: aloulier. Height to water: Steg sieht gut aus. Alle Starts möglich, einige Wellen von den Schiffen Images of spot: https:\/\/maps.app.goo.gl\/RWbpJ8o3opRZx7xK7?g_st=aw","tag":"description"}],"pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

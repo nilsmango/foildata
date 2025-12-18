@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <title>Erlenwäldli, Ipsach</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Erlenwäldli, Ipsach Wind Spot Info">
+    <meta name="description" content="Wingfoil & Parawing Spot Erlenwäldli, Ipsach. Foiling spot with access information, conditions, local contact, videos.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -43,13 +43,13 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Erlenwäldli, Ipsach</h1>
+            <h1 class="card-title">Erlenwäldli, Ipsach Wingfoil & Parawing Spot</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wind Spot<br>Coordinates: 47.121264, 7.226660 | <a href="https://www.google.com/maps?q=47.121263959843674,7.226659655570985" target="_blank">See on Google Maps</a><br></p>
+            <p>Wingfoil & Parawing Spot<br>Coordinates: 47.121264, 7.226660 | <a href="https://www.google.com/maps?q=47.121263959843674,7.226659655570985" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -303,7 +303,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"name":"Erlenwäldli, Ipsach","id":"erlenwaeldli-ipsach","country":"CH","kind":"wind-spot","infos":[{"userName":"Nils Mango","text":"The wind spot where to cool kids are.","date":"2025-04-24T08:15:19.828Z","tag":"description","id":"erlenwaeldli-ipsach-m9v383ys-vdkm3","spotId":"erlenwaeldli-ipsach","userUrl":"https:\/\/nilsmango.ch"},{"userName":"nilsmango","text":"Webcams: https:\/\/bielersee.live\nWind Measurements: https:\/\/wsa-ipsach.meteobase.ch\/index.php\nMore Wind: https:\/\/biel-hafen.meteobase.ch\/index.php\n\n","date":"2025-04-29T12:00:37+02:00","tag":"description","id":"6810a34528b16","spotId":"erlenwaeldli-ipsach","userUrl":""},{"userName":"nilsmango","text":"Local club: https:\/\/wsci.ch\nLocal legend: https:\/\/www.instagram.com\/radiculo\/","date":"2025-04-29T12:01:36+02:00","tag":"local-contact","id":"6810a38070e47","spotId":"erlenwaeldli-ipsach","userUrl":""}],"videos":[{"date":"2025-04-24T21:10:43+02:00","url":"https:\/\/www.instagram.com\/reel\/C7CoH_foPuk\/","kind":"Insta"}],"locations":[{"lng":7.226659655570985,"lat":47.121263959843674}]};
+            const spotData = {"locations":[{"lng":7.226659655570985,"lat":47.121263959843674}],"name":"Erlenwäldli, Ipsach","id":"erlenwaeldli-ipsach","country":"CH","kind":"wind-spot","videos":[{"date":"2025-04-24T21:10:43+02:00","url":"https:\/\/www.instagram.com\/reel\/C7CoH_foPuk\/","kind":"Insta"}],"infos":[{"date":"2025-04-24T08:15:19.828Z","id":"erlenwaeldli-ipsach-m9v383ys-vdkm3","spotId":"erlenwaeldli-ipsach","userName":"Nils Mango","userUrl":"https:\/\/nilsmango.ch","text":"The wind spot where to cool kids are.","tag":"description"},{"date":"2025-04-29T12:00:37+02:00","id":"6810a34528b16","spotId":"erlenwaeldli-ipsach","userName":"nilsmango","userUrl":"","text":"Webcams: https:\/\/bielersee.live\nWind Measurements: https:\/\/wsa-ipsach.meteobase.ch\/index.php\nMore Wind: https:\/\/biel-hafen.meteobase.ch\/index.php\n\n","tag":"description"},{"date":"2025-04-29T12:01:36+02:00","id":"6810a38070e47","spotId":"erlenwaeldli-ipsach","userName":"nilsmango","userUrl":"","text":"Local club: https:\/\/wsci.ch\nLocal legend: https:\/\/www.instagram.com\/radiculo\/","tag":"local-contact"}],"pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

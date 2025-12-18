@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <title>Caños de Meca</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Caños de Meca Wave Wind Spot Info">
+    <meta name="description" content="Wave & Wind Foiling Spot Caños de Meca. Foiling spot with access information, conditions, local contact, videos.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -43,13 +43,13 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Caños de Meca</h1>
+            <h1 class="card-title">Caños de Meca Wave & Wind Foiling Spot</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wave Wind Spot<br>Coordinates: 36.186430, -6.025780 | <a href="https://www.google.com/maps?q=36.18642971651456,-6.025779788657589" target="_blank">See on Google Maps</a><br></p>
+            <p>Wave & Wind Foiling Spot<br>Coordinates: 36.186430, -6.025780 | <a href="https://www.google.com/maps?q=36.18642971651456,-6.025779788657589" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -249,7 +249,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"name":"Caños de Meca","id":"canos-de-meca","country":"ES","kind":"wave-wind-spot","infos":[{"userName":"nilsmango","text":"Cool wave spot. Lots of kiters, but also lots of waves.","date":"2025-12-01T14:49:22.288Z","id":"canos-de-meca-min9m3xs-ha0xh","spotId":"canos-de-meca","tag":"description"}],"videos":[{"date":"2025-12-01T14:49:22.288Z","url":"https:\/\/www.instagram.com\/p\/DB6-YTmIwpF\/","kind":"Insta"}],"locations":[{"lat":36.18642971651456,"lng":-6.025779788657589}]};
+            const spotData = {"locations":[{"lng":-6.025779788657589,"lat":36.18642971651456}],"name":"Caños de Meca","id":"canos-de-meca","country":"ES","kind":"wave-wind-spot","videos":[{"date":"2025-12-01T14:49:22.288Z","url":"https:\/\/www.instagram.com\/p\/DB6-YTmIwpF\/","kind":"Insta"}],"infos":[{"userName":"nilsmango","tag":"description","text":"Cool wave spot. Lots of kiters, but also lots of waves.","date":"2025-12-01T14:49:22.288Z","id":"canos-de-meca-min9m3xs-ha0xh","spotId":"canos-de-meca"}],"pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

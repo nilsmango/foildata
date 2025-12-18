@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <title>Porís de Abona → El Médano</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Porís de Abona → El Médano Downwind Run Info">
+    <meta name="description" content="Downwind Foiling Run Porís de Abona → El Médano. Foiling spot with access information, conditions, local contact, videos, distance, start and end coordinates, and GPX Track Download.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -43,13 +43,13 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Porís de Abona → El Médano</h1>
+            <h1 class="card-title">Porís de Abona → El Médano Downwind Foiling Run</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Downwind Run<br>Distance: 22.4 km    <br>Start Coordinates: 28.164354, -16.431363  | <a href="https://www.google.com/maps?q=28.16435410654023,-16.43136262893677" target="_blank">See on Google Maps</a>
+            <p>Downwind Foiling Run<br>Distance: 22.4 km    <br>Start Coordinates: 28.164354, -16.431363  | <a href="https://www.google.com/maps?q=28.16435410654023,-16.43136262893677" target="_blank">See on Google Maps</a>
     <br>End Coordinates: 28.040338, -16.542277  | <a href="https://www.google.com/maps?q=28.040338051040777,-16.54227733612061" target="_blank">See on Google Maps</a>
     <br><a href="#" onclick="downloadGPX(); return false;">
     Download GPX Track
@@ -253,7 +253,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"name":"Porís de Abona → El Médano","id":"poris-de-abona-el-medano","distance":22.4,"kind":"downwind-run","country":"ES","infos":[{"userName":"nilsmango","text":"Bigger El Médano run.\nYou have to really be far out when coming to the harbour wall, otherwise you are in the backwash, and it's brutal.","date":"2025-12-01T14:42:57.120Z","id":"poris-de-abona-el-medano-min9duqo-2tdtr","spotId":"poris-de-abona-el-medano","tag":"description"}],"locations":[{"lng":-16.43136262893677,"lat":28.16435410654023},{"lng":-16.429774761199955,"lat":28.163975765366793},{"lng":-16.424474716186527,"lat":28.161989452262134},{"lng":-16.421728134155277,"lat":28.160589552309293},{"lng":-16.42138481140137,"lat":28.148746422879817},{"lng":-16.42267227172852,"lat":28.14185940025912},{"lng":-16.424045562744144,"lat":28.111202995495855},{"lng":-16.42662048339844,"lat":28.09833226290091},{"lng":-16.43983840942383,"lat":28.073949349991395},{"lng":-16.455287933349613,"lat":28.054257244023297},{"lng":-16.49631500244141,"lat":28.046985400591012},{"lng":-16.53202056884766,"lat":28.039258528153397},{"lng":-16.54227733612061,"lat":28.040338051040777}]};
+            const spotData = {"distance":22.4,"name":"Porís de Abona → El Médano","id":"poris-de-abona-el-medano","country":"ES","locations":[{"lng":-16.43136262893677,"lat":28.16435410654023},{"lng":-16.429774761199955,"lat":28.163975765366793},{"lng":-16.424474716186527,"lat":28.161989452262134},{"lng":-16.421728134155277,"lat":28.160589552309293},{"lng":-16.42138481140137,"lat":28.148746422879817},{"lng":-16.42267227172852,"lat":28.14185940025912},{"lng":-16.424045562744144,"lat":28.111202995495855},{"lng":-16.42662048339844,"lat":28.09833226290091},{"lng":-16.43983840942383,"lat":28.073949349991395},{"lng":-16.455287933349613,"lat":28.054257244023297},{"lng":-16.49631500244141,"lat":28.046985400591012},{"lng":-16.53202056884766,"lat":28.039258528153397},{"lng":-16.54227733612061,"lat":28.040338051040777}],"kind":"downwind-run","infos":[{"spotId":"poris-de-abona-el-medano","date":"2025-12-01T14:42:57.120Z","text":"Bigger El Médano run.\nYou have to really be far out when coming to the harbour wall, otherwise you are in the backwash, and it's brutal.","tag":"description","id":"poris-de-abona-el-medano-min9duqo-2tdtr","userName":"nilsmango"}],"pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

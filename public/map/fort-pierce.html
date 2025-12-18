@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <title>Fort Pierce</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Fort Pierce Wave Wind Spot Info">
+    <meta name="description" content="Wave & Wind Foiling Spot Fort Pierce. Foiling spot with access information, conditions, local contact, videos.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -43,13 +43,13 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Fort Pierce</h1>
+            <h1 class="card-title">Fort Pierce Wave & Wind Foiling Spot</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wave Wind Spot<br>Coordinates: 27.469744, -80.291433 | <a href="https://www.google.com/maps?q=27.469744396647588,-80.2914333343506" target="_blank">See on Google Maps</a><br></p>
+            <p>Wave & Wind Foiling Spot<br>Coordinates: 27.469744, -80.291433 | <a href="https://www.google.com/maps?q=27.469744396647588,-80.2914333343506" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -249,7 +249,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"name":"Fort Pierce","id":"fort-pierce","state":"FL","kind":"wave-wind-spot","country":"US","infos":[{"userName":"rick_neeser","text":"On its day one of the best wing spots on the east coast. Best set up in strong north wind. Launch under the protected jetty, get access to some well overhead north swell. If you cannot stay upwind be careful as the shore-break is very large only 1\/2 mile south of the jetty.","date":"2025-04-30T12:28:15.804Z","id":"fort-pierce-ma3wwhto-28m77","spotId":"fort-pierce","tag":"description"}],"locations":[{"lng":-80.2914333343506,"lat":27.469744396647588}]};
+            const spotData = {"name":"Fort Pierce","id":"fort-pierce","locations":[{"lng":-80.2914333343506,"lat":27.469744396647588}],"country":"US","kind":"wave-wind-spot","infos":[{"spotId":"fort-pierce","date":"2025-04-30T12:28:15.804Z","text":"On its day one of the best wing spots on the east coast. Best set up in strong north wind. Launch under the protected jetty, get access to some well overhead north swell. If you cannot stay upwind be careful as the shore-break is very large only 1\/2 mile south of the jetty.","tag":"description","id":"fort-pierce-ma3wwhto-28m77","userName":"rick_neeser"}],"pending":false,"state":"FL"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

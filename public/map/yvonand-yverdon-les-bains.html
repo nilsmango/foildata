@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <title>Yvonand → Yverdon-les-Bains</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Yvonand → Yverdon-les-Bains Downwind Run Info">
+    <meta name="description" content="Downwind Foiling Run Yvonand → Yverdon-les-Bains. Foiling spot with access information, conditions, local contact, videos, distance, start and end coordinates, and GPX Track Download.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -43,13 +43,13 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Yvonand → Yverdon-les-Bains</h1>
+            <h1 class="card-title">Yvonand → Yverdon-les-Bains Downwind Foiling Run</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Downwind Run<br>Distance: 7.3 km    <br>Start Coordinates: 46.807403, 6.726980  | <a href="https://www.google.com/maps?q=46.80740333108803,6.726980209350587" target="_blank">See on Google Maps</a>
+            <p>Downwind Foiling Run<br>Distance: 7.3 km    <br>Start Coordinates: 46.807403, 6.726980  | <a href="https://www.google.com/maps?q=46.80740333108803,6.726980209350587" target="_blank">See on Google Maps</a>
     <br>End Coordinates: 46.786978, 6.640157  | <a href="https://www.google.com/maps?q=46.786977506106574,6.640157103538513" target="_blank">See on Google Maps</a>
     <br><a href="#" onclick="downloadGPX(); return false;">
     Download GPX Track
@@ -253,7 +253,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"name":"Yvonand → Yverdon-les-Bains","id":"yvonand-yverdon-les-bains","distance":7.3,"kind":"downwind-run","country":"CH","infos":[{"spotId":"yvonand-yverdon-les-bains","date":"2025-04-24T13:56:14.805Z","userName":"Rawham","id":"yvonand-yverdon-les-bains-m9vfej4l-n0yky","tag":"description","text":"Fun Run :D","votes":1}],"locations":[{"lng":6.726980209350587,"lat":46.80740333108803},{"lng":6.724877357482911,"lat":46.8089013603689},{"lng":6.721615791320802,"lat":46.8100468840216},{"lng":6.714277267456056,"lat":46.8094594390422},{"lng":6.700887680053712,"lat":46.80687460491035},{"lng":6.6811466217041025,"lat":46.80152830384885},{"lng":6.6544532775878915,"lat":46.79324342530679},{"lng":6.6460150480270395,"lat":46.790103211145336},{"lng":6.644958257675172,"lat":46.78969552078176},{"lng":6.6404950618743905,"lat":46.787286044407715},{"lng":6.640157103538513,"lat":46.786977506106574}]};
+            const spotData = {"distance":7.3,"name":"Yvonand → Yverdon-les-Bains","id":"yvonand-yverdon-les-bains","country":"CH","locations":[{"lng":6.726980209350587,"lat":46.80740333108803},{"lng":6.724877357482911,"lat":46.8089013603689},{"lng":6.721615791320802,"lat":46.8100468840216},{"lng":6.714277267456056,"lat":46.8094594390422},{"lng":6.700887680053712,"lat":46.80687460491035},{"lng":6.6811466217041025,"lat":46.80152830384885},{"lng":6.6544532775878915,"lat":46.79324342530679},{"lng":6.6460150480270395,"lat":46.790103211145336},{"lng":6.644958257675172,"lat":46.78969552078176},{"lng":6.6404950618743905,"lat":46.787286044407715},{"lng":6.640157103538513,"lat":46.786977506106574}],"kind":"downwind-run","infos":[{"userName":"Rawham","text":"Fun Run :D","date":"2025-04-24T13:56:14.805Z","id":"yvonand-yverdon-les-bains-m9vfej4l-n0yky","votes":1,"tag":"description","spotId":"yvonand-yverdon-les-bains"}],"pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

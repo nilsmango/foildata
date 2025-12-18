@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <title>Cassiopeiasteg Ecke</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Cassiopeiasteg Ecke Pump Foil Dock Info">
+    <meta name="description" content="Pump Foiling Spot Cassiopeiasteg Ecke. Foiling spot with access information, conditions, local contact, videos.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -43,13 +43,13 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Cassiopeiasteg Ecke</h1>
+            <h1 class="card-title">Cassiopeiasteg Ecke Pump Foiling Spot</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Pump Foil Dock<br>Coordinates: 47.340939, 8.538847 | <a href="https://www.google.com/maps?q=47.340939,8.538847" target="_blank">See on Google Maps</a><br></p>
+            <p>Pump Foiling Spot<br>Coordinates: 47.340939, 8.538847 | <a href="https://www.google.com/maps?q=47.340939,8.538847" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -251,7 +251,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"name":"Cassiopeiasteg Ecke","id":"cassiopeiasteg-ecke-ffd8ab","country":"CH","kind":"pump-foil-dock","infos":[{"userName":"zdavatz","text":"Spotfinder: zdavatz. Height to water: About 50 cm over the water.  Easy to climb out. Good for Goofy and Regular Images of spot: https:\/\/www.instagram.com\/reel\/CPIpCFojcuz\/","date":"2025-07-29T13:43:42.134569Z","tag":"description","id":"cassiopeiasteg-ecke-ffd8ab","spotId":"cassiopeiasteg-ecke-ffd8ab","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv"}],"locations":[{"lat":47.340939,"lng":8.538847}]};
+            const spotData = {"locations":[{"lng":8.538847,"lat":47.340939}],"name":"Cassiopeiasteg Ecke","id":"cassiopeiasteg-ecke-ffd8ab","country":"CH","kind":"pump-foil-dock","infos":[{"date":"2025-07-29T13:43:42.134569Z","id":"cassiopeiasteg-ecke-ffd8ab","spotId":"cassiopeiasteg-ecke-ffd8ab","userName":"zdavatz","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","text":"Spotfinder: zdavatz. Height to water: About 50 cm over the water.  Easy to climb out. Good for Goofy and Regular Images of spot: https:\/\/www.instagram.com\/reel\/CPIpCFojcuz\/","tag":"description"}],"pending":false};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
