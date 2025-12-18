@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <title>Pompano Beach (16th Street)</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Wave & Wind Foiling Spot Pompano Beach (16th Street). Foiling spot with access information, conditions, local contact, videos.">
+    <meta name="description" content="Wave Wingfoil & Parawing Spot Pompano Beach (16th Street). Foiling spot with access information, conditions, local contact, videos.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -44,13 +44,13 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Pompano Beach (16th Street) Wave & Wind Foiling Spot</h1>
+            <h1 class="card-title">Pompano Beach (16th Street) Wave Wingfoil & Parawing Spot</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Wave & Wind Foiling Spot<br>Coordinates: 26.252162, -80.084420 | <a href="https://www.google.com/maps?q=26.25216224802288,-80.08442044258119" target="_blank">See on Google Maps</a><br></p>
+            <p>Wave Wingfoil & Parawing Spot<br>Coordinates: 26.252162, -80.084420 | <a href="https://www.google.com/maps?q=26.25216224802288,-80.08442044258119" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -250,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lng":-80.08442044258119,"lat":26.25216224802288}],"state":"FL","infos":[{"spotId":"pompano-beach-16th-street","tag":"description","id":"pompano-beach-16th-street-ma3wjrn5-aszk3","text":"Great wingfoil and kite spot. The reef near Hillsboro inlet lessens the shorebreak. Works on any wind with east. ","date":"2025-04-30T12:18:22.001Z","userName":"rick_neeser"}],"country":"US","kind":"wave-wind-spot","id":"pompano-beach-16th-street","pending":false,"name":"Pompano Beach (16th Street)"};
+            const spotData = {"pending":false,"id":"pompano-beach-16th-street","kind":"wave-wind-spot","locations":[{"lat":26.25216224802288,"lng":-80.08442044258119}],"country":"US","state":"FL","name":"Pompano Beach (16th Street)","infos":[{"id":"pompano-beach-16th-street-ma3wjrn5-aszk3","spotId":"pompano-beach-16th-street","tag":"description","text":"Great wingfoil and kite spot. The reef near Hillsboro inlet lessens the shorebreak. Works on any wind with east. ","date":"2025-04-30T12:18:22.001Z","userName":"rick_neeser"}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
