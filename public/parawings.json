@@ -235,18 +235,28 @@
     ]
   },
   {
-    "averageRating" : 0,
+    "averageRating" : 5,
     "brandName" : "F-ONE",
+    "discontinued" : false,
+    "imageFilename" : "frigate-2-650x650.png",
     "name" : "FRIGATE",
     "reviews" : [
 
     ],
-    "reviewsCount" : 0,
+    "reviewsCount" : 1,
     "sizes" : [
       {
         "areaSqM" : 4.7,
         "doubleSkin" : false,
         "weightKg" : 0.73
+      },
+      {
+        "areaSqM" : 4,
+        "doubleSkin" : false
+      },
+      {
+        "areaSqM" : 3,
+        "doubleSkin" : false
       }
     ],
     "videos" : [
