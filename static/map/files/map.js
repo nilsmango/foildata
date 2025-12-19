@@ -6,7 +6,7 @@ const map = L.map('map', {
 
 // Add custom attribution
 L.control.attribution({
-  prefix: '<a href="/foildata/about.html">about</a> | <a href="/foildata/contact.html">contact</a> | <a href="/foildata/privacy.html">privacy policy</a> | Powered by <a href="https://leafletjs.com">Leaflet</a> | Maps &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  prefix: '<a href="/foildata/about">about</a> | <a href="/foildata/contact">contact</a> | <a href="/foildata/privacy">privacy policy</a> | Powered by <a href="https://leafletjs.com">Leaflet</a> | Maps &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
 // Add the tile layer
@@ -325,7 +325,7 @@ function showSpotInfo(spot) {
       window.location.href = `spot-detail.php?id=${spot.id}`
     } else {
       // For non-pending spots, link directly to the static page
-      window.location.href = `${spot.id}.html`
+      window.location.href = `${spot.id}`
     }
   }
 

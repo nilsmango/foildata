@@ -30,11 +30,11 @@
       
       <div class="nav">
         <ul class="nav-list">
-            <li class="nav-item"><a href="/foildata/about.html">about</a></li>
-<li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
-<li class="nav-item"><a href="/foildata/map/spots.html">spots</a></li>
+            <li class="nav-item"><a href="/foildata/about">about</a></li>
+<li class="nav-item"><a href="/foildata/parawings">parawings</a></li>
+<li class="nav-item"><a href="/foildata/map/spots">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
-<li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
+<li class="nav-item"><a href="/foildata/conditions">conditions</a></li>
 
         </ul>
       </div>
@@ -77,7 +77,7 @@
     </div>
     <div class="bottom-button">
     <button type="submit" class="main-button">Submit</button>
-    <a href="parawings.html">Back to parawings</a>
+    <a href="parawings">Back to parawings</a>
     </div>
     
 </form>
@@ -134,8 +134,8 @@
         <footer>
       <div class="footer-nav">
         <ul class="footer-nav-list">
-          <li class="footer-nav-item"><a href="/foildata/contact.html">contact</a></li>
-<li class="footer-nav-item"><a href="/foildata/privacy.html">privacy policy</a></li>
+          <li class="footer-nav-item"><a href="/foildata/contact">contact</a></li>
+<li class="footer-nav-item"><a href="/foildata/privacy">privacy policy</a></li>
 
         </ul>
       </div>
@@ -312,7 +312,7 @@ async function initializeParawingForm() {
                 if (parawingResponse.ok) {
                     alert('Parawing added successfully!');
                     this.reset();
-                    window.location.href = 'parawings.html';
+                    window.location.href = 'parawings';
                 } else {
                     alert(result.error || 'Failed to add parawing');
                 }

@@ -42,7 +42,7 @@ async function loadParawingData() {
   const params = getUrlParams();
   if (!params.brand || !params.parawing) {
     alert("Missing required parameters");
-    window.location.href = "parawings.html";
+    window.location.href = "parawings";
     return;
   }
 
@@ -58,7 +58,7 @@ async function loadParawingData() {
 
     if (!parawing) {
       alert("Parawing not found");
-      window.location.href = "parawings.html";
+      window.location.href = "parawings";
       return;
     }
 
@@ -93,7 +93,7 @@ async function loadParawingData() {
 
     // Set the back link to return to the parawing details page
     document.getElementById("back-link").href =
-      `brands/${parawing.brandName.replace(/\s+/g, "-").toLowerCase()}/parawings/${parawing.name.replace(/\s+/g, "-").toLowerCase()}.html`;
+      `brands/${parawing.brandName.replace(/\s+/g, "-").toLowerCase()}/parawings/${parawing.name.replace(/\s+/g, "-").toLowerCase()}`;
   } catch (error) {
     console.error("Failed to load parawing data:", error);
     alert("Unable to load parawing data. Please try again later.");
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         if (response.ok) {
           alert("Parawing edits submitted for review!");
           // Redirect back to parawing details page
-          window.location.href = `parawings.html`;
+          window.location.href = `parawings`;
         } else {
           const result = await response.json();
           alert(result.error || "Failed to submit edits");
@@ -324,7 +324,7 @@ async function loadParawingData() {
   const params = getUrlParams();
   if (!params.brand || !params.parawing) {
     alert("Missing required parameters");
-    window.location.href = "parawings.html";
+    window.location.href = "parawings";
     return;
   }
 
@@ -340,7 +340,7 @@ async function loadParawingData() {
 
     if (!parawing) {
       alert("Parawing not found");
-      window.location.href = "parawings.html";
+      window.location.href = "parawings";
       return;
     }
 
@@ -375,7 +375,7 @@ async function loadParawingData() {
 
     // Set the back link to return to the parawing details page
     document.getElementById("back-link").href =
-      `brands/${parawing.brandName.replace(/\s+/g, "-").toLowerCase()}/parawings/${parawing.name.replace(/\s+/g, "-").toLowerCase()}.html`;
+      `brands/${parawing.brandName.replace(/\s+/g, "-").toLowerCase()}/parawings/${parawing.name.replace(/\s+/g, "-").toLowerCase()}`;
   } catch (error) {
     console.error("Failed to load parawing data:", error);
     alert("Unable to load parawing data. Please try again later.");
@@ -506,7 +506,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         if (response.ok) {
           alert("Parawing edits submitted for review!");
           // Redirect back to parawing details page
-          window.location.href = `parawings.html`;
+          window.location.href = `parawings`;
         } else {
           const result = await response.json();
           alert(result.error || "Failed to submit edits");

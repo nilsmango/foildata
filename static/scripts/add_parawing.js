@@ -159,7 +159,7 @@ async function initializeParawingForm() {
                 if (parawingResponse.ok) {
                     alert('Parawing added successfully!');
                     this.reset();
-                    window.location.href = 'parawings.html';
+                    window.location.href = 'parawings';
                 } else {
                     alert(result.error || 'Failed to add parawing');
                 }

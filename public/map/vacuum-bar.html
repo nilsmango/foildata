@@ -32,11 +32,11 @@
       
       <div class="nav">
         <ul class="nav-list">
-            <li class="nav-item"><a href="/foildata/about.html">about</a></li>
-<li class="nav-item"><a href="/foildata/parawings.html">parawings</a></li>
-<li class="nav-item"><a href="/foildata/map/spots.html">spots</a></li>
+            <li class="nav-item"><a href="/foildata/about">about</a></li>
+<li class="nav-item"><a href="/foildata/parawings">parawings</a></li>
+<li class="nav-item"><a href="/foildata/map/spots">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
-<li class="nav-item"><a href="/foildata/conditions.html">conditions</a></li>
+<li class="nav-item"><a href="/foildata/conditions">conditions</a></li>
 
         </ul>
       </div>
@@ -148,8 +148,8 @@
                     <footer>
       <div class="footer-nav">
         <ul class="footer-nav-list">
-          <li class="footer-nav-item"><a href="/foildata/contact.html">contact</a></li>
-<li class="footer-nav-item"><a href="/foildata/privacy.html">privacy policy</a></li>
+          <li class="footer-nav-item"><a href="/foildata/contact">contact</a></li>
+<li class="footer-nav-item"><a href="/foildata/privacy">privacy policy</a></li>
 
         </ul>
       </div>
@@ -250,7 +250,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":29.0774943147033,"lng":-80.91477870941164}],"state":"FL","pending":false,"id":"vacuum-bar","country":"US","infos":[{"userName":"rick_neeser","text":"Prone\/Sup spot on east wind. Very strong outgoing tide creates standing waves. Can also be a fun wing spot but wind is often fickle. Advanced spot as you can be swept out into 2x overhead waves.","tag":"description","spotId":"vacuum-bar","date":"2025-04-30T12:30:11.125Z","id":"vacuum-bar-ma3wyyt1-dzskd"}],"videos":[{"date":"2025-04-30T14:43:09+02:00","url":"https:\/\/www.youtube.com\/watch?v=Vqew86Gmo48","kind":"YouTube"}],"kind":"wave-wind-spot","name":"Vacuum Bar"};
+            const spotData = {"country":"US","id":"vacuum-bar","pending":false,"state":"FL","infos":[{"text":"Prone\/Sup spot on east wind. Very strong outgoing tide creates standing waves. Can also be a fun wing spot but wind is often fickle. Advanced spot as you can be swept out into 2x overhead waves.","tag":"description","spotId":"vacuum-bar","date":"2025-04-30T12:30:11.125Z","userName":"rick_neeser","id":"vacuum-bar-ma3wyyt1-dzskd"}],"kind":"wave-wind-spot","locations":[{"lng":-80.91477870941164,"lat":29.0774943147033}],"videos":[{"url":"https:\/\/www.youtube.com\/watch?v=Vqew86Gmo48","date":"2025-04-30T14:43:09+02:00","kind":"YouTube"}],"name":"Vacuum Bar"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

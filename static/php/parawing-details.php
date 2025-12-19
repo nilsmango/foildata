@@ -36,13 +36,13 @@ HTML;
 
 // Basic Header function (replace with your actual implementation)
 function createHeader($activePage, $urlPrefix) {
-    $headerPages = ['about', 'parawings', 'map']; // Example pages
+    $headerPages = ['about', 'parawings', 'spots','map', 'conditions']; // Example pages
     $homeURL = $urlPrefix;
     $safeHomeURL = htmlspecialchars($homeURL);
     $navList = '';
     foreach ($headerPages as $page) {
         $pageSlug = explode(' ', strtolower($page))[0];
-        $pageUrl = ($pageSlug === 'map') ? "{$urlPrefix}/{$pageSlug}" : "{$urlPrefix}/{$pageSlug}.html";
+        $pageUrl = ($pageSlug === 'map') ? "{$urlPrefix}/{$pageSlug}" : "{$urlPrefix}/{$pageSlug}";
         $safePageName = htmlspecialchars($page);
         if ($activePage === $page || $activePage === "{$page} {$page}") { // Handle compound activePage names like "ENSIS Roger"
              $navList .= "<li class=\"nav-item\"><a class=\"nav-active\" href=\"{$pageUrl}\">{$safePageName}</a></li>\n";
@@ -73,7 +73,7 @@ function createFooter($activePage, $urlPrefix) {
      $footerNavList = '';
      foreach ($footerPages as $page) {
         $pageSlug = explode(' ', strtolower($page))[0];
-        $pageUrl = htmlspecialchars("{$urlPrefix}/{$pageSlug}.html"); // Assuming .html extension
+        $pageUrl = htmlspecialchars("{$urlPrefix}/{$pageSlug}"); // Assuming  extension
         $safePageName = htmlspecialchars($page);
         if ($activePage === $page) {
              $footerNavList .= "<li class=\"footer-nav-item\"><a class=\"nav-active\" href=\"{$pageUrl}\">{$safePageName}</a></li>\n";

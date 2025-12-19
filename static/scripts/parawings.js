@@ -786,7 +786,7 @@ class ParawingsTable {
       // Only create link if not freshlyAdded
       if (!parawing.freshlyAdded) {
         const link = document.createElement("a");
-        link.href = `/foildata/brands/${parawing.brandName.replace(/\s+/g, "-").toLowerCase()}/parawings/${parawing.name.replace(/\s+/g, "-").toLowerCase()}.html`;
+        link.href = `/foildata/brands/${parawing.brandName.replace(/\s+/g, "-").toLowerCase()}/parawings/${parawing.name.replace(/\s+/g, "-").toLowerCase()}`;
         link.className = "row-link";
         link.style.display = "contents"; // Ensures the whole row is clickable
 

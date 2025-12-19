@@ -233,5 +233,25 @@
     "videos" : [
 
     ]
+  },
+  {
+    "averageRating" : 0,
+    "brandName" : "F-ONE",
+    "name" : "FRIGATE",
+    "reviews" : [
+
+    ],
+    "reviewsCount" : 0,
+    "sizes" : [
+      {
+        "areaSqM" : 4.7,
+        "doubleSkin" : false,
+        "weightKg" : 0.73
+      }
+    ],
+    "videos" : [
+
+    ],
+    "website" : "https:\/\/www.f-one.world\/product\/frigate\/"
   }
 ]

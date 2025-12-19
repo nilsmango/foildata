@@ -34,7 +34,7 @@ async function initializeBrandForm() {
                     alert('Brand added successfully!');
                     this.reset();
                     // Optionally redirect or update page
-                    window.location.href = 'brands.html';
+                    window.location.href = 'brands';
                 } else {
                     alert(result.error || 'Failed to add brand');
                 }
@@ -59,7 +59,7 @@ async function initializeBrandForm() {
         console.error('Failed to fetch brands:', error);
         alert('Unable to load existing brands. Please try again later.');
         // Optionally redirect or update page
-        window.location.href = 'brands.html';
+        window.location.href = 'brands';
     }
 }
 
