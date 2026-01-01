@@ -37,6 +37,7 @@
 <li class="nav-item"><a href="/foildata/map/spots">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions">conditions</a></li>
+<li class="nav-item"><a href="/foildata/safety">safety</a></li>
 
         </ul>
       </div>
@@ -252,7 +253,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"kind":"pump-foil-dock","infos":[{"spotId":"blue-lagoon-dock-kos-becb28","tag":"description","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","date":"2025-07-29T13:43:42.135676Z","text":"Spotfinder: lkoeppel. Height to water: 20-30cm über dem Wasser. Alle Starts möglich Images of spot: https:\/\/pump.zuerich\/wp-content\/uploads\/2024\/10\/kos_dockstart.jpeg","userName":"lkoeppel","id":"blue-lagoon-dock-kos"}],"country":"CH","name":"Blue Lagoon Dock Kos","locations":[{"lng":27.264526,"lat":36.908474}],"id":"blue-lagoon-dock-kos-becb28"};
+            const spotData = {"kind":"pump-foil-dock","name":"Blue Lagoon Dock Kos","country":"CH","locations":[{"lat":36.908474,"lng":27.264526}],"pending":false,"infos":[{"text":"Spotfinder: lkoeppel. Height to water: 20-30cm über dem Wasser. Alle Starts möglich Images of spot: https:\/\/pump.zuerich\/wp-content\/uploads\/2024\/10\/kos_dockstart.jpeg","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","spotId":"blue-lagoon-dock-kos-becb28","date":"2025-07-29T13:43:42.135676Z","userName":"lkoeppel","tag":"description","id":"blue-lagoon-dock-kos"}],"id":"blue-lagoon-dock-kos-becb28"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

@@ -37,6 +37,7 @@
 <li class="nav-item"><a href="/foildata/map/spots">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions">conditions</a></li>
+<li class="nav-item"><a href="/foildata/safety">safety</a></li>
 
         </ul>
       </div>
@@ -252,7 +253,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"kind":"pump-foil-dock","infos":[{"spotId":"steg-faellanden-a7a293","tag":"description","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","date":"2025-07-29T13:43:42.135913Z","text":"Spotfinder: aloulier. Height to water: Steg sieht gut aus. Alle Starts möglich, einige Wellen von den Schiffen Images of spot: https:\/\/maps.app.goo.gl\/RWbpJ8o3opRZx7xK7?g_st=aw","userName":"aloulier","id":"steg-faellanden-a7a293"}],"country":"CH","name":"Steg Faellanden","locations":[{"lng":8.6537514,"lat":47.361111}],"id":"steg-faellanden-a7a293"};
+            const spotData = {"locations":[{"lat":47.361111,"lng":8.6537514}],"infos":[{"date":"2025-07-29T13:43:42.135913Z","text":"Spotfinder: aloulier. Height to water: Steg sieht gut aus. Alle Starts möglich, einige Wellen von den Schiffen Images of spot: https:\/\/maps.app.goo.gl\/RWbpJ8o3opRZx7xK7?g_st=aw","userName":"aloulier","spotId":"steg-faellanden-a7a293","id":"steg-faellanden-a7a293","tag":"description","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv"}],"pending":false,"kind":"pump-foil-dock","id":"steg-faellanden-a7a293","name":"Steg Faellanden","country":"CH"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

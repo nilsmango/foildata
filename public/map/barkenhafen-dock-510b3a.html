@@ -37,6 +37,7 @@
 <li class="nav-item"><a href="/foildata/map/spots">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions">conditions</a></li>
+<li class="nav-item"><a href="/foildata/safety">safety</a></li>
 
         </ul>
       </div>
@@ -252,7 +253,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"kind":"pump-foil-dock","infos":[{"spotId":"barkenhafen-dock-510b3a","tag":"description","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","date":"2025-07-29T13:43:42.134469Z","text":"Spotfinder: zooosky. Height to water: Pumpfoil ramp 50 cm over water mounted to the dock. The spot is near the restaurant Le Peniche in Biel. Images of spot: https:\/\/images2.imgbox.com\/20\/ab\/ut4CFllz_o.jpg","userName":"zooosky","id":"barkenhafen-dock-510b3a"}],"country":"CH","name":"Barkenhafen Dock","locations":[{"lng":7.233352,"lat":47.127958}],"id":"barkenhafen-dock-510b3a"};
+            const spotData = {"pending":false,"country":"CH","name":"Barkenhafen Dock","infos":[{"tag":"description","userName":"zooosky","spotId":"barkenhafen-dock-510b3a","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","id":"barkenhafen-dock-510b3a","text":"Spotfinder: zooosky. Height to water: Pumpfoil ramp 50 cm over water mounted to the dock. The spot is near the restaurant Le Peniche in Biel. Images of spot: https:\/\/images2.imgbox.com\/20\/ab\/ut4CFllz_o.jpg","date":"2025-07-29T13:43:42.134469Z"}],"locations":[{"lat":47.127958,"lng":7.233352}],"id":"barkenhafen-dock-510b3a","kind":"pump-foil-dock"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

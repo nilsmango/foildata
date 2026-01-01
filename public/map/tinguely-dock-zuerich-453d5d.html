@@ -37,6 +37,7 @@
 <li class="nav-item"><a href="/foildata/map/spots">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions">conditions</a></li>
+<li class="nav-item"><a href="/foildata/safety">safety</a></li>
 
         </ul>
       </div>
@@ -252,7 +253,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"kind":"pump-foil-dock","infos":[{"spotId":"tinguely-dock-zuerich-453d5d","tag":"description","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","date":"2025-07-29T13:43:42.134311Z","text":"Spotfinder: zdavatz. Height to water: About 50 cm depending on status of the lake.. no ladder to climb out. Images of spot: https:\/\/www.instagram.com\/p\/C8r9yXPqZGv\/, https:\/\/www.instagram.com\/p\/C8sH-n2q6Hw\/","userName":"zdavatz","id":"tinguely-dock-zuerich-453d5d"}],"country":"CH","name":"Tinguely Dock Zürich","locations":[{"lng":8.552016,"lat":47.352537}],"id":"tinguely-dock-zuerich-453d5d"};
+            const spotData = {"pending":false,"country":"CH","name":"Tinguely Dock Zürich","infos":[{"tag":"description","userName":"zdavatz","spotId":"tinguely-dock-zuerich-453d5d","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","id":"tinguely-dock-zuerich-453d5d","text":"Spotfinder: zdavatz. Height to water: About 50 cm depending on status of the lake.. no ladder to climb out. Images of spot: https:\/\/www.instagram.com\/p\/C8r9yXPqZGv\/, https:\/\/www.instagram.com\/p\/C8sH-n2q6Hw\/","date":"2025-07-29T13:43:42.134311Z"}],"locations":[{"lat":47.352537,"lng":8.552016}],"id":"tinguely-dock-zuerich-453d5d","kind":"pump-foil-dock"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

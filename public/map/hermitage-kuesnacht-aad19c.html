@@ -37,6 +37,7 @@
 <li class="nav-item"><a href="/foildata/map/spots">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions">conditions</a></li>
+<li class="nav-item"><a href="/foildata/safety">safety</a></li>
 
         </ul>
       </div>
@@ -252,7 +253,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"kind":"pump-foil-dock","infos":[{"spotId":"hermitage-kuesnacht-aad19c","tag":"description","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","date":"2025-07-29T13:43:42.135002Z","text":"Spotfinder: zdavatz. Height to water: 50cm über dem Wasser. Hier gibt es Fischer. Gute Welle von den Kursschiffen, guter Hafen zum Tricks üben. Images of spot: https:\/\/www.instagram.com\/p\/C0WtaAnK6Om\/","userName":"zdavatz","id":"hermitage-kuesnacht-aad19c"}],"country":"CH","name":"Hermitage Küsnacht","locations":[{"lng":8.57671,"lat":47.322413}],"id":"hermitage-kuesnacht-aad19c"};
+            const spotData = {"pending":false,"country":"CH","name":"Hermitage Küsnacht","infos":[{"date":"2025-07-29T13:43:42.135002Z","userName":"zdavatz","spotId":"hermitage-kuesnacht-aad19c","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","id":"hermitage-kuesnacht-aad19c","text":"Spotfinder: zdavatz. Height to water: 50cm über dem Wasser. Hier gibt es Fischer. Gute Welle von den Kursschiffen, guter Hafen zum Tricks üben. Images of spot: https:\/\/www.instagram.com\/p\/C0WtaAnK6Om\/","tag":"description"}],"locations":[{"lat":47.322413,"lng":8.57671}],"id":"hermitage-kuesnacht-aad19c","kind":"pump-foil-dock"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

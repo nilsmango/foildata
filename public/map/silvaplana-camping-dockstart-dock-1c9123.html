@@ -37,6 +37,7 @@
 <li class="nav-item"><a href="/foildata/map/spots">spots</a></li>
 <li class="nav-item"><a href="/foildata/map">map</a></li>
 <li class="nav-item"><a href="/foildata/conditions">conditions</a></li>
+<li class="nav-item"><a href="/foildata/safety">safety</a></li>
 
         </ul>
       </div>
@@ -252,7 +253,7 @@
             }
             
             // Get spot data
-            const spotData = {"pending":false,"kind":"pump-foil-dock","infos":[{"spotId":"silvaplana-camping-dockstart-dock-1c9123","tag":"description","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","date":"2025-07-29T13:43:42.134653Z","text":"Spotfinder: zdavatz. Height to water: About 40cm over the water. Good for Goofy and Regular, very popular Images of spot: https:\/\/www.instagram.com\/p\/CxBkhkDq1QT\/","userName":"zdavatz","id":"silvaplana-camping-dockstart-dock-1c9123"}],"country":"CH","name":"Silvaplana Camping Dockstart Dock","locations":[{"lng":9.793014,"lat":46.454726}],"id":"silvaplana-camping-dockstart-dock-1c9123"};
+            const spotData = {"pending":false,"country":"CH","name":"Silvaplana Camping Dockstart Dock","infos":[{"tag":"description","userName":"zdavatz","spotId":"silvaplana-camping-dockstart-dock-1c9123","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","id":"silvaplana-camping-dockstart-dock-1c9123","date":"2025-07-29T13:43:42.134653Z","text":"Spotfinder: zdavatz. Height to water: About 40cm over the water. Good for Goofy and Regular, very popular Images of spot: https:\/\/www.instagram.com\/p\/CxBkhkDq1QT\/"}],"locations":[{"lng":9.793014,"lat":46.454726}],"id":"silvaplana-camping-dockstart-dock-1c9123","kind":"pump-foil-dock"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
