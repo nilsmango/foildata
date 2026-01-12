@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-    <title>Zihlkanal Restaurant Rothaus</title>
+    <title>Langenargen Marina am Bodensee → Bregenz Hafen Bhf</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Pump Foiling Spot Zihlkanal Restaurant Rothaus. Foiling spot with access information, conditions, local contact, videos.">
+    <meta name="description" content="Downwind Foiling Run Langenargen Marina am Bodensee → Bregenz Hafen Bhf. Foiling spot with access information, conditions, local contact, videos, distance, start and end coordinates, and GPX Track Download.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -45,13 +45,17 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Zihlkanal Restaurant Rothaus Pump Foiling Spot</h1>
+            <h1 class="card-title">Langenargen Marina am Bodensee → Bregenz Hafen Bhf Downwind Foiling Run</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Pump Foiling Spot<br>Coordinates: 47.010837, 7.031266 | <a href="https://www.google.com/maps?q=47.010837,7.031266" target="_blank">See on Google Maps</a><br></p>
+            <p>Downwind Foiling Run<br>Distance: 17.1 km    <br>Start Coordinates: 47.586035, 9.560208  | <a href="https://www.google.com/maps?q=47.58603522091796,9.560208320617678" target="_blank">See on Google Maps</a>
+    <br>End Coordinates: 47.508041, 9.750237  | <a href="https://www.google.com/maps?q=47.50804105362256,9.750237464904787" target="_blank">See on Google Maps</a>
+    <br><a href="#" onclick="downloadGPX(); return false;">
+    Download GPX Track
+</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -64,25 +68,23 @@
         <h3>Description</h3>
         <div>•</div>
         <div class="info-meta">
-            <span class="info-date">Juli 29, 2025</span>
+            <span class="info-date">Januar 2, 2026</span>
             <span class="info-author">by 
-                <a href="https://github.com/zdavatz/pumpspots/blob/main/pumpspots.csv" target="_blank" rel="noopener">
-    küsöggeler
-</a>
+                Jurij.Scheibler
             </span>
         </div>
     </div>
     <div class="info-content">
-        Spotfinder: küsöggeler. Height to water: Steg wird von Santosh mitgebracht. Alle Starts möglich, viele Wellen von den Schiffen Images of spot: <a href="https://www.instagram.com/reel/DBx_jOzP2u4/" target="_blank" rel="noopener">https://www.instagram.com/reel/DBx_jOzP2u4/</a>
+        Needs shuttle to reach starting point otherwise it’s a 20 min walk from the train station. Train back from Bregenz Hafen via Lindau Insel always at xx:53 one transfer to Rb93 in Lindau always at xx:22. Same connection works for the Nonnenhorn-Bregenz run where your have to walk less. Best Sections in front of the Lindau Insel. Works best with a westerly Föhn but also with super light thermal west wind in spring/summer. Most of the time you ride to the right on a regular stance since the wind and waves are often w-sw. If you can’t make it, exits are on the west side of Lindau Insel and Lochau. Hit me up for further Questions and a Partywave! IG: jurij.scheibler
     </div>
     <div class="info-actions">
-        <div class="vote-btn" data-info-id="zihlkanal-restaurant-rothaus" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+        <div class="vote-btn" data-info-id="langenargen-marina-am-bodensee-bregenz-hafen-bhf-mjx0t86t-xtfl9" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
             <span class="vote-icon">
                 <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
                                 <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
                             </svg>
             </span>
-            <span class="vote-count">0</span>
+            <span class="vote-count">1</span>
         </div>
     </div>
     <hr class="info-separator">
@@ -91,7 +93,7 @@
             <div class="add-info-section" style="display: none;">
                 <h2>Add Information</h2>
                 <form id="add-info-form">
-                    <input type="hidden" name="spotId" value="zihlkanal-restaurant-rothaus">
+                    <input type="hidden" name="spotId" value="langenargen-marina-am-bodensee-bregenz-hafen-bhf">
                     
                     <div class="form-group">
                         <label for="info-tag" class="required">Tag</label>
@@ -135,7 +137,7 @@
                             <div class="add-video-section" style="display: none;">
                                 <h2>Add Video</h2>
                                 <form id="add-video-form">
-                                    <input type="hidden" name="spotId" value="zihlkanal-restaurant-rothaus">
+                                    <input type="hidden" name="spotId" value="langenargen-marina-am-bodensee-bregenz-hafen-bhf">
                                     
                                     <div class="form-group">
                                         <label for="video-url" class="required">Video URL (YouTube or Instagram)</label>
@@ -253,7 +255,7 @@
             }
             
             // Get spot data
-            const spotData = {"locations":[{"lat":47.010837,"lng":7.031266}],"name":"Zihlkanal Restaurant Rothaus","id":"zihlkanal-restaurant-rothaus","pending":false,"infos":[{"spotId":"zihlkanal-restaurant-rothaus","date":"2025-07-29T13:43:42.135743Z","text":"Spotfinder: küsöggeler. Height to water: Steg wird von Santosh mitgebracht. Alle Starts möglich, viele Wellen von den Schiffen Images of spot: https:\/\/www.instagram.com\/reel\/DBx_jOzP2u4\/","id":"zihlkanal-restaurant-rothaus","userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","tag":"description","userName":"küsöggeler"}],"kind":"pump-foil-dock","country":"CH"};
+            const spotData = {"country":"DE","pending":false,"name":"Langenargen Marina am Bodensee → Bregenz Hafen Bhf","kind":"downwind-run","id":"langenargen-marina-am-bodensee-bregenz-hafen-bhf","locations":[{"lng":9.560208320617678,"lat":47.58603522091796},{"lng":9.559028148651125,"lat":47.58638256747346},{"lng":9.558126926422121,"lat":47.585716817883906},{"lng":9.557783603668215,"lat":47.58506553291814},{"lng":9.595184326171877,"lat":47.56749225365282},{"lng":9.676895141601564,"lat":47.53621055123139},{"lng":9.750237464904787,"lat":47.50804105362256}],"infos":[{"spotId":"langenargen-marina-am-bodensee-bregenz-hafen-bhf","votes":1,"date":"2026-01-02T15:20:21.942Z","text":"Needs shuttle to reach starting point otherwise it’s a 20 min walk from the train station. Train back from Bregenz Hafen via Lindau Insel always at xx:53 one transfer to Rb93 in Lindau always at xx:22. Same connection works for the Nonnenhorn-Bregenz run where your have to walk less. Best Sections in front of the Lindau Insel. Works best with a westerly Föhn but also with super light thermal west wind in spring\/summer. Most of the time you ride to the right on a regular stance since the wind and waves are often w-sw. If you can’t make it, exits are on the west side of Lindau Insel and Lochau. Hit me up for further Questions and a Partywave! IG: jurij.scheibler","id":"langenargen-marina-am-bodensee-bregenz-hafen-bhf-mjx0t86t-xtfl9","tag":"description","userName":"Jurij.Scheibler"}],"distance":17.1};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -508,7 +510,7 @@
                   return;
                 }
                 
-                const filtered = data.filter(info => info.spotId === 'zihlkanal-restaurant-rothaus');
+                const filtered = data.filter(info => info.spotId === 'langenargen-marina-am-bodensee-bregenz-hafen-bhf');
                 if (filtered.length === 0) {
                   console.log('No matching spotId entries.');
                   return;
@@ -594,7 +596,7 @@
   const res = await fetch(jsonFile);
   const spots = await res.json();
   const videoContainer = document.getElementById("videos");
-  const spotId = "zihlkanal-restaurant-rothaus";
+  const spotId = "langenargen-marina-am-bodensee-bregenz-hafen-bhf";
 
   // Add masonry container style
   videoContainer.style.columnCount = "1";
