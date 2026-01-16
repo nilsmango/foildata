@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <title>Sandhamn Surf School</title>
+    <link rel="stylesheet" href="/foildata/styles.css">
+    <meta name="description" content="Foiling School Sandhamn Surf School. Foiling spot with access information, conditions, local contact, videos.">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favi/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favi/favicon-16x16.png">
+    <link rel="manifest" href="/favi/site.webmanifest">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+            <header>
+          <div class="logo">
+            <a href="/foildata">
+                <h1><span class="iii">7III</span> foildata</h1>
+            </a>
+          </div>
+      
+      <div class="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="/foildata/about">about</a></li>
+<li class="nav-item"><a href="/foildata/parawings">parawings</a></li>
+<li class="nav-item"><a href="/foildata/map/spots">spots</a></li>
+<li class="nav-item"><a href="/foildata/map">map</a></li>
+<li class="nav-item"><a href="/foildata/conditions">conditions</a></li>
+<li class="nav-item"><a href="/foildata/safety">safety</a></li>
+
+        </ul>
+      </div>
+    </header>
+        <div class="card">
+          <div class="card-header">
+          <div class="product-header">
+            <h1 class="card-title">Sandhamn Surf School Foiling School</h1>
+            </div>
+          </div>
+          <div class="card-content">
+            <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
+            <h2>Information</h2>
+            <p>Foiling School<br>Coordinates: 59.282819, 18.922663 | <a href="https://www.google.com/maps?q=59.28281895930989,18.922662734985355" target="_blank">See on Google Maps</a><br></p>
+            <div class="badge-container">
+<button class="badge badge-outline active" data-tag="all">All</button>
+<button class="badge badge-outline" data-tag="description">
+    Description
+</button>
+</div>
+<hr class="info-separator">
+<div class="info-container"><div class="info-item" data-tag="description">
+    <div class="info-header">
+        <h3>Description</h3>
+        <div>•</div>
+        <div class="info-meta">
+            <span class="info-date">Januar 16, 2026</span>
+            <span class="info-author">by 
+                armswe
+            </span>
+        </div>
+    </div>
+    <div class="info-content">
+        Windsurfing and foiling School. Also good launch for Windfoiling. 
+    </div>
+    <div class="info-actions">
+        <div class="vote-btn" data-info-id="sandhamn-surf-school-mkh29x37-p6d7o" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+            <span class="vote-icon">
+                <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
+                                <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
+                            </svg>
+            </span>
+            <span class="vote-count">0</span>
+        </div>
+    </div>
+    <hr class="info-separator">
+  </div></div>
+          <div class="main-button" id="add-info-btn" style="margin-top: 1.5rem;">+ Add Info</div>
+            <div class="add-info-section" style="display: none;">
+                <h2>Add Information</h2>
+                <form id="add-info-form">
+                    <input type="hidden" name="spotId" value="sandhamn-surf-school">
+                    
+                    <div class="form-group">
+                        <label for="info-tag" class="required">Tag</label>
+                        <select id="info-tag" name="tag" required>
+                            <option value="">Select Tag</option>
+                            <option value="description">Description</option>
+                            <option value="wind-direction">Wind Direction</option>
+                            <option value="wind-measurements">Wind Measurements</option>
+                            <option value="wind-predictions">Wind Predictions</option>
+                            <option value="conditions">Conditions</option>
+                            <option value="logistics">Logistics</option>
+                            <option value="local-contact">Local Legends & Groups</option>
+                            <option value="local-rules">Local Rules</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="info-text" class="required">Text</label>
+                        <textarea id="info-text" name="text" rows="7" required></textarea>
+                        <p class="results-count">Info: URLs starting with "http" will be converted into clickable links.</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="user-name" class="required">Username</label>
+                        <input type="text" id="user-name" name="userName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="user-url">Username URL (optional)</label>
+                        <input type="url" id="user-url" name="userUrl">
+                    </div>
+                    
+                    <button type="submit" class="main-button">Submit Information</button>
+                </form>
+            </div>
+            
+          <h2>Videos</h2>
+            <div id="videos"></div>
+
+            <div class="main-button" id="add-video-btn" style="margin-top: 1rem;">+ Add Video</div>
+                            <div class="add-video-section" style="display: none;">
+                                <h2>Add Video</h2>
+                                <form id="add-video-form">
+                                    <input type="hidden" name="spotId" value="sandhamn-surf-school">
+                                    
+                                    <div class="form-group">
+                                        <label for="video-url" class="required">Video URL (YouTube or Instagram)</label>
+                                        <input type="url" id="video-url" name="videoUrl" required>
+                                    </div>
+                                    
+                                    <button type="submit" class="main-button">Submit Video</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <footer>
+      <div class="footer-nav">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><a href="/foildata/contact">contact</a></li>
+<li class="footer-nav-item"><a href="/foildata/privacy">privacy policy</a></li>
+
+        </ul>
+      </div>
+    <p class="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> project7III - Simon Lang. All rights reserved.</p>
+    </footer>
+    <div id="maintenance-banner" style="display:none; background:yellow; color:black; padding:10px; text-align:center; position:fixed; bottom:0; left:0; width:100%; z-index:9999;">
+    🚨 Maintenance: Changes might get lost. If you want to add or edit information please come back in a few minutes and refresh the page. 🚨
+    </div>
+
+    <script>
+    fetch('/foildata/.maintenance', { cache: 'no-store' })
+      .then(r => { if (r.ok) document.getElementById('maintenance-banner').style.display = 'block'; })
+      .catch(() => {});
+    </script>
+                
+        <script>
+            // Initialize the map
+            const spotMap = L.map('spot-map');
+            
+            // Add the tile layer (OpenStreetMap)
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(spotMap);
+            
+            // Icons for different spot types
+            const spotIcons = {
+              "pump-foil-dock": L.icon({
+                iconUrl: "icons/pump-foil-dock.svg",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+              }),
+              "wake-thief-spot": L.icon({
+                iconUrl: "icons/wake-thief-spot.svg",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+              }),
+              "wave-wind-spot": L.icon({
+                iconUrl: "icons/wave-wind-spot.svg",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+              }),
+              "wind-spot": L.icon({
+                iconUrl: "icons/wind-spot.svg",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+              }),
+              "wave-spot": L.icon({
+                iconUrl: "icons/wave-spot.svg",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+              }),
+              "rental-station": L.icon({
+                iconUrl: "icons/rental-station.svg",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+              }),
+              "shop": L.icon({
+                iconUrl: "icons/shop.svg",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+              }),
+              "school": L.icon({
+                iconUrl: "icons/coach-school.svg",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+              }),
+              "wake-boat": L.icon({
+                iconUrl: "icons/wake-boat.svg",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+              }),
+              "downwind-run": L.icon({
+                iconUrl: "icons/route-start.svg",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+              }),
+              "paddle-tour": L.icon({
+                iconUrl: "icons/paddle-route-start.svg",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+              }),
+              default: L.icon({
+                iconUrl: "icons/default.svg",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+              }),
+            }
+            
+            // Get spot data
+            const spotData = {"locations":[{"lng":18.922662734985355,"lat":59.28281895930989}],"name":"Sandhamn Surf School","id":"sandhamn-surf-school","country":"SE","infos":[{"tag":"description","spotId":"sandhamn-surf-school","text":"Windsurfing and foiling School. Also good launch for Windfoiling. ","userName":"armswe","date":"2026-01-16T15:56:43.843Z","id":"sandhamn-surf-school-mkh29x37-p6d7o"}],"kind":"school","pending":false};
+            
+            // Get the appropriate icon based on spot type and pending status
+            function getIcon(type, isPending) {
+              // if (isPending) {
+              //   return L.icon({
+              //     iconUrl: "icons/pending.svg",
+              //     iconSize: [32, 32],
+              //     iconAnchor: [16, 32],
+              //     popupAnchor: [0, -32],
+              //   })
+              // }
+            
+              // Add debug logging to see what icon is being requested
+              console.log("Getting icon for type:", type)
+            
+              // Check if the icon exists in our spotIcons object
+              if (!spotIcons[type]) {
+                console.warn(`Icon not found for type: ${type}, using default`)
+                return spotIcons.default
+              }
+            
+              return spotIcons[type]
+            }
+            
+            // Add markers and polylines
+            if (spotData.locations && spotData.locations.length > 0) {
+                if (spotData.locations.length === 1) {
+                    // Single point
+                    const marker = L.marker([spotData.locations[0].lat, spotData.locations[0].lng], {
+                      icon: getIcon(spotData.kind, spotData.pending),
+                    }).addTo(spotMap)
+                    spotMap.setView([spotData.locations[0].lat, spotData.locations[0].lng], 17);
+                } else {
+                    // Route with multiple points
+                    const points = spotData.locations.map(loc => [loc.lat, loc.lng]);
+                    const turfPoints = spotData.locations.map(loc => [loc.lng, loc.lat]);
+                    const line = turf.lineString(turfPoints);
+                    const curved = turf.bezierSpline(line);
+                    const smoothPoints = curved.geometry.coordinates.map(c => [c[1], c[0]]);
+                    // Create a polyline
+                    L.polyline(smoothPoints, {
+                        color: '#E7FF00',
+                        weight: 4,
+                        opacity: 1.0
+                    }).addTo(spotMap);
+                    
+                    // Add start and end markers
+                    const startIcon = spotData.kind === "paddle-tour"
+                      ? L.icon({ iconUrl: "icons/paddle-route-start.svg", iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] })
+                      : spotData.kind === "downwind-run"
+                      ? L.icon({ iconUrl: "icons/route-start.svg", iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] })
+                      : getIcon(spotData.kind, spotData.pending)
+                    
+                    const startMarker = L.marker(points[0], {
+                      icon: startIcon,
+                    }).addTo(spotMap)
+                    
+                    const endIcon = spotData.kind === "paddle-tour"
+                      ? L.icon({ iconUrl: "icons/paddle-route-finish.svg", iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] })
+                      : spotData.kind === "downwind-run"
+                      ? L.icon({ iconUrl: "icons/route-finish.svg", iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] })
+                      : getIcon(spotData.kind, spotData.pending)
+                    
+                    const endMarker = L.marker(points[points.length - 1], {
+                      icon: endIcon,
+                    }).addTo(spotMap)
+                    
+                    // Fit the map to the route
+                    spotMap.fitBounds(points);
+                }
+            }
+                    
+            // Tag filter functionality
+            document.querySelectorAll('.badge').forEach(button => {
+              button.addEventListener('click', () => {
+                  const isActive = button.classList.contains('active');
+                  const currentTag = button.getAttribute('data-tag');
+              
+                  document.querySelectorAll('.badge').forEach(btn => btn.classList.remove('active'));
+              
+                  let tag = button.getAttribute('data-tag');
+                  if (isActive && currentTag !== 'all') {
+                      tag = 'all';
+                      document.querySelector('.badge[data-tag="all"]').classList.add('active');
+                  } else if (!isActive) {
+                      button.classList.add('active');
+                  }
+              
+                  document.querySelectorAll('.info-item').forEach(item => {
+                      if (tag === 'all' || item.getAttribute('data-tag') === tag) {
+                          item.style.display = 'block';
+                      } else {
+                          item.style.display = 'none';
+                      }
+                  });
+                });
+            });
+            
+            // Vote functionality
+            const infoContainer = document.querySelector('.info-container');
+
+            if (infoContainer) {
+                infoContainer.addEventListener('click', async (event) => {
+                    // Use event.target.closest() to find the nearest ancestor (or the element itself)
+                    // that has the class 'vote-btn'.
+                    const button = event.target.closest('.vote-btn');
+
+                    // If a .vote-btn was clicked (or a child element inside it)
+                    if (button) {
+                        const infoId = button.getAttribute('data-info-id');
+                        const voteCount = button.querySelector('.vote-count');
+
+                        try {
+                            const response = await fetch('vote-info.php', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ infoId })
+                            });
+
+                            const data = await response.json();
+
+                            if (data.success) {
+                                voteCount.textContent = data.votes;
+                                button.classList.add('voted'); // Optional: Add a class to change appearance after voting
+                            } else {
+                                // Handle error message from server (e.g., user already voted)
+                                alert(data.message);
+                            }
+                        } catch (error) {
+                            console.error('Error voting:', error);
+                            alert('An error occurred while trying to vote.');
+                        }
+                    }
+                });
+            } else {
+                console.error("'.info-container' element not found. Event delegation for voting cannot be set up.");
+            }
+            
+            // Add info form submission
+            document.getElementById('add-info-form').addEventListener('submit', async (event) => {
+                event.preventDefault();
+                
+                const form = event.target;
+                const formData = new FormData(form);
+                const infoData = {
+                    spotId: formData.get('spotId'),
+                    tag: formData.get('tag'),
+                    text: formData.get('text'),
+                    userName: formData.get('userName'),
+                    userUrl: formData.get('userUrl')
+                };
+                
+                try {
+                    const response = await fetch('submit-pending-info.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(infoData)
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        alert('Information submitted successfully!');
+                        form.reset();
+                        location.reload();
+                    } else {
+                        alert('Error submitting information: ' + data.message);
+                    }
+                } catch (error) {
+                    console.error('Error submitting info:', error);
+                    alert('An error occurred while submitting your information.');
+                }
+            });
+            
+            // Add video form submission
+            document.getElementById('add-video-form').addEventListener('submit', async (event) => {
+                event.preventDefault();
+                
+                const form = event.target;
+                const formData = new FormData(form);
+                
+                try {
+                    const response = await fetch('submit-video.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        alert('Video submitted successfully!');
+                        form.reset();
+                        location.reload();
+                    } else {
+                        alert('Error submitting video: ' + data.message);
+                    }
+                } catch (error) {
+                    console.error('Error submitting video:', error);
+                    alert('An error occurred while submitting your video.');
+                }
+            });
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                // Add event listener to the Add Info button
+                const addInfoBtn = document.getElementById('add-info-btn');
+                const addInfoSection = document.querySelector('.add-info-section');
+                
+                if (addInfoBtn && addInfoSection) {
+                    addInfoBtn.addEventListener('click', function() {
+                        // Toggle the visibility of the form
+                        if (addInfoSection.style.display === 'none' || !addInfoSection.style.display) {
+                            addInfoSection.style.display = 'block';
+                            addInfoBtn.textContent = '- Hide Form';
+                        } else {
+                            addInfoSection.style.display = 'none';
+                            addInfoBtn.textContent = '+ Add Info';
+                        }
+                    });
+                }
+                
+                // Add event listener to the Add Video button
+                const addVideoBtn = document.getElementById('add-video-btn');
+                const addVideoSection = document.querySelector('.add-video-section');
+                
+                if (addVideoBtn && addVideoSection) {
+                    addVideoBtn.addEventListener('click', function() {
+                        // Toggle the visibility of the form
+                        if (addVideoSection.style.display === 'none' || !addVideoSection.style.display) {
+                            addVideoSection.style.display = 'block';
+                            addVideoBtn.textContent = '- Hide Form';
+                        } else {
+                            addVideoSection.style.display = 'none';
+                            addVideoBtn.textContent = '+ Add Video';
+                        }
+                    });
+                }
+            });
+
+            fetch('pending-infos.json')
+              .then(res => {
+                console.log('Response status:', res.status);
+                return res.json();
+              })
+              .then(data => {
+                console.log('Loaded data:', data);
+                if (!Array.isArray(data) || data.length === 0) {
+                  console.log('No info entries found.');
+                  return;
+                }
+                
+                const filtered = data.filter(info => info.spotId === 'sandhamn-surf-school');
+                if (filtered.length === 0) {
+                  console.log('No matching spotId entries.');
+                  return;
+                }
+                
+                const container = document.querySelector('.info-container');
+
+                filtered.forEach(info => {
+                  console.log('Processing info:', info);
+                  const item = document.createElement('div');
+                  const date = new Date(info.date);
+                  const formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                  const infoTextWithLinks = info.text
+                    .replace(/\bhttp[^\s]*/g, url => `<a href="${url}" target="_blank" rel="nofollow">${url}</a>`)
+                    .replace(/\n/g, '<br>');
+                  item.className = 'info-item';
+                  item.dataset.tag = info.tag;
+
+                  item.innerHTML = `
+                    <div class="info-header">
+                      <h3>${info.tag.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}</h3>
+                      <div>•</div>
+                      <div class="info-meta">
+                        <span class="info-date">${formattedDate}</span>
+                        <span class="info-author">by ${info.userName}</span>
+                      </div>
+                    </div>
+                    <div class="info-content">${infoTextWithLinks}</div>
+                    <div class="info-actions">
+                      <div class="vote-btn" data-info-id="${info.id}" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+                        <span class="vote-icon">
+                          <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
+                            <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
+                          </svg>
+                        </span>
+                        <span class="vote-count">${info.votes ?? 0}</span>
+                      </div>
+                    </div>
+                    <hr class="info-separator">
+                  `;
+
+                  container.appendChild(item);
+                });
+
+              })
+              .catch(err => console.error('Error loading pending infos:', err));
+            
+            // Function to update vote counts based on infos.json data
+            function updateVoteCounts() {
+              // Fetch the infos.json file
+              fetch('infos.json')
+                .then(response => response.json())
+                .then(infos => {
+                  // Create a map of id to votes for quick lookup
+                  const votesMap = {};
+                  infos.forEach(info => {
+                    votesMap[info.id] = info.votes || 0; // Default to 0 if votes property doesn't exist
+                  });
+                  
+                  // Find all vote buttons
+                  const voteButtons = document.querySelectorAll('.vote-btn[data-info-id]');
+                  
+                  // Update each vote button with the corresponding vote count
+                  voteButtons.forEach(button => {
+                    const infoId = button.getAttribute('data-info-id');
+                    const voteCountSpan = button.querySelector('.vote-count');
+                    
+                    if (infoId && voteCountSpan && votesMap.hasOwnProperty(infoId)) {
+                      voteCountSpan.textContent = votesMap[infoId];
+                    }
+                  });
+                })
+                .catch(error => {
+                  console.error('Error fetching or processing infos.json:', error);
+                });
+            }
+
+            // Call the function when the DOM is fully loaded
+            document.addEventListener('DOMContentLoaded', updateVoteCounts);
+
+            async function loadVideos() {
+  const jsonFile = "spots.json";
+  const res = await fetch(jsonFile);
+  const spots = await res.json();
+  const videoContainer = document.getElementById("videos");
+  const spotId = "sandhamn-surf-school";
+
+  // Add masonry container style
+  videoContainer.style.columnCount = "1";
+  videoContainer.style.columnGap = "20px";
+  videoContainer.style.padding = "0";
+
+  // Set column count based on viewport width
+  const setMasonryColumns = () => {
+    if (window.innerWidth > 1200) {
+      videoContainer.style.columnCount = "3";
+    } else if (window.innerWidth > 768) {
+      videoContainer.style.columnCount = "2";
+    } else {
+      videoContainer.style.columnCount = "1";
+    }
+  };
+
+  // Set initial column count
+  setMasonryColumns();
+
+  // Update columns on resize
+  window.addEventListener("resize", setMasonryColumns);
+
+  // Get all videos and remove duplicates by URL
+  let allVideos = spots
+    .filter(p => p.id === spotId)
+    .flatMap((p) => p.videos?.map((v) => ({ ...v, name: p.name })) || []);
+
+  // Track seen URLs to filter out duplicates
+  const seenUrls = new Set();
+  allVideos = allVideos.filter(video => {
+    // Normalize URL to handle slight variations
+    const normalizedUrl = normalizeVideoUrl(video.url);
+
+    if (seenUrls.has(normalizedUrl)) {
+      return false; // Skip this duplicate
+    }
+
+    // Add to seen set and keep this video
+    seenUrls.add(normalizedUrl);
+    return true;
+  });
+
+  // Sort by date (newest first)
+  allVideos.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  // Function to normalize video URLs to identify duplicates
+  function normalizeVideoUrl(url) {
+    try {
+      const parsedUrl = new URL(url);
+
+      // For YouTube videos (including Shorts)
+      if (parsedUrl.hostname.includes('youtube.com') || parsedUrl.hostname === 'youtu.be') {
+        let videoId;
+
+        // Handle youtu.be shortened URLs
+        if (parsedUrl.hostname === 'youtu.be') {
+          videoId = parsedUrl.pathname.substring(1);
+        } 
+        // Handle YouTube Shorts
+        else if (parsedUrl.pathname.includes('/shorts/')) {
+          videoId = parsedUrl.pathname.split('/shorts/')[1].split('/')[0];
+        } 
+        // Handle regular YouTube videos
+        else {
+          videoId = parsedUrl.searchParams.get("v");
+        }
+
+        if (videoId) {
+          // Return just the video ID as the normalized form
+          return `youtube:${videoId}`;
+        }
+      }
+
+      // For Instagram posts/reels
+      if (parsedUrl.hostname.includes('instagram.com')) {
+          // Use a regex to match the pattern /optional_username/(reel|p)/identifier
+          const match = parsedUrl.pathname.match(/^\/(?:[a-zA-Z0-9_.]+\/)?(reel|p)\/([a-zA-Z0-9_-]+)/);
+      
+          // If the regex finds a match and captures the type (reel or p) and the identifier
+          if (match && match[1] && match[2]) {
+              // Construct the desired string in the format instagram:type/identifier
+              return `instagram:${match[1]}/${match[2]}`;
+          }
+      }
+
+      // For URLs that don't match patterns, return the full URL
+      return url;
+    } catch (e) {
+      console.warn("Error normalizing URL:", url, e);
+      return url;
+    }
+  }
+
+  if (allVideos.length === 0) {
+    const noVideosMessage = document.createElement("p");
+    noVideosMessage.textContent = "No videos yet.";
+    videoContainer.appendChild(noVideosMessage);
+  } else {
+    allVideos.forEach((video) => {
+      // Create masonry item
+      const item = document.createElement("div");
+      item.classList.add("masonry-item");
+      item.style.breakInside = "avoid";
+      item.style.marginBottom = "20px";
+
+      if (video.kind === "YouTube") {
+        try {
+          const url = new URL(video.url);
+          let videoId;
+
+          // Handle youtu.be shortened URLs
+          if (url.hostname === 'youtu.be') {
+            videoId = url.pathname.substring(1);
+          } 
+          // Handle YouTube Shorts
+          else if (url.pathname.includes('/shorts/')) {
+            videoId = url.pathname.split('/shorts/')[1].split('/')[0];
+          } 
+          // Handle regular YouTube videos
+          else {
+            videoId = url.searchParams.get("v");
+          }
+
+          if (videoId) {
+            // Create responsive YouTube container - wider than before
+            const content = document.createElement("div");
+            content.style.position = "relative";
+            content.style.paddingBottom = "56.25%"; // 16:9 aspect ratio
+            content.style.height = "0";
+            content.style.overflow = "hidden";
+            content.style.maxWidth = "550px"; // Increased YouTube width
+            content.style.width = "100%";
+
+            const embed = document.createElement("iframe");
+            embed.src = `https://www.youtube-nocookie.com/embed/${videoId}`;
+            embed.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+            embed.allowFullscreen = true;
+            embed.loading = "lazy";
+            embed.style.position = "absolute";
+            embed.style.top = "0";
+            embed.style.left = "0";
+            embed.style.width = "100%";
+            embed.style.height = "100%";
+            embed.style.border = "none";
+
+            content.appendChild(embed);
+            item.appendChild(content);
+            videoContainer.appendChild(item);
+          }
+        } catch (e) {
+          console.warn("Invalid YouTube URL:", video.url, e);
+        }
+      } else if (video.kind === "Insta") {
+        try {
+          const url = new URL(video.url);
+          const path = url.pathname.split('/').filter(Boolean);
+
+          if (path.length >= 2) {
+            // Instagram container - no card design
+            const content = document.createElement("div");
+            content.style.position = "relative";
+            content.style.paddingBottom = "125%"; // 4:5 aspect ratio for Instagram
+            content.style.height = "0";
+            content.style.overflow = "hidden";
+            content.style.maxWidth = "350px"; // Keep Instagram width more compact
+            content.style.width = "100%";
+            content.style.margin = "0 auto";
+
+            // Create a placeholder with loading effect
+            const placeholder = document.createElement("div");
+            placeholder.style.position = "absolute";
+            placeholder.style.top = "0";
+            placeholder.style.left = "0";
+            placeholder.style.width = "100%";
+            placeholder.style.height = "100%";
+            placeholder.style.display = "flex";
+            placeholder.style.alignItems = "center";
+            placeholder.style.justifyContent = "center";
+            placeholder.style.backgroundColor = "#fafafa";
+
+            // Add a loading spinner
+            const spinner = document.createElement("div");
+            spinner.style.border = "3px solid #f3f3f3";
+            spinner.style.borderTop = "3px solid #3897f0"; // Instagram blue
+            spinner.style.borderRadius = "50%";
+            spinner.style.width = "30px";
+            spinner.style.height = "30px";
+            spinner.style.animation = "spin 1s linear infinite";
+            placeholder.appendChild(spinner);
+
+            // Add animation style if not already added
+            if (!document.getElementById("spin-animation")) {
+              const style = document.createElement("style");
+              style.id = "spin-animation";
+              style.textContent = "@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }";
+              document.head.appendChild(style);
+            }
+
+            // Create the Instagram iframe with proper parameters
+            const embedUrl = `https://www.instagram.com/${path[0]}/${path[1]}/embed`;
+            const embed = document.createElement('iframe');
+            embed.src = embedUrl;
+            embed.loading = "lazy";
+            embed.scrolling = "no";
+            embed.style.position = "absolute";
+            embed.style.top = "0";
+            embed.style.left = "0";
+            embed.style.width = "100%";
+            embed.style.height = "100%";
+            embed.style.border = "none";
+
+            // Remove placeholder when loaded
+            embed.onload = () => {
+              placeholder.style.display = "none";
+            };
+
+            content.appendChild(placeholder);
+            content.appendChild(embed);
+            item.appendChild(content);
+            videoContainer.appendChild(item);
+
+            // Load Instagram embed script if needed
+            if (!document.getElementById("instagram-embed-script")) {
+              const instaScript = document.createElement("script");
+              instaScript.id = "instagram-embed-script";
+              instaScript.src = "//www.instagram.com/embed.js";
+              instaScript.async = true;
+              instaScript.defer = true;
+              document.body.appendChild(instaScript);
+            }
+          }
+        } catch (e) {
+          console.warn("Invalid Instagram URL:", video.url, e);
+        }
+      }
+    });
+
+    // Process Instagram embeds after all are added
+    if (window.instgrm) {
+      window.instgrm.Embeds.process();
+    }
+  }
+}
+
+// Add event listeners
+window.addEventListener("DOMContentLoaded", loadVideos);
+window.addEventListener("load", function() {
+  if (window.instgrm) {
+    window.instgrm.Embeds.process();
+  }
+});
+            async function downloadGPX() {
+  try {
+    const spot = spotData;
+    
+    if (!spot.locations || spot.locations.length <= 1) {
+      console.error("Not enough locations for GPX track:", spot.locations?.length || 0);
+      return;
+    }
+    
+    const gpxContent = createGPXContent(spot);
+    const blob = new Blob([gpxContent], { type: 'application/gpx+xml' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${spot.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_track.gpx`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+  } catch (error) {
+    console.error("Error downloading GPX:", error);
+  }
+}
+
+function createGPXContent(spot) {
+  const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="project7III/foildata" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>${escapeXml(spot.name)}</name>
+    <desc>Track for ${escapeXml(spot.name)} in ${escapeXml(spot.country)}${spot.state ? ', ' + escapeXml(spot.state) : ''}</desc>
+    <author>
+      <name>project7III/foildata</name>
+      <link href="https://project7iii.com/foildata/map">
+        <text>Downloaded from project7III foildata/map</text>
+      </link>
+    </author>
+    <link href="https://project7iii.com/foildata/map">
+      <text>project7III foildata/map</text>
+    </link>
+  </metadata>
+  <trk>
+    <name>${escapeXml(spot.name)}</name>
+    <type>${escapeXml(spot.kind)}</type>
+    <trkseg>`;
+
+  const trackPoints = spot.locations.map((location, index) => 
+    `      <trkpt lat="${location.lat}" lon="${location.lng}">
+        <name>Point ${index + 1}</name>
+      </trkpt>`
+  ).join('\n');
+
+  const gpxFooter = `    </trkseg>
+  </trk>
+</gpx>`;
+
+  return gpxHeader + '\n' + trackPoints + '\n' + gpxFooter;
+}
+
+function escapeXml(unsafe) {
+  if (typeof unsafe !== 'string') {
+    return String(unsafe);
+  }
+  return unsafe.replace(/[<>&'"]/g, function (c) {
+    switch (c) {
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '&': return '&amp;';
+      case '\'': return '&apos;';
+      case '"': return '&quot;';
+      default: return c;
+    }
+  });
+}
+        </script>

@@ -1239,5 +1239,123 @@
         "userName": "marbodan",
         "userUrl": null,
         "spotId": "windspot-laguito-cartagena-2"
+    },
+    {
+        "id": "bob-wentz-windy-point-park-mkgznexr-y41xa",
+        "tag": "description",
+        "text": "Lake Travis main body",
+        "date": "2026-01-16T14:43:14.655Z",
+        "userName": "KB",
+        "userUrl": null,
+        "spotId": "bob-wentz-windy-point-park",
+        "votes": 1
+    },
+    {
+        "id": "new-providence-mkh012v5-90j0h",
+        "tag": "wind-direction",
+        "text": "NEE (Easterly with a Northern component)",
+        "date": "2026-01-16T14:53:52.193Z",
+        "userName": "atlantic",
+        "userUrl": null,
+        "spotId": "new-providence"
+    },
+    {
+        "id": "new-providence-2-mkh0795t-a6plz",
+        "tag": "conditions",
+        "text": "NEE (Easterly with a Northern component), when swells come in at +8s from the Atlantic, expect nice downwind rollers along New Providences northern coast. ",
+        "date": "2026-01-16T14:58:40.289Z",
+        "userName": "atlantic",
+        "userUrl": null,
+        "spotId": "new-providence-2"
+    },
+    {
+        "id": "la-ventana-mkh241ki-uy2g4",
+        "tag": "description",
+        "text": "Start at rasta beach and foil south toward baja Joe's.  ",
+        "date": "2026-01-16T15:52:09.714Z",
+        "userName": "Kitesurfer",
+        "userUrl": null,
+        "spotId": "la-ventana"
+    },
+    {
+        "id": "stora-trouville-beach-mkh283yq-2rid0",
+        "tag": "description",
+        "text": "Good location for Wingfoiling and Windfoiling.",
+        "date": "2026-01-16T15:55:19.442Z",
+        "userName": "armswe",
+        "userUrl": null,
+        "spotId": "stora-trouville-beach"
+    },
+    {
+        "id": "sandhamn-surf-school-mkh29x37-p6d7o",
+        "tag": "description",
+        "text": "Windsurfing and foiling School. Also good launch for Windfoiling. ",
+        "date": "2026-01-16T15:56:43.843Z",
+        "userName": "armswe",
+        "userUrl": null,
+        "spotId": "sandhamn-surf-school"
+    },
+    {
+        "id": "lilla-sand-och-stora-sand-mkh3y006-gb93x",
+        "tag": "description",
+        "text": "Pretty good spot with parking \/ public transport, nice beaches with less wind. Best when wind comes from southwest.",
+        "date": "2026-01-16T16:43:26.982Z",
+        "userName": "Per",
+        "userUrl": null,
+        "spotId": "lilla-sand-och-stora-sand"
+    },
+    {
+        "id": "oesterskaer-mkh42pll-f3c27",
+        "tag": "description",
+        "text": "Residential spot for locals or by public transport. Local club has their club house for storage on the beach and organizes a wing school.",
+        "date": "2026-01-16T16:47:06.777Z",
+        "userName": "Per",
+        "userUrl": null,
+        "spotId": "oesterskaer"
+    },
+    {
+        "id": "djursholms-segelklubb-mkh47i10-dnacv",
+        "tag": "description",
+        "text": "Clubspot with general access and bastu, mostly for foiling on stora v\u00e4rtan. The club organizes a wind surfing school but has plenty of different foiling people.",
+        "date": "2026-01-16T16:50:50.244Z",
+        "userName": "Per",
+        "userUrl": null,
+        "spotId": "djursholms-segelklubb"
+    },
+    {
+        "id": "the-big-dick-mkh4azna-e7jr8",
+        "tag": "description",
+        "text": "fqfqvqd",
+        "date": "2026-01-16T16:53:33.046Z",
+        "userName": "Trump ",
+        "userUrl": null,
+        "spotId": "the-big-dick"
+    },
+    {
+        "id": "strandvaegen-nynaeshamn-mkh4b6v6-ye0do",
+        "tag": "description",
+        "text": "Good access, be aware of submerged rocks near the beach. Good spot for beginners in wind from the south as you can lose ground and walk back up.",
+        "date": "2026-01-16T16:53:42.403Z",
+        "userName": "Per",
+        "userUrl": null,
+        "spotId": "strandvaegen-nynaeshamn"
+    },
+    {
+        "id": "toroe-mkh4f68g-r7jsc",
+        "tag": "description",
+        "text": "The spot in the wider area for surfing (unless you go to an island). Camping area nearby, rocky beach, generally very good wind. Kites are on the tip of the peninsula.",
+        "date": "2026-01-16T16:56:48.208Z",
+        "userName": "Per",
+        "userUrl": null,
+        "spotId": "toroe"
+    },
+    {
+        "id": "la-ventana-2-mkh8ijpl-33kjq",
+        "tag": "description",
+        "text": "Start at rasta beach and foil south toward baja Joe's.",
+        "date": "2026-01-16T18:51:24.105Z",
+        "userName": "someone",
+        "userUrl": null,
+        "spotId": "la-ventana-2"
     }
 ]
