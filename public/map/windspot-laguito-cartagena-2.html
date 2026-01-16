@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-    <title>Granadilla de Abona → Arona</title>
+    <title>Windspot, Laguito, Cartagena</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Downwind Foiling Run Granadilla de Abona → Arona. Foiling spot with access information, conditions, local contact, videos, distance, start and end coordinates, and GPX Track Download.">
+    <meta name="description" content="Wave Wingfoil & Parawing Spot Windspot, Laguito, Cartagena. Foiling spot with access information, conditions, local contact, videos.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -45,40 +45,36 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Granadilla de Abona → Arona Downwind Foiling Run</h1>
+            <h1 class="card-title">Windspot, Laguito, Cartagena Wave Wingfoil & Parawing Spot</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Downwind Foiling Run<br>Distance: 22.7 km    <br>Start Coordinates: 28.076770, -16.502173  | <a href="https://www.google.com/maps?q=28.076770327321935,-16.502172946929935" target="_blank">See on Google Maps</a>
-    <br>End Coordinates: 28.008459, -16.664028  | <a href="https://www.google.com/maps?q=28.008459156353474,-16.664028167724613" target="_blank">See on Google Maps</a>
-    <br><a href="#" onclick="downloadGPX(); return false;">
-    Download GPX Track
-</a><br></p>
+            <p>Wave Wingfoil & Parawing Spot<br>Coordinates: 10.396798, -75.564356 | <a href="https://www.google.com/maps?q=10.396797722715247,-75.56435644626619" target="_blank">See on Google Maps</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
-<button class="badge badge-outline" data-tag="description">
-    Description
+<button class="badge badge-outline" data-tag="wind-direction">
+    Wind Direction
 </button>
 </div>
 <hr class="info-separator">
-<div class="info-container"><div class="info-item" data-tag="description">
+<div class="info-container"><div class="info-item" data-tag="wind-direction">
     <div class="info-header">
-        <h3>Description</h3>
+        <h3>Wind Direction</h3>
         <div>•</div>
         <div class="info-meta">
-            <span class="info-date">Dezember 1, 2025</span>
+            <span class="info-date">Januar 16, 2026</span>
             <span class="info-author">by 
-                nilsmango
+                marbodan
             </span>
         </div>
     </div>
     <div class="info-content">
-        Longer Harbour Run<br>I don't know where to get out really. Sketchy as if you overshoot and you most likely die ;)
+        North
     </div>
     <div class="info-actions">
-        <div class="vote-btn" data-info-id="granadilla-de-abona-arona-min9h0h8-bwv0z" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+        <div class="vote-btn" data-info-id="windspot-laguito-cartagena-2-mkgyf42r-k0npb" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
             <span class="vote-icon">
                 <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
                                 <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
@@ -93,7 +89,7 @@
             <div class="add-info-section" style="display: none;">
                 <h2>Add Information</h2>
                 <form id="add-info-form">
-                    <input type="hidden" name="spotId" value="granadilla-de-abona-arona">
+                    <input type="hidden" name="spotId" value="windspot-laguito-cartagena-2">
                     
                     <div class="form-group">
                         <label for="info-tag" class="required">Tag</label>
@@ -137,7 +133,7 @@
                             <div class="add-video-section" style="display: none;">
                                 <h2>Add Video</h2>
                                 <form id="add-video-form">
-                                    <input type="hidden" name="spotId" value="granadilla-de-abona-arona">
+                                    <input type="hidden" name="spotId" value="windspot-laguito-cartagena-2">
                                     
                                     <div class="form-group">
                                         <label for="video-url" class="required">Video URL (YouTube or Instagram)</label>
@@ -255,7 +251,7 @@
             }
             
             // Get spot data
-            const spotData = {"name":"Granadilla de Abona → Arona","infos":[{"spotId":"granadilla-de-abona-arona","tag":"description","text":"Longer Harbour Run\nI don't know where to get out really. Sketchy as if you overshoot and you most likely die ;)","date":"2025-12-01T14:45:24.524Z","userName":"nilsmango","id":"granadilla-de-abona-arona-min9h0h8-bwv0z"}],"kind":"downwind-run","pending":false,"country":"ES","id":"granadilla-de-abona-arona","distance":22.7,"locations":[{"lng":-16.502172946929935,"lat":28.076770327321935},{"lng":-16.503138542175297,"lat":28.06630015281589},{"lng":-16.50455474853516,"lat":28.059407835560144},{"lng":-16.502881050109867,"lat":28.056832570638814},{"lng":-16.50300979614258,"lat":28.04198572298303},{"lng":-16.505928039550785,"lat":28.030015853768045},{"lng":-16.539573669433597,"lat":28.00607212133814},{"lng":-16.56600952148438,"lat":27.99591715912407},{"lng":-16.60669326782227,"lat":27.99864545194509},{"lng":-16.62986755371094,"lat":28.00137367569477},{"lng":-16.63467407226563,"lat":27.99875912931371},{"lng":-16.646175384521488,"lat":27.998872806562442},{"lng":-16.660251617431644,"lat":28.000615842693005},{"lng":-16.664242744445804,"lat":28.005276431245772},{"lng":-16.664028167724613,"lat":28.008459156353474}]};
+            const spotData = {"name":"Windspot, Laguito, Cartagena","pending":false,"id":"windspot-laguito-cartagena-2","country":"CO","kind":"wave-wind-spot","locations":[{"lng":-75.56435644626619,"lat":10.396797722715247}],"infos":[{"spotId":"windspot-laguito-cartagena-2","userName":"marbodan","tag":"wind-direction","text":"North","id":"windspot-laguito-cartagena-2-mkgyf42r-k0npb","date":"2026-01-16T14:08:47.716Z"}]};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -510,7 +506,7 @@
                   return;
                 }
                 
-                const filtered = data.filter(info => info.spotId === 'granadilla-de-abona-arona');
+                const filtered = data.filter(info => info.spotId === 'windspot-laguito-cartagena-2');
                 if (filtered.length === 0) {
                   console.log('No matching spotId entries.');
                   return;
@@ -596,7 +592,7 @@
   const res = await fetch(jsonFile);
   const spots = await res.json();
   const videoContainer = document.getElementById("videos");
-  const spotId = "granadilla-de-abona-arona";
+  const spotId = "windspot-laguito-cartagena-2";
 
   // Add masonry container style
   videoContainer.style.columnCount = "1";
