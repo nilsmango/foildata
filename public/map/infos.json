@@ -866,7 +866,8 @@
         "tag": "description",
         "date": "2025-09-17T14:34:16.798Z",
         "id": "gorgier-saint-blaise-mfo31t9a-i4m8x",
-        "userName": "Nils Mango"
+        "userName": "Nils Mango",
+        "votes": 1
     },
     {
         "spotId": "gorgier-saint-blaise",
@@ -967,7 +968,8 @@
         "tag": "description",
         "date": "2025-12-01T14:45:24.524Z",
         "id": "granadilla-de-abona-arona-min9h0h8-bwv0z",
-        "userName": "nilsmango"
+        "userName": "nilsmango",
+        "votes": 1
     },
     {
         "date": "2025-12-01T14:46:41.711Z",
@@ -1357,5 +1359,77 @@
         "userName": "someone",
         "userUrl": null,
         "spotId": "la-ventana-2"
+    },
+    {
+        "id": "kihei-maluaka-mkh96rd9-220vr",
+        "tag": "description",
+        "text": "There are a few different places to end this run and a couple different starting points depending on condition, but this is the bulk of a full run when conditions are good.\n\nAlternatively, Wailea is a pretty common end point, or Ulua, or Keawakapu (Mana Kai) or maybe even a Kam.",
+        "date": "2026-01-16T19:10:13.773Z",
+        "userName": "dustin",
+        "userUrl": null,
+        "spotId": "kihei-maluaka"
+    },
+    {
+        "id": "maliko-run-mkh98x3o-g1mzz",
+        "tag": "description",
+        "text": "This is pretty good almost every day in the summer.  Winters can be a bit dangerous if you're not careful.",
+        "date": "2026-01-16T19:11:54.516Z",
+        "userName": "dustin",
+        "userUrl": null,
+        "spotId": "maliko-run"
+    },
+    {
+        "id": "frigate-island-mkhdyper-wmcme",
+        "tag": "description",
+        "text": "Really good spot. need\/want a boat to hang out here. Good winds most the time during season (December -> May)",
+        "date": "2026-01-16T21:23:56.067Z",
+        "userName": "Tinorca",
+        "userUrl": null,
+        "spotId": "frigate-island"
+    },
+    {
+        "id": "cabrillo-beach-outside-mkhf3wm3-7yqtm",
+        "tag": "conditions",
+        "text": "Windy on all days except winter",
+        "date": "2026-01-16T21:55:58.299Z",
+        "userName": "Foiled My Plans",
+        "userUrl": null,
+        "spotId": "cabrillo-beach-outside"
+    },
+    {
+        "id": "passeig-de-colom-la-pobla-de-farnals-mkhhxtbs-v7rec",
+        "tag": "wind-direction",
+        "text": "Great spot for N NE E SE S and WE ",
+        "date": "2026-01-16T23:15:12.953Z",
+        "userName": "ddgp",
+        "userUrl": null,
+        "spotId": "passeig-de-colom-la-pobla-de-farnals"
+    },
+    {
+        "id": "ocean-beach-sloat-mkhj1g2d-d8akj",
+        "tag": "description",
+        "text": "Beach break that can get huge with good swell but also can have very rideable small conditions at times.  Plenty of foilers ride here, but find your own peak away from surfers",
+        "date": "2026-01-16T23:46:02.005Z",
+        "userName": "Jondrums ",
+        "userUrl": null,
+        "spotId": "ocean-beach-sloat"
+    },
+    {
+        "id": "lake-washington-sailing-club-mkhjjbgd-4ya12",
+        "tag": "description",
+        "text": "Anyone sailing club, required membership or being guest of current member.\n\nLate spring through late summer, the Delta breeze brings consistent South wind in the afternoon",
+        "date": "2026-01-16T23:59:55.838Z",
+        "userName": "Tmix",
+        "userUrl": null,
+        "spotId": "lake-washington-sailing-club"
+    },
+    {
+        "id": "hood-river-columbia-river-gorge-mkhuyz38-06yun",
+        "tag": "description",
+        "text": "North American wind sport hot spot.",
+        "date": "2026-01-17T05:20:02.084Z",
+        "userName": "Spam",
+        "userUrl": null,
+        "spotId": "hood-river-columbia-river-gorge"
     }
 ]
