@@ -1431,5 +1431,122 @@
         "userName": "Spam",
         "userUrl": null,
         "spotId": "hood-river-columbia-river-gorge"
+    },
+    {
+        "id": "hullet-mki2sxx3-zh1s7",
+        "tag": "description",
+        "text": "Flatwater foil spot, great for beginners, can get a bit crowded.",
+        "date": "2026-01-17T08:59:17.559Z",
+        "userName": "Delta",
+        "userUrl": null,
+        "spotId": "hullet"
+    },
+    {
+        "id": "begtrupvig-strandsborg-mki2x4zb-v2873",
+        "tag": "description",
+        "text": "Can get decent waves",
+        "date": "2026-01-17T09:02:33.335Z",
+        "userName": "Delta",
+        "userUrl": null,
+        "spotId": "begtrupvig-strandsborg"
+    },
+    {
+        "id": "ewk-mki2zfju-jim2v",
+        "tag": "description",
+        "text": "Has a ramp, and there's the club or bluespirit where you can get changed, often good company",
+        "date": "2026-01-17T09:04:20.346Z",
+        "userName": "Delta",
+        "userUrl": null,
+        "spotId": "ewk"
+    },
+    {
+        "id": "bla-flag-blue-flag-ebeltoft-mki31ytl-w1bn3",
+        "tag": "description",
+        "text": "Popular with tourists",
+        "date": "2026-01-17T09:06:18.633Z",
+        "userName": "Delta",
+        "userUrl": null,
+        "spotId": "bla-flag-blue-flag-ebeltoft"
+    },
+    {
+        "id": "femm-ller-mki33ex9-iqnff",
+        "tag": "description",
+        "text": "Gets deep fast",
+        "date": "2026-01-17T09:07:26.157Z",
+        "userName": "Delta",
+        "userUrl": null,
+        "spotId": "femm-ller"
+    },
+    {
+        "id": "bogens-mki34zwx-bvx3r",
+        "tag": "description",
+        "text": "Great spot for when wind is low most other places, gets deep fast",
+        "date": "2026-01-17T09:08:40.017Z",
+        "userName": "Delta",
+        "userUrl": null,
+        "spotId": "bogens"
+    },
+    {
+        "id": "boeslum-helms-deep-mki39cy8-qia5k",
+        "tag": "description",
+        "text": "Stony bottom and tough shorebreak, but great waves and lots of space. Fun fact, helms deep in lord of the rings is named after this spot",
+        "date": "2026-01-17T09:12:03.536Z",
+        "userName": "Delta",
+        "userUrl": null,
+        "spotId": "boeslum-helms-deep"
+    },
+    {
+        "id": "olaf-ryes-vej-mki3bh9r-mw3n1",
+        "tag": "description",
+        "text": "Very windy spot with good waves. Beware of seaweed season",
+        "date": "2026-01-17T09:13:42.447Z",
+        "userName": "Delta",
+        "userUrl": null,
+        "spotId": "olaf-ryes-vej"
+    },
+    {
+        "id": "sk-dshoved-mki3fbsj-lsw6z",
+        "tag": "description",
+        "text": "Small waves but surfable, beautiful spot, good in nw",
+        "date": "2026-01-17T09:16:41.971Z",
+        "userName": "Delta",
+        "userUrl": null,
+        "spotId": "sk-dshoved"
+    },
+    {
+        "id": "akrogen-mki3jjwn-6yy2b",
+        "tag": "description",
+        "text": "Next to the windsurf club, many big stones, challenging chop. When the wind is just right the waves are amazing around the marina. Always good company.",
+        "date": "2026-01-17T09:19:59.111Z",
+        "userName": "Delta",
+        "userUrl": null,
+        "spotId": "akrogen"
+    },
+    {
+        "id": "tangkrogen-mki3l7f1-1pstn",
+        "tag": "description",
+        "text": "Popular wave spot",
+        "date": "2026-01-17T09:21:16.237Z",
+        "userName": "Delta",
+        "userUrl": null,
+        "spotId": "tangkrogen"
+    },
+    {
+        "id": "wingm-ller-wingmills-mki3nm6a-bipmc",
+        "tag": "description",
+        "text": "Closed-in spot with both flat water areas and wave areas, great for beginners.",
+        "date": "2026-01-17T09:23:08.674Z",
+        "userName": "Delta",
+        "userUrl": null,
+        "spotId": "wingm-ller-wingmills"
+    },
+    {
+        "id": "gjerrild-mki3prpg-ux0x9",
+        "tag": "description",
+        "text": "Amazing waves in NW-NE",
+        "date": "2026-01-17T09:24:49.156Z",
+        "userName": "Delta",
+        "userUrl": null,
+        "spotId": "gjerrild"
     }
 ]
