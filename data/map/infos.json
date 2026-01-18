@@ -1430,7 +1430,8 @@
         "date": "2026-01-17T05:20:02.084Z",
         "userName": "Spam",
         "userUrl": null,
-        "spotId": "hood-river-columbia-river-gorge"
+        "spotId": "hood-river-columbia-river-gorge",
+        "votes": 1
     },
     {
         "id": "hullet-mki2sxx3-zh1s7",
@@ -1548,5 +1549,32 @@
         "userName": "Delta",
         "userUrl": null,
         "spotId": "gjerrild"
+    },
+    {
+        "id": "laghi-alimini-mki9a7ny-qclj9",
+        "tag": "wind-direction",
+        "text": "NW\/SW",
+        "date": "2026-01-17T12:00:41.038Z",
+        "userName": "fabio",
+        "userUrl": null,
+        "spotId": "laghi-alimini"
+    },
+    {
+        "id": "brandon-mkiu7ytk-p8lc4",
+        "tag": "description",
+        "text": "Regular speed run for the local crew in SW wind with little swell\n\n",
+        "date": "2026-01-17T21:46:48.200Z",
+        "userName": "DinDjarin",
+        "userUrl": null,
+        "spotId": "brandon"
+    },
+    {
+        "id": "praia-do-rosario-mkixc1o1-y7uiv",
+        "tag": "description",
+        "text": "Windsurf & wingfoil spot. Tide dependent ",
+        "date": "2026-01-17T23:13:57.361Z",
+        "userName": "Jbeirao",
+        "userUrl": null,
+        "spotId": "praia-do-rosario"
     }
 ]
