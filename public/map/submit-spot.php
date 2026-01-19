@@ -1,6 +1,10 @@
 <?php
-// Set headers to allow JSON response
+// Set headers to allow JSON response and prevent caching
 header('Content-Type: application/json');
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Cache-Control: post-check=0, pre-check=0', false);
+header('Pragma: no-cache');
+header('Expires: 0');
 
 // Get the raw POST data
 $jsonData = file_get_contents('php://input');

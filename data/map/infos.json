@@ -1576,5 +1576,95 @@
         "userName": "Jbeirao",
         "userUrl": null,
         "spotId": "praia-do-rosario"
+    },
+    {
+        "id": "annaberg-beach-mkka0ehg-x3n83",
+        "tag": "description",
+        "text": "Pretty fun spot. Easy launch",
+        "date": "2026-01-18T21:56:35.284Z",
+        "userName": "N\/a",
+        "userUrl": null,
+        "spotId": "annaberg-beach"
+    },
+    {
+        "id": "odu-49th-street-norfolk-mkka2798-uayko",
+        "tag": "wind-direction",
+        "text": "Good on south ish winds",
+        "date": "2026-01-18T21:57:59.228Z",
+        "userName": "N\/a",
+        "userUrl": null,
+        "spotId": "odu-49th-street-norfolk"
+    },
+    {
+        "id": "mill-creek-pond-hampton-mkka3pag-z09jg",
+        "tag": "wind-direction",
+        "text": "Best on north and north east winds",
+        "date": "2026-01-18T21:59:09.256Z",
+        "userName": "N\/a",
+        "userUrl": null,
+        "spotId": "mill-creek-pond-hampton"
+    },
+    {
+        "id": "factory-point-hampton-mkka5hxi-6cxt3",
+        "tag": "wind-direction",
+        "text": "Good on winds out of the westish",
+        "date": "2026-01-18T22:00:33.030Z",
+        "userName": "N\/a",
+        "userUrl": null,
+        "spotId": "factory-point-hampton"
+    },
+    {
+        "id": "messick-point-poquoson-mkka6ws8-bfx3g",
+        "tag": "wind-direction",
+        "text": "Good on south or west winds ",
+        "date": "2026-01-18T22:01:38.936Z",
+        "userName": "N\/a",
+        "userUrl": null,
+        "spotId": "messick-point-poquoson"
+    },
+    {
+        "id": "first-landing-state-park-virginia-beach-mkka8sel-yairx",
+        "tag": "wind-direction",
+        "text": "Best on north east",
+        "date": "2026-01-18T22:03:06.573Z",
+        "userName": "N\/a",
+        "userUrl": null,
+        "spotId": "first-landing-state-park-virginia-beach"
+    },
+    {
+        "id": "my-den-virginia-beach-mkkaa8ve-tuth9",
+        "tag": "wind-direction",
+        "text": "South wind",
+        "date": "2026-01-18T22:04:14.570Z",
+        "userName": "N\/a",
+        "userUrl": null,
+        "spotId": "my-den-virginia-beach"
+    },
+    {
+        "id": "canadian-hole-dare-county-mkkabm5w-q109a",
+        "tag": "wind-direction",
+        "text": "North or south wind",
+        "date": "2026-01-18T22:05:18.452Z",
+        "userName": "N\/a",
+        "userUrl": null,
+        "spotId": "canadian-hole-dare-county"
+    },
+    {
+        "id": "ann-arbor-rawing-club-dock-mkkap0f6-kldg0",
+        "tag": "description",
+        "text": "Nice low dock. It can be crowded.",
+        "date": "2026-01-18T22:15:43.458Z",
+        "userName": "Viza",
+        "userUrl": null,
+        "spotId": "ann-arbor-rawing-club-dock"
+    },
+    {
+        "id": "la-redoute-morsalines-mkl5mkhe-lasry",
+        "tag": "description",
+        "text": "Kite\nWindsurf\nWingfoil\nTide dependant",
+        "date": "2026-01-19T12:41:37.587Z",
+        "userName": "Marino33",
+        "userUrl": null,
+        "spotId": "la-redoute-morsalines"
     }
 ]

@@ -112,7 +112,7 @@ const tempIcon = L.icon({
 async function loadSpots() {
   try {
     console.log("Attempting to load spots.json...")
-    const response = await fetch("spots.json")
+    const response = await fetch(`spots.json?t=${Date.now()}`)
     if (!response.ok) {
       throw new Error(`Failed to load spots: ${response.status} ${response.statusText}`)
     }
@@ -279,7 +279,7 @@ function showSpotInfo(spot) {
   const typeLabels = {
     "pump-foil-dock": "Pump Foil Dock",
     "wake-thief-spot": "Wake Thief Spot",
-    "wave-wind-spot": "Wave Wind Spot",
+    "wave-wind-spot": "Wind & Wave Spot",
     "wind-spot": "Wind Spot",
     "wave-spot": "Wave Spot",
     "rental-station": "Rental Station",
@@ -656,7 +656,7 @@ function openAddForm(type, points) {
     const spotTypes = [
       { value: "pump-foil-dock", label: "Pump Foil Dock" },
       { value: "wake-thief-spot", label: "Wake Thief Spot" },
-      { value: "wave-wind-spot", label: "Wave Wind Spot" },
+      { value: "wave-wind-spot", label: "Wave & Wind Spot" },
       { value: "wind-spot", label: "Wind Spot" },
       { value: "wave-spot", label: "Wave Spot" },
       { value: "rental-station", label: "Rental Station" },

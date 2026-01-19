@@ -515,6 +515,9 @@ async function handleFormSubmit(event) {
     // Show success message
     alert("Spot submitted successfully! It will appear on the map (you might need to refresh the page), but will be reviewed before being added permanently.");
 
+    // Add small delay to ensure server has finished writing
+    await new Promise(resolve => setTimeout(resolve, 500));
+
     // Reload spots
     const loadSpots = getLoadSpots();
     loadSpots();
