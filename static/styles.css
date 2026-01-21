@@ -56,22 +56,35 @@
 
 body {
     font-family:
-        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-        sans-serif;
+    system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     background-color: var(--background);
     color: var(--text);
     line-height: 1.5;
     font-size: 1.125rem;
 }
 
+
+h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 3.2rem;
+}
+
+
 h2 {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     margin-bottom: 0.5rem;
+    font-size: 2.3rem;
+    line-height: 2.3rem;
+    font-weight: 600;
 }
 
 h3 {
-    margin-top: 1rem;
+    margin-top: 1.25rem;
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 600;
 }
 
 p,
@@ -766,6 +779,9 @@ header {
     position: relative;
     /* line-height: 4rem; */
     font-weight: 400;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.3em;
 }
 
 .iii {
