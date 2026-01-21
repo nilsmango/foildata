@@ -1160,7 +1160,8 @@
         "tag": "description",
         "date": "2025-12-19T13:28:38.849Z",
         "id": "la-caleta-adeje-mjcwnmpt-519bw",
-        "userName": "nilsmango"
+        "userName": "nilsmango",
+        "votes": 1
     },
     {
         "date": "2025-12-19T13:48:38+00:00",
@@ -1675,5 +1676,32 @@
         "userName": "tester",
         "userUrl": null,
         "spotId": "test"
+    },
+    {
+        "id": "lyall-bay-mklxgar5-x3vlp",
+        "tag": "wind-direction",
+        "text": "Best in Southerly, although can be a flat water spot with northerly or off-shore wave riding if there is southerly swell. ",
+        "date": "2026-01-20T01:40:34.289Z",
+        "userName": "Chilko",
+        "userUrl": null,
+        "spotId": "lyall-bay"
+    },
+    {
+        "id": "lyall-bay-mklxgar5-3g6j1",
+        "tag": "description",
+        "text": "Great wave & wind spot, typically onshore conditions with a southerly weather system. This is Wellington's main surf spot so stay clear of the surfers - foilers and windsurfers tend to rig and launch from the western end of the beach whereas the surfers tend to be closer to the airport. ",
+        "date": "2026-01-20T01:40:34.289Z",
+        "userName": "Chilko",
+        "userUrl": null,
+        "spotId": "lyall-bay"
+    },
+    {
+        "id": "sqy-mkmzop8g-ocwz7",
+        "tag": "description",
+        "text": "A spot to dockstart near Paris",
+        "date": "2026-01-20T19:30:51.712Z",
+        "userName": "alban",
+        "userUrl": null,
+        "spotId": "sqy"
     }
 ]
