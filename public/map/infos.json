@@ -1704,5 +1704,15 @@
         "userName": "alban",
         "userUrl": null,
         "spotId": "sqy"
+    },
+    {
+        "id": "interlakenstrasse-spiez-mkv0wxyf-icrag",
+        "tag": "description",
+        "text": "Good dock, running start, easy. \nParking across the street, free warm showers at the spot!",
+        "date": "2026-01-26T10:27:25.287Z",
+        "userName": "test",
+        "userUrl": null,
+        "spotId": "interlakenstrasse-spiez",
+        "votes": 1
     }
 ]
