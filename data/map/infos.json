@@ -88,7 +88,8 @@
         "userUrl": "https:\/\/nilsmango.ch",
         "spotId": "neuchatel-yverdon-les-bains",
         "text": "Longest possible Bise run.\nCheck wind: https:\/\/letskite.ch\/en\nCheck waves in Neuch\u00e2tel: https:\/\/jeunesrives.roundshot.com\/",
-        "id": "neuchatel-yverdon-les-bains-m9vbgr51-0ai7u"
+        "id": "neuchatel-yverdon-les-bains-m9vbgr51-0ai7u",
+        "votes": 1
     },
     {
         "date": "2025-04-24T12:06:00.037Z",
@@ -1127,7 +1128,8 @@
         "userUrl": "",
         "spotId": "neuchatel-yverdon-les-bains",
         "text": "Check webcams for Lac de Neuch\u00e2tel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-webcams.html\nCheck wind forecasts for Lac de Neuch\u00e2tel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-forecasts.html",
-        "id": "69440cde3c815"
+        "id": "69440cde3c815",
+        "votes": 1
     },
     {
         "date": "2025-12-18T14:17:17+00:00",
@@ -1714,5 +1716,23 @@
         "userUrl": null,
         "spotId": "interlakenstrasse-spiez",
         "votes": 1
+    },
+    {
+        "id": "kamen-nica-ml8mgvlj-x2xb0",
+        "tag": "description",
+        "text": "\u2026",
+        "date": "2026-02-04T22:51:47.575Z",
+        "userName": "Lh",
+        "userUrl": null,
+        "spotId": "kamen-nica"
+    },
+    {
+        "id": "center-parcs-bostalsee-nohfelden-mljfd44o-hxew2",
+        "tag": "description",
+        "text": "Wind spot on a nice lake with Duotone rental station",
+        "date": "2026-02-12T12:18:22.632Z",
+        "userName": "Johnny",
+        "userUrl": null,
+        "spotId": "center-parcs-bostalsee-nohfelden"
     }
 ]
