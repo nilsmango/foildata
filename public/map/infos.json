@@ -1734,5 +1734,23 @@
         "userName": "Johnny",
         "userUrl": null,
         "spotId": "center-parcs-bostalsee-nohfelden"
+    },
+    {
+        "id": "brown-water-mlswxynt-smqqk",
+        "tag": "description",
+        "text": "Known spot for Wing Foiling, Foil Drive, SUP foiling and Pump foiling",
+        "date": "2026-02-19T03:40:24.377Z",
+        "userName": "LRP",
+        "userUrl": null,
+        "spotId": "brown-water"
+    },
+    {
+        "id": "big-pond-mlsx3rnv-qkwyx",
+        "tag": "description",
+        "text": "Can be shiftier than a bag full of weasels. However Pittwater is great in a NE of when a decent southerly hits.\n",
+        "date": "2026-02-19T03:44:55.243Z",
+        "userName": "LRP",
+        "userUrl": null,
+        "spotId": "big-pond"
     }
 ]
