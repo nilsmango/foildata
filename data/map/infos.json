@@ -598,7 +598,7 @@
         "spotId": "nyon-villeneuve",
         "text": "Longest possible single downwind run in Switzerland. Be careful with possible thunderstorms.",
         "id": "nyon-villeneuve-mdmtii3o-9ikn5",
-        "votes": 2
+        "votes": 3
     },
     {
         "date": "2025-07-28T10:04:48.911Z",
@@ -884,7 +884,8 @@
         "tag": "description",
         "date": "2025-10-29T07:36:20.785Z",
         "id": "saint-aubin-sauges-concise-mhbom4hd-9hfl9",
-        "userName": "Supfoil.vh"
+        "userName": "Supfoil.vh",
+        "votes": 1
     },
     {
         "date": "2025-11-08T08:50:41.887Z",
@@ -1752,5 +1753,14 @@
         "userName": "LRP",
         "userUrl": null,
         "spotId": "big-pond"
+    },
+    {
+        "id": "testing-mlxllwke-m58xa",
+        "tag": "description",
+        "text": "test",
+        "date": "2026-02-22T10:21:56.894Z",
+        "userName": "test",
+        "userUrl": null,
+        "spotId": "testing"
     }
 ]
