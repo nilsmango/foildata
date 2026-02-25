@@ -13,7 +13,7 @@ if (!$spot || !isset($spot['name']) || !isset($spot['locations'])) {
 
 $apiKey = $_SERVER['HTTP_X_API_KEY'] ?? '';
 
-$configFile = '../.api-key';
+$configFile = '.api-key';
 if (!file_exists($configFile)) {
     file_put_contents($configFile, bin2hex(random_bytes(16)));
 }
