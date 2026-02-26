@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-    <title>Ruderclub Erlenbach</title>
+    <title>Alcalá → Las Americas</title>
     <link rel="stylesheet" href="/foildata/styles.css">
-    <meta name="description" content="Pump Foiling Spot Ruderclub Erlenbach. Foiling spot with access information, conditions, local contact, videos.">
+    <meta name="description" content="Downwind Foiling Run Alcalá → Las Americas. Foiling spot with access information, conditions, local contact, videos, distance, start and end coordinates, and GPX Track Download.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
@@ -45,13 +45,17 @@
         <div class="card">
           <div class="card-header">
           <div class="product-header">
-            <h1 class="card-title">Ruderclub Erlenbach Pump Foiling Spot</h1>
+            <h1 class="card-title">Alcalá → Las Americas Downwind Foiling Run</h1>
             </div>
           </div>
           <div class="card-content">
             <div id="spot-map" style="height: 400px; margin-bottom: 1rem; margin-top: -0.75rem;"></div>
             <h2>Information</h2>
-            <p>Pump Foiling Spot<br>Coordinates: 47.305998, 8.587855 | <a href="https://www.google.com/maps?q=47.305998,8.587855" target="_blank">See on Google Maps</a><br></p>
+            <p>Downwind Foiling Run<br>Distance: 20.3 km    <br>Start Coordinates: 28.201298, -16.832036  | <a href="https://www.google.com/maps?q=28.201297865912718,-16.83203622162892" target="_blank">See on Google Maps</a>
+    <br>End Coordinates: 28.052543, -16.731495  | <a href="https://www.google.com/maps?q=28.052542723035355,-16.731495410166225" target="_blank">See on Google Maps</a>
+    <br><a href="#" onclick="downloadGPX(); return false;">
+    Download GPX Track
+</a><br></p>
             <div class="badge-container">
 <button class="badge badge-outline active" data-tag="all">All</button>
 <button class="badge badge-outline" data-tag="description">
@@ -64,19 +68,17 @@
         <h3>Description</h3>
         <div>•</div>
         <div class="info-meta">
-            <span class="info-date">Juli 29, 2025</span>
+            <span class="info-date">Februar 26, 2026</span>
             <span class="info-author">by 
-                <a href="https://github.com/zdavatz/pumpspots/blob/main/pumpspots.csv" target="_blank" rel="noopener">
-    zdavatz
-</a>
+                nilsmango
             </span>
         </div>
     </div>
     <div class="info-content">
-        Spotfinder: zdavatz. Height to water: 15 cm über Wasser. Gerry Gearloose hat seinen Shop hier. Gut zum Material testen. Images of spot: <a href="https://www.instagram.com/p/C7a26EXKT5v/" target="_blank" rel="noopener">https://www.instagram.com/p/C7a26EXKT5v/</a>
+        Best run on the island!
     </div>
     <div class="info-actions">
-        <div class="vote-btn" data-info-id="ruderclub-erlenbach-3a64a0" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
+        <div class="vote-btn" data-info-id="E3CB2396-55F1-4F25-8420-699EA7094B5D" style="padding: 5px 15px 8px; display: inline-block; margin-top: 0.5rem;">
             <span class="vote-icon">
                 <svg width="20" height="24" viewBox="0 0 24 28" fill="currentColor" style="position: relative; top: 5px;">
                                 <path d="M12 4c-.5 0-1 .2-1.4.6l-6.8 6.8c-.8.8-.2 2.2.9 2.2h3.8v8.8c0 .8.7 1.6 1.5 1.6h4c.8 0 1.5-.8 1.5-1.6v-8.8h3.8c1.1 0 1.7-1.4.9-2.2l-6.8-6.8c-.4-.4-.9-.6-1.4-.6z"/>
@@ -91,7 +93,7 @@
             <div class="add-info-section" style="display: none;">
                 <h2>Add Information</h2>
                 <form id="add-info-form">
-                    <input type="hidden" name="spotId" value="ruderclub-erlenbach-3a64a0">
+                    <input type="hidden" name="spotId" value="alcal-las-americas">
                     
                     <div class="form-group">
                         <label for="info-tag" class="required">Tag</label>
@@ -135,7 +137,7 @@
                             <div class="add-video-section" style="display: none;">
                                 <h2>Add Video</h2>
                                 <form id="add-video-form">
-                                    <input type="hidden" name="spotId" value="ruderclub-erlenbach-3a64a0">
+                                    <input type="hidden" name="spotId" value="alcal-las-americas">
                                     
                                     <div class="form-group">
                                         <label for="video-url" class="required">Video URL (YouTube or Instagram)</label>
@@ -253,7 +255,7 @@
             }
             
             // Get spot data
-            const spotData = {"infos":[{"userUrl":"https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv","date":"2025-07-29T13:43:42.135270Z","spotId":"ruderclub-erlenbach-3a64a0","text":"Spotfinder: zdavatz. Height to water: 15 cm über Wasser. Gerry Gearloose hat seinen Shop hier. Gut zum Material testen. Images of spot: https:\/\/www.instagram.com\/p\/C7a26EXKT5v\/","id":"ruderclub-erlenbach-3a64a0","tag":"description","userName":"zdavatz"}],"country":"CH","pending":false,"locations":[{"lat":47.305998,"lng":8.587855}],"name":"Ruderclub Erlenbach","id":"ruderclub-erlenbach-3a64a0","kind":"pump-foil-dock"};
+            const spotData = {"infos":[{"date":"2026-02-26T09:20:35Z","userName":"nilsmango","id":"E3CB2396-55F1-4F25-8420-699EA7094B5D","spotId":"alcal-las-americas","tag":"description","text":"Best run on the island!"}],"country":"ES","videos":[],"distance":20.3,"pending":false,"locations":[{"lat":28.201297865912718,"lng":-16.83203622162892},{"lat":28.200590388164656,"lng":-16.83250289644671},{"lat":28.197506945508312,"lng":-16.833224921846217},{"lat":28.19120450738524,"lng":-16.831454224928848},{"lat":28.17295210180591,"lng":-16.823966323960338},{"lat":28.155029854895204,"lng":-16.81186755653051},{"lat":28.128612653338436,"lng":-16.793431339494624},{"lat":28.108722880680315,"lng":-16.78026261304051},{"lat":28.079430848678772,"lng":-16.75949673941181},{"lat":28.06682136780037,"lng":-16.752555476517905},{"lat":28.053465854010607,"lng":-16.742620229639464},{"lat":28.04811873051018,"lng":-16.734752338863004},{"lat":28.052542723035355,"lng":-16.731495410166225}],"name":"Alcalá → Las Americas","id":"alcal-las-americas","kind":"downwind-run"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
@@ -508,7 +510,7 @@
                   return;
                 }
                 
-                const filtered = data.filter(info => info.spotId === 'ruderclub-erlenbach-3a64a0');
+                const filtered = data.filter(info => info.spotId === 'alcal-las-americas');
                 if (filtered.length === 0) {
                   console.log('No matching spotId entries.');
                   return;
@@ -594,7 +596,7 @@
   const res = await fetch(jsonFile);
   const spots = await res.json();
   const videoContainer = document.getElementById("videos");
-  const spotId = "ruderclub-erlenbach-3a64a0";
+  const spotId = "alcal-las-americas";
 
   // Add masonry container style
   videoContainer.style.columnCount = "1";
