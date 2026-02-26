@@ -23,7 +23,7 @@
         "userName": "sevensurf",
         "userUrl": "https:\/\/sevensurf.ch",
         "spotId": "sevensurf-steffisburg",
-        "text": "surfshop\n- wing\n- kite\n- parawing\n- dw\n- pumpfoil\n- accesoirs\n\nbrands\n- f-one pro shop\n- duotone\n- north\n- and others\n\ntestpool and all year open\n\nsevensurf gmbh \nSchwäbismattweg 4           \n3613 Steffisburg \n+4177 456 06 06\nshop@sevensurf.ch\nsevensurf.ch\n\n",
+        "text": "surfshop\n- wing\n- kite\n- parawing\n- dw\n- pumpfoil\n- accesoirs\n\nbrands\n- f-one pro shop\n- duotone\n- north\n- and others\n\ntestpool and all year open\n\nsevensurf gmbh \nSchw\u00e4bismattweg 4           \n3613 Steffisburg \n+4177 456 06 06\nshop@sevensurf.ch\nsevensurf.ch\n\n",
         "id": "sevensurf-steffisburg-m9v3fhpe-x9cnj",
         "votes": 2
     },
@@ -77,7 +77,7 @@
         "userName": "Nils Mango",
         "userUrl": "https:\/\/nilsmango.ch",
         "spotId": "neuchatel-saint-blaise",
-        "text": "For wind check: https:\/\/letskite.ch\/en\nFor waves in Neuchâtel check this webcam link: https:\/\/jeunesrives.roundshot.com\/#\/",
+        "text": "For wind check: https:\/\/letskite.ch\/en\nFor waves in Neuch\u00e2tel check this webcam link: https:\/\/jeunesrives.roundshot.com\/#\/",
         "id": "680a21ca9a4af",
         "votes": 1
     },
@@ -87,7 +87,7 @@
         "userName": "nilsmango",
         "userUrl": "https:\/\/nilsmango.ch",
         "spotId": "neuchatel-yverdon-les-bains",
-        "text": "Longest possible Bise run.\nCheck wind: https:\/\/letskite.ch\/en\nCheck waves in Neuchâtel: https:\/\/jeunesrives.roundshot.com\/",
+        "text": "Longest possible Bise run.\nCheck wind: https:\/\/letskite.ch\/en\nCheck waves in Neuch\u00e2tel: https:\/\/jeunesrives.roundshot.com\/",
         "id": "neuchatel-yverdon-les-bains-m9vbgr51-0ai7u",
         "votes": 1
     },
@@ -173,7 +173,7 @@
     },
     {
         "spotId": "brienz-be-interlaken",
-        "text": "Parawing downwind run. Only works when there is a lot of Südfön pressure (I think it needs at least 12 hPa).\nCheck pressure here: https:\/\/www.srf.ch\/meteo\/surf-und-segelwetter\/diagramme-foehn-und-bise\n",
+        "text": "Parawing downwind run. Only works when there is a lot of S\u00fcdf\u00f6n pressure (I think it needs at least 12 hPa).\nCheck pressure here: https:\/\/www.srf.ch\/meteo\/surf-und-segelwetter\/diagramme-foehn-und-bise\n",
         "tag": "description",
         "date": "2025-04-24T14:03:40.252Z",
         "id": "brienz-be-interlaken-m9vfo2u4-c51av",
@@ -200,7 +200,7 @@
         "tag": "description",
         "userName": "nilsmango",
         "spotId": "gorgier-yverdon-les-bains",
-        "text": "Great Bise run when there is not enough wind in Neuchâtel.\nFor wind measurements check: https:\/\/letskite.ch\/en\nNice train connections, also good parking at start or at end.\nI like to stay at the shore as I find the waves there the cleanest.\nYou can also go out at Concise or Grandson.",
+        "text": "Great Bise run when there is not enough wind in Neuch\u00e2tel.\nFor wind measurements check: https:\/\/letskite.ch\/en\nNice train connections, also good parking at start or at end.\nI like to stay at the shore as I find the waves there the cleanest.\nYou can also go out at Concise or Grandson.",
         "id": "gorgier-yverdon-les-bains-m9vge1dj-el8l6",
         "votes": 1
     },
@@ -243,7 +243,7 @@
         "userName": "Rawham",
         "userUrl": "https:\/\/www.bhs.swiss\/wetter-webcam",
         "spotId": "seedorf-ur-brunnen",
-        "text": "When there is Föhn above 40 knots the föhn will blow through sisikon and you can ride till brunnen. Bumps are from isleten super clean, gets messy before sisikon and are getting better from sisikon till Brunnen. Check the Webcam in Sisikon or\/and in Brunnen if the Wind blows through",
+        "text": "When there is F\u00f6hn above 40 knots the f\u00f6hn will blow through sisikon and you can ride till brunnen. Bumps are from isleten super clean, gets messy before sisikon and are getting better from sisikon till Brunnen. Check the Webcam in Sisikon or\/and in Brunnen if the Wind blows through",
         "id": "seedorf-ur-brunnen-m9wzvzo2-8y89a"
     },
     {
@@ -262,7 +262,7 @@
         "spotId": "coppet-rolle",
         "text": "South west wind or Bise, both direction works to downwind, around 1h run if you don't fall.",
         "id": "coppet-rolle-m9x0wcm8-ksw5m",
-        "votes": 1
+        "votes": 2
     },
     {
         "spotId": "inseli-birsfelden",
@@ -274,7 +274,7 @@
     },
     {
         "spotId": "inseli-birsfelden",
-        "text": "Webcams:\nBasel\nhttps:\/\/webtv.feratel.com\/webtv\/?cam=4175&design=v3&c0=0&c2=1&lg=de&s=0\n\n\nOstwind viel Besser in Möhlin \/ Schwörstadt ?\nWebcam:\nhttps:\/\/www.hochrheinsegler.de\/index.php\/webcam\n\nhttps:\/\/www.rheinfelden.de\/de\/aktuell\/Webcam",
+        "text": "Webcams:\nBasel\nhttps:\/\/webtv.feratel.com\/webtv\/?cam=4175&design=v3&c0=0&c2=1&lg=de&s=0\n\n\nOstwind viel Besser in M\u00f6hlin \/ Schw\u00f6rstadt ?\nWebcam:\nhttps:\/\/www.hochrheinsegler.de\/index.php\/webcam\n\nhttps:\/\/www.rheinfelden.de\/de\/aktuell\/Webcam",
         "tag": "conditions",
         "date": "2025-04-30T08:15:23.068Z",
         "id": "inseli-birsfelden-ma3nvags-jnwaa",
@@ -286,7 +286,7 @@
         "userName": "nilsmango",
         "userUrl": "https:\/\/nilsmango.ch",
         "spotId": "inseli-birsfelden",
-        "text": "Meine Notizen von früher:\nOstwind\nJeden morgen im Sommer (wahrscheinlich nicht genug)\nMuss mind. 10 km\/h Wetterstation, damit es funktioniert - aber schwierig zu sagen, muss man schauen gehen - nur bei richtig viel wind!! 20 kn vorhersage, 20 km\/h durchschnitt fast schon.\n\nWestwind\nWenn in Binningen so 10 kn: ab 16-17 Uhr\nMuss mind 8-10 kn und dann noch Thermik!\n\nWetterstation Binningen ab 8 km\/h und Spitzen ab ca. 20 km\/h - dann ist der Wind wahrscheinlich Spitzen etwa 10 Knoten, Durchschnitt 6 Knoten. Das ist was ich brauche mit 210er und 4.5.\n\nWetterstation Binningen:\nhttps:\/\/www.meteoschweiz.admin.ch\/service-und-publikationen\/applikationen\/messwerte-und-messnetze.html#param=messwerte-windgeschwindigkeit-kmh-10min&table=false&station=BAS",
+        "text": "Meine Notizen von fr\u00fcher:\nOstwind\nJeden morgen im Sommer (wahrscheinlich nicht genug)\nMuss mind. 10 km\/h Wetterstation, damit es funktioniert - aber schwierig zu sagen, muss man schauen gehen - nur bei richtig viel wind!! 20 kn vorhersage, 20 km\/h durchschnitt fast schon.\n\nWestwind\nWenn in Binningen so 10 kn: ab 16-17 Uhr\nMuss mind 8-10 kn und dann noch Thermik!\n\nWetterstation Binningen ab 8 km\/h und Spitzen ab ca. 20 km\/h - dann ist der Wind wahrscheinlich Spitzen etwa 10 Knoten, Durchschnitt 6 Knoten. Das ist was ich brauche mit 210er und 4.5.\n\nWetterstation Binningen:\nhttps:\/\/www.meteoschweiz.admin.ch\/service-und-publikationen\/applikationen\/messwerte-und-messnetze.html#param=messwerte-windgeschwindigkeit-kmh-10min&table=false&station=BAS",
         "id": "inseli-birsfelden-ma3nvags-7x5bi"
     },
     {
@@ -441,7 +441,7 @@
         "userName": "Wassersport Basel",
         "userUrl": "",
         "spotId": "inseli-pump-birsfelden",
-        "text": "Please make sure to always take care with swimmers and rowers. \n\nThe rowing club is the placeholder of the area - so always remember we‘re just acting as guests at the spot. ",
+        "text": "Please make sure to always take care with swimmers and rowers. \n\nThe rowing club is the placeholder of the area - so always remember we\u2018re just acting as guests at the spot. ",
         "id": "681464ac507df",
         "votes": 1
     },
@@ -485,13 +485,13 @@
         "tag": "description",
         "userName": "Foil4Fun",
         "spotId": "turquoise-lake-leadville-co",
-        "text": "Great spot when wind from due west, it’s possible to shuttle a DWer from west to east. ",
+        "text": "Great spot when wind from due west, it\u2019s possible to shuttle a DWer from west to east. ",
         "id": "turquoise-lake-leadville-co-mahg1cbm-s5mef",
         "votes": 1
     },
     {
         "spotId": "via-gardesana-orientale-navene",
-        "text": "Downwind from here to Malcesine (bus parking) then walk back upwind. Ideal for beginners. Good steep bumps in morning Pelèr winds. Get up EARLY! 🤙",
+        "text": "Downwind from here to Malcesine (bus parking) then walk back upwind. Ideal for beginners. Good steep bumps in morning Pel\u00e8r winds. Get up EARLY! \ud83e\udd19",
         "tag": "description",
         "date": "2025-05-31T13:02:13.891Z",
         "id": "via-gardesana-orientale-navene-mbc8rl37-57eq5",
@@ -499,11 +499,11 @@
     },
     {
         "spotId": "sentier-littoral-bormes-les-mimosas",
-        "text": "DW Bregancon-Hyères\n\n",
+        "text": "DW Bregancon-Hy\u00e8res\n\n",
         "tag": "description",
         "date": "2025-06-03T19:44:10.779Z",
         "id": "sentier-littoral-bormes-les-mimosas-mbgxg1sr-5hkvm",
-        "userName": "Bärni"
+        "userName": "B\u00e4rni"
     },
     {
         "spotId": "plage-de-bregancon-hyeres",
@@ -527,7 +527,7 @@
         "tag": "description",
         "userName": "berni",
         "spotId": "plage-de-bregancon-hyeres",
-        "text": "Best east wind run in Hyères. Pretty long paddle out in the beginning. \nStay outside of the buoy.\nParking at the start ca. 10 EUR, free in winter.\n",
+        "text": "Best east wind run in Hy\u00e8res. Pretty long paddle out in the beginning. \nStay outside of the buoy.\nParking at the start ca. 10 EUR, free in winter.\n",
         "id": "plage-de-bregancon-hyeres-mbholuxb-zrda6",
         "votes": 1
     },
@@ -537,7 +537,7 @@
         "userName": "JH1",
         "userUrl": "https:\/\/supfoil.ch\/",
         "spotId": "campobello-di-mazara-sciacca",
-        "text": "Great run if you’re comfortable with 20km+ runs.\n\nEasy entry thanks to sandy beach close to Puzziteddu Surf Center\nSan Marco Beach is nice and sandy to exit and thanks to some outer banks the shore brake isn’t to (at lest with the 20kn of wind I had there)\nAccording to google maps it looks like most of the coast you’re passing along is sandy so shorter runs and\/or emergency exits shouldn’t be that difficult \n",
+        "text": "Great run if you\u2019re comfortable with 20km+ runs.\n\nEasy entry thanks to sandy beach close to Puzziteddu Surf Center\nSan Marco Beach is nice and sandy to exit and thanks to some outer banks the shore brake isn\u2019t to (at lest with the 20kn of wind I had there)\nAccording to google maps it looks like most of the coast you\u2019re passing along is sandy so shorter runs and\/or emergency exits shouldn\u2019t be that difficult \n",
         "id": "campobello-di-mazara-sciacca-mbhp6zb9-b36kx"
     },
     {
@@ -555,7 +555,7 @@
         "userName": "JH1",
         "userUrl": "https:\/\/supfoil.ch\/",
         "spotId": "campobello-di-mazara-sciacca",
-        "text": "You’ll need to car shuttle… drive is almost 1h one way…",
+        "text": "You\u2019ll need to car shuttle\u2026 drive is almost 1h one way\u2026",
         "id": "campobello-di-mazara-sciacca-mbhp6zb9-pxfv5"
     },
     {
@@ -584,7 +584,7 @@
     },
     {
         "spotId": "altenteil-puttgarden",
-        "text": "Nice, steep and surfy bumps for the first half of the run (also worth doing up and DW runs with a parawing).\nThe second part gets technical. \nMake sure you stay far enough out at Grüner Brink, as the sandbank “kills” all the bumps ",
+        "text": "Nice, steep and surfy bumps for the first half of the run (also worth doing up and DW runs with a parawing).\nThe second part gets technical. \nMake sure you stay far enough out at Gr\u00fcner Brink, as the sandbank \u201ckills\u201d all the bumps ",
         "tag": "description",
         "date": "2025-07-18T08:03:43.156Z",
         "id": "altenteil-puttgarden-md8j8l2s-6twdw",
@@ -685,7 +685,7 @@
         "userName": "zdavatz",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "hafen-riesbach-a7c179",
-        "text": "Spotfinder: zdavatz. Height to water: Max 20cm über dem Wasser. Drop von der Hafenmauer ist cool. Gut für Goofy und Regular. Images of spot: https:\/\/www.instagram.com\/reel\/Cz-r559qdVT\/, https:\/\/www.instagram.com\/p\/Cz8_3GwKdOH\/",
+        "text": "Spotfinder: zdavatz. Height to water: Max 20cm \u00fcber dem Wasser. Drop von der Hafenmauer ist cool. Gut f\u00fcr Goofy und Regular. Images of spot: https:\/\/www.instagram.com\/reel\/Cz-r559qdVT\/, https:\/\/www.instagram.com\/p\/Cz8_3GwKdOH\/",
         "id": "hafen-riesbach-a7c179"
     },
     {
@@ -694,7 +694,7 @@
         "userName": "zdavatz",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "floss-strandbad-wollishofen-05a13b",
-        "text": "Spotfinder: zdavatz. Height to water: 40cm über dem Wasser. Nur für Hauptsaison (Winter) offen für die Öffentlichkeit. Während dem Badibetrieb ist ASVZ Schulung morgens von 7-9 Uhr Images of spot: https:\/\/www.instagram.com\/p\/Cy-yeAZtlrp\/",
+        "text": "Spotfinder: zdavatz. Height to water: 40cm \u00fcber dem Wasser. Nur f\u00fcr Hauptsaison (Winter) offen f\u00fcr die \u00d6ffentlichkeit. W\u00e4hrend dem Badibetrieb ist ASVZ Schulung morgens von 7-9 Uhr Images of spot: https:\/\/www.instagram.com\/p\/Cy-yeAZtlrp\/",
         "id": "floss-strandbad-wollishofen-05a13b"
     },
     {
@@ -703,7 +703,7 @@
         "userName": "zdavatz",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "hermitage-kuesnacht-aad19c",
-        "text": "Spotfinder: zdavatz. Height to water: 50cm über dem Wasser. Hier gibt es Fischer. Gute Welle von den Kursschiffen, guter Hafen zum Tricks üben. Images of spot: https:\/\/www.instagram.com\/p\/C0WtaAnK6Om\/",
+        "text": "Spotfinder: zdavatz. Height to water: 50cm \u00fcber dem Wasser. Hier gibt es Fischer. Gute Welle von den Kursschiffen, guter Hafen zum Tricks \u00fcben. Images of spot: https:\/\/www.instagram.com\/p\/C0WtaAnK6Om\/",
         "id": "hermitage-kuesnacht-aad19c"
     },
     {
@@ -712,7 +712,7 @@
         "userName": "zdavatz",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "schiffsteg-bahnhof-tiefenbrunnen-754513",
-        "text": "Spotfinder: zdavatz. Height to water: 60cm über dem Wasser. Achtung Kursschiffe. Images of spot: https:\/\/www.instagram.com\/reel\/C4vWxdJqFhO\/",
+        "text": "Spotfinder: zdavatz. Height to water: 60cm \u00fcber dem Wasser. Achtung Kursschiffe. Images of spot: https:\/\/www.instagram.com\/reel\/C4vWxdJqFhO\/",
         "id": "schiffsteg-bahnhof-tiefenbrunnen-754513"
     },
     {
@@ -721,7 +721,7 @@
         "userName": "zdavatz",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "park-tiefenbrunnen-8007b1",
-        "text": "Spotfinder: zdavatz. Height to water: 20 cm über Wasser. Der Ursprung von Pump Tsüri. Nur in der Hauptsaison (Winter), nach dem offiziellen Badebetrieb. Images of spot: https:\/\/www.instagram.com\/p\/C5dTeoPKrrG\/",
+        "text": "Spotfinder: zdavatz. Height to water: 20 cm \u00fcber Wasser. Der Ursprung von Pump Ts\u00fcri. Nur in der Hauptsaison (Winter), nach dem offiziellen Badebetrieb. Images of spot: https:\/\/www.instagram.com\/p\/C5dTeoPKrrG\/",
         "id": "park-tiefenbrunnen-8007b1"
     },
     {
@@ -730,7 +730,7 @@
         "userName": "zdavatz",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "indiana-showroom-oberrieden-0bf1eb",
-        "text": "Spotfinder: zdavatz. Height to water: 30 cm über Wasser. Am Donnerstag Nachmittag kann man Material mieten. Goofy und Regular. Images of spot: https:\/\/www.instagram.com\/reel\/C5puupIKwJ1\/",
+        "text": "Spotfinder: zdavatz. Height to water: 30 cm \u00fcber Wasser. Am Donnerstag Nachmittag kann man Material mieten. Goofy und Regular. Images of spot: https:\/\/www.instagram.com\/reel\/C5puupIKwJ1\/",
         "id": "indiana-showroom-oberrieden-0bf1eb"
     },
     {
@@ -739,7 +739,7 @@
         "userName": "zdavatz",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "ruderclub-erlenbach-3a64a0",
-        "text": "Spotfinder: zdavatz. Height to water: 15 cm über Wasser. Gerry Gearloose hat seinen Shop hier. Gut zum Material testen. Images of spot: https:\/\/www.instagram.com\/p\/C7a26EXKT5v\/",
+        "text": "Spotfinder: zdavatz. Height to water: 15 cm \u00fcber Wasser. Gerry Gearloose hat seinen Shop hier. Gut zum Material testen. Images of spot: https:\/\/www.instagram.com\/p\/C7a26EXKT5v\/",
         "id": "ruderclub-erlenbach-3a64a0"
     },
     {
@@ -748,7 +748,7 @@
         "userName": "zdavatz",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "foilclub-zuerichsee-91db6b",
-        "text": "Spotfinder: zdavatz. Height to water: 20-40cm über Wasser. Hier kann man Mitglied werden. Gut zum täglich üben. Images of spot: https:\/\/www.instagram.com\/p\/C79YoCzK0iv\/",
+        "text": "Spotfinder: zdavatz. Height to water: 20-40cm \u00fcber Wasser. Hier kann man Mitglied werden. Gut zum t\u00e4glich \u00fcben. Images of spot: https:\/\/www.instagram.com\/p\/C79YoCzK0iv\/",
         "id": "foilclub-zuerichsee-91db6b"
     },
     {
@@ -757,7 +757,7 @@
         "userName": "zdavatz",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "chickendock-b1b71d",
-        "text": "Spotfinder: zdavatz. Height to water: 50cm über Wasser. Immer sehr viele Leute (Taucher, Schwimmer, Pumper). Dock hat zwei Leitern. Images of spot: https:\/\/www.instagram.com\/p\/C_IvVANKor_\/",
+        "text": "Spotfinder: zdavatz. Height to water: 50cm \u00fcber Wasser. Immer sehr viele Leute (Taucher, Schwimmer, Pumper). Dock hat zwei Leitern. Images of spot: https:\/\/www.instagram.com\/p\/C_IvVANKor_\/",
         "id": "chickendock-b1b71d"
     },
     {
@@ -766,7 +766,7 @@
         "userName": "zdavatz",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "marienhalde-b6f0f0",
-        "text": "Spotfinder: zdavatz. Height to water: 60cm über Wasser. Der Dock ist eher hoch. Gut zum Dropstarten. Es gibt eine Leiter und eine Dusche und ein WC. Images of spot: https:\/\/www.instagram.com\/reel\/CtopO-TqYuJ\/",
+        "text": "Spotfinder: zdavatz. Height to water: 60cm \u00fcber Wasser. Der Dock ist eher hoch. Gut zum Dropstarten. Es gibt eine Leiter und eine Dusche und ein WC. Images of spot: https:\/\/www.instagram.com\/reel\/CtopO-TqYuJ\/",
         "id": "marienhalde-b6f0f0"
     },
     {
@@ -775,7 +775,7 @@
         "userName": "zdavatz",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "kibag-tiefenbrunnen-c57a90",
-        "text": "Spotfinder: zdavatz. Height to water: 15-20cm über Wasser. Gut für Beachstart, Sidestart und Frogstart. Images of spot: https:\/\/www.instagram.com\/p\/Cl8W6Jbqdwp\/",
+        "text": "Spotfinder: zdavatz. Height to water: 15-20cm \u00fcber Wasser. Gut f\u00fcr Beachstart, Sidestart und Frogstart. Images of spot: https:\/\/www.instagram.com\/p\/Cl8W6Jbqdwp\/",
         "id": "kibag-tiefenbrunnen-c57a90",
         "votes": 1
     },
@@ -785,7 +785,7 @@
         "userName": "zdavatz",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "letten-steg",
-        "text": "Spotfinder: zdavatz. Height to water: 25-35cm über Wasser - je nach Flusshöhe. Gut für regular Sidestart. Images of spot: https:\/\/www.instagram.com\/p\/COhzth3jq6O\/",
+        "text": "Spotfinder: zdavatz. Height to water: 25-35cm \u00fcber Wasser - je nach Flussh\u00f6he. Gut f\u00fcr regular Sidestart. Images of spot: https:\/\/www.instagram.com\/p\/COhzth3jq6O\/",
         "id": "letten-steg"
     },
     {
@@ -794,16 +794,16 @@
         "userName": "lkoeppel",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "blue-lagoon-dock-kos-becb28",
-        "text": "Spotfinder: lkoeppel. Height to water: 20-30cm über dem Wasser. Alle Starts möglich Images of spot: https:\/\/pump.zuerich\/wp-content\/uploads\/2024\/10\/kos_dockstart.jpeg",
+        "text": "Spotfinder: lkoeppel. Height to water: 20-30cm \u00fcber dem Wasser. Alle Starts m\u00f6glich Images of spot: https:\/\/pump.zuerich\/wp-content\/uploads\/2024\/10\/kos_dockstart.jpeg",
         "id": "blue-lagoon-dock-kos"
     },
     {
         "date": "2025-07-29T13:43:42.135743Z",
         "tag": "description",
-        "userName": "küsöggeler",
+        "userName": "k\u00fcs\u00f6ggeler",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "zihlkanal-restaurant-rothaus",
-        "text": "Spotfinder: küsöggeler. Height to water: Steg wird von Santosh mitgebracht. Alle Starts möglich, viele Wellen von den Schiffen Images of spot: https:\/\/www.instagram.com\/reel\/DBx_jOzP2u4\/",
+        "text": "Spotfinder: k\u00fcs\u00f6ggeler. Height to water: Steg wird von Santosh mitgebracht. Alle Starts m\u00f6glich, viele Wellen von den Schiffen Images of spot: https:\/\/www.instagram.com\/reel\/DBx_jOzP2u4\/",
         "id": "zihlkanal-restaurant-rothaus"
     },
     {
@@ -812,7 +812,7 @@
         "userName": "dlieber",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "foilclub-zuerichsee",
-        "text": "Spotfinder: dlieber. Height to water: Neben der Badi. ca. 40 cm über dem Wasser Images of spot: https:\/\/www.instagram.com\/p\/C79YoCzK0iv\/",
+        "text": "Spotfinder: dlieber. Height to water: Neben der Badi. ca. 40 cm \u00fcber dem Wasser Images of spot: https:\/\/www.instagram.com\/p\/C79YoCzK0iv\/",
         "id": "foilclub-zuerichsee-91db6b"
     },
     {
@@ -821,7 +821,7 @@
         "userName": "Santosh",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "schiffanlegestelle-la-tene-9cd6d2",
-        "text": "Spotfinder: Santosh. Height to water: Steg wird von Santosh mitgebracht. Alle Starts möglich, viele Wellen von den Schiffen Images of spot: https:\/\/www.instagram.com\/reel\/DBx_jOzP2u4\/",
+        "text": "Spotfinder: Santosh. Height to water: Steg wird von Santosh mitgebracht. Alle Starts m\u00f6glich, viele Wellen von den Schiffen Images of spot: https:\/\/www.instagram.com\/reel\/DBx_jOzP2u4\/",
         "id": "schiffanlegestelle-la-tene-9cd6d2"
     },
     {
@@ -830,7 +830,7 @@
         "userName": "aloulier",
         "userUrl": "https:\/\/github.com\/zdavatz\/pumpspots\/blob\/main\/pumpspots.csv",
         "spotId": "steg-faellanden-a7a293",
-        "text": "Spotfinder: aloulier. Height to water: Steg sieht gut aus. Alle Starts möglich, einige Wellen von den Schiffen Images of spot: https:\/\/maps.app.goo.gl\/RWbpJ8o3opRZx7xK7?g_st=aw",
+        "text": "Spotfinder: aloulier. Height to water: Steg sieht gut aus. Alle Starts m\u00f6glich, einige Wellen von den Schiffen Images of spot: https:\/\/maps.app.goo.gl\/RWbpJ8o3opRZx7xK7?g_st=aw",
         "id": "steg-faellanden-a7a293"
     },
     {
@@ -863,7 +863,7 @@
     },
     {
         "spotId": "gorgier-saint-blaise",
-        "text": "The very best west wind run on lake Neuchâtel. ",
+        "text": "The very best west wind run on lake Neuch\u00e2tel. ",
         "tag": "description",
         "date": "2025-09-17T14:34:16.798Z",
         "id": "gorgier-saint-blaise-mfo31t9a-i4m8x",
@@ -945,12 +945,12 @@
         "userName": "nilsmango",
         "userUrl": "https:\/\/nilsmango.ch",
         "spotId": "la-ciotat-hyeres",
-        "text": "Big Hyères run. Get in at the beach, then paddle out to the wind line.\nHuge rollers.\nBe carful with the police, I heard you are not really allowed to paddle on the open ocean in France.",
+        "text": "Big Hy\u00e8res run. Get in at the beach, then paddle out to the wind line.\nHuge rollers.\nBe carful with the police, I heard you are not really allowed to paddle on the open ocean in France.",
         "id": "la-ciotat-hyeres-min955nx-kl9f3"
     },
     {
         "spotId": "granadilla-de-abona-el-medano",
-        "text": "Normal El Médano Run\nYou are not allowed inside the red buoy - be careful.",
+        "text": "Normal El M\u00e9dano Run\nYou are not allowed inside the red buoy - be careful.",
         "tag": "description",
         "date": "2025-12-01T14:41:14.078Z",
         "id": "granadilla-de-abona-el-medano-min9bn8e-wwx4b",
@@ -958,7 +958,7 @@
     },
     {
         "spotId": "poris-de-abona-el-medano",
-        "text": "Bigger El Médano run.\nYou have to really be far out when coming to the harbour wall, otherwise you are in the backwash, and it's brutal.",
+        "text": "Bigger El M\u00e9dano run.\nYou have to really be far out when coming to the harbour wall, otherwise you are in the backwash, and it's brutal.",
         "tag": "description",
         "date": "2025-12-01T14:42:57.120Z",
         "id": "poris-de-abona-el-medano-min9duqo-2tdtr",
@@ -996,7 +996,7 @@
         "userName": "Supfoil.ch",
         "userUrl": "",
         "spotId": "neuchatel-saint-blaise",
-        "text": "From the train station in Neuchâtel, you either walk \nhttps:\/\/maps.app.goo.gl\/ATfUdsDp2ve8uofy6?g_st=ic\n\nOr take the Funi and walk the last part\nhttps:\/\/maps.app.goo.gl\/KVwxNiDcnjUf6SWC9?g_st=ic",
+        "text": "From the train station in Neuch\u00e2tel, you either walk \nhttps:\/\/maps.app.goo.gl\/ATfUdsDp2ve8uofy6?g_st=ic\n\nOr take the Funi and walk the last part\nhttps:\/\/maps.app.goo.gl\/KVwxNiDcnjUf6SWC9?g_st=ic",
         "id": "6901bfd72a380"
     },
     {
@@ -1025,7 +1025,7 @@
         "userName": "nobody",
         "userUrl": "",
         "spotId": "brienz-be-interlaken",
-        "text": "Also a good Föhndiagramm: https:\/\/profiwetter.ch\/index.php?show=wind_foehn_ch&lang=de",
+        "text": "Also a good F\u00f6hndiagramm: https:\/\/profiwetter.ch\/index.php?show=wind_foehn_ch&lang=de",
         "id": "691457e3e4da3"
     },
     {
@@ -1034,7 +1034,7 @@
         "userName": "nilsmango",
         "userUrl": "",
         "spotId": "brienz-be-interlaken",
-        "text": "Also perfect web cam: https:\/\/www.webcam-4insiders.de\/webcam\/bönigen%20bei%20interlaken\/14459",
+        "text": "Also perfect web cam: https:\/\/www.webcam-4insiders.de\/webcam\/b\u00f6nigen%20bei%20interlaken\/14459",
         "id": "692da192db733",
         "votes": 1
     },
@@ -1044,7 +1044,7 @@
         "userName": "ced_voyager",
         "userUrl": "https:\/\/www.instagram.com\/ced_voyager",
         "spotId": "turtle-bay-proteas-lavrio",
-        "text": "Extended Loutsa downwind run.\nHuge rollers form during strong meltemi conditions. Be cautious around Lavrio port, as cargo ships and ferries are frequently arriving and departing. The run ends in a bay with many turtles—hence the name of the run.",
+        "text": "Extended Loutsa downwind run.\nHuge rollers form during strong meltemi conditions. Be cautious around Lavrio port, as cargo ships and ferries are frequently arriving and departing. The run ends in a bay with many turtles\u2014hence the name of the run.",
         "id": "turtle-bay-proteas-lavrio-mj5h0vg5-kvbbe",
         "votes": 1
     },
@@ -1063,7 +1063,7 @@
         "userName": "nilsmango",
         "userUrl": "https:\/\/nilsmango.ch",
         "spotId": "isleten-seedorf-ur",
-        "text": "This is a run that is actually not bad if there is weak Fön, meaning it's Fön Bise from the north. There is a bus back to the start, but only once an hour (I think), so the best way to foil here is Parawing Up-, and Downwinder. Don't go all the way down, as the wind stops just at Bolzbach, most of the time.\nTips: Use a foil of around 1300 for this downwind foil run + Bise will be freaking cold :D",
+        "text": "This is a run that is actually not bad if there is weak F\u00f6n, meaning it's F\u00f6n Bise from the north. There is a bus back to the start, but only once an hour (I think), so the best way to foil here is Parawing Up-, and Downwinder. Don't go all the way down, as the wind stops just at Bolzbach, most of the time.\nTips: Use a foil of around 1300 for this downwind foil run + Bise will be freaking cold :D",
         "id": "isleten-seedorf-ur-mj9srmfd-c2foh"
     },
     {
@@ -1101,7 +1101,7 @@
         "userName": "nilsmango",
         "userUrl": "",
         "spotId": "estavayer-le-lac-yverdon-les-bains",
-        "text": "Check webcams for Lac de Neuchâtel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-webcams.html\nCheck wind forecasts for Lac de Neuchâtel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-forecasts.html",
+        "text": "Check webcams for Lac de Neuch\u00e2tel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-webcams.html\nCheck wind forecasts for Lac de Neuch\u00e2tel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-forecasts.html",
         "id": "69440c82030c7"
     },
     {
@@ -1110,7 +1110,7 @@
         "userName": "nilsmango",
         "userUrl": "",
         "spotId": "gorgier-yverdon-les-bains",
-        "text": "You can find webcams for Lac de Neuchâtel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-webcams.html\nAnd check wind forecasts for Lac de Neuchâtel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-forecasts.html",
+        "text": "You can find webcams for Lac de Neuch\u00e2tel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-webcams.html\nAnd check wind forecasts for Lac de Neuch\u00e2tel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-forecasts.html",
         "id": "69440cad64635"
     },
     {
@@ -1119,7 +1119,7 @@
         "userName": "nilsmango",
         "userUrl": "",
         "spotId": "neuchatel-saint-blaise",
-        "text": "Webcams: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-webcams.html\nWind forecasts for Lac de Neuchâtel: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-forecasts.html",
+        "text": "Webcams: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-webcams.html\nWind forecasts for Lac de Neuch\u00e2tel: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-forecasts.html",
         "id": "69440ccf7ffb3"
     },
     {
@@ -1128,7 +1128,7 @@
         "userName": "NM",
         "userUrl": "",
         "spotId": "neuchatel-yverdon-les-bains",
-        "text": "Check webcams for Lac de Neuchâtel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-webcams.html\nCheck wind forecasts for Lac de Neuchâtel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-forecasts.html",
+        "text": "Check webcams for Lac de Neuch\u00e2tel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-webcams.html\nCheck wind forecasts for Lac de Neuch\u00e2tel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-forecasts.html",
         "id": "69440cde3c815",
         "votes": 1
     },
@@ -1138,7 +1138,7 @@
         "userName": "nilsmango",
         "userUrl": "",
         "spotId": "saint-aubin-sauges-concise",
-        "text": "Check webcams for Lac de Neuchâtel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-webcams.html\nCheck wind forecasts for Lac de Neuchâtel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-forecasts.html",
+        "text": "Check webcams for Lac de Neuch\u00e2tel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-webcams.html\nCheck wind forecasts for Lac de Neuch\u00e2tel here: https:\/\/project7iii.com\/foildata\/lac-de-neuchatel-forecasts.html",
         "id": "69440ced382a6"
     },
     {
@@ -1188,7 +1188,7 @@
         "tag": "description",
         "userName": "Jurij.Scheibler",
         "spotId": "langenargen-marina-am-bodensee-bregenz-hafen-bhf",
-        "text": "Needs shuttle to reach starting point otherwise it’s a 20 min walk from the train station. Train back from Bregenz Hafen via Lindau Insel always at xx:53 one transfer to Rb93 in Lindau always at xx:22. Same connection works for the Nonnenhorn-Bregenz run where your have to walk less. Best Sections in front of the Lindau Insel. Works best with a westerly Föhn but also with super light thermal west wind in spring\/summer. Most of the time you ride to the right on a regular stance since the wind and waves are often w-sw. If you can’t make it, exits are on the west side of Lindau Insel and Lochau. Hit me up for further Questions and a Partywave! IG: jurij.scheibler",
+        "text": "Needs shuttle to reach starting point otherwise it\u2019s a 20 min walk from the train station. Train back from Bregenz Hafen via Lindau Insel always at xx:53 one transfer to Rb93 in Lindau always at xx:22. Same connection works for the Nonnenhorn-Bregenz run where your have to walk less. Best Sections in front of the Lindau Insel. Works best with a westerly F\u00f6hn but also with super light thermal west wind in spring\/summer. Most of the time you ride to the right on a regular stance since the wind and waves are often w-sw. If you can\u2019t make it, exits are on the west side of Lindau Insel and Lochau. Hit me up for further Questions and a Partywave! IG: jurij.scheibler",
         "id": "langenargen-marina-am-bodensee-bregenz-hafen-bhf-mjx0t86t-xtfl9",
         "votes": 2
     },
@@ -1208,7 +1208,8 @@
         "userUrl": "",
         "spotId": "la-ciotat-hyeres",
         "text": "Good wind stations for France: https:\/\/m.winds-up.com\/index.php",
-        "id": "6964ce0548f47"
+        "id": "6964ce0548f47",
+        "votes": 1
     },
     {
         "date": "2026-01-12T10:34:07+00:00",
@@ -1322,7 +1323,7 @@
     {
         "id": "djursholms-segelklubb-mkh47i10-dnacv",
         "tag": "description",
-        "text": "Clubspot with general access and bastu, mostly for foiling on stora värtan. The club organizes a wind surfing school but has plenty of different foiling people.",
+        "text": "Clubspot with general access and bastu, mostly for foiling on stora v\u00e4rtan. The club organizes a wind surfing school but has plenty of different foiling people.",
         "date": "2026-01-16T16:50:50.244Z",
         "userName": "Per",
         "userUrl": null,
@@ -1721,7 +1722,7 @@
     {
         "id": "kamen-nica-ml8mgvlj-x2xb0",
         "tag": "description",
-        "text": "…",
+        "text": "\u2026",
         "date": "2026-02-04T22:51:47.575Z",
         "userName": "Lh",
         "userUrl": null,
@@ -1803,5 +1804,14 @@
         "text": "Test",
         "userName": "Ddd",
         "spotId": "santuario-pelagos-livorno"
+    },
+    {
+        "id": "munizip-bengasi-mm36losb-etzqb",
+        "tag": "description",
+        "text": "tester",
+        "date": "2026-02-26T08:08:29.627Z",
+        "userName": "tester",
+        "userUrl": null,
+        "spotId": "munizip-bengasi"
     }
 ]
