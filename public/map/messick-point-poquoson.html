@@ -251,7 +251,7 @@
             }
             
             // Get spot data
-            const spotData = {"kind":"wind-spot","country":"US","name":"Messick Point,  Poquoson","infos":[{"date":"2026-01-18T22:01:38.936Z","userName":"N\/a","id":"messick-point-poquoson-mkka6ws8-bfx3g","spotId":"messick-point-poquoson","tag":"wind-direction","text":"Good on south or west winds "}],"pending":false,"id":"messick-point-poquoson","state":"VA","locations":[{"lat":37.109265255676064,"lng":-76.32090568542482}]};
+            const spotData = {"locations":[{"lat":37.109265255676064,"lng":-76.32090568542482}],"kind":"wind-spot","infos":[{"spotId":"messick-point-poquoson","tag":"wind-direction","text":"Good on south or west winds ","date":"2026-01-18T22:01:38.936Z","id":"messick-point-poquoson-mkka6ws8-bfx3g","userName":"N\/a"}],"name":"Messick Point,  Poquoson","country":"US","state":"VA","pending":false,"id":"messick-point-poquoson"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {

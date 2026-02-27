@@ -251,7 +251,7 @@
             }
             
             // Get spot data
-            const spotData = {"kind":"wind-spot","country":"BS","name":"New Providence","infos":[{"id":"new-providence-mkh012v5-90j0h","text":"NEE (Easterly with a Northern component)","tag":"wind-direction","date":"2026-01-16T14:53:52.193Z","userName":"atlantic","spotId":"new-providence"}],"pending":false,"id":"new-providence","locations":[{"lat":25.05436498120071,"lng":-77.50957489013672}]};
+            const spotData = {"infos":[{"text":"NEE (Easterly with a Northern component)","spotId":"new-providence","id":"new-providence-mkh012v5-90j0h","tag":"wind-direction","date":"2026-01-16T14:53:52.193Z","userName":"atlantic"}],"name":"New Providence","kind":"wind-spot","id":"new-providence","locations":[{"lng":-77.50957489013672,"lat":25.05436498120071}],"pending":false,"country":"BS"};
             
             // Get the appropriate icon based on spot type and pending status
             function getIcon(type, isPending) {
