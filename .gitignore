@@ -1,3 +1,5 @@
 # .gitignore
 
 deploy_config.sh
+static/map/files/.api-key
+public/map/.api-key
