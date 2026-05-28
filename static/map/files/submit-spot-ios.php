@@ -15,9 +15,11 @@ $apiKey = $_SERVER['HTTP_X_API_KEY'] ?? '';
 
 $configFile = '.api-key';
 if (!file_exists($configFile)) {
-    file_put_contents($configFile, bin2hex(random_bytes(16)));
+    http_response_code(500);
+    echo json_encode(['success' => false, 'message' => 'Server API key is not configured']);
+    exit;
 }
-$expectedKey = file_get_contents($configFile);
+$expectedKey = trim(file_get_contents($configFile));
 
 if (!hash_equals($expectedKey, $apiKey)) {
     http_response_code(401);
