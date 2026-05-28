@@ -1820,5 +1820,30 @@
         "id": "phantom-foil-test-spot-1772188993-b583298f6f25841a",
         "date": "2026-02-27T10:43:13+00:00",
         "spotId": "phantom-foil-test-spot-1772188993"
+    },
+    {
+        "userName": "foildata tester",
+        "text": "This is a test spot created by the automated build process. It should be removed automatically.",
+        "tag": "description",
+        "id": "phantom-test-spot-1774360147-4345bce52b92d0d9",
+        "date": "2026-03-24T13:49:07+00:00",
+        "spotId": "phantom-test-spot-1774360147"
+    },
+    {
+        "id": "quai-theophile-cornu-agde-mowqah4w-5rqei",
+        "tag": "description",
+        "text": "Very good foil wave and wind spot, when the conditions are right.",
+        "date": "2026-05-08T09:44:22.592Z",
+        "userName": "nilsmango",
+        "userUrl": null,
+        "spotId": "quai-theophile-cornu-agde"
+    },
+    {
+        "tag": "wind-direction",
+        "text": "SW",
+        "userName": "Scarol",
+        "date": "2026-05-12T21:49:56Z",
+        "id": "355057AF-C23D-4227-A73B-F591F89966BC",
+        "spotId": "point-danger"
     }
 ]
